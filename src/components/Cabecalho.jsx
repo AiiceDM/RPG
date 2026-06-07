@@ -25,7 +25,7 @@ export default function Cabecalho({ tema, alternarTema, setPaginaAtual }) {
           <button className="botao-menu">Cenário ▾</button>
           <div className="dropdown-conteudo">
             <a href="#" onClick={(e) => navegarPara(e, 'geografia')}>Geografia</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Capitais</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'capitais')}>Capitais</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Idiomas</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Calendário</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Curiosidades</a>

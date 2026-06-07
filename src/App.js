@@ -3,6 +3,7 @@ import './App.css';
 import Cabecalho from './components/Cabecalho';
 import Capa from './components/Capa';
 import Geografia from './components/Geografia';
+import Capitais from './components/Capitais';
 
 export default function App() {
   const [tema, setTema] = useState('escuro');
@@ -29,6 +30,7 @@ export default function App() {
       />
       {paginaAtual === 'inicio' && <Capa />}
       {paginaAtual === 'geografia' && <Geografia />}
+      {paginaAtual === 'capitais' && <Capitais />}
     </>
   );
 }
