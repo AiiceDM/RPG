@@ -50,30 +50,30 @@ const regioes = [
   {
     id: 7,
     pontos: '400,460 555,460 555,530 400,530',
-    nome: 'O Refúgio',
-    resumo: 'Uma zona restrita e misteriosa encravada na floresta.',
-    imagem: ''
+    nome: 'Kryta',
+    resumo: 'Uma das regiões mais seguras de Tyria, abrigando Divinity\'s Reach, a imponente capital dos humanos. A área é cercada por uma rede de fortes que fornecem proteção constante a viajantes e comerciantes. Graças a essa estabilidade, Kryta atrai um elevado contingente populacional de diversas ancestralidades, sendo o destino mais procurado por aqueles que buscam se estabelecer.',
+    imagem: 'https://wiki.guildwars2.com/images/thumb/d/de/Queensdale_loading_screen.jpg/240px-Queensdale_loading_screen.jpg'
   },
   {
     id: 8,
     pontos: '270,640 380,460 400,460 400,530 555,530 555,685 410,685',
-    nome: 'Selva Meridional',
-    resumo: 'Matas densas que se estendem até a fronteira sul.',
-    imagem: ''
+    nome: 'Sea of Sorrows',
+    resumo: 'Uma rica e próspera região litorânea. É uma área fortemente civilizada e segura, abrigando a capital ancestral dos Quaggan e a grande cidade costeira miscigenada de Lion\'s Arch. A região acumula imensa riqueza devido ao intenso tráfego de navios e comerciantes. Nas extensões além do mar, o terreno é recortado por rios e afluentes frequentes, criando um ambiente de elevada umidade.',
+    imagem: 'https://d3qqidoz8mm2hm.cloudfront.net/wp-content/uploads/wallpapers/lost-shores-1920x1200.jpg'
   },
   {
     id: 9,
     pontos: '540,435 720,380 635,530 710,650 555,685 555,460',
-    nome: 'Picos Gélidos (Sul)',
-    resumo: 'As montanhas congeladas que descem até o centro do mundo.',
-    imagem: ''
+    nome: 'Shiverpeak Mountains',
+    resumo: 'Uma vasta cordilheira civilizada e relativamente segura, porém marcada por um frio cortante e altitudes desconfortáveis para a maioria da população de Tyria. Este território gélido é o lar de Hoelbrak, a capital dos Norn, e de The Sanctuary, a morada dos Kodan. A região é pontilhada por vilarejos nevados e fortes robustos que protegem os corajosos viajantes e comerciantes locais.',
+    imagem: 'https://d3qqidoz8mm2hm.cloudfront.net/wp-content/uploads/wallpapers/Feb_Wallpaper-1920x1200.jpg'
   },
   {
     id: 10,
     pontos: '720,380 720,265 840,225 860,420',
-    nome: 'Região Provisória (Norte da Cratera)',
-    resumo: 'Uma área de transição que separa os picos gélidos da terra morta mais ao sul. Aguardando registros dos exploradores.',
-    imagem: ''
+    nome: 'Nebreus Deadlands',
+    resumo: 'Uma floresta rasteira e alagada, perpetuamente submersa em uma neblina fina. Este ambiente pantanoso e lúgubre é o habitat de aberrações e monstruosidades letais.',
+    imagem: 'https://i.ytimg.com/vi/jsnSPFWwChM/maxresdefault.jpg'
   },
   {
     id: 11,
