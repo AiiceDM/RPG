@@ -127,16 +127,16 @@ const regioes = [
   {
     id: 17,
     pontos: '359,525 325,438 281,509 255,644 413,703',
-    nome: 'Planície dos Ecos',
-    resumo: 'Uma área plana e serena, caracterizada por campos abertos e pequenos bosques. Costuma ser uma rota de viagem segura para as caravanas que se dirigem à capital.',
-    imagem: ''
+    nome: 'Tarnished Coast',
+    resumo: 'Uma floresta tropical densa, lar de duas grandes capitais: Rata Sum, sede tecnológica dos Asura, e The Grove, o sagrado núcleo dos Sylvari. A região é consideravelmente segura, mas vive uma dualidade constante entre a preservação pregada pelos Sylvari e a exploração científica dos Asura.',
+    imagem: 'https://wiki.guildwars2.com/images/thumb/6/60/Waterfall.jpg/1200px-Waterfall.jpg'
   },
   {
     id: 18,
     pontos: '321,390 250,297 150,431 281,509 325,438',
-    nome: 'Platô Árido',
-    resumo: 'Uma região rochosa e seca, marcada por fendas profundas e ventos fortes. É um local inóspito, servindo de transição entre as densas selvas e as planícies centrais.',
-    imagem: ''
+    nome: 'Heart of Maguuma',
+    resumo: 'Uma floresta impenetrável e corrompida pela presença adormecida de Mordremoth, o Dragão Primordial dos Espinhos. Sua influência permeia o solo e as criaturas do lugar, tornando a região completamente inabitável. Exércitos de Tyria mantêm bases em suas bordas para conter o avanço dos Mordrem, servos do dragão.',
+    imagem: 'https://assetsio.gnwcdn.com/gw2heartofthorns.jpg?width=1828&height=893&fit=bounds&quality=85&format=jpg&auto=webp'
   },
   {
     id: 19,
