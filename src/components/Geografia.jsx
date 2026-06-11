@@ -7,128 +7,170 @@ const TOOLTIP_FALLBACK_HEIGHT = 180;
 const regioes = [
   {
     id: 1,
-    pontos: '90,340 190,190 450,45 520,160 470,320 380,345',
-    nome: 'Thalas Von',
-    resumo: 'Um arquipélago brutal, acessível apenas a aventureiros veteranos. Viagens marítimas são impossibilitadas por criaturas colossais, resultando na ausência de civilizações. Expedições bem-sucedidas retornam com fortunas em minérios raros, relíquias antigas e flora milagrosa.',
-    imagem: 'https://images.gamewatcherstatic.com/news/image/6/5a/47576/Icarus-Dangerous-Horizons-Expansion-1.jpg'
-  },
-  {
-    id: 2,
-    pontos: '450,45 610,45 610,120 520,310 470,320 520,160',
-    nome: 'Cerobbi Steppe',
-    resumo: 'Uma vasta zona de transição onde florestas verdejantes encontram o frio rigoroso. Rica em minas e ruínas desconhecidas, sua exploração é dificultada pela presença de feras letais e sociedades hostis a visitantes.',
-    imagem: 'https://images.squarespace-cdn.com/content/v1/670447eeba89c103beabb9a5/9c330af7-31bc-4b84-bab2-45bb7874fe01/Snowy+Ruins.jpg?format=1000w'
-  },
-  {
-    id: 3,
-    pontos: '610,45 800,85 840,225 720,265 720,380 540,435 520,310 610,120',
-    nome: 'Vaelkyr',
-    resumo: 'Uma massa de terra congelada incapaz de abrigar civilizações. Em seu coração repousa o ninho de Jormag, o Dragão Primordial do gelo e da persuasão. A área é infestada por suas crias, que aguardam o despertar de seu mestre.',
-    imagem: 'https://readytorole.com/wp-content/uploads/2018/04/mountain_pass_by_sabin_boykinov-d5fgno9.jpg'
-  },
-  {
-    id: 4,
-    pontos: '800,85 980,85 970,470 860,420 840,225',
-    nome: 'Nethyl Glimra',
-    resumo: 'Uma floresta feérica de vegetação bioluminescente em tons de rosa, roxo e azul. Embora magnífica, abriga fadas e bestas letais exclusivas deste ecossistema. Conjuradores encontram aqui manifestações mágicas únicas, tornando a região um destino tão cobiçado quanto mortal.',
-    imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcs8SSPB6AvCn-nUZOwvCrs0lT_wwznTFfUQ&s'
-  },
-  {
-    id: 5,
-    pontos: '90,340 380,345 380,460 270,640 140,610 65,490',
-    nome: 'Maguuma Wastes',
-    resumo: 'Uma selva densa dividida em dois extremos territoriais. O norte é um território letal dominado pelo ninho de Mordremoth, o Dragão dos Espinhos. O sul abriga as capitais Sylvari, Asura e Hylek, servindo como uma zona civilizada e moderadamente segura para o comércio livre.',
-    imagem: 'https://cdna.artstation.com/p/assets/images/images/013/881/386/large/yanli-wang-painting-149-uplox.jpg?1541505162'
-  },
-  {
-    id: 6,
-    pontos: '380,345 470,320 520,310 540,435 555,460 400,460 380,460',
-    nome: 'Zanarkland',
-    resumo: 'Uma vasta planície rasteira que sedia a capital Drakan e diversos vilarejos multirraciais. É considerada uma das regiões mais seguras e pacíficas de Tyria, embora as viagens por suas longas estradas ainda exijam preparo e cautela básica.',
-    imagem: 'https://wiki.guildwars2.com/images/7/74/Gendarran_Fields_loading_screen.jpg'
-  },
-  {
-    id: 7,
-    pontos: '400,460 555,460 555,530 400,530',
-    nome: 'Kryta',
-    resumo: 'Uma das regiões mais seguras de Tyria, abrigando Divinity\'s Reach, a imponente capital dos humanos. A área é cercada por uma rede de fortes que fornecem proteção constante a viajantes e comerciantes. Graças a essa estabilidade, Kryta atrai um elevado contingente populacional de diversas ancestralidades, sendo o destino mais procurado por aqueles que buscam se estabelecer.',
-    imagem: 'https://wiki.guildwars2.com/images/thumb/d/de/Queensdale_loading_screen.jpg/240px-Queensdale_loading_screen.jpg'
-  },
-  {
-    id: 8,
-    pontos: '270,640 380,460 400,460 400,530 555,530 555,685 410,685',
-    nome: 'Sea of Sorrows',
-    resumo: 'Uma rica e próspera região litorânea. É uma área fortemente civilizada e segura, abrigando a capital ancestral dos Quaggan e a grande cidade costeira miscigenada de Lion\'s Arch. A região acumula imensa riqueza devido ao intenso tráfego de navios e comerciantes. Nas extensões além do mar, o terreno é recortado por rios e afluentes frequentes, criando um ambiente de elevada umidade.',
-    imagem: 'https://d3qqidoz8mm2hm.cloudfront.net/wp-content/uploads/wallpapers/lost-shores-1920x1200.jpg'
-  },
-  {
-    id: 9,
-    pontos: '540,435 720,380 635,530 710,650 555,685 555,460',
-    nome: 'Shiverpeak Mountains',
-    resumo: 'Uma vasta cordilheira civilizada e relativamente segura, porém marcada por um frio cortante e altitudes desconfortáveis para a maioria da população de Tyria. Este território gélido é o lar de Hoelbrak, a capital dos Norn, e de The Sanctuary, a morada dos Kodan. A região é pontilhada por vilarejos nevados e fortes robustos que protegem os corajosos viajantes e comerciantes locais.',
-    imagem: 'https://d3qqidoz8mm2hm.cloudfront.net/wp-content/uploads/wallpapers/Feb_Wallpaper-1920x1200.jpg'
-  },
-  {
-    id: 10,
-    pontos: '720,380 720,265 840,225 860,420',
-    nome: 'Nebreus Deadlands',
-    resumo: 'Uma floresta rasteira e alagada, perpetuamente submersa em uma neblina fina. Este ambiente pantanoso e lúgubre é o habitat de aberrações e monstruosidades letais.',
-    imagem: 'https://i.ytimg.com/vi/jsnSPFWwChM/maxresdefault.jpg'
-  },
-  {
-    id: 11,
-    pontos: '720,380 860,420 970,470 900,600 710,650 635,530',
-    nome: 'A Grande Cratera',
-    resumo: 'Uma depressão massiva e inóspita de terra morta, cicatriz de um evento ancestral.',
-    imagem: ''
-  },
-  {
-    id: 12,
-    pontos: '970,470 980,810 880,720 900,600',
-    nome: 'Costa Leste',
-    resumo: 'As penínsulas verdes que sobrevivem ao lado da grande cratera.',
-    imagem: ''
-  },
-  {
-    id: 13,
-    pontos: '710,650 900,600 880,720 760,890 690,810 630,690',
-    nome: 'Estepes Áridas',
-    resumo: 'Um deserto impiedoso e hostil esculpido pelos ventos do sudeste.',
-    imagem: ''
-  },
-  {
-    id: 14,
-    pontos: '410,685 555,685 630,690 690,810 500,810 460,780',
-    nome: 'Planícies do Crepúsculo',
-    resumo: 'Terras de transição entre a floresta e os ermos desertificados.',
-    imagem: ''
-  },
-  {
-    id: 15,
-    pontos: '80,800 240,750 380,800 400,980 200,1050 50,1020',
+    pontos: '100,972 201,1030 399,982 354,824 180,771 79,895',
     nome: 'Arquipélago de Cinzas',
     resumo: 'Ilhas de magma exposto e ar denso de fuligem. Altamente perigoso.',
     imagem: ''
   },
   {
-    id: 16,
-    pontos: '270,640 410,685 460,780 290,750',
-    nome: 'Ilhas Fragmentadas',
-    resumo: 'Pequenos pedaços de terra estilhaçados pela força do oceano.',
+    id: 2,
+    pontos: '769,982 926,771 737,645 634,704 703,953',
+    nome: 'Estepes Áridas',
+    resumo: 'Um deserto impiedoso e hostil esculpido pelos ventos do sudeste.',
     imagem: ''
   },
   {
-    id: 17,
-    pontos: '410,870 500,810 690,810 760,890 720,950 730,1060 550,1080',
+    id: 3,
+    pontos: '538,432 325,438 359,525 547,525',
+    nome: 'Kryta',
+    resumo: 'Uma das regiões mais seguras de Tyria, abrigando Divinity\'s Reach, a imponente capital dos humanos. A área é cercada por uma rede de fortes que fornecem proteção constante a viajantes e comerciantes. Graças a essa estabilidade, Kryta atrai um elevado contingente populacional de diversas ancestralidades, sendo o destino mais procurado por aqueles que buscam se estabelecer.',
+    imagem: 'https://wiki.guildwars2.com/images/thumb/d/de/Queensdale_loading_screen.jpg/240px-Queensdale_loading_screen.jpg'
+  },
+  {
+    id: 22,
+    pontos: '547,525 550,559 569,704 413,703 359,525',
+    nome: 'Sea of Sorrows',
+    resumo: 'Uma rica e próspera região litorânea. É uma área fortemente civilizada e segura, abrigando a capital ancestral dos Quaggan e a grande cidade costeira miscigenada de Lion\'s Arch. A região acumula imensa riqueza devido ao intenso tráfego de navios e comerciantes. Nas extensões além do mar, o terreno é recortado por rios e afluentes frequentes, criando um ambiente de elevada umidade.',
+    imagem: 'https://d3qqidoz8mm2hm.cloudfront.net/wp-content/uploads/wallpapers/lost-shores-1920x1200.jpg'
+  },
+  {
+    id: 4,
+    pontos: '451,982 602,1083 751,1083 703,953 434,824 391,889',
     nome: 'Península Desolada',
     resumo: 'Uma extensão de terra marrom e escassa de recursos.',
     imagem: ''
   },
   {
-    id: 18,
-    pontos: '760,890 880,720 980,810 950,1030 760,1050',
+    id: 5,
+    pontos: '737,645 883,569 910,481 883,432 817,381 703,381 647,505',
+    nome: 'A Grande Cratera',
+    resumo: 'Uma depressão massiva e inóspita de terra morta, cicatriz de um evento ancestral.',
+    imagem: ''
+  },
+  {
+    id: 6,
+    pontos: '883,432 982,456 982,175 883,74 788,74 804,198 848,208 883,260 883,365',
+    nome: 'Nethyl Glimra',
+    resumo: 'Uma floresta feérica de vegetação bioluminescente em tons de rosa, roxo e azul. Embora magnífica, abriga fadas e bestas letais exclusivas deste ecossistema. Conjuradores encontram aqui manifestações mágicas únicas, tornando a região um destino tão cobiçado quanto mortal.',
+    imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcs8SSPB6AvCn-nUZOwvCrs0lT_wwznTFfUQ&s'
+  },
+  {
+    id: 7,
+    pontos: '926,771 972,848 982,456 883,432 910,481 883,569 737,645',
+    nome: 'Costa Leste',
+    resumo: 'As penínsulas verdes que sobrevivem ao lado da grande cratera.',
+    imagem: ''
+  },
+  {
+    id: 8,
+    pontos: '434,824 703,953 634,704 569,704 413,703',
+    nome: 'Planícies do Crepúsculo',
+    resumo: 'Terras de transição entre a floresta e os ermos desertificados.',
+    imagem: ''
+  },
+  {
+    id: 9,
+    pontos: '450,324 434,203 391,74 290,145 250,297 321,390',
+    nome: 'Thalas Von',
+    resumo: 'Um arquipélago brutal, acessível apenas a aventureiros veteranos. Viagens marítimas são impossibilitadas por criaturas colossais, resultando na ausência de civilizações. Expedições bem-sucedidas retornam com fortunas em minérios raros, relíquias antigas e flora milagrosa.',
+    imagem: 'https://images.gamewatcherstatic.com/news/image/6/5a/47576/Icarus-Dangerous-Horizons-Expansion-1.jpg'
+  },
+  {
+    id: 10,
+    pontos: '713,321 727,246 804,198 593,117 508,125 490,165 526,203 526,272 593,324',
+    nome: 'Vaelkyr',
+    resumo: 'Uma massa de terra congelada incapaz de abrigar civilizações. Em seu coração repousa o ninho de Jormag, o Dragão Primordial do gelo e da persuasão. A área é infestada por suas crias, que aguardam o despertar de seu mestre.',
+    imagem: 'https://readytorole.com/wp-content/uploads/2018/04/mountain_pass_by_sabin_boykinov-d5fgno9.jpg'
+  },
+  {
+    id: 11,
+    pontos: '926,771 769,982 761,1018 788,1073 949,1073 972,848',
     nome: 'Ilhas Tropicais',
     resumo: 'Um refúgio verdejante isolado no mar do sudeste.',
+    imagem: ''
+  },
+  {
+    id: 12,
+    pontos: '250,297 290,145 150,175 64,343 150,431',
+    nome: 'Colinas Escarlates',
+    resumo: 'Cadeias montanhosas de rochas avermelhadas e ricas em minérios brutos. O terreno acidentado é lar de tribos nômades e feras territoriais agressivas.',
+    imagem: ''
+  },
+  {
+    id: 13,
+    pontos: '634,704 737,645 647,505 538,432 550,559 569,704',
+    nome: 'Shiverpeak Mountains',
+    resumo: 'Uma vasta cordilheira civilizada e relativamente segura, porém marcada por um frio cortante e altitudes desconfortáveis para a maioria da população de Tyria. Este território gélido é o lar de Hoelbrak, a capital dos Norn, e de The Sanctuary, a morada dos Kodan. A região é pontilhada por vilarejos nevados e fortes robustos que protegem os corajosos viajantes e comerciantes locais.',
+    imagem: 'https://d3qqidoz8mm2hm.cloudfront.net/wp-content/uploads/wallpapers/Feb_Wallpaper-1920x1200.jpg'
+  },
+  {
+    id: 14,
+    pontos: '538,432 620,365 593,324 526,272 450,324 321,390 325,438',
+    nome: 'Zanarkland',
+    resumo: 'Uma vasta planície rasteira que sedia a capital Drakan e diversos vilarejos multirraciais. É considerada uma das regiões mais seguras e pacíficas de Tyria, embora as viagens por suas longas estradas ainda exijam preparo e cautela básica.',
+    imagem: 'https://wiki.guildwars2.com/images/7/74/Gendarran_Fields_loading_screen.jpg'
+  },
+  {
+    id: 15,
+    pontos: '703,381 817,381 883,432 883,365 883,260 848,208 804,198 727,246 713,321',
+    nome: 'Nebreus Deadlands',
+    resumo: 'Uma floresta rasteira e alagada, perpetuamente submersa em uma neblina fina. Este ambiente pantanoso e lúgubre é o habitat de aberrações e monstruosidades letais.',
+    imagem: 'https://i.ytimg.com/vi/jsnSPFWwChM/maxresdefault.jpg'
+  },
+  {
+    id: 16,
+    pontos: '150,431 64,343 79,444 77,525 191,563 255,644 281,509',
+    nome: 'Maguuma Wastes',
+    resumo: 'A porção central da grande selva vermelha. Um território letal dominado pelo ninho de Mordremoth, o Dragão dos Espinhos, e infestado por suas criaturas corruptoras.',
+    imagem: 'https://cdna.artstation.com/p/assets/images/images/013/881/386/large/yanli-wang-painting-149-uplox.jpg?1541505162'
+  },
+  {
+    id: 17,
+    pontos: '359,525 325,438 281,509 255,644 413,703',
+    nome: 'Planície dos Ecos',
+    resumo: 'Uma área plana e serena, caracterizada por campos abertos e pequenos bosques. Costuma ser uma rota de viagem segura para as caravanas que se dirigem à capital.',
+    imagem: ''
+  },
+  {
+    id: 18,
+    pontos: '321,390 250,297 150,431 281,509 325,438',
+    nome: 'Platô Árido',
+    resumo: 'Uma região rochosa e seca, marcada por fendas profundas e ventos fortes. É um local inóspito, servindo de transição entre as densas selvas e as planícies centrais.',
+    imagem: ''
+  },
+  {
+    id: 19,
+    pontos: '490,165 508,125 593,117 593,42 391,18 391,74',
+    nome: 'Cerobbi Steppe',
+    resumo: 'Uma vasta zona de transição onde florestas verdejantes encontram o frio rigoroso. Rica em minas e ruínas desconhecidas, sua exploração é dificultada pela presença de feras letais e sociedades hostis a visitantes.',
+    imagem: 'https://images.squarespace-cdn.com/content/v1/670447eeba89c103beabb9a5/9c330af7-31bc-4b84-bab2-45bb7874fe01/Snowy+Ruins.jpg?format=1000w'
+  },
+  {
+    id: 20,
+    pontos: '647,505 703,381 713,321 593,324 620,365 538,432',
+    nome: 'Região Central',
+    resumo: 'Região a ser nomeada e descrita.',
+    imagem: ''
+  },
+  {
+    id: 21,
+    pontos: '526,272 526,203 490,165 391,74 434,203 450,324',
+    nome: 'Cume Gélido',
+    resumo: 'A extremidade norte da grande cordilheira. O frio aqui é letal e as tempestades de neve são constantes, tornando a sobrevivência impossível para os despreparados.',
+    imagem: ''
+  },
+  {
+    id: 23,
+    pontos: '255,644 413,703 434,824 354,824 180,771',
+    nome: 'Selva Costeira',
+    resumo: 'Região a ser nomeada e descrita.',
+    imagem: ''
+  },
+  {
+    id: 24,
+    pontos: '77,525 191,563 255,644 180,771 78,698',
+    nome: 'Região Sul-Ocidental',
+    resumo: 'Região a ser nomeada e descrita.',
     imagem: ''
   }
 ];
