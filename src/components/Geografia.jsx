@@ -15,9 +15,9 @@ const regioes = [
   {
     id: 2,
     pontos: '769,982 926,771 737,645 634,704 703,953',
-    nome: 'Estepes Áridas',
-    resumo: 'Um deserto impiedoso e hostil esculpido pelos ventos do sudeste.',
-    imagem: ''
+    nome: "Crestfallen's Retreat",
+    resumo: "Crestfallen's Retreat cerca o ninho do dragão de cristal Kralkatorrik, onde formações afiadas brotam do solo e criaturas corrompidas pela Marca vagam sem distinção. Ainda assim, cidades-estado protegidas por muralhas de obsidiana sobrevivem nas bordas seguras, comerciando água e fragmentos cristalinos.",
+    imagem: 'https://res.cloudinary.com/cook-becker/image/fetch/q_auto:good,f_auto,w_1920/https://candb.com/site/candb/images/artwork/majula-gate_dark-souls2.jpg'
   },
   {
     id: 3,
@@ -43,9 +43,9 @@ const regioes = [
   {
     id: 5,
     pontos: '737,645 883,569 910,481 883,432 817,381 703,381 647,505',
-    nome: 'A Grande Cratera',
-    resumo: 'Uma depressão massiva e inóspita de terra morta, cicatriz de um evento ancestral.',
-    imagem: ''
+    nome: 'Ascalon',
+    resumo: 'Ascalon é uma planície semi-árida dominada pela Black Citadel, capital de ferro dos Charr e maior centro populacional da região. Apesar disso, espinheiros-cinábrio tóxicos e células remanescentes de Legiões Revolucionárias Charr tornam as áreas afastadas das estradas perigosas até para os próprios habitantes de Black Citadel.',
+    imagem: 'https://img.freepik.com/premium-photo/fantastic-epic-magica-landscape-mountains-summer-nature-mystic-forest-gaming-rpg-background_636456-305.jpg'
   },
   {
     id: 6,
@@ -57,9 +57,9 @@ const regioes = [
   {
     id: 7,
     pontos: '926,771 972,848 982,456 883,432 910,481 883,569 737,645',
-    nome: 'Costa Leste',
-    resumo: 'As penínsulas verdes que sobrevivem ao lado da grande cratera.',
-    imagem: ''
+    nome: 'Giruvegan',
+    resumo: 'A região de Giruvegan é cortada por desfiladeiros instáveis que escondem veios de ferrita-lume, minério cobiçado por ferreiros e arcanistas. As galerias mais ricas, porém, são o corpo dos Vermes-de-Pedra, criaturas que se fundem à rocha e reagem a qualquer perfuração não autorizada.',
+    imagem: 'https://wiki.guildwars2.com/images/thumb/1/1f/Dragon_Response_Mission-_Fireheart_Rise.jpg/800px-Dragon_Response_Mission-_Fireheart_Rise.jpg?20220414025116'
   },
   {
     id: 8,
@@ -92,9 +92,9 @@ const regioes = [
   {
     id: 12,
     pontos: '250,297 290,145 150,175 64,343 150,431',
-    nome: 'Colinas Escarlates',
-    resumo: 'Cadeias montanhosas de rochas avermelhadas e ricas em minérios brutos. O terreno acidentado é lar de tribos nômades e feras territoriais agressivas.',
-    imagem: ''
+    nome: 'Sablesmire Isles',
+    resumo: 'O arquipélago de Sablesmire reúne quatro ilhas, das quais três são cobertas por uma vegetação tão densa que mantém a mata num azul-escuro permanente. Entre os fungos-lampião bioluminescentes vivem os Esgar, predadores que imitam vozes humanas para atrair suas presas, deixando apenas a quarta ilha segura para ancoragem.',
+    imagem: 'https://cdnb.artstation.com/p/assets/images/images/029/067/783/large/lorenzo-lanfranconi-mtg-inspired-7.jpg?1596367465'
   },
   {
     id: 13,
@@ -148,16 +148,16 @@ const regioes = [
   {
     id: 20,
     pontos: '647,505 703,381 713,321 593,324 620,365 538,432',
-    nome: 'Região Central',
-    resumo: 'Região a ser nomeada e descrita.',
-    imagem: ''
+    nome: 'Frostgorge Sound',
+    resumo: 'A região abriga os templos das Bestas Ancestrais, cujas formas espectrais de lobos e ursos aparecem nas tempestades mais violentas. Além da fauna gélida hostil, as tribos dos Vraskir atacam sem hesitar qualquer forasteiro que cruze os limites sagrados sem os ritos adequados.',
+    imagem: 'https://wiki.guildwars2.com/images/c/c1/Thunderhead_Peaks_loading_screen.jpg'
   },
   {
     id: 21,
     pontos: '526,272 526,203 490,165 391,74 434,203 450,324',
-    nome: 'Cume Gélido',
-    resumo: 'A extremidade norte da grande cordilheira. O frio aqui é letal e as tempestades de neve são constantes, tornando a sobrevivência impossível para os despreparados.',
-    imagem: ''
+    nome: 'Phon Coast',
+    resumo: 'Phon Coast se estende por enseadas recortadas e dezenas de vilarejos que vivem da pesca e do sal. No inverno, os pescadores evitam águas profundas por causa das serpentes-de-bruma, e cada vila mantém um farol de óleo de peixe-lampião para se proteger e guiar embarcações.',
+    imagem: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b121b656-fc74-4971-a27b-7614f53e4731/dfnjwi5-9a5dc223-6a4f-4597-afe5-936e12bf5d26.jpg/v1/fill/w_1270,h_629,q_70,strp/coastal_landscape___fantasy__concept_art__by_chrisgartiste_dfnjwi5-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTUyIiwicGF0aCI6Ii9mL2IxMjFiNjU2LWZjNzQtNDk3MS1hMjdiLTc2MTRmNTNlNDczMS9kZm5qd2k1LTlhNWRjMjIzLTZhNGYtNDU5Ny1hZmU1LTkzNmUxMmJmNWQyNi5qcGciLCJ3aWR0aCI6Ijw9MTkyMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.9JKFMtY5G8CVTumD-A0fzZG6XaPUNHs9fT6OJAjw-TM'
   },
   {
     id: 23,
