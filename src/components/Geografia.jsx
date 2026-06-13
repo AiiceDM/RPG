@@ -8,9 +8,9 @@ const regioes = [
   {
     id: 1,
     pontos: '100,972 201,1030 399,982 354,824 180,771 79,895',
-    nome: 'Arquipélago de Cinzas',
-    resumo: 'Ilhas de magma exposto e ar denso de fuligem. Altamente perigoso.',
-    imagem: ''
+    nome: 'Ring of Fire',
+    resumo: 'Um arquipélago vulcânico de rocha negra e magma exposto, lar do Dragão Primordial do Fogo e da Destruição, Primordus, e de suas crias, os Destroyers. A hostilidade do terreno e a presença constante dessas criaturas tornam a região completamente inabitável, acessível apenas aos aventureiros mais poderosos de Tyria.',
+    imagem: 'https://wiki-de.guildwars2.com/images/3/32/Feuerherzh%C3%BCgel.jpg'
   },
   {
     id: 2,
@@ -36,9 +36,9 @@ const regioes = [
   {
     id: 4,
     pontos: '451,982 602,1083 751,1083 703,953 434,824 391,889',
-    nome: 'Península Desolada',
-    resumo: 'Uma extensão de terra marrom e escassa de recursos.',
-    imagem: ''
+    nome: 'Ruins of Orr',
+    resumo: 'Um dos territórios mais letais de toda Tyria, dominado por Zaithan, o Dragão Primordial da Morte, e por seus servos Risen, mortos-vivos que compensam a fraqueza individual com números avassaladores. Uma única civilização resiste em suas bordas, sustentada por reforços de todas as capitais para impedir que os Risen se alastrem pelo continente.',
+    imagem: 'https://wiki.guildwars2.com/images/5/55/Straits_of_Devastation_loading_screen.jpg'
   },
   {
     id: 5,
@@ -64,9 +64,9 @@ const regioes = [
   {
     id: 8,
     pontos: '434,824 703,953 634,704 569,704 413,703',
-    nome: 'Planícies do Crepúsculo',
-    resumo: 'Terras de transição entre a floresta e os ermos desertificados.',
-    imagem: ''
+    nome: 'Metaphor Exodus',
+    resumo: 'Esta região é moldada por Exodus, uma divindade de Lion\'s Arch com o poder de trazer fragmentos do mundo antigo para Tyria. Grupos considerados dignos podem fundar Províncias nessas terras pelo evento Grancrest Senki, assumindo o controle de uma área por meio de um brasão arcano. Entre províncias estabelecidas e vastas zonas inexploradas, a região é um mosaico de civilização e mistério.',
+    imagem: 'https://i.pinimg.com/736x/2d/67/ba/2d67baf80cb59c8285d0e0d13da5d6d4.jpg'
   },
   {
     id: 9,
@@ -85,9 +85,9 @@ const regioes = [
   {
     id: 11,
     pontos: '926,771 769,982 761,1018 788,1073 949,1073 972,848',
-    nome: 'Ilhas Tropicais',
-    resumo: 'Um refúgio verdejante isolado no mar do sudeste.',
-    imagem: ''
+    nome: "Scavenger's Causeway",
+    resumo: 'Uma região de surpresas imprevisíveis, onde ruínas de um mundo perdido surgem e desaparecem sem aviso, trazendo consigo criaturas e artefatos de uma era esquecida. Cada expedição revela vestígios inexplicáveis do passado, tornando este lugar tão fascinante quanto mortalmente imprevisível para qualquer aventureiro.',
+    imagem: 'https://d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/06/eaa74Brisban.jpg'
   },
   {
     id: 12,
@@ -162,16 +162,16 @@ const regioes = [
   {
     id: 23,
     pontos: '255,644 413,703 434,824 354,824 180,771',
-    nome: 'Selva Costeira',
-    resumo: 'Região a ser nomeada e descrita.',
-    imagem: ''
+    nome: 'Sulfurous Wastelands',
+    resumo: 'Uma área desolada composta por ilhas pontiagudas varridas por ventos sulfurosos, sobrevoadas por criaturas voadoras de alta periculosidade. Sob a superfície árida, cavernas escondem depósitos de minerais raros de grande valor estético e dureza, como diamantes, turquesas e opalas.',
+    imagem: 'https://static.wikia.nocookie.net/gwwikia/images/9/92/The_Sulfurous_Wastes.jpg/revision/latest?cb=20070131135010'
   },
   {
     id: 24,
     pontos: '77,525 191,563 255,644 180,771 78,698',
-    nome: 'Região Sul-Ocidental',
-    resumo: 'Região a ser nomeada e descrita.',
-    imagem: ''
+    nome: 'Woodland Cascades',
+    resumo: 'Uma floresta fantástica pontuada por portais que conectam a planos distintos, onde ilusões misteriosas e criaturas de toda ordem habitam entre flora e fauna únicas no mundo. A região abriga locais considerados maravilhas naturais, atraindo estudantes corajosos e seres de outros planos que cruzam os portais em busca de refúgio.',
+    imagem: 'https://i.ytimg.com/vi/dvLQ-3CUcuM/maxresdefault.jpg'
   }
 ];
 
