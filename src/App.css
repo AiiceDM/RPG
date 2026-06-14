@@ -457,3 +457,76 @@ body {
   border: 1px solid var(--cor-cabecalho);
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
+
+/* ── Página de Povos ────────────────────────────────────────── */
+
+.grade-ancestralidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.card-ancestralidade {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #111;
+  border: 1px solid #1a1a1a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-arte {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  filter: grayscale(1) brightness(0.45);
+  transition: filter 0.45s ease, transform 0.5s ease;
+}
+
+.card-ancestralidade:hover .card-arte {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.1);
+}
+
+.card-nome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 14px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.card-popout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 36px 14px 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 65%, transparent);
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.card-popout p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.card-ancestralidade:hover .card-popout {
+  opacity: 1;
+  transform: translateY(0);
+}
