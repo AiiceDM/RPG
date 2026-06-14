@@ -35,7 +35,7 @@ export default function Cabecalho({ tema, alternarTema, setPaginaAtual }) {
         <div className="dropdown">
           <button className="botao-menu">Sociedade ▾</button>
           <div className="dropdown-conteudo">
-            <a href="#" onClick={(e) => e.preventDefault()}>Povos</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'povos')}>Povos</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Facções</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Divindades</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Vilões</a>
@@ -55,7 +55,7 @@ export default function Cabecalho({ tema, alternarTema, setPaginaAtual }) {
         <div className="dropdown">
           <button className="botao-menu">Personagem ▾</button>
           <div className="dropdown-conteudo">
-            <a href="#" onClick={(e) => e.preventDefault()}>Talentos e Habilidades</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'talentos-habilidades')}>Talentos e Habilidades</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Rituais</a>
             <a href="#" onClick={(e) => navegarPara(e, 'vitalidade')}>Vitalidade</a>
             <a href="#" onClick={(e) => navegarPara(e, 'sanidade')}>Sanidade</a>

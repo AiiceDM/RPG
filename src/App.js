@@ -18,6 +18,10 @@ import Masmorras from './components/Masmorras';
 import Aliados from './components/Aliados';
 import Exploracao from './components/Exploracao';
 import Downtime from './components/Downtime';
+import Povos from './components/Povos';
+import PovosDetalhe from './components/PovosDetalhe';
+import TalentosHabilidades from './components/TalentosHabilidades';
+import TalentosDetalhe from './components/TalentosDetalhe';
 
 export default function App() {
   const [tema, setTema] = useState('escuro');
@@ -59,6 +63,10 @@ export default function App() {
       {paginaAtual === 'aliados' && <Aliados />}
       {paginaAtual === 'exploracao' && <Exploracao />}
       {paginaAtual === 'downtime' && <Downtime />}
+      {paginaAtual === 'povos' && <Povos setPaginaAtual={setPaginaAtual} />}
+      {paginaAtual.startsWith('povo-') && <PovosDetalhe ancestralId={paginaAtual.replace('povo-', '')} setPaginaAtual={setPaginaAtual} />}
+      {paginaAtual === 'talentos-habilidades' && <TalentosHabilidades setPaginaAtual={setPaginaAtual} />}
+      {paginaAtual.startsWith('talento-') && <TalentosDetalhe ancestralId={paginaAtual.replace('talento-', '')} setPaginaAtual={setPaginaAtual} />}
     </>
   );
 }
