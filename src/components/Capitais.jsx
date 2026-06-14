@@ -55,8 +55,8 @@ const capitais = [
     id: 'rata-sum',
     nome: 'Rata Sum',
     regiao: 'Tarnished Coast',
-    x: 38.2,
-    y: 32.7,
+    x: 41.0,
+    y: 53.9,
     pagina: 'capital-rata-sum',
     cor: '#1e8449',
     icone: '⚙️'
