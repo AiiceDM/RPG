@@ -72,16 +72,6 @@ const capitais = [
     icone: '🌿'
   },
   {
-    id: 'drakan',
-    nome: 'Drakan',
-    regiao: 'Zanarkland',
-    x: 48.2,
-    y: 33.1,
-    pagina: 'capital-drakan',
-    cor: '#8e44ad',
-    icone: '🏰'
-  },
-  {
     id: 'micholt-grounds',
     nome: 'Micholt Grounds',
     regiao: 'Woodland Cascades',

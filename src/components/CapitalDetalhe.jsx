@@ -43,12 +43,6 @@ const dadosCapitais = {
     imagem: 'https://wiki.guildwars2.com/images/thumb/6/60/Waterfall.jpg/1200px-Waterfall.jpg',
     descricao: 'Em construção.'
   },
-  'capital-drakan': {
-    nome: 'Drakan',
-    regiao: 'Zanarkland',
-    imagem: 'https://wiki.guildwars2.com/images/7/74/Gendarran_Fields_loading_screen.jpg',
-    descricao: 'Em construção.'
-  },
   'capital-micholt-grounds': {
     nome: 'Micholt Grounds',
     regiao: 'Woodland Cascades',
