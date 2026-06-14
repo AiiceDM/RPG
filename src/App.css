@@ -530,3 +530,96 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ── Página de Divindades ─────────────────────────────────────── */
+
+.grade-divindades {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.card-divindade {
+  display: flex;
+  align-items: stretch;
+  height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-divindade:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.7);
+}
+
+.card-divindade-img-wrap {
+  position: relative;
+  width: 140px;
+  min-width: 140px;
+  overflow: hidden;
+  background-color: #0a0a0a;
+}
+
+.card-divindade-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  filter: grayscale(1) brightness(0.45);
+  transition: filter 0.45s ease, transform 0.5s ease;
+}
+
+.card-divindade:hover .card-divindade-img {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.08);
+}
+
+.card-divindade-info {
+  flex: 1;
+  padding: 18px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-divindade-subtitulo {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0 0 5px;
+}
+
+.card-divindade-nome {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.card-divindade-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.card-divindade-tag {
+  font-size: 0.72rem;
+  padding: 3px 11px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-divindade-tag--alinhamento {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.75);
+}

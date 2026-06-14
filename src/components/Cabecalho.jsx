@@ -37,7 +37,7 @@ export default function Cabecalho({ tema, alternarTema, setPaginaAtual }) {
           <div className="dropdown-conteudo">
             <a href="#" onClick={(e) => navegarPara(e, 'povos')}>Povos</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Facções</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Divindades</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'divindades')}>Divindades</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Vilões</a>
           </div>
         </div>
