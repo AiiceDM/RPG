@@ -420,22 +420,6 @@ body {
   opacity: 1;
 }
 
-.debug-coords {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(0,0,0,0.75);
-  color: #00ff99;
-  font-family: monospace;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 6px;
-  pointer-events: none;
-  z-index: 100;
-  letter-spacing: 0.05em;
-}
-
 /* ── Página de Detalhe da Capital ───────────────────────────── */
 
 .botao-voltar {

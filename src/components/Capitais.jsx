@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const capitais = [
   {
@@ -114,16 +114,6 @@ const capitais = [
 ];
 
 export default function Capitais({ setPaginaAtual }) {
-  const [coords, setCoords] = useState(null);
-  const mapaRef = React.useRef(null);
-
-  const handleMouseMove = (e) => {
-    const rect = mapaRef.current.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
-    const y = ((e.clientY - rect.top) / rect.height * 100).toFixed(1);
-    setCoords({ x, y });
-  };
-
   return (
     <main className="pagina-site pagina-conteudo">
       <h1>Capitais de Tyria</h1>
@@ -135,23 +125,12 @@ export default function Capitais({ setPaginaAtual }) {
         os valores e a história do povo que a ergueu.
       </p>
 
-      <div
-        className="mapa-capitais"
-        ref={mapaRef}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={() => setCoords(null)}
-      >
+      <div className="mapa-capitais">
         <img
           src="https://i.imgur.com/GZs4YwZ.png"
           alt="Mapa de Tyria"
           className="imagem-geografia"
         />
-
-        {coords && (
-          <div className="debug-coords">
-            {coords.x}% , {coords.y}%
-          </div>
-        )}
 
         {capitais.map((capital) => (
           <div
