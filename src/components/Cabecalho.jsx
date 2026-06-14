@@ -26,8 +26,8 @@ export default function Cabecalho({ tema, alternarTema, setPaginaAtual }) {
           <div className="dropdown-conteudo">
             <a href="#" onClick={(e) => navegarPara(e, 'geografia')}>Geografia</a>
             <a href="#" onClick={(e) => navegarPara(e, 'capitais')}>Capitais</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Idiomas</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Calendário</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'idiomas')}>Idiomas</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'calendario')}>Calendário</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Curiosidades</a>
           </div>
         </div>
@@ -46,9 +46,9 @@ export default function Cabecalho({ tema, alternarTema, setPaginaAtual }) {
           <button className="botao-menu">Mecânicas ▾</button>
           <div className="dropdown-conteudo">
             <a href="#" onClick={(e) => e.preventDefault()}>Alterações Oficiais</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Experiência</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Inspiração</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Descanso</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'experiencia')}>Experiência</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'inspiracao')}>Inspiração</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'descanso')}>Descanso</a>
           </div>
         </div>
 
@@ -57,20 +57,20 @@ export default function Cabecalho({ tema, alternarTema, setPaginaAtual }) {
           <div className="dropdown-conteudo">
             <a href="#" onClick={(e) => e.preventDefault()}>Talentos e Habilidades</a>
             <a href="#" onClick={(e) => e.preventDefault()}>Rituais</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Vitalidade</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Sanidade</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'vitalidade')}>Vitalidade</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'sanidade')}>Sanidade</a>
           </div>
         </div>
 
         <div className="dropdown">
           <button className="botao-menu">Jornada ▾</button>
           <div className="dropdown-conteudo">
-            <a href="#" onClick={(e) => e.preventDefault()}>Exploração</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Masmorras</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Downtime</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Renome</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Vínculos</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Aliados</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'exploracao')}>Exploração</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'masmorras')}>Masmorras</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'downtime')}>Downtime</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'renome')}>Renome</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'vinculos')}>Vínculos</a>
+            <a href="#" onClick={(e) => navegarPara(e, 'aliados')}>Aliados</a>
           </div>
         </div>
 

@@ -5,6 +5,19 @@ import Capa from './components/Capa';
 import Geografia from './components/Geografia';
 import Capitais from './components/Capitais';
 import CapitalDetalhe from './components/CapitalDetalhe';
+import Calendario from './components/Calendario';
+import Idiomas from './components/Idiomas';
+import Vitalidade from './components/Vitalidade';
+import Sanidade from './components/Sanidade';
+import Inspiracao from './components/Inspiracao';
+import Renome from './components/Renome';
+import Vinculos from './components/Vinculos';
+import Experiencia from './components/Experiencia';
+import Descanso from './components/Descanso';
+import Masmorras from './components/Masmorras';
+import Aliados from './components/Aliados';
+import Exploracao from './components/Exploracao';
+import Downtime from './components/Downtime';
 
 export default function App() {
   const [tema, setTema] = useState('escuro');
@@ -24,15 +37,28 @@ export default function App() {
 
   return (
     <>
-      <Cabecalho 
-        tema={tema} 
-        alternarTema={alternarTema} 
-        setPaginaAtual={setPaginaAtual} 
+      <Cabecalho
+        tema={tema}
+        alternarTema={alternarTema}
+        setPaginaAtual={setPaginaAtual}
       />
       {paginaAtual === 'inicio' && <Capa />}
       {paginaAtual === 'geografia' && <Geografia />}
       {paginaAtual === 'capitais' && <Capitais setPaginaAtual={setPaginaAtual} />}
       {paginaAtual.startsWith('capital-') && <CapitalDetalhe capitalId={paginaAtual} setPaginaAtual={setPaginaAtual} />}
+      {paginaAtual === 'calendario' && <Calendario />}
+      {paginaAtual === 'idiomas' && <Idiomas />}
+      {paginaAtual === 'vitalidade' && <Vitalidade />}
+      {paginaAtual === 'sanidade' && <Sanidade />}
+      {paginaAtual === 'inspiracao' && <Inspiracao />}
+      {paginaAtual === 'renome' && <Renome />}
+      {paginaAtual === 'vinculos' && <Vinculos />}
+      {paginaAtual === 'experiencia' && <Experiencia />}
+      {paginaAtual === 'descanso' && <Descanso />}
+      {paginaAtual === 'masmorras' && <Masmorras />}
+      {paginaAtual === 'aliados' && <Aliados />}
+      {paginaAtual === 'exploracao' && <Exploracao />}
+      {paginaAtual === 'downtime' && <Downtime />}
     </>
   );
 }
