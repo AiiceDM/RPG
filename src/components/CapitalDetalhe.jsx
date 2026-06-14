@@ -48,6 +48,24 @@ const dadosCapitais = {
     regiao: 'Zanarkland',
     imagem: 'https://wiki.guildwars2.com/images/7/74/Gendarran_Fields_loading_screen.jpg',
     descricao: 'Em construção.'
+  },
+  'capital-micholt-grounds': {
+    nome: 'Micholt Grounds',
+    regiao: 'Woodland Cascades',
+    imagem: '',
+    descricao: 'Em construção.'
+  },
+  'capital-skrittsburgh': {
+    nome: 'Skrittsburgh',
+    regiao: 'Zanarkland',
+    imagem: '',
+    descricao: 'Em construção.'
+  },
+  'capital-moorookoo': {
+    nome: 'Moorookoo',
+    regiao: 'Sea of Sorrows',
+    imagem: '',
+    descricao: 'Em construção.'
   }
 };
 

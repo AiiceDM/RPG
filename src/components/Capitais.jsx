@@ -5,8 +5,8 @@ const capitais = [
     id: 'divinity',
     nome: "Divinity's Reach",
     regiao: 'Kryta',
-    x: 44.2,
-    y: 43.6,
+    x: 43.3,
+    y: 42.7,
     pagina: 'capital-divinity',
     cor: '#c8a800',
     icone: '🏛️'
@@ -15,8 +15,8 @@ const capitais = [
     id: 'lions-arch',
     nome: "Lion's Arch",
     regiao: 'Sea of Sorrows',
-    x: 48.8,
-    y: 56.5,
+    x: 50.0,
+    y: 63.0,
     pagina: 'capital-lions-arch',
     cor: '#2980b9',
     icone: '⚓'
@@ -25,8 +25,8 @@ const capitais = [
     id: 'black-citadel',
     nome: 'Black Citadel',
     regiao: 'Ascalon',
-    x: 79.7,
-    y: 44.1,
+    x: 70.0,
+    y: 46.1,
     pagina: 'capital-black-citadel',
     cor: '#c0392b',
     icone: '🔩'
@@ -35,8 +35,8 @@ const capitais = [
     id: 'hoelbrak',
     nome: 'Hoelbrak',
     regiao: 'Shiverpeak Mountains',
-    x: 61.3,
-    y: 56.0,
+    x: 61.4,
+    y: 51.0,
     pagina: 'capital-hoelbrak',
     cor: '#7fb3d3',
     icone: '🐺'
@@ -45,8 +45,8 @@ const capitais = [
     id: 'sanctuary',
     nome: 'The Sanctuary',
     regiao: 'Shiverpeak Mountains',
-    x: 64.0,
-    y: 50.0,
+    x: 65.7,
+    y: 34.4,
     pagina: 'capital-sanctuary',
     cor: '#85c1e9',
     icone: '🏔️'
@@ -55,8 +55,8 @@ const capitais = [
     id: 'rata-sum',
     nome: 'Rata Sum',
     regiao: 'Tarnished Coast',
-    x: 29.5,
-    y: 52.5,
+    x: 38.2,
+    y: 32.7,
     pagina: 'capital-rata-sum',
     cor: '#1e8449',
     icone: '⚙️'
@@ -65,8 +65,8 @@ const capitais = [
     id: 'the-grove',
     nome: 'The Grove',
     regiao: 'Tarnished Coast',
-    x: 31.5,
-    y: 58.5,
+    x: 36.2,
+    y: 58.3,
     pagina: 'capital-the-grove',
     cor: '#27ae60',
     icone: '🌿'
@@ -80,6 +80,36 @@ const capitais = [
     pagina: 'capital-drakan',
     cor: '#8e44ad',
     icone: '🏰'
+  },
+  {
+    id: 'micholt-grounds',
+    nome: 'Micholt Grounds',
+    regiao: 'Woodland Cascades',
+    x: 26.0,
+    y: 54.8,
+    pagina: 'capital-micholt-grounds',
+    cor: '#4caf50',
+    icone: '🐸'
+  },
+  {
+    id: 'skrittsburgh',
+    nome: 'Skrittsburgh',
+    regiao: 'Zanarkland',
+    x: 50.6,
+    y: 40.6,
+    pagina: 'capital-skrittsburgh',
+    cor: '#a0785a',
+    icone: '🐀'
+  },
+  {
+    id: 'moorookoo',
+    nome: 'Moorookoo',
+    regiao: 'Sea of Sorrows',
+    x: 51.8,
+    y: 57.2,
+    pagina: 'capital-moorookoo',
+    cor: '#00acc1',
+    icone: '🫧'
   }
 ];
 
