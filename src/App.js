@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Cabecalho from './components/Cabecalho';
 import Capa from './components/Capa';
@@ -26,27 +26,13 @@ import TalentosHabilidades from './components/TalentosHabilidades';
 import TalentosDetalhe from './components/TalentosDetalhe';
 
 export default function App() {
-  const [tema, setTema] = useState('escuro');
   const [paginaAtual, setPaginaAtual] = useState('inicio');
-
-  useEffect(() => {
-    if (tema === 'claro') {
-      document.documentElement.setAttribute('data-tema', 'claro');
-    } else {
-      document.documentElement.removeAttribute('data-tema');
-    }
-  }, [tema]);
-
-  const alternarTema = () => {
-    setTema(tema === 'escuro' ? 'claro' : 'escuro');
-  };
 
   return (
     <>
       <Cabecalho
-        tema={tema}
-        alternarTema={alternarTema}
         setPaginaAtual={setPaginaAtual}
+        paginaAtual={paginaAtual}
       />
       {paginaAtual === 'inicio' && <Capa />}
       {paginaAtual === 'geografia' && <Geografia />}
