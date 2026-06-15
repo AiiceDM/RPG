@@ -547,15 +547,17 @@ body {
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
   background-color: #111;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card-divindade:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.7);
+  background-color: var(--cor-tema, #1a1a1a);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.8);
 }
 
 .card-divindade-img-wrap {
@@ -564,6 +566,11 @@ body {
   min-width: 140px;
   overflow: hidden;
   background-color: #0a0a0a;
+  transition: background-color 0.4s ease;
+}
+
+.card-divindade:hover .card-divindade-img-wrap {
+  background-color: var(--cor-tema, #0a0a0a);
 }
 
 .card-divindade-img {

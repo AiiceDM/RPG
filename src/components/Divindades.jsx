@@ -8,6 +8,7 @@ const DIVINDADES = [
     tags: ['Cura', 'Compaixão', 'Esperança'],
     alinhamento: 'Neutro e Bom',
     img: 'https://i.imgur.com/I5vF3FU.jpeg',
+    cor: '#7A4F1A',
   },
   {
     slug: 'franchesca',
@@ -16,6 +17,7 @@ const DIVINDADES = [
     tags: ['Morte', 'Passagem de Almas', 'Luto'],
     alinhamento: 'Neutro',
     img: 'https://i.imgur.com/waQh2Ef.jpeg',
+    cor: '#1E6B5C',
   },
   {
     slug: 'menestad',
@@ -24,6 +26,7 @@ const DIVINDADES = [
     tags: ['Segredos', 'Conhecimento Oculto', 'Exploração'],
     alinhamento: 'Neutro',
     img: 'https://i.imgur.com/9wBImjP.jpeg',
+    cor: '#4A2070',
   },
   {
     slug: 'balthazar',
@@ -32,6 +35,7 @@ const DIVINDADES = [
     tags: ['Guerra', 'Fogo Purificador', 'Conflito'],
     alinhamento: 'Caótico e Neutro',
     img: 'https://i.imgur.com/PQt6hia.jpeg',
+    cor: '#8C2810',
   },
   {
     slug: 'lyssa',
@@ -40,6 +44,7 @@ const DIVINDADES = [
     tags: ['Beleza', 'Ilusão', 'Profundezas'],
     alinhamento: 'Caótico e Neutro',
     img: 'https://i.imgur.com/srPdMPn.jpeg',
+    cor: '#1A5878',
   },
   {
     slug: 'koda',
@@ -48,6 +53,7 @@ const DIVINDADES = [
     tags: ['Equilíbrio', 'Origens', 'Vigilância'],
     alinhamento: 'Leal e Neutro',
     img: 'https://i.imgur.com/kXFW5Ek.jpeg',
+    cor: '#14385E',
   },
   {
     slug: 'dwayna',
@@ -56,6 +62,7 @@ const DIVINDADES = [
     tags: ['Cura Ativa', 'Iluminação', 'Proteção'],
     alinhamento: 'Neutro e Bom',
     img: 'https://i.imgur.com/hvbYpdo.jpeg',
+    cor: '#A87010',
   },
   {
     slug: 'kormyr',
@@ -64,6 +71,7 @@ const DIVINDADES = [
     tags: ['Justiça', 'Leis Civis', 'Autoridade'],
     alinhamento: 'Leal e Neutro',
     img: 'https://i.imgur.com/JWHCGal.jpeg',
+    cor: '#5E4410',
   },
   {
     slug: 'nana',
@@ -72,6 +80,7 @@ const DIVINDADES = [
     tags: ['Proteção Infantil', 'Barreiras', 'Punição'],
     alinhamento: 'Neutro',
     img: 'https://i.imgur.com/Y7Z5uIp.png',
+    cor: '#4A1030',
   },
   {
     slug: 'melandru',
@@ -80,6 +89,7 @@ const DIVINDADES = [
     tags: ['Natureza', 'Terra', 'Preservação'],
     alinhamento: 'Neutro e Bom',
     img: 'https://i.imgur.com/S8kuihR.png',
+    cor: '#1E5828',
   },
   {
     slug: 'grenth',
@@ -88,6 +98,7 @@ const DIVINDADES = [
     tags: ['Morte', 'Necromancia', 'Gelo'],
     alinhamento: 'Leal e Mau',
     img: 'https://i.imgur.com/TCc6Fhb.png',
+    cor: '#0E2E46',
   },
   {
     slug: 'irori',
@@ -96,6 +107,7 @@ const DIVINDADES = [
     tags: ['Sabedoria', 'Autodisciplina', 'Iluminação'],
     alinhamento: 'Leal e Bom',
     img: 'https://i.imgur.com/0y4Xaiw.png',
+    cor: '#8C6010',
   },
   {
     slug: 'caligura',
@@ -104,6 +116,7 @@ const DIVINDADES = [
     tags: ['Crueldade', 'Sacrifício', 'Ambição'],
     alinhamento: 'Caótico e Mau',
     img: 'https://i.imgur.com/5pG4Wac.png',
+    cor: '#580A0E',
   },
 ];
 
@@ -122,6 +135,7 @@ export default function Divindades({ setPaginaAtual }) {
           <div
             key={d.slug}
             className="card-divindade"
+            style={{ '--cor-tema': d.cor }}
             onClick={() => setPaginaAtual(`divindade-${d.slug}`)}
           >
             <div className="card-divindade-img-wrap">
