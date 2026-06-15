@@ -7,7 +7,7 @@ const DIVINDADES = [
     titulo: 'A Abundância',
     tags: ['Cura', 'Compaixão', 'Esperança'],
     alinhamento: 'Neutro e Bom',
-    img: null, // símbolo pendente
+    img: 'https://i.imgur.com/I5vF3FU.jpeg',
   },
   {
     slug: 'franchesca',
