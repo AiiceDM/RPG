@@ -13,7 +13,6 @@ const POVOS = [
   { slug: 'quaggan', nome: 'Quaggan', desc: 'Criatura SMALL com PV base 6. Nadar veloz e 13 heranças com poderes elementais únicos. Fúria devastadora em situações extremas.', img: 'https://i.pinimg.com/originals/42/90/8f/42908fcd24848dbf56bcb5df1c837b90.png' },
   { slug: 'hylek', nome: 'Hylek', desc: 'Alquimia biológica e venenos naturais. Quatro sub-raças com estilos de combate distintos, do furtivo ao colossal.', img: 'https://images-platform.99static.com/Tazo_50GpTbwCpDS5o-eO7BWpEU=/28x204:960x1136/500x500/top/smart/99designs-contests-attachments/99/99905/attachment_99905462' },
   { slug: 'magnus', nome: 'Magnus', desc: 'Em breve.', img: 'https://img.magnific.com/vetores-gratis/ilustracao-do-icone-de-doodle-de-engrenagem_53876-5596.jpg?semt=ais_hybrid&w=740&q=80' },
-  { slug: 'oficiais', nome: 'Oficiais', desc: 'Ancestralidades do Pathfinder 2e: Anão, Gnomo, Goblin, Halfling, Orc, Kitsune, Kobold e Leshy com adaptações para Tyria.', img: 'https://placehold.co/400x600/1a1520/8b0a50?text=Oficiais' },
 ];
 
 export default function TalentosHabilidades({ setPaginaAtual }) {
