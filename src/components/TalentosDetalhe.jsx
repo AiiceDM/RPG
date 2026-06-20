@@ -596,7 +596,7 @@ function Drakan() {
                 titulo="Voz do Dragão"
                 tags="Drakan · Intimidação"
                 descricao="Há algo no sopro de um dragão que criaturas elementais reconhecem antes de qualquer palavra. O medo vem primeiro, a compreensão depois."
-                img="https://i.imgur.com/qDsM7KL.png"
+                img="https://i.imgur.com/PcexFkh.png"
                 efeito={<>
                   <p>Quando você usa Intimidação para Desmoralizar criaturas com o traço <strong>Dragão</strong> ou com o traço do seu <strong>Elemento</strong>, você ignora a penalidade de <strong>−4</strong> por não compartilhar um idioma com o alvo.</p>
                   <p>Se o alvo testemunhou você usar sua Arma de Sopro neste encontro, a CD de Vontade dele contra seu Desmoralizar sofre uma <strong>penalidade de circunstância de −1</strong>. Se o alvo sofreu dano da Arma de Sopro neste turno, essa penalidade aumenta para <strong>−2</strong>.</p>
