@@ -1254,6 +1254,407 @@ body {
   opacity: 0.7;
 }
 
+/* ── POVO DETALHE · LAYOUT COM IMAGEM ───────────────────────── */
+.povo-secao-flex {
+  display: flex;
+  gap: var(--s6);
+  align-items: flex-start;
+  margin: var(--s4) 0 var(--s6);
+}
+
+.povo-img-placeholder {
+  width: 180px;
+  min-width: 180px;
+  aspect-ratio: 2 / 3;
+  background: var(--violet);
+  border: 1px solid rgba(139,10,80,0.25);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 3rem;
+  overflow: hidden;
+}
+
+.povo-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--r-md);
+}
+
+.povo-texto {
+  flex: 1;
+  min-width: 0;
+}
+
+.povo-texto h3 { margin-top: var(--s4); }
+.povo-texto h3:first-child { margin-top: 0; }
+
+@media (max-width: 600px) {
+  .povo-secao-flex { flex-direction: column; }
+  .povo-img-placeholder { width: 100%; min-width: unset; aspect-ratio: 16 / 9; }
+}
+
+/* ── HABILIDADE CARD ─────────────────────────────────────────── */
+.habilidade-card {
+  display: flex;
+  gap: var(--s4);
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--s4) var(--s6);
+  margin: var(--s3) 0 var(--s4);
+}
+
+.habilidade-card-img {
+  width: 88px;
+  min-width: 88px;
+  height: 88px;
+  background: var(--violet);
+  border: 1px solid rgba(139,10,80,0.25);
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.habilidade-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--r-sm);
+}
+
+.habilidade-card-corpo {
+  flex: 1;
+  min-width: 0;
+}
+
+.habilidade-card-corpo h3 {
+  margin-top: 0;
+  margin-bottom: var(--s2);
+}
+
+.habilidade-card-corpo p:last-child,
+.habilidade-card-corpo ul:last-child {
+  margin-bottom: 0;
+}
+
+/* ── TALENTOS ANCESTRALIDADE ─────────────────────────────────── */
+.talentos-ancestralidade {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  margin: var(--s6) 0;
+  overflow: hidden;
+}
+
+.talentos-ancestralidade > summary {
+  font-family: var(--font-gothic);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  color: var(--fg-accent);
+  padding: var(--s4) var(--s6);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  transition: background 0.15s;
+}
+
+.talentos-ancestralidade > summary::-webkit-details-marker { display: none; }
+.talentos-ancestralidade > summary::marker { display: none; }
+
+.talentos-ancestralidade > summary::after {
+  content: '▸';
+  margin-left: auto;
+  color: var(--crimson);
+  transition: transform 0.2s var(--ease-gothic);
+  flex-shrink: 0;
+}
+
+.talentos-ancestralidade[open] > summary {
+  border-bottom: 1px solid var(--border);
+}
+
+.talentos-ancestralidade[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.talentos-corpo {
+  padding: var(--s3) var(--s6) var(--s4);
+}
+
+/* ── HERANÇA CARD ────────────────────────────────────────────── */
+.heranca-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  margin: var(--s3) 0;
+  transition: border-color 0.2s;
+}
+
+.heranca-card[open] {
+  border-color: rgba(139,10,80,0.45);
+}
+
+.heranca-card-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  padding: var(--s3) var(--s4);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  border-radius: var(--r-md);
+  transition: background 0.15s;
+}
+
+.heranca-card[open] .heranca-card-summary {
+  border-radius: var(--r-md) var(--r-md) 0 0;
+}
+
+.heranca-card-summary::-webkit-details-marker { display: none; }
+.heranca-card-summary::marker { display: none; }
+
+.heranca-card-summary:hover { background: rgba(139,10,80,0.04); }
+
+.heranca-card-summary::after {
+  content: '▸';
+  margin-left: auto;
+  color: var(--crimson);
+  flex-shrink: 0;
+  transition: transform 0.2s var(--ease-gothic);
+}
+
+.heranca-card[open] .heranca-card-summary::after {
+  transform: rotate(90deg);
+}
+
+.heranca-thumb-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.heranca-img-popout {
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%) translateX(-6px);
+  width: 220px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.85);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s var(--ease-gothic), transform 0.18s var(--ease-gothic);
+  z-index: 500;
+}
+
+.heranca-thumb-wrapper:hover .heranca-img-popout {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) translateX(0);
+}
+
+.heranca-img-popout img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.heranca-card-img {
+  width: 64px;
+  min-width: 64px;
+  height: 64px;
+  background: var(--violet);
+  border: 1px solid rgba(139,10,80,0.25);
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.heranca-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heranca-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.heranca-identificador {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  font-weight: 600;
+}
+
+.heranca-titulo {
+  font-family: var(--font-gothic);
+  font-size: 1.05rem;
+  color: var(--fg);
+  letter-spacing: 0.03em;
+}
+
+.heranca-elemento {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: var(--fg-muted);
+  letter-spacing: 0.05em;
+}
+
+.heranca-card-corpo {
+  border-top: 1px solid var(--border);
+  padding: var(--s3) var(--s4) var(--s4);
+}
+
+.heranca-descricao {
+  font-style: italic;
+  color: var(--fg-muted);
+  font-size: 0.9375rem;
+  margin-bottom: var(--s3) !important;
+}
+
+/* ── HERANÇA SEÇÃO ───────────────────────────────────────────── */
+.heranca-secao {
+  border: 1px solid rgba(139,10,80,0.18);
+  border-radius: var(--r-sm);
+  margin: var(--s2) 0;
+  overflow: hidden;
+}
+
+.heranca-secao > summary {
+  font-family: var(--font-gothic);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--fg-accent);
+  padding: var(--s2) var(--s3);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  transition: background 0.15s;
+}
+
+.heranca-secao > summary::-webkit-details-marker { display: none; }
+.heranca-secao > summary::marker { display: none; }
+
+.heranca-secao > summary:hover { background: rgba(139,10,80,0.04); }
+
+.heranca-secao > summary::before {
+  content: '▸';
+  color: var(--blood);
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.heranca-secao[open] > summary { border-bottom: 1px solid rgba(139,10,80,0.18); }
+.heranca-secao[open] > summary::before { transform: rotate(90deg); }
+
+.heranca-secao-corpo {
+  padding: var(--s3) var(--s4);
+}
+
+/* ── SINGULARIDADE ITEM ──────────────────────────────────────── */
+.sing-item {
+  padding: var(--s2) 0;
+  border-bottom: 1px solid rgba(139,10,80,0.1);
+}
+
+.sing-item:last-child { border-bottom: none; }
+
+.sing-label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.67rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: var(--s1);
+  font-weight: 600;
+}
+
+.sing-item p {
+  margin-bottom: var(--s2) !important;
+  color: var(--fg-muted);
+}
+
+.sing-item p:last-child { margin-bottom: 0 !important; }
+
+/* ── TALENTO NÍVEL ───────────────────────────────────────────── */
+.talento-nivel {
+  border-bottom: 1px solid rgba(139,10,80,0.12);
+}
+
+.talento-nivel:last-child { border-bottom: none; }
+
+.talento-nivel > summary {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding: var(--s2) 0;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  transition: color 0.15s;
+}
+
+.talento-nivel > summary::-webkit-details-marker { display: none; }
+.talento-nivel > summary::marker { display: none; }
+
+.talento-nivel > summary:hover { color: var(--fg-accent); }
+
+.talento-nivel > summary::before {
+  content: '▸';
+  color: var(--blood);
+  font-size: 0.6rem;
+  transition: transform 0.2s;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.talento-nivel[open] > summary::before { transform: rotate(90deg); }
+
+.talento-nivel-corpo {
+  padding: var(--s2) 0 var(--s3) var(--s4);
+  color: var(--fg-muted);
+}
+
+.talento-nivel-corpo p {
+  margin-bottom: 0 !important;
+  font-size: 0.9rem;
+}
+
 /* ── RESPONSIVO ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .cabecalho { padding: 0 var(--s4); gap: var(--s3); }

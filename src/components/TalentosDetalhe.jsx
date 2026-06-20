@@ -394,95 +394,298 @@ function Skritt() {
   </>;
 }
 
+function HabilidadeCard({ titulo, children }) {
+  return (
+    <div className="habilidade-card">
+      <div className="habilidade-card-img">🐉</div>
+      <div className="habilidade-card-corpo">
+        <h3>{titulo}</h3>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function TalentosNiveis() {
+  return [1, 5, 9, 13, 17].map(n => (
+    <details key={n} className="talento-nivel">
+      <summary>{n}° Nível</summary>
+      <div className="talento-nivel-corpo">
+        <p><em>Em desenvolvimento — consulte o Mestre para talentos disponíveis.</em></p>
+      </div>
+    </details>
+  ));
+}
+
+function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopout, sing1, sing2, sing3 }) {
+  return (
+    <details className="heranca-card">
+      <summary className="heranca-card-summary">
+        <div className="heranca-thumb-wrapper">
+          <div className="heranca-card-img">
+            {img ? <img src={img} alt={titulo} /> : '🐉'}
+          </div>
+          {imgPopout && (
+            <div className="heranca-img-popout">
+              <img src={imgPopout} alt={`Arte — ${titulo}`} />
+            </div>
+          )}
+        </div>
+        <div className="heranca-card-meta">
+          <span className="heranca-identificador">{identificador}</span>
+          <span className="heranca-titulo">{titulo}</span>
+          <span className="heranca-elemento">{elemento}</span>
+        </div>
+      </summary>
+      <div className="heranca-card-corpo">
+        {descricao && <p className="heranca-descricao">{descricao}</p>}
+        <details className="heranca-secao">
+          <summary>Singularidades</summary>
+          <div className="heranca-secao-corpo">
+            <div className="sing-item">
+              <span className="sing-label">Singularidade 1</span>
+              {sing1}
+            </div>
+            <div className="sing-item">
+              <span className="sing-label">Singularidade 2</span>
+              {sing2}
+            </div>
+            <div className="sing-item">
+              <span className="sing-label">Singularidade 3</span>
+              {sing3}
+            </div>
+          </div>
+        </details>
+        <details className="heranca-secao">
+          <summary>Talentos</summary>
+          <div className="heranca-secao-corpo">
+            <TalentosNiveis />
+          </div>
+        </details>
+      </div>
+    </details>
+  );
+}
+
 function Drakan() {
   return <>
     <Stats tamanho="1,50–2,00m (Médio)" idade="50–90 anos" pv="10" habilidades="2 escolhidas livremente" idiomas="1 + modificador de Inteligência (mín. 1)" deslocamento="7,5m (25 pés)" />
 
     <h2>🎲 Habilidades</h2>
-    <h3>Fisiologia Dracônica [Drakan]</h3>
-    <p>Definida ao escolher a Herança Dracônica (Elemento e Tipo de Baforada):</p>
-    <ul>
-      <li><strong>Armas Naturais:</strong> Garras (1d4 Cortante, Agile/Finesse) ou Mordida (1d8 Perfurante). Ambas causam +1 dano do Elemento.</li>
-      <li><strong>Escamas Protetoras:</strong> Resistência ao Elemento = metade do nível (mín. 1).</li>
-    </ul>
-    <h3>Hálito Elemental [Drakan, Arcane, Evocation, Elemental]</h3>
-    <ul>
-      <li><strong>Arma de Sopro</strong> (2 ações, 1x/hora): Cone de 15 pés ou Linha de 30 pés; 2d6 dano do Elemento (+1d6/2 níveis após o 1°). Save varia por herança contra CD de Classe.</li>
-      <li><strong>Inalar Elemento</strong> (Reação, 1x/dia): ao sofrer dano do Elemento, recarrega o uso da Arma de Sopro.</li>
-    </ul>
-    <h3>Graciosidade do Dragão [Drakan]</h3>
-    <p>+2 circunstancial em Percepção, Sobrevivência e Diplomacia contra criaturas com traço Dragão ou com traço do seu Elemento.</p>
 
-    <h2>🧬 Heranças Elementais</h2>
-    <p>Selecione um Ancestral Elemental:</p>
-    <table>
-      <thead><tr><th>Cor</th><th>Ancestral</th><th>Elemento (Save)</th><th>Perícia Extra</th><th>Singularidades</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Preto</td><td>O Corrosivo</td><td>Ácido (Reflexo)</td><td>Furtividade</td>
-          <td>Darkvision. <em>Dissolução Cruel</em> (1 ação, 1x/dia, 9m): 1d6 Ácido Fortitude Básico (+1d6/2 níveis); bônus se alvo com Persistente/Sickened/Enfeebled.</td>
-        </tr>
-        <tr>
-          <td>Azul</td><td>A Tempestade</td><td>Elétrico (Reflexo)</td><td>Enganação</td>
-          <td><em>Voz da Miragem:</em> conjura Figment em 1 ação. <em>Campo Estático:</em> Sopro cria Terreno Perigoso (1 elétrico/2 níveis/turno). <em>Sobrecarga</em> (1 ação, 1x/dia): consome campo para 1d6 Elétrico na área.</td>
-        </tr>
-        <tr>
-          <td>Verde</td><td>O Nocivo</td><td>Veneno (Fortitude)</td><td>Sociedade</td>
-          <td><em>Pele Tóxica:</em> criaturas adjacentes que te atacam desarmados/Grapple sofrem 1 Veneno (+1/5 níveis). <em>Destilar Peçonha</em> (10 min): 2 frascos/dia, Injury Poison (1d6 veneno + 1 persistente, escala +1d6+1/2 níveis).</td>
-        </tr>
-        <tr>
-          <td>Vermelho</td><td>O Fornalha</td><td>Fogo (Reflexo)</td><td>Intimidação</td>
-          <td><em>Tirania Ardente:</em> +1 Intimidação/Demoralize contra alvos que sofreram seu Fogo; ignora penalidade por idioma. <em>Napalm:</em> Sopro adiciona Dano Persistente de Fogo (metade do nível). <em>Incinerar</em> (1 ação, 1x/dia): alvos com Persistente de Fogo sofrem-no imediatamente de novo (dobrado se Frightened).</td>
-        </tr>
-        <tr>
-          <td>Branco</td><td>O Feral</td><td>Frio (Fortitude)</td><td>Sobrevivência</td>
-          <td><em>Faro de Sangue:</em> Scent (impreciso, 30 pés). <em>Sopro Congelante:</em> falha = −5 pés deslocamento; falha crítica = Imobilizado. <em>Quebrar o Gelo</em> (1 ação, 1x/dia): requer alvo com deslocamento reduzido/Imobilizado; Strike + 1d6 Frio (+1d6/4 níveis).</td>
-        </tr>
-        <tr>
-          <td>Latão</td><td>O Tectônico</td><td>Sônico (Fortitude)</td><td>Atletismo</td>
-          <td><em>Pulso Sísmico</em> (1 ação, 1x/10min): Sentido Sísmico Impreciso de 60 pés por 1 rodada. <em>Onda de Choque:</em> Sopro ignora Dureza; falha empurra 5 pés; falha crítica derruba. <em>Punho Tectônico</em> (1 ação, 1x/dia): 1d6 Concussão + 1d6 Sônico (+1d6 ambos/4 níveis); acerto empurra 1,5m (crítico 3m).</td>
-        </tr>
-      </tbody>
-    </table>
+    <HabilidadeCard titulo="Fisiologia Dracônica">
+      <p>Seu sangue é elemental. Ao escolher sua Herança Dracônica, você define seu Elemento e Tipo de Baforada. Você recebe as seguintes habilidades:</p>
+      <p><strong>Armas Naturais.</strong> Escolha uma das opções abaixo. Seus ataques desarmados causam dano físico + 1 de dano do seu Elemento.</p>
+      <ul>
+        <li><strong>Garras:</strong> 1d4 Cortante (Traços: Ágil, Acuidade).</li>
+        <li><strong>Mordida:</strong> 1d8 Perfurante.</li>
+        <li><strong>Cauda:</strong> 1d6 Concussão (Traço: Alcance).</li>
+      </ul>
+      <p><strong>Escamas Protetoras.</strong> Você ganha resistência ao seu Elemento igual à metade do seu nível (mínimo 1).</p>
+    </HabilidadeCard>
 
-    <h2>🧬 Heranças Primordiais</h2>
-    <p>Selecione um Ancestral Primordial (raros; enfrentam racismo considerável):</p>
-    <table>
-      <thead><tr><th>Primogênito</th><th>Elemento (Save)</th><th>Perícia</th><th>Singularidades</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Zhaitan</td><td>Vazio (Fortitude)</td><td>Religião</td>
-          <td>Traço Void Healing; resistência a Vitalidade em vez de Vazio. <em>Colheita Sinistra</em> (1 ação, 1x/dia): inimigo morto a 18m na última rodada → PV Temporários = Nível×2. <em>Marionete Macabra</em> (1 ação, 1x/rodada): cadáver a 9m realiza Strike (1d6–1d8 Concussão).</td>
-        </tr>
-        <tr>
-          <td>Mordremoth</td><td>Veneno (Fortitude)</td><td>Natureza</td>
-          <td><em>Consciência de Colmeia:</em> não pode ser Flanqueado por criaturas ≥2 níveis abaixo. <em>Raízes do Pesadelo:</em> Sopro cria Terreno Difícil + vinhas (1 min). <em>Estrangular</em> (2 ações, 1x/dia): Reflexo ou Imobilizado na área do sopro.</td>
-        </tr>
-        <tr>
-          <td>Primordus</td><td>Fogo (Reflexo)</td><td>Atletismo</td>
-          <td><em>Escavador de Magma</em> (1 ação, 1x/dia): Burrow 3m por 10 min, atravessa rocha sólida. <em>Terra Queimada:</em> Sopro = Terreno Perigoso (1 Fogo+1/2 níveis/turno). <em>Erupção</em> (2 ações, 1x/dia, req. Terra Queimada): detona magma causando dano do Sopro (Reflexo Básico) e consome o terreno.</td>
-        </tr>
-        <tr>
-          <td>Jormag</td><td>Mental (Vontade)</td><td>Diplomacia</td>
-          <td><em>Sussurros no Vento:</em> truque Message (arcano inato). <em>Foco Psíquico:</em> Sopro em 1 alvo a 30 pés (d10). <em>Palavras do Pavor</em> (1 ação, 1x/dia): via Message, alvo faz Vontade; Falha = Frightened 1; Falha Crítica = Frightened 2.</td>
-        </tr>
-        <tr>
-          <td>Kralkatorrik</td><td>Elétrico (Reflexo)</td><td>Ocultismo</td>
-          <td><em>Pele de Cristal:</em> +1 circunstancial na CA contra ataques à distância não-mágicos. <em>Marca do Dragão:</em> Sopro aplica Clumsy 1 em falha. <em>Ressonância</em> (1 ação, 1x/dia): alvos com marca sofrem 1d6 Cortante + 1d6 Elétrico (+1d6 ambos/4 níveis).</td>
-        </tr>
-        <tr>
-          <td>Soo-Won</td><td>Água/Concussão (Reflexo)</td><td>Arcanismo</td>
-          <td><em>Corrente de Cura:</em> +1 status em curas que você concede (+1/5 níveis, máx. +5). <em>Sopro da Vida:</em> fere mortos-vivos/Vazio, cura vivos. Sempre com traço Água. <em>Chuva Purificadora</em> (2 ações, 1x/dia): emanação de 30 pés por 1 min (Sustentado); aliados curam 1+½ nível; inimigos ganham Fraqueza a Água = cura.</td>
-        </tr>
-        <tr>
-          <td>Aurene</td><td>Vitalidade (Vontade)</td><td>Diplomacia</td>
-          <td><em>Luz Purificadora</em> (1x/dia): reduz 1 condição (Frightened, Sickened, Clumsy, Enfeebled ou Stupefied) em você ou aliado a 30 pés. <em>Luz da Alvorada:</em> Sopro fere mortos-vivos/Vazio, concede PV Temporários a aliados na área. <em>Ascensão</em> (1 ação, 1x/dia): flash de luz; inimigos na área ficam Dazzled por 1 minuto.</td>
-        </tr>
-      </tbody>
-    </table>
+    <HabilidadeCard titulo="Hálito Elemental">
+      <p>Você é capaz de manifestar o Elemento de sua Herança Dracônica através de uma baforada mortal.</p>
+      <p><strong>Arma de Sopro</strong> (2 Ações) <code>[Drakan] [Arcane] [Evocation] [Elemental]</code><br /><em>Frequência: Uma vez a cada 1 hora.</em></p>
+      <p>Você exala energia pura. Todas as criaturas na área de um cone de 15 pés ou uma linha de 30 pés (sua escolha ao utilizar esta habilidade) sofrem <strong>2d6 de dano</strong> do seu Elemento (Tipo de Save varia de acordo com sua Herança Draconiana e usa sua CD de Classe). O dano aumenta em +1d6 a cada 2 níveis depois do 1º.</p>
+      <p><strong>Inalar Elemento</strong> (Reação) <code>[Drakan] [Arcane] [Elemental]</code><br /><em>Gatilho: Você sofre dano do mesmo tipo do seu Elemento. Frequência: Uma vez por dia.</em></p>
+      <p>Você inspira o próprio elemento, recarregando suas glândulas mortais. Reduza o dano sofrido pela metade e, se você já tiver utilizado sua Arma de Sopro, recupere imediatamente seu uso dela.</p>
+    </HabilidadeCard>
 
-    <h2>📀 Talentos de Ancestralidade</h2>
-    <p><em>Em desenvolvimento — consulte o Mestre para talentos disponíveis.</em></p>
+    <HabilidadeCard titulo="Graciosidade do Dragão">
+      <p>Sua presença impõe respeito e você reconhece instintivamente a linhagem do poder. Você ganha um bônus de circunstância de +2 em testes de Percepção, Sobrevivência e Diplomacia contra:</p>
+      <ul>
+        <li>Criaturas com o traço <strong>Dragão</strong>.</li>
+        <li>Criaturas com o traço do seu <strong>Elemento</strong> (ex: Fogo, Frio).</li>
+      </ul>
+      <p><em>Nota: A critério do mestre, este bônus pode se aplicar a criaturas tematicamente ligadas ao seu elemento, mesmo que não possuam o traço.</em></p>
+    </HabilidadeCard>
+
+    <details className="talentos-ancestralidade">
+      <summary>📀 Talentos de Ancestralidade</summary>
+      <div className="talentos-corpo">
+        <TalentosNiveis />
+      </div>
+    </details>
+
+    <h2>🧬 Heranças</h2>
+
+    <h3>Herança Elemental</h3>
+    <p>Os Drakans Elementais formam o grupo mais vasto e heterogêneo da espécie. Diferente dos Anciões, que são manifestações de uma vontade corruptora única, estes dragões evoluíram em simbiose com os ambientes naturais de Tyria. Eles são biologicamente distintos entre si: um Drakan das tempestades possui órgãos elétricos e escamas condutoras, enquanto um Drakan vital possui sangue fotossensível e sopro regenerativo. O único traço que os une é a capacidade de metabolizar magia elemental pura.</p>
+
+    <HerancaCard
+      identificador="Preto"
+      titulo="O Corrosivo"
+      descricao="Habitante de pântanos fétidos. Predador de emboscada que se camufla na água estagnada. Biologia adaptada para corrosão e digestão externa."
+      elemento="Ácido · Reflexo"
+      sing1={<>Treinado em <strong>Furtividade (Stealth)</strong>.</>}
+      sing2={<><strong>Visão na Penumbra (Low-Light Vision):</strong> Você enxerga em condições de luz fraca como se fosse iluminação normal. Isso não lhe permite enxergar em escuridão total.</>}
+      sing3={<><strong>Dissolução Cruel</strong> (1 Ação) [Drakan, Ácido] — <em>Frequência:</em> Uma vez a cada 10 minutos; <em>Alcance:</em> 9 metros. Você projeta um jato de ácido corrosivo contra um alvo visível. Ele deve fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo <strong>1d6 de dano de Ácido</strong> (+1d6 a cada 2 níveis acima do 1º). Se o alvo estiver sofrendo Dano Persistente ou estiver com a condição <strong>Sickened</strong> ou <strong>Enfeebled</strong>, o ataque causa +1 dado de dano adicional.</>}
+    />
+
+    <HerancaCard
+      identificador="Azul"
+      titulo="A Tempestade"
+      descricao="Senhor dos ermos áridos e céus abertos. Usa eletricidade estática para caçar. Hierarquia rígida e vaidade baseada em domínio territorial."
+      elemento="Elétrico · Reflexo"
+      sing1={<>Treinado em <strong>Enganação (Deception)</strong>.</>}
+      sing2={<><strong>Voz da Miragem:</strong> Você aprende o truque mágico <em>Figment</em> como magia arcana inata, podendo lançá-lo à vontade. Ao contrário do normal, você pode conjurá-lo gastando apenas <strong>1 Ação</strong> em vez de 2.</>}
+      sing3={<>
+        <p><strong>Campo Estático:</strong> Ao usar sua Arma de Sopro, a área afetada torna-se <strong>Hazardous Terrain</strong> até o final do seu próximo turno. Qualquer inimigo que se mova ou termine seu turno dentro da área sofre <strong>1 de dano Elétrico</strong> (+1 a cada 2 níveis acima do 1º).</p>
+        <p><strong>Sobrecarga</strong> (1 Ação) [Drakan, Elétrico] — <em>Frequência:</em> Uma vez por dia. <em>Requisito:</em> Você possui uma área de Campo Estático ativa. Você detona a eletricidade residual acumulada no terreno. A área de Campo Estático é imediatamente dissipada e todas as criaturas que estavam dentro dela devem fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo <strong>1d6 de dano Elétrico</strong> (+1d6 a cada 2 níveis acima do 1º).</p>
+      </>}
+    />
+
+    <HerancaCard
+      identificador="Verde"
+      titulo="O Nocivo"
+      descricao="Nativo de florestas densas. Estrategista paciente que usa terreno e miasmas para enfraquecer presas. Territorial e observador."
+      elemento="Veneno · Fortitude"
+      sing1={<>Treinado em <strong>Sociedade (Society)</strong>.</>}
+      sing2={<><strong>Pele Tóxica:</strong> Sua pele secreta toxinas que reagem ao contato físico. Sempre que uma criatura adjacente acertar você com um ataque Desarmado, ou tiver sucesso em um teste de Atletismo para aplicar a condição <strong>Grabbed</strong> ou <strong>Shoved</strong> em você, ela sofre <strong>1 de dano de Veneno</strong> (+1 a cada 4 níveis acima do 1º, até +5 no 17º nível).</>}
+      sing3={<><strong>Destilar Peçonha</strong> (Atividade de 10 Minutos) [Manipulação] — Você extrai e refina o veneno de suas próprias glândulas em frascos de vidro. <em>Frequência:</em> Até <strong>2 doses por dia</strong>; as doses expiram em <strong>24 horas</strong>. O veneno produzido é do tipo <strong>Injury</strong>. Aplicar o veneno a uma arma ou munição requer <strong>1 Ação</strong> [Manipulação]. A próxima vez que a arma acertar, o alvo deve fazer um teste de <strong>Fortitude</strong> contra sua CD de Classe: em uma <strong>falha</strong>, ele sofre <strong>1d6 de dano de Veneno</strong> e <strong>1 de dano Persistente de Veneno</strong> (+1d6 inicial e +1 persistente a cada 2 níveis acima do 1º); em <strong>sucesso crítico</strong>, não sofre efeito algum; em <strong>falha crítica</strong>, o dano inicial é dobrado.</>}
+    />
+
+    <HerancaCard
+      identificador="Vermelho"
+      titulo="O Fornalha"
+      descricao="Predador alfa das montanhas. Metabolismo exige calor constante, temperamento agressivo e dominador. Força bruta é sua única lei."
+      elemento="Fogo · Reflexo"
+      sing1={<>Treinado em <strong>Intimidação (Intimidation)</strong>.</>}
+      sing2={<>
+        <p><strong>Tirania Ardente:</strong> Sua agressividade incendiária impõe obediência pelo terror. Sempre que você causar dano de Fogo a um alvo durante o turno atual, você ganha <strong>+1 de circunstância em testes de Intimidação</strong> para usar Demoralize contra esse alvo neste mesmo turno.</p>
+        <p><strong>Rugido Universal:</strong> Seu rugido transcende a barreira da linguagem. Ao usar Demoralize contra um alvo que sofreu seu dano de Fogo neste turno, você ignora a penalidade de <strong>−4</strong> normalmente imposta por não compartilhar um idioma com o alvo.</p>
+      </>}
+      sing3={<>
+        <p><strong>Napalm:</strong> Ao usar sua Arma de Sopro, ela adquire uma consistência viscosa e incendiária. Criaturas que <strong>falharem</strong> no teste de resistência também sofrem <strong>Dano Persistente de Fogo</strong> igual à metade do seu nível (mínimo 1), além do dano normal.</p>
+        <p><strong>Incinerar</strong> (1 Ação) [Drakan, Fogo] — <em>Frequência:</em> Uma vez por dia; <em>Alcance:</em> 9 metros. Você concentra sua energia sobre as chamas que já consomem o inimigo, provocando uma combustão explosiva. Escolha um inimigo com Dano Persistente de Fogo dentro do alcance: ele sofre <strong>1d6 de dano de Fogo imediato</strong> (+1d6 a cada 2 níveis acima do 1º), e o Dano Persistente de Fogo é então <strong>encerrado</strong>. Se o alvo estiver com a condição <strong>Frightened</strong>, esse dano é dobrado.</p>
+      </>}
+    />
+
+    <HerancaCard
+      identificador="Branco"
+      titulo="O Feral"
+      descricao="Nômade das tundras gélidas. Solitário e movido por instinto puro. Memória eidética para rancores e presas que escaparam."
+      elemento="Frio · Fortitude"
+      sing1={<>Treinado em <strong>Sobrevivência (Survival)</strong>.</>}
+      sing2={<><strong>Faro de Sangue:</strong> Você desenvolve um sentido olfativo aguçado. Você ganha o sentido <strong>Olfato (Scent) Impreciso</strong> com alcance de <strong>9 metros</strong>, permitindo detectar a localização aproximada de criaturas invisíveis ou ocultas pelo odor. Você também ganha <strong>+1 de circunstância em testes de Percepção</strong> ao procurar ou rastrear ativamente criaturas usando o faro.</>}
+      sing3={<>
+        <p><strong>Sopro Congelante:</strong> Ao usar sua Arma de Sopro, o ar congelante acumula gelo nas extremidades dos alvos. Criaturas que <strong>falharem</strong> no teste de resistência sofrem uma penalidade de <strong>−1,5 metro (−5 pés)</strong> em todos os seus deslocamentos por <strong>1 rodada</strong>. Criaturas que <strong>falharem criticamente</strong> ficam <strong>Immobilized</strong> até o final de seu próximo turno (podendo escapar com uma ação <strong>Escape</strong>).</p>
+        <p><strong>Quebrar o Gelo</strong> (1 Ação) [Drakan, Frio] — <em>Frequência:</em> Uma vez por dia. <em>Requisito:</em> O alvo possui o deslocamento reduzido pelo Sopro Congelante ou está <strong>Immobilized</strong>. Você golpeia com brutalidade para estilhaçar o gelo que prende seu inimigo, amplificando o trauma pelo impacto. Realize um Strike: em um <strong>acerto</strong>, o ataque causa o dano normal da arma acrescido de <strong>1d6 de dano de Frio</strong> (+1d6 a cada 4 níveis acima do 1º).</p>
+      </>}
+    />
+
+    <HerancaCard
+      identificador="Latão"
+      titulo="O Tectônico"
+      descricao="Habita cavernas profundas. Corpo coberto por placas grossas que lembram pedra polida. Pesado e brutal, não voa bem, domina o combate terrestre com vibração e força bruta."
+      elemento="Sônico · Fortitude"
+      sing1={<>Treinado em <strong>Atletismo (Athletics)</strong>.</>}
+      sing2={<><strong>Pulso Sísmico</strong> (1 Ação) [Drakan, Arcano] — <em>Frequência:</em> Uma vez a cada 10 minutos. Você pressiona as mãos contra o solo e emite uma onda de vibração sutil através da terra. Por <strong>1 rodada</strong>, você ganha <strong>Sentido Sísmico (Impreciso)</strong> com alcance de <strong>18 metros</strong>, detectando qualquer criatura que esteja em contato com o solo, mesmo que separada por paredes ou obstáculos.</>}
+      sing3={<>
+        <p><strong>Onda de Choque:</strong> Ao usar sua Arma de Sopro, ela emite uma concussão sônica devastadora que <strong>ignora a Dureza</strong> de objetos. Criaturas que <strong>falharem</strong> no teste de resistência são <strong>empurradas 1,5 metro (5 pés)</strong> na direção oposta a você. Criaturas que <strong>falharem criticamente</strong> são empurradas <strong>3 metros (10 pés)</strong> e ficam <strong>Prone</strong>.</p>
+        <p><strong>Punho Tectônico</strong> (1 Ação) [Drakan, Sônico] — <em>Frequência:</em> Uma vez a cada 1 hora. Você carrega seu punho com vibrações sísmicas e desfere um golpe devastador. Realize um Strike Desarmado especial que causa <strong>1d6 de dano de Concussão + 1d6 de dano Sônico</strong> (+1d6 de ambos os tipos a cada 2 níveis acima do 1º). Em um <strong>acerto</strong>, o alvo é empurrado <strong>1,5 metro (5 pés)</strong>; em um <strong>acerto crítico</strong>, é empurrado <strong>3 metros (10 pés)</strong>. Este ataque beneficia-se de Handwraps of Mighty Blows e de todos os bônus aplicáveis a ataques desarmados.</p>
+      </>}
+    />
+
+    <h3>Herança Primordial</h3>
+    <p>Os Drakans Primordiais são anomalias biológicas, concebidos a partir da energia corruptora dos Dragões Anciões (Elder Dragons). Seu poder transcende a manipulação elemental; ele distorce a realidade e a própria essência da magia e da vida. Cada Primordial é um condutor de uma força cataclísmica singular, manifestando habilidades que causam mutação, controle mental, cura negativa ou alteração permanente do terreno, representando uma ameaça que desafia a ordem biológica de Tyria.</p>
+
+    <HerancaCard
+      identificador="Zhaitan"
+      titulo="A Sombra Eterna"
+      descricao="Senhor de Orr. Representa a morte inevitável e a estagnação. Seus servos não são apenas mortos, são distorções da vida."
+      elemento="Vazio · Fortitude"
+      sing1={<>Treinado em <strong>Religião (Religion)</strong>.</>}
+      sing2={<>
+        <p><strong>Morto-Vivo Supremo:</strong> Você possui a fisiologia de um ser impregnado de energia da morte. Você ganha o traço <strong>Void Healing</strong>: efeitos de Energia Positiva (Vitalidade) que normalmente curariam você passam a causar dano; efeitos de Energia Negativa (Vazio) que normalmente causariam dano passam a curar você.</p>
+        <p><strong>Escamas Profanas:</strong> Sua resistência elemental dracônica estende-se além dos elementos naturais. Sua Resistência a Vazio (concedida por Escamas Protetoras) aplica-se também ao dano de <strong>Energia Positiva (Vitalidade)</strong>, tornando-o resistente à principal vulnerabilidade dos mortos-vivos.</p>
+      </>}
+      sing3={<>
+        <p><strong>Colheita Sinistra</strong> (Reação) [Drakan, Vazio] — <em>Frequência:</em> Uma vez a cada 10 minutos. <em>Gatilho:</em> Um inimigo é reduzido a 0 pontos de vida dentro de <strong>18 metros</strong> de você. Você drena a essência vital residual do inimigo no momento de sua morte, recuperando <strong>(1 + seu nível) Pontos de Vida</strong> e ganhando <strong>(1 + seu nível) Pontos de Vida Temporários</strong> que duram <strong>1 minuto</strong>.</p>
+        <p><strong>Marionete Macabra</strong> (1 Ação) [Drakan, Vazio, Necromancia, Flourish] — <em>Alvo:</em> Um cadáver de tamanho Médio ou menor dentro de <strong>9 metros</strong>. Você anima brevemente um cadáver próximo pelo impulso necromântico de Zhaitan. O corpo se move até <strong>4,5 metros</strong> e realiza um <strong>Strike</strong> contra uma criatura adjacente, usando sua CD de Classe. Esta ação aplica e é afetada pela <strong>penalidade de ataque múltiplo (MAP)</strong> do seu turno. O corpo cai inanimado imediatamente após o ataque. <em>Dano:</em> 1d6 de Concussão para cadáveres Médios, ou 1d8 para cadáveres Grandes (+1 dado de dano a cada 3 níveis acima do 1º). Uma criatura pode gastar uma ação <strong>Interact</strong> para desmembrar um cadáver e torná-lo inutilizável por esta habilidade.</p>
+      </>}
+    />
+
+    <HerancaCard
+      identificador="Mordremoth"
+      titulo="A Selva Senciente"
+      descricao="Dragão da mente e das plantas. Acredita que a individualidade é ineficiente; todos devem servir à colmeia."
+      elemento="Veneno · Fortitude"
+      sing1={<>Treinado em <strong>Natureza (Nature)</strong>.</>}
+      sing2={<><strong>Consciência de Colmeia:</strong> Sua mente está sincronizada ao fluxo vital ao seu redor como uma extensão da colmeia de Mordremoth, percebendo o ambiente de forma instintiva e difusa. Você <strong>não pode ser Flanked</strong> por criaturas que sejam 2 ou mais níveis abaixo do seu.</>}
+      sing3={<>
+        <p><strong>Raízes do Pesadelo:</strong> Ao usar sua Arma de Sopro, a área afetada é encoberta por raízes e vinhas espinhosas por <strong>1 minuto</strong>, tornando-se <strong>Hazardous Terrain</strong>. Qualquer criatura (aliada ou inimiga) que se mova pela área ou termine seu turno nela sofre <strong>1 de dano Perfurante</strong> (+1 a cada 2 níveis acima do 1º). Você pode gastar <strong>1 Ação</strong> para dissipar o efeito prematuramente.</p>
+        <p><strong>Estrangular</strong> (2 Ações) [Drakan, Vegetal] — <em>Requisito:</em> Você possui uma área de Raízes do Pesadelo ativa. Você ordena as vinhas a brotarem e envolverem os inimigos. Todas as criaturas dentro da área de Raízes do Pesadelo devem fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo <strong>3d4 de dano de Concussão</strong> (+3d4 a cada 4 níveis acima do 1º). Em uma <strong>falha</strong>, o alvo também tem seu deslocamento reduzido em <strong>1,5 metro (5 pés)</strong> por 1 rodada. Em uma <strong>falha crítica</strong>, o alvo fica <strong>Grabbed</strong> pelas vinhas até conseguir se libertar com uma ação <strong>Escape</strong>.</p>
+      </>}
+    />
+
+    <HerancaCard
+      identificador="Primordus"
+      titulo="A Fornalha"
+      descricao="O primeiro dragão. Habita as profundezas da terra. Odeia a vida biológica e busca purificar o mundo transformando tudo em pedra e magma."
+      elemento="Fogo · Reflexo"
+      img="https://i.imgur.com/AttQm1D.png"
+      imgPopout="https://d1vzi28wh99zvq.cloudfront.net/images/15661/408368.jpg"
+      sing1={<>Treinado em <strong>Atletismo (Athletics)</strong>.</>}
+      sing2={<><strong>Escavador de Magma</strong> (1 Ação) [Drakan, Fogo] — <em>Frequência:</em> Uma vez por dia. Você superaquece suas garras e corpo até temperaturas extremas, fundindo a rocha ao seu redor. Por <strong>10 minutos</strong>, você ganha uma <strong>Velocidade de Escavar (Burrow) de 3 metros</strong>, capaz de atravessar <strong>Rocha Sólida</strong>. Ao passar, você deixa um túnel revestido de pedra derretida em sua esteira.</>}
+      sing3={<>
+        <p><strong>Terra Queimada:</strong> Ao usar sua Arma de Sopro, o magma residual transforma a área afetada em <strong>Hazardous Terrain</strong> por <strong>1 minuto</strong>. Qualquer inimigo que se mova pela área ou termine seu turno nela sofre <strong>1 de dano de Fogo</strong> (+1 a cada 2 níveis acima do 1º).</p>
+        <p><strong>Erupção</strong> (2 Ações) [Drakan, Fogo] — <em>Frequência:</em> Uma vez por dia. <em>Requisito:</em> Você possui uma área de Terra Queimada ativa. Você detona a energia do magma represado no solo, provocando uma erupção localizada. Todas as criaturas dentro da área de Terra Queimada devem fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo o mesmo dano que sua Arma de Sopro causaria. A Terra Queimada é então <strong>consumida</strong> pela erupção.</p>
+      </>}
+    />
+
+    <HerancaCard
+      identificador="Jormag"
+      titulo="O Persuasor"
+      descricao="Dragão dos segredos e da tentação. Não congela apenas corpos, mas mentes. Seus servos não são escravos, mas fanáticos convertidos por promessas de poder."
+      elemento="Mental · Vontade"
+      sing1={<>Treinado em <strong>Diplomacia (Diplomacy)</strong>.</>}
+      sing2={<><strong>Sussurros no Vento:</strong> Você aprende o truque mágico <em>Message</em> como magia arcana inata, podendo lançá-lo à vontade. Você pode enviar mensagens sussurradas a alvos distantes com precisão sobrenatural, característica da influência psíquica de Jormag.</>}
+      sing3={<>
+        <p><strong>Foco Psíquico:</strong> Ao usar sua Arma de Sopro, você pode optar por concentrar toda a energia em um <strong>único alvo</strong> dentro de <strong>9 metros</strong>, em vez de afetar uma área. Ao fazê-lo, o tipo de dado de dano do Sopro aumenta para <strong>d10</strong>.</p>
+        <p><strong>Palavras do Pavor</strong> (1 Ação) [Drakan, Auditório, Mental, Medo] — <em>Frequência:</em> Uma vez por uso de Sopro do Dragão. <em>Requisito:</em> Você usou sua Arma de Sopro neste turno ou no turno anterior (esta janela expira ao final do seu próximo turno). Você profere palavras carregadas da vontade gélida de Jormag, penetrando diretamente na mente de um inimigo que possa ouvi-lo. O alvo deve fazer um teste de <strong>Will Básico</strong> contra sua CD de Classe, sofrendo <strong>1d10 de dano Mental</strong>. Além do dano padrão do teste: em uma <strong>falha</strong>, o alvo fica <strong>Frightened 1</strong>; em uma <strong>falha crítica</strong>, fica <strong>Frightened 2</strong>.</p>
+      </>}
+    />
+
+    <HerancaCard
+      identificador="Kralkatorrik"
+      titulo="O Marcador"
+      descricao="Sua energia distorce o espaço e a matéria. Sua presença cria tempestades de raios roxos e cristaliza a terra e seres vivos em uma tentativa de ordem cósmica."
+      elemento="Elétrico · Reflexo"
+      sing1={<>Treinado em <strong>Ocultismo (Occultism)</strong>.</>}
+      sing2={<><strong>Pele de Cristal:</strong> Suas escamas possuem propriedades cristalinas que refletem e dispersam projéteis não mágicos. Você ganha <strong>+1 de circunstância à sua CA</strong> contra <strong>ataques à distância não mágicos</strong>.</>}
+      sing3={<>
+        <p><strong>Marca do Dragão:</strong> Ao usar sua Arma de Sopro, você impregna os alvos com resíduos de cristal que restringem seus movimentos. Criaturas que <strong>falharem</strong> no teste de resistência ficam <strong>Clumsy 1</strong>; criaturas que <strong>falharem criticamente</strong> ficam <strong>Clumsy 2</strong>. O alvo pode gastar <strong>1 Ação</strong> [Manipulação] para remover a condição <strong>Clumsy 1</strong>; remover <strong>Clumsy 2</strong> exige <strong>2 Ações</strong> [Manipulação], que podem ser divididas em turnos diferentes.</p>
+        <p><strong>Ressonância</strong> (1 Ação) [Drakan, Elétrico] — <em>Alcance:</em> 9 metros. Você emite uma frequência que detona os cristais impregnados nos inimigos dentro do alcance. Alvos com <strong>Clumsy 1</strong> sofrem <strong>1d6 de dano Cortante + 1d6 de dano Elétrico</strong> (+1d6 de cada a cada 4 níveis acima do 1º). Alvos com <strong>Clumsy 2</strong> sofrem <strong>1d10 de dano Cortante + 1d10 de dano Elétrico</strong> (+1d10 de cada a cada 3 níveis acima do 1º). Detonar os cristais <strong>remove</strong> a condição <strong>Clumsy</strong> aplicada pela Marca do Dragão.</p>
+      </>}
+    />
+
+    <HerancaCard
+      identificador="Soo-Won"
+      titulo="A Mãe Oceano"
+      descricao="A dragoa da água e da magia pura. Fluída, protetora e a origem de toda a vida em Tyria, mas capaz de fúria maremotriz."
+      elemento="Água/Concussão · Reflexo"
+      sing1={<>Treinado em <strong>Arcanismo (Arcana)</strong>.</>}
+      sing2={<><strong>Corrente de Cura:</strong> Sua linhagem carrega o dom restaurador das águas de Soo-Won. Você ganha <strong>+1 de bônus de status</strong> em todos os Pontos de Vida que você restaura a <strong>outras criaturas</strong> (não a si mesmo). Este bônus aumenta para <strong>+2 no 5º nível</strong>, <strong>+3 no 10º</strong>, <strong>+4 no 15º</strong> e <strong>+5 no 20º nível</strong>.</>}
+      sing3={<>
+        <p><strong>Sopro da Vida:</strong> Sua Arma de Sopro sempre possui o traço <strong>Água</strong>, independentemente do seu dano elemental. Ao usar o Sopro, para cada criatura dentro da área você deve declarar se ela é um <strong>alvo hostil</strong> ou um <strong>alvo amistoso</strong>: alvos hostis sofrem o dano normalmente; alvos amistosos são <strong>curados</strong> pela mesma quantidade de Pontos de Vida que o dano causaria, sem nenhum teste de resistência.</p>
+        <p><strong>Chuva Purificadora</strong> (2 Ações) [Drakan, Água, Concentração] — <em>Frequência:</em> Uma vez por dia. Você invoca uma chuva sagrada em uma <strong>emanação de 9 metros</strong> ao seu redor, que dura até <strong>1 minuto</strong>. Você pode gastar <strong>1 Ação</strong> no início de cada turno para sustentar o efeito (Sustain). Enquanto ativa: aliados dentro da área curam <strong>1 + metade do seu nível (mínimo 1) Pontos de Vida</strong> a cada Sustain; inimigos dentro da área ganham <strong>Fraqueza ao dano com o traço Água</strong> em quantidade igual ao valor de cura enquanto permanecerem na chuva.</p>
+      </>}
+    />
+
+    <HerancaCard
+      identificador="Aurene"
+      titulo="A Prismática"
+      descricao="Neta de Kralkatorrik e herdeira do equilíbrio. Representa a luz, a esperança e a união de todas as magias."
+      elemento="Vitalidade · Vontade"
+      sing1={<>Treinado em <strong>Diplomacia (Diplomacy)</strong>.</>}
+      sing2={<><strong>Luz Purificadora</strong> (1 Ação) [Drakan, Luz] — <em>Frequência:</em> Uma vez por dia. Você irradia um pulso de luz restauradora de Aurene. Escolha você mesmo ou um aliado dentro de <strong>9 metros (30 pés)</strong>: reduza em <strong>1</strong> o valor de uma das seguintes condições no alvo: <strong>Frightened</strong>, <strong>Sickened</strong>, <strong>Clumsy</strong>, <strong>Enfeebled</strong> ou <strong>Stupefied</strong>.</>}
+      sing3={<>
+        <p><strong>Luz da Alvorada:</strong> Ao usar sua Arma de Sopro, você pode optar por converter sua energia em luz prismática. Ao fazê-lo, o Sopro causa dano normalmente a <strong>Mortos-Vivos</strong> e criaturas com o traço <strong>Vazio</strong>, mas, em vez de danificar aliados na área, concede-lhes <strong>Pontos de Vida Temporários</strong> iguais ao dano que teriam sofrido (esses PVTs duram <strong>1 minuto</strong>).</p>
+        <p><strong>Ascensão</strong> (1 Ação) [Drakan, Luz] — <em>Frequência:</em> Uma vez por dia. <em>Requisito:</em> Você usou sua Arma de Sopro neste turno ou no turno anterior. Você libera um flash de luz prismática em uma <strong>emanação de 4,5 metros (15 pés)</strong>. <strong>Inimigos</strong> na área devem fazer um teste de <strong>Fortitude</strong> contra sua CD de Classe: em uma <strong>falha</strong>, ficam <strong>Dazzled</strong> por <strong>1 rodada</strong>; em uma <strong>falha crítica</strong>, ficam <strong>Dazzled</strong> por <strong>1 minuto</strong>. <strong>Aliados</strong> na área (e você mesmo) recebem <strong>1d6 Pontos de Vida Temporários</strong> (+1d6 a cada 2 níveis acima do 1º), que duram <strong>1 minuto</strong>.</p>
+      </>}
+    />
   </>;
 }
 

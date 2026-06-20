@@ -225,34 +225,44 @@ function Drakan() {
       <footer>— Mjolnir</footer>
     </blockquote>
 
-    <h2>Heranças</h2>
-    <h3>Elementais</h3>
-    <p>Os Drakans Elementais formam o grupo mais vasto e heterogêneo da espécie, evoluindo em simbiose com os ambientes naturais de Tyria. São geralmente aceitos como uma raça "normal".</p>
-    <ul>
-      <li><strong>Preto — O Corrosivo:</strong> Habitante de pântanos fétidos. Predador de emboscada especialista em ácido e corrosão que se camufla na água estagnada.</li>
-      <li><strong>Azul — A Tempestade:</strong> Senhor dos ermos áridos e céus abertos. Utiliza a eletricidade estática para caçar, com uma hierarquia social rígida baseada no domínio territorial.</li>
-      <li><strong>Verde — O Nocivo:</strong> Nativo de florestas densas. Estrategista paciente que utiliza o terreno e miasmas para enfraquecer presas antes do confronto. Territorial e observador.</li>
-      <li><strong>Vermelho — O Fornalha:</strong> O predador alfa das montanhas. Seu metabolismo exige calor constante, gerando um temperamento agressivo e dominador.</li>
-      <li><strong>Branco — O Feral:</strong> Nômade das tundras gélidas. Solitário e movido por instinto puro, com memória eidética para rancores e presas que escaparam.</li>
-      <li><strong>Latão — O Tectônico:</strong> Habita cavernas profundas. Corpo coberto por placas de pedra polida, pesado e brutal, dominando o combate terrestre com vibração e força.</li>
-    </ul>
-    <h3>Primordiais</h3>
-    <p>Os Drakans Primordiais são anomalias biológicas concebidas a partir da energia corruptora dos Dragões Anciões. São notavelmente raros e carregam uma reputação sombria, enfrentando racismo considerável por serem vistos como aberrações ou espiões.</p>
-    <ul>
-      <li><strong>Zhaitan — A Sombra Eterna:</strong> Senhor de Orr. Representa a morte inevitável e a estagnação. Ligado ao Vazio.</li>
-      <li><strong>Mordremoth — A Selva Senciente:</strong> O dragão da mente e das plantas. Acredita que a individualidade é ineficiente; todos devem servir à colmeia.</li>
-      <li><strong>Primordus — A Fornalha:</strong> O primeiro dragão. Habita as profundezas da terra, buscando transformar tudo em pedra e magma.</li>
-      <li><strong>Jormag — O Persuasor:</strong> O dragão dos segredos e da tentação. Não congela apenas corpos, mas mentes. Seus seguidores são fanáticos convertidos por promessas de poder.</li>
-      <li><strong>Kralkatorrik — O Marcador:</strong> Sua energia distorce o espaço e a matéria, criando tempestades de raios roxos e cristalizando tudo ao redor.</li>
-      <li><strong>Soo-Won — A Mãe Oceano:</strong> A dragoa da água e da magia pura. Fluída, protetora e a origem de toda a vida em Tyria.</li>
-      <li><strong>Aurene — A Prismática:</strong> A neta de Kralkatorrik e herdeira do equilíbrio. Representa a luz, a esperança e a união de todas as magias.</li>
-    </ul>
-
     <h2>História</h2>
-    <p>Os Drakans são uma raça bípede de origem dracônica, distinguindo-se das raças mais humanoides por sua imensa afinidade mágica e constituição resiliente. Diferente das lendas clássicas, a espécie Drakan é vasta e heterogênea. Eles são os filhos do poder primordial de Tyria, manifestando em sua biologia o domínio elemental ou a corrupção ancestral.</p>
-    <p>A maior parte da população Drakan pertence à Herança Elemental. Estes são geralmente aceitos como uma raça "normal" dentro de Tyria, similar aos humanos em termos de status social. Em forte contraste, os Drakans da Herança Primordial são notavelmente raros e carregam uma reputação sombria. Por isso, os Primordiais enfrentam um racismo considerável, sendo vistos como aberrações, presságios de catástrofe ou espiões. O medo não é infundado, pois muitos Primordiais sentem um chamado biológico para servir seu ancestral.</p>
-    <p>A civilização Drakan está centrada na Skycity of Bujherba, uma capital de esplendor arquitetônico que paira magicamente sobre uma pequena ilha flutuante. Bujherba serve como o principal refúgio e centro político dos Drakans, sendo governada principalmente pelos Elementais mais tradicionais e influentes.</p>
-    <p>O fenótipo Drakan varia drasticamente entre as Heranças. Os Elementais mantêm uma aparência mais clássica com detalhes que refletem seu elemento. Os Primordiais são marcados por características antinaturais que frequentemente inspiram medo e repulsa: escamas secas e cinzentas como ossos, pele substituída por casca fibrosa, rachaduras incandescentes com magma pulsante, ou cristais que crescem de forma errática a partir do próprio corpo.</p>
+    <div className="povo-secao-flex">
+      <div className="povo-texto">
+        <p>Os Drakans são uma raça bípede de origem dracônica, distinguindo-se das raças mais humanoides por sua imensa afinidade mágica e constituição resiliente. Diferente das lendas clássicas, a espécie Drakan é vasta e heterogênea. Eles são os filhos do poder primordial de Tyria, manifestando em sua biologia o domínio elemental ou a corrupção ancestral.</p>
+        <p>A maior parte da população Drakan pertence à Herança Elemental. Estes são geralmente aceitos como uma raça "normal" dentro de Tyria, similar aos humanos em termos de status social. Em forte contraste, os Drakans da Herança Primordial são notavelmente raros e carregam uma reputação sombria. Por isso, os Primordiais enfrentam um racismo considerável, sendo vistos como aberrações, presságios de catástrofe ou espiões. O medo não é infundado, pois muitos Primordiais sentem um chamado biológico para servir seu ancestral.</p>
+        <p>A civilização Drakan está centrada na Skycity of Bujherba, uma capital de esplendor arquitetônico que paira magicamente sobre uma pequena ilha flutuante. Bujherba serve como o principal refúgio e centro político dos Drakans, sendo governada principalmente pelos Elementais mais tradicionais e influentes.</p>
+        <p>O fenótipo Drakan varia drasticamente entre as Heranças. Os Elementais mantêm uma aparência mais clássica com detalhes que refletem seu elemento. Os Primordiais são marcados por características antinaturais que frequentemente inspiram medo e repulsa: escamas secas e cinzentas como ossos, pele substituída por casca fibrosa, rachaduras incandescentes com magma pulsante, ou cristais que crescem de forma errática a partir do próprio corpo.</p>
+      </div>
+      <div className="povo-img-placeholder">🐉</div>
+    </div>
+
+    <h2>Heranças</h2>
+    <div className="povo-secao-flex">
+      <div className="povo-img-placeholder">🐉</div>
+      <div className="povo-texto">
+        <h3>Elementais</h3>
+        <p>Os Drakans Elementais formam o grupo mais vasto e heterogêneo da espécie, evoluindo em simbiose com os ambientes naturais de Tyria. São geralmente aceitos como uma raça "normal".</p>
+        <ul>
+          <li><strong>Preto — O Corrosivo:</strong> Habitante de pântanos fétidos. Predador de emboscada especialista em ácido e corrosão que se camufla na água estagnada.</li>
+          <li><strong>Azul — A Tempestade:</strong> Senhor dos ermos áridos e céus abertos. Utiliza a eletricidade estática para caçar, com uma hierarquia social rígida baseada no domínio territorial.</li>
+          <li><strong>Verde — O Nocivo:</strong> Nativo de florestas densas. Estrategista paciente que utiliza o terreno e miasmas para enfraquecer presas antes do confronto. Territorial e observador.</li>
+          <li><strong>Vermelho — O Fornalha:</strong> O predador alfa das montanhas. Seu metabolismo exige calor constante, gerando um temperamento agressivo e dominador.</li>
+          <li><strong>Branco — O Feral:</strong> Nômade das tundras gélidas. Solitário e movido por instinto puro, com memória eidética para rancores e presas que escaparam.</li>
+          <li><strong>Latão — O Tectônico:</strong> Habita cavernas profundas. Corpo coberto por placas de pedra polida, pesado e brutal, dominando o combate terrestre com vibração e força.</li>
+        </ul>
+        <h3>Primordiais</h3>
+        <p>Os Drakans Primordiais são anomalias biológicas concebidas a partir da energia corruptora dos Dragões Anciões. São notavelmente raros e carregam uma reputação sombria, enfrentando racismo considerável por serem vistos como aberrações ou espiões.</p>
+        <ul>
+          <li><strong>Zhaitan — A Sombra Eterna:</strong> Senhor de Orr. Representa a morte inevitável e a estagnação. Ligado ao Vazio.</li>
+          <li><strong>Mordremoth — A Selva Senciente:</strong> O dragão da mente e das plantas. Acredita que a individualidade é ineficiente; todos devem servir à colmeia.</li>
+          <li><strong>Primordus — A Fornalha:</strong> O primeiro dragão. Habita as profundezas da terra, buscando transformar tudo em pedra e magma.</li>
+          <li><strong>Jormag — O Persuasor:</strong> O dragão dos segredos e da tentação. Não congela apenas corpos, mas mentes. Seus seguidores são fanáticos convertidos por promessas de poder.</li>
+          <li><strong>Kralkatorrik — O Marcador:</strong> Sua energia distorce o espaço e a matéria, criando tempestades de raios roxos e cristalizando tudo ao redor.</li>
+          <li><strong>Soo-Won — A Mãe Oceano:</strong> A dragoa da água e da magia pura. Fluída, protetora e a origem de toda a vida em Tyria.</li>
+          <li><strong>Aurene — A Prismática:</strong> A neta de Kralkatorrik e herdeira do equilíbrio. Representa a luz, a esperança e a união de todas as magias.</li>
+        </ul>
+      </div>
+    </div>
   </>;
 }
 
