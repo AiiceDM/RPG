@@ -481,7 +481,7 @@ function Drakan() {
       <ul>
         <li><strong>Garras:</strong> 1d4 Cortante (Traços: Unarmed, Agile, Finesse).</li>
         <li><strong>Mordida:</strong> 1d8 Perfurante (Traços: Unarmed, Forceful).</li>
-        <li><strong>Cauda:</strong> 1d6 Concussão (Traços: Unarmed, Reach, Sweep).</li>
+        <li><strong>Cauda:</strong> 1d6 Concussão (Traços: Unarmed, Trip, Sweep).</li>
       </ul>
       <p><strong>Escamas Protetoras.</strong> Você ganha resistência ao seu Elemento igual à metade do seu nível (mínimo 1).</p>
     </HabilidadeCard>
