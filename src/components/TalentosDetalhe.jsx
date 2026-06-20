@@ -531,7 +531,7 @@ function Drakan() {
             1: <>
               <TalentoCard
                 titulo="Ascensão Fisiológica"
-                tags="Drakan"
+                tags="Drakan · Armamentos"
                 descricao="Sua fisiologia dracônica evolui além de sua manifestação inicial, desenvolvendo novos arsenais físicos e aprofundando a afinidade elemental que permeia cada golpe."
                 img="https://i.imgur.com/ZLMnijN.png"
                 efeito={<>
@@ -541,7 +541,7 @@ function Drakan() {
               />
               <TalentoCard
                 titulo="Arsenal Dracônico"
-                tags="Drakan"
+                tags="Drakan · Armamentos"
                 descricao="Todo dragão nasce com mais de um modo de matar. Você aprendeu a reconhecer isso e a refinar cada parte do seu corpo para uma função específica, tornando cada golpe uma escolha deliberada."
                 img="https://i.imgur.com/jgKNlZo.png"
                 efeito={<>
@@ -556,7 +556,7 @@ function Drakan() {
               />
               <TalentoCard
                 titulo="Escamas Resilientes"
-                tags="Drakan"
+                tags="Drakan · Defesa"
                 descricao="As escamas de um Drakan não param de crescer. Endurecendo camada sobre camada com o tempo, elas assumem a forma que a vida exige. Ao selecionar este talento, você define permanentemente o que as suas se tornarão."
                 img="https://i.imgur.com/EunWwxd.png"
                 efeito={<>
