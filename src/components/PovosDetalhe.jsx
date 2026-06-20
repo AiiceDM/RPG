@@ -218,7 +218,7 @@ function Skritt() {
   </>;
 }
 
-function Drakan() {
+function Drakan({ setPaginaAtual }) {
   return <>
     <blockquote>
       <p><em>"Do pico mais gelado ao magma que aflora, a escama Drakan a história reescreve agora."</em></p>
@@ -262,6 +262,12 @@ function Drakan() {
           <li><strong>Aurene — A Prismática:</strong> A neta de Kralkatorrik e herdeira do equilíbrio. Representa a luz, a esperança e a união de todas as magias.</li>
         </ul>
       </div>
+    </div>
+
+    <div className="botao-habilidades-wrapper">
+      <button className="botao-habilidades" onClick={() => setPaginaAtual('talento-drakan')}>
+        ⚔ Ver Habilidades e Talentos dos Drakan
+      </button>
     </div>
   </>;
 }
@@ -372,7 +378,7 @@ export default function PovosDetalhe({ ancestralId, setPaginaAtual }) {
     <main className="pagina-site pagina-conteudo">
       <button onClick={() => setPaginaAtual('povos')} className="botao-voltar">← Voltar aos Povos</button>
       <h1>{nome}</h1>
-      <Conteudo />
+      <Conteudo setPaginaAtual={setPaginaAtual} />
     </main>
   );
 }

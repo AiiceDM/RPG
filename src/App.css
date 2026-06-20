@@ -660,6 +660,44 @@ body {
   background: rgba(139,10,80,0.1);
 }
 
+/* ── BOTÃO HABILIDADES (CTA no final da página de Povo) ───────── */
+.botao-habilidades-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--s10);
+  padding-top: var(--s8);
+  border-top: 1px solid var(--border);
+}
+
+.botao-habilidades {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s3);
+  background: linear-gradient(135deg, var(--crimson) 0%, var(--blood) 100%);
+  border: 1px solid rgba(199,58,58,0.5);
+  color: #fff;
+  font-family: var(--font-gothic);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: var(--s4) var(--s8);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  box-shadow: 0 0 24px rgba(139,10,80,0.4), 0 4px 16px rgba(0,0,0,0.6);
+  transition: all 0.25s var(--ease-gothic);
+}
+
+.botao-habilidades:hover {
+  background: linear-gradient(135deg, var(--blood) 0%, var(--crimson) 100%);
+  box-shadow: 0 0 40px rgba(199,58,58,0.6), 0 6px 24px rgba(0,0,0,0.7);
+  transform: translateY(-2px);
+}
+
+.botao-habilidades:active {
+  transform: translateY(0);
+  box-shadow: 0 0 16px rgba(139,10,80,0.4);
+}
+
 /* ── MAPA INTERATIVO ─────────────────────────────────────────── */
 .mapa-interativo {
   position: relative;
