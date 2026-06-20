@@ -406,12 +406,28 @@ function HabilidadeCard({ titulo, img, children }) {
   );
 }
 
-function TalentosNiveis() {
+function TalentoCard({ titulo, tags, descricao, efeito, img }) {
+  return (
+    <div className="talento-card">
+      <div className="talento-card-img">
+        {img ? <img src={img} alt={titulo} /> : '📀'}
+      </div>
+      <div className="talento-card-corpo">
+        <h4 className="talento-card-titulo">{titulo}</h4>
+        {tags && <div className="talento-card-tags">{tags}</div>}
+        {descricao && <p className="talento-card-descricao">{descricao}</p>}
+        {efeito && <div className="talento-card-efeito">{efeito}</div>}
+      </div>
+    </div>
+  );
+}
+
+function TalentosNiveis({ children }) {
   return [1, 5, 9, 13, 17].map(n => (
     <details key={n} className="talento-nivel">
       <summary>{n}° Nível</summary>
       <div className="talento-nivel-corpo">
-        <p><em>Em desenvolvimento — consulte o Mestre para talentos disponíveis.</em></p>
+        {children?.[n] || <p><em>Em desenvolvimento — consulte o Mestre para talentos disponíveis.</em></p>}
       </div>
     </details>
   ));

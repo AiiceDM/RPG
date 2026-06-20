@@ -1823,11 +1823,95 @@ body {
 .talento-nivel-corpo {
   padding: var(--s2) 0 var(--s3) var(--s4);
   color: var(--fg-muted);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
 }
 
 .talento-nivel-corpo p {
   margin-bottom: 0 !important;
   font-size: 0.9rem;
+}
+
+/* ── TALENTO CARD ────────────────────────────────────────────── */
+.talento-card {
+  display: flex;
+  gap: var(--s4);
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--s4);
+  transition: border-color 0.2s;
+}
+
+.talento-card:hover {
+  border-color: rgba(139,10,80,0.35);
+}
+
+.talento-card-img {
+  width: 72px;
+  min-width: 72px;
+  height: 72px;
+  background: var(--violet);
+  border: 1px solid rgba(139,10,80,0.25);
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.talento-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.talento-card-corpo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+}
+
+.talento-card-titulo {
+  font-family: var(--font-gothic);
+  font-size: 1rem;
+  color: var(--fg);
+  margin: 0;
+}
+
+.talento-card-tags {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--crimson);
+}
+
+.talento-card-descricao {
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  font-style: italic;
+  margin: var(--s1) 0 0 !important;
+}
+
+.talento-card-efeito {
+  font-size: 0.9rem;
+  color: var(--fg);
+  margin-top: var(--s1);
+}
+
+.talento-card-efeito p {
+  margin-bottom: var(--s2) !important;
+}
+
+.talento-card-efeito p:last-child {
+  margin-bottom: 0 !important;
 }
 
 /* ── RESPONSIVO ─────────────────────────────────────────────── */
