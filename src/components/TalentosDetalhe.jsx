@@ -575,6 +575,43 @@ function Drakan() {
                   Se o modificador de Força for inferior a +4, aplique −1 adicional em testes e −1,5m de velocidade além das penalidades normais.</p>
                 </>}
               />
+              <TalentoCard
+                titulo="Horizonte do Predador"
+                tags="Drakan"
+                descricao="Dragões caçam em qualquer luz. Seus olhos aprenderam a fazer o mesmo."
+                img="https://i.imgur.com/OQkidqc.png"
+                efeito={<p>Você ganha <strong>Visão na Penumbra (Low-Light Vision)</strong>. Se sua Herança já concede esta visão, você ganha <strong>Visão no Escuro (Darkvision)</strong> em vez disso.</p>}
+              />
+              <TalentoCard
+                titulo="Percepção Elemental"
+                tags="Drakan"
+                descricao="Com o tempo, você aprendeu a sentir seu Elemento antes de vê-lo. Uma temperatura, um faro, uma vibração que existe antes da percepção consciente."
+                img="https://i.imgur.com/7hCvRkE.png"
+                efeito={<>
+                  <p>Em um raio de <strong>18 metros</strong>, você percebe concentrações do seu Elemento de forma imprecisa — chamas ativas, campos elétricos, gases tóxicos, água corrente, solo aquecido, entre outros. Ao usar a ação Buscar (Seek) para procurar uma criatura que esteja dentro de ou diretamente adjacente a uma fonte do seu Elemento, você recebe <strong>+1 de circunstância</strong> no teste de Percepção.</p>
+                  <p>Além disso, uma vez por dia, você pode realizar uma atividade de 10 minutos em contato com uma fonte do seu Elemento. Se a fonte for suficiente (à critério do Mestre), você absorve parte de sua essência e recupera imediatamente o uso de <strong>Inalar Elemento</strong>.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Voz do Dragão"
+                tags="Drakan"
+                descricao="Há algo no sopro de um dragão que criaturas elementais reconhecem antes de qualquer palavra. O medo vem primeiro, a compreensão depois."
+                img="https://i.imgur.com/qDsM7KL.png"
+                efeito={<>
+                  <p>Quando você usa Intimidação para Desmoralizar criaturas com o traço <strong>Dragão</strong> ou com o traço do seu <strong>Elemento</strong>, você ignora a penalidade de <strong>−4</strong> por não compartilhar um idioma com o alvo.</p>
+                  <p>Se o alvo testemunhou você usar sua Arma de Sopro neste encontro, a CD de Vontade dele contra seu Desmoralizar sofre uma <strong>penalidade de circunstância de −1</strong>. Se o alvo sofreu dano da Arma de Sopro neste turno, essa penalidade aumenta para <strong>−2</strong>.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Erudição Ancestral"
+                tags="Drakan"
+                descricao="O sangue dracônico acumula memória ao longo de gerações. Às vezes você sabe coisas que nunca aprendeu."
+                img="https://i.imgur.com/qDsM7KL.png"
+                efeito={<>
+                  <p>Você recebe o talento <strong>Additional Lore</strong>, escolhendo <strong>Dragon Lore</strong> como a perícia concedida.</p>
+                  <p>Além disso, uma vez por dia, você pode convocar a memória dracônica instintiva acumulada em seu sangue para utilizar <strong>Dragon Lore</strong> em um teste de Lembrar Conhecimento sobre qualquer assunto, independente da perícia normalmente exigida. Para isso, seu nível de proficiência em Dragon Lore deve ser compatível com a raridade ou complexidade do assunto (à critério do Mestre).</p>
+                </>}
+              />
             </>
           }}
         </TalentosNiveis>
