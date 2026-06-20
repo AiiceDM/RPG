@@ -1437,12 +1437,27 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: var(--s4);
   margin-bottom: var(--s6);
+  align-items: start;
 }
 
 .heranca-grid .heranca-card {
   margin: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.heranca-grid .heranca-card-corpo {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  z-index: 200;
+  background: var(--surface);
+  border: 1px solid rgba(139,10,80,0.45);
+  border-top: none;
+  border-radius: 0 0 var(--r-md) var(--r-md);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
 }
 
 .heranca-grid .heranca-card-summary {
