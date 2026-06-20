@@ -504,7 +504,7 @@ function Drakan() {
     </HabilidadeCard>
 
     <details className="talentos-ancestralidade">
-      <summary>📀 Talentos de Ancestralidade</summary>
+      <summary>📀 Talentos de Ancestralidade Independentes</summary>
       <div className="talentos-corpo">
         <TalentosNiveis />
       </div>
