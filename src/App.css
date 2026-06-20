@@ -1835,24 +1835,53 @@ body {
 
 /* ── TALENTO CARD ────────────────────────────────────────────── */
 .talento-card {
-  display: flex;
-  gap: var(--s4);
-  align-items: flex-start;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
-  padding: var(--s4);
   transition: border-color 0.2s;
 }
 
-.talento-card:hover {
+.talento-card[open] {
   border-color: rgba(139,10,80,0.35);
 }
 
+.talento-card-header {
+  display: flex;
+  gap: var(--s4);
+  align-items: center;
+  padding: var(--s3) var(--s4);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  border-radius: var(--r-md);
+  transition: background 0.15s;
+}
+
+.talento-card-header::-webkit-details-marker { display: none; }
+.talento-card-header::marker { display: none; }
+
+.talento-card-header:hover { background: rgba(139,10,80,0.04); }
+
+.talento-card[open] .talento-card-header {
+  border-radius: var(--r-md) var(--r-md) 0 0;
+}
+
+.talento-card-header::after {
+  content: '▸';
+  margin-left: auto;
+  color: var(--crimson);
+  flex-shrink: 0;
+  transition: transform 0.2s var(--ease-gothic);
+}
+
+.talento-card[open] .talento-card-header::after {
+  transform: rotate(90deg);
+}
+
 .talento-card-img {
-  width: 72px;
-  min-width: 72px;
-  height: 72px;
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
   background: var(--violet);
   border: 1px solid rgba(139,10,80,0.25);
   border-radius: var(--r-sm);
@@ -1870,12 +1899,12 @@ body {
   object-fit: cover;
 }
 
-.talento-card-corpo {
-  flex: 1;
-  min-width: 0;
+.talento-card-meta {
   display: flex;
   flex-direction: column;
-  gap: var(--s1);
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
 }
 
 .talento-card-titulo {
@@ -1893,17 +1922,25 @@ body {
   color: var(--crimson);
 }
 
+.talento-card-corpo {
+  border-top: 1px solid var(--border);
+  padding: var(--s3) var(--s4) var(--s4);
+  padding-left: calc(56px + var(--s4) + var(--s4));
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
 .talento-card-descricao {
   font-size: 0.85rem;
   color: var(--fg-muted);
   font-style: italic;
-  margin: var(--s1) 0 0 !important;
+  margin: 0 !important;
 }
 
 .talento-card-efeito {
   font-size: 0.9rem;
   color: var(--fg);
-  margin-top: var(--s1);
 }
 
 .talento-card-efeito p {

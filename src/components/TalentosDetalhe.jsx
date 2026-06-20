@@ -408,17 +408,21 @@ function HabilidadeCard({ titulo, img, children }) {
 
 function TalentoCard({ titulo, tags, descricao, efeito, img }) {
   return (
-    <div className="talento-card">
-      <div className="talento-card-img">
-        {img ? <img src={img} alt={titulo} /> : '📀'}
-      </div>
+    <details className="talento-card">
+      <summary className="talento-card-header">
+        <div className="talento-card-img">
+          {img ? <img src={img} alt={titulo} /> : '📀'}
+        </div>
+        <div className="talento-card-meta">
+          <h4 className="talento-card-titulo">{titulo}</h4>
+          {tags && <div className="talento-card-tags">{tags}</div>}
+        </div>
+      </summary>
       <div className="talento-card-corpo">
-        <h4 className="talento-card-titulo">{titulo}</h4>
-        {tags && <div className="talento-card-tags">{tags}</div>}
         {descricao && <p className="talento-card-descricao">{descricao}</p>}
         {efeito && <div className="talento-card-efeito">{efeito}</div>}
       </div>
-    </div>
+    </details>
   );
 }
 
