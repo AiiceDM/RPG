@@ -1460,6 +1460,18 @@ body {
   box-shadow: 0 8px 32px rgba(0,0,0,0.6);
 }
 
+/* Coluna esquerda → corpo estica para a direita até o fim do grid */
+.heranca-grid .heranca-card:nth-child(odd) .heranca-card-corpo {
+  left: -1px;
+  right: calc(-100% - var(--s4));
+}
+
+/* Coluna direita → corpo estica para a esquerda até o início do grid */
+.heranca-grid .heranca-card:nth-child(even) .heranca-card-corpo {
+  right: -1px;
+  left: calc(-100% - var(--s4));
+}
+
 .heranca-grid .heranca-card-summary {
   flex-direction: column;
   align-items: stretch;
