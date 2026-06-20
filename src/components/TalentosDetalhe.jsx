@@ -577,14 +577,14 @@ function Drakan() {
               />
               <TalentoCard
                 titulo="Horizonte do Predador"
-                tags="Drakan"
+                tags="Drakan · Sentidos"
                 descricao="Dragões caçam em qualquer luz. Seus olhos aprenderam a fazer o mesmo."
                 img="https://i.imgur.com/OQkidqc.png"
                 efeito={<p>Você ganha <strong>Visão na Penumbra (Low-Light Vision)</strong>. Se sua Herança já concede esta visão, você ganha <strong>Visão no Escuro (Darkvision)</strong> em vez disso.</p>}
               />
               <TalentoCard
                 titulo="Percepção Elemental"
-                tags="Drakan"
+                tags="Drakan · Sentidos"
                 descricao="Com o tempo, você aprendeu a sentir seu Elemento antes de vê-lo. Uma temperatura, um faro, uma vibração que existe antes da percepção consciente."
                 img="https://i.imgur.com/7hCvRkE.png"
                 efeito={<>
@@ -594,7 +594,7 @@ function Drakan() {
               />
               <TalentoCard
                 titulo="Voz do Dragão"
-                tags="Drakan"
+                tags="Drakan · Intimidação"
                 descricao="Há algo no sopro de um dragão que criaturas elementais reconhecem antes de qualquer palavra. O medo vem primeiro, a compreensão depois."
                 img="https://i.imgur.com/qDsM7KL.png"
                 efeito={<>
@@ -604,7 +604,7 @@ function Drakan() {
               />
               <TalentoCard
                 titulo="Erudição Ancestral"
-                tags="Drakan"
+                tags="Drakan · Conhecimento"
                 descricao="O sangue dracônico acumula memória ao longo de gerações. Às vezes você sabe coisas que nunca aprendeu."
                 img="https://i.imgur.com/qDsM7KL.png"
                 efeito={<>
