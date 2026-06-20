@@ -422,8 +422,8 @@ function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopou
     <details className="heranca-card">
       <summary className="heranca-card-summary">
         <div className="heranca-thumb-wrapper">
-          <div className="heranca-card-img">
-            {img ? <img src={img} alt={titulo} /> : '🐉'}
+          <div className="heranca-card-banner">
+            {img ? <img src={img} alt={titulo} /> : <span className="heranca-banner-placeholder">🐉</span>}
           </div>
           {imgPopout && (
             <div className="heranca-img-popout">
@@ -431,10 +431,12 @@ function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopou
             </div>
           )}
         </div>
-        <div className="heranca-card-meta">
-          <span className="heranca-identificador">{identificador}</span>
+        <div className="heranca-card-info">
+          <div className="heranca-card-tags">
+            <span className="heranca-identificador">{identificador}</span>
+            <span className="heranca-elemento">{elemento}</span>
+          </div>
           <span className="heranca-titulo">{titulo}</span>
-          <span className="heranca-elemento">{elemento}</span>
         </div>
       </summary>
       <div className="heranca-card-corpo">
@@ -513,6 +515,7 @@ function Drakan() {
     <h3>Herança Elemental</h3>
     <p>Os Drakans Elementais formam o grupo mais vasto e heterogêneo da espécie. Diferente dos Anciões, que são manifestações de uma vontade corruptora única, estes dragões evoluíram em simbiose com os ambientes naturais de Tyria. Eles são biologicamente distintos entre si: um Drakan das tempestades possui órgãos elétricos e escamas condutoras, enquanto um Drakan vital possui sangue fotossensível e sopro regenerativo. O único traço que os une é a capacidade de metabolizar magia elemental pura.</p>
 
+    <div className="heranca-grid">
     <HerancaCard
       identificador="Preto"
       titulo="O Corrosivo"
@@ -587,10 +590,12 @@ function Drakan() {
         <p><strong>Punho Tectônico</strong> (1 Ação) [Drakan, Sônico] — <em>Frequência:</em> Uma vez a cada 1 hora. Você carrega seu punho com vibrações sísmicas e desfere um golpe devastador. Realize um Strike Desarmado especial que causa <strong>1d6 de dano de Concussão + 1d6 de dano Sônico</strong> (+1d6 de ambos os tipos a cada 2 níveis acima do 1º). Em um <strong>acerto</strong>, o alvo é empurrado <strong>1,5 metro (5 pés)</strong>; em um <strong>acerto crítico</strong>, é empurrado <strong>3 metros (10 pés)</strong>. Este ataque beneficia-se de Handwraps of Mighty Blows e de todos os bônus aplicáveis a ataques desarmados.</p>
       </>}
     />
+    </div>
 
     <h3>Herança Primordial</h3>
     <p>Os Drakans Primordiais são anomalias biológicas, concebidos a partir da energia corruptora dos Dragões Anciões (Elder Dragons). Seu poder transcende a manipulação elemental; ele distorce a realidade e a própria essência da magia e da vida. Cada Primordial é um condutor de uma força cataclísmica singular, manifestando habilidades que causam mutação, controle mental, cura negativa ou alteração permanente do terreno, representando uma ameaça que desafia a ordem biológica de Tyria.</p>
 
+    <div className="heranca-grid">
     <HerancaCard
       identificador="Zhaitan"
       titulo="A Sombra Eterna"
@@ -686,6 +691,7 @@ function Drakan() {
         <p><strong>Ascensão</strong> (1 Ação) [Drakan, Luz] — <em>Frequência:</em> Uma vez por dia. <em>Requisito:</em> Você usou sua Arma de Sopro neste turno ou no turno anterior. Você libera um flash de luz prismática em uma <strong>emanação de 4,5 metros (15 pés)</strong>. <strong>Inimigos</strong> na área devem fazer um teste de <strong>Fortitude</strong> contra sua CD de Classe: em uma <strong>falha</strong>, ficam <strong>Dazzled</strong> por <strong>1 rodada</strong>; em uma <strong>falha crítica</strong>, ficam <strong>Dazzled</strong> por <strong>1 minuto</strong>. <strong>Aliados</strong> na área (e você mesmo) recebem <strong>1d6 Pontos de Vida Temporários</strong> (+1d6 a cada 2 níveis acima do 1º), que duram <strong>1 minuto</strong>.</p>
       </>}
     />
+    </div>
   </>;
 }
 

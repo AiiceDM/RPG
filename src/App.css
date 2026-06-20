@@ -1431,6 +1431,116 @@ body {
   padding: var(--s3) var(--s6) var(--s4);
 }
 
+/* ── HERANÇA GRID (2 colunas) ───────────────────────────────── */
+.heranca-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s4);
+  margin-bottom: var(--s6);
+}
+
+.heranca-grid .heranca-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.heranca-grid .heranca-card-summary {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  gap: 0;
+  position: relative;
+}
+
+.heranca-grid .heranca-card-summary::after {
+  position: absolute;
+  bottom: var(--s3);
+  right: var(--s4);
+  margin-left: 0;
+}
+
+.heranca-card-banner {
+  width: 100%;
+  aspect-ratio: 3/2;
+  background: var(--violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heranca-card-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease-gothic);
+}
+
+.heranca-grid .heranca-card-summary:hover .heranca-card-banner img {
+  transform: scale(1.04);
+}
+
+.heranca-banner-placeholder {
+  font-size: 3rem;
+}
+
+.heranca-card-info {
+  padding: var(--s3) var(--s4) var(--s4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+}
+
+.heranca-card-tags {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  flex-wrap: wrap;
+}
+
+.heranca-grid .heranca-thumb-wrapper {
+  width: 100%;
+  flex-shrink: unset;
+}
+
+.heranca-grid .heranca-thumb-wrapper:hover {
+  z-index: 100;
+}
+
+/* Popout maior no grid, sem translateY (posição top: 0 do banner) */
+.heranca-grid .heranca-img-popout {
+  width: 320px;
+  top: 0;
+  transform: translateX(8px);
+}
+
+.heranca-grid .heranca-thumb-wrapper:hover .heranca-img-popout {
+  transform: translateX(0);
+}
+
+/* Coluna esquerda (ímpares) → popout à DIREITA */
+.heranca-grid .heranca-card:nth-child(odd) .heranca-img-popout {
+  right: auto;
+  left: calc(100% + 10px);
+  transform: translateX(-8px);
+}
+
+.heranca-grid .heranca-card:nth-child(odd) .heranca-thumb-wrapper:hover .heranca-img-popout {
+  transform: translateX(0);
+}
+
+/* Coluna direita (pares) → popout à ESQUERDA (herda right: calc(100% + 10px) do base) */
+.heranca-grid .heranca-card:nth-child(even) .heranca-img-popout {
+  left: auto;
+  right: calc(100% + 10px);
+  transform: translateX(8px);
+}
+
+.heranca-grid .heranca-card:nth-child(even) .heranca-thumb-wrapper:hover .heranca-img-popout {
+  transform: translateX(0);
+}
+
 /* ── HERANÇA CARD ────────────────────────────────────────────── */
 .heranca-card {
   background: var(--surface);
