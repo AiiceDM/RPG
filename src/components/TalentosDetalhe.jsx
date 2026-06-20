@@ -394,10 +394,10 @@ function Skritt() {
   </>;
 }
 
-function HabilidadeCard({ titulo, children }) {
+function HabilidadeCard({ titulo, img, children }) {
   return (
     <div className="habilidade-card">
-      <div className="habilidade-card-img">🐉</div>
+      <div className="habilidade-card-img">{img ? <img src={img} alt={titulo} /> : '🐉'}</div>
       <div className="habilidade-card-corpo">
         <h3>{titulo}</h3>
         {children}
@@ -475,7 +475,7 @@ function Drakan() {
 
     <h2>🎲 Habilidades</h2>
 
-    <HabilidadeCard titulo="Fisiologia Dracônica">
+    <HabilidadeCard titulo="Fisiologia Dracônica" img="https://i.imgur.com/2AwpMYu.png">
       <p>Seu sangue é elemental. Ao escolher sua Herança Dracônica, você define seu Elemento e Tipo de Baforada. Você recebe as seguintes habilidades:</p>
       <p><strong>Armas Naturais.</strong> Escolha uma das opções abaixo. Seus ataques desarmados causam dano físico + 1 de dano do seu Elemento.</p>
       <ul>
@@ -486,7 +486,7 @@ function Drakan() {
       <p><strong>Escamas Protetoras.</strong> Você ganha resistência ao seu Elemento igual à metade do seu nível (mínimo 1).</p>
     </HabilidadeCard>
 
-    <HabilidadeCard titulo="Hálito Elemental">
+    <HabilidadeCard titulo="Hálito Elemental" img="https://i.imgur.com/p2FSlU1.png">
       <p>Você é capaz de manifestar o Elemento de sua Herança Dracônica através de uma baforada mortal.</p>
       <p><strong>Arma de Sopro</strong> (2 Ações) <code>[Drakan] [Arcane] [Evocation] [Elemental]</code><br /><em>Frequência: Uma vez a cada 1 hora.</em></p>
       <p>Você exala energia pura. Todas as criaturas na área de um cone de 15 pés ou uma linha de 30 pés (sua escolha ao utilizar esta habilidade) sofrem <strong>2d6 de dano</strong> do seu Elemento (Tipo de Save varia de acordo com sua Herança Draconiana e usa sua CD de Classe). O dano aumenta em +1d6 a cada 2 níveis depois do 1º.</p>
@@ -494,7 +494,7 @@ function Drakan() {
       <p>Você inspira o próprio elemento, recarregando suas glândulas mortais. Reduza o dano sofrido pela metade e, se você já tiver utilizado sua Arma de Sopro, recupere imediatamente seu uso dela.</p>
     </HabilidadeCard>
 
-    <HabilidadeCard titulo="Graciosidade do Dragão">
+    <HabilidadeCard titulo="Graciosidade do Dragão" img="https://i.imgur.com/d62pOKw.png">
       <p>Sua presença impõe respeito e você reconhece instintivamente a linhagem do poder. Você ganha um bônus de circunstância de +2 em testes de Percepção, Sobrevivência e Diplomacia contra:</p>
       <ul>
         <li>Criaturas com o traço <strong>Dragão</strong>.</li>
