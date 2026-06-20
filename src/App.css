@@ -1446,9 +1446,9 @@ body {
 
 .heranca-img-popout {
   position: absolute;
-  left: calc(100% + 10px);
+  right: calc(100% + 10px);
   top: 50%;
-  transform: translateY(-50%) translateX(-6px);
+  transform: translateY(-50%) translateX(6px);
   width: 220px;
   border-radius: var(--r-md);
   border: 1px solid var(--border);
