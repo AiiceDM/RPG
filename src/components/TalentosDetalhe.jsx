@@ -479,9 +479,9 @@ function Drakan() {
       <p>Seu sangue é elemental. Ao escolher sua Herança Dracônica, você define seu Elemento e Tipo de Baforada. Você recebe as seguintes habilidades:</p>
       <p><strong>Armas Naturais.</strong> Escolha uma das opções abaixo. Seus ataques desarmados causam dano físico + 1 de dano do seu Elemento.</p>
       <ul>
-        <li><strong>Garras:</strong> 1d4 Cortante (Traços: Ágil, Acuidade).</li>
-        <li><strong>Mordida:</strong> 1d8 Perfurante.</li>
-        <li><strong>Cauda:</strong> 1d6 Concussão (Traço: Alcance).</li>
+        <li><strong>Garras:</strong> 1d4 Cortante (Traços: Unarmed, Agile, Finesse).</li>
+        <li><strong>Mordida:</strong> 1d8 Perfurante (Traços: Unarmed, Forceful).</li>
+        <li><strong>Cauda:</strong> 1d6 Concussão (Traços: Unarmed, Reach, Sweep).</li>
       </ul>
       <p><strong>Escamas Protetoras.</strong> Você ganha resistência ao seu Elemento igual à metade do seu nível (mínimo 1).</p>
     </HabilidadeCard>
