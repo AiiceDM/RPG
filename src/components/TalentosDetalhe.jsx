@@ -522,7 +522,58 @@ function Drakan() {
     <details className="talentos-ancestralidade">
       <summary>📀 Talentos de Ancestralidade Independentes</summary>
       <div className="talentos-corpo">
-        <TalentosNiveis />
+        <TalentosNiveis>
+          {{
+            1: <>
+              <TalentoCard
+                titulo="Ascensão Fisiológica"
+                tags="Drakan"
+                descricao="Sua fisiologia dracônica evolui além de sua manifestação inicial, desenvolvendo novos arsenais físicos e aprofundando a afinidade elemental que permeia cada golpe."
+                img="https://i.imgur.com/ZLMnijN.png"
+                efeito={<>
+                  <p>Você ganha um tipo adicional de Arma Natural da lista de Fisiologia Dracônica, diferente do que já possui.</p>
+                  <p>Além disso, o bônus de dano elemental concedido por Fisiologia Dracônica passa a escalar com o número de dados de dano que sua arma natural possui: <strong>+1</strong> com 1 dado (base), <strong>+2</strong> com 2 dados (Striking), <strong>+3</strong> com 3 dados (Greater Striking), <strong>+4</strong> com 4 dados (Major Striking). Este bônus substitui o fixo de +1 original.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Arsenal Dracônico"
+                tags="Drakan"
+                descricao="Todo dragão nasce com mais de um modo de matar. Você aprendeu a reconhecer isso e a refinar cada parte do seu corpo para uma função específica, tornando cada golpe uma escolha deliberada."
+                img="https://i.imgur.com/jgKNlZo.png"
+                efeito={<>
+                  <p>Você ganha um tipo adicional de Arma Natural da lista de Fisiologia Dracônica, diferente dos que já possui.</p>
+                  <p>Além disso, escolha uma das suas armas naturais para receber a seguinte melhoria permanente:</p>
+                  <ul>
+                    <li><strong>Garras:</strong> O dado de dano aumenta para 1d6. Ela ganha os traços Backswing e Versatile B.</li>
+                    <li><strong>Mordida:</strong> O dado de dano aumenta para 1d10. Ela ganha o traço Deadly d10.</li>
+                    <li><strong>Cauda:</strong> O dado de dano aumenta para 1d8. Ela ganha o traço Reach.</li>
+                  </ul>
+                </>}
+              />
+              <TalentoCard
+                titulo="Escamas Resilientes"
+                tags="Drakan"
+                descricao="As escamas de um Drakan não param de crescer. Endurecendo camada sobre camada com o tempo, elas assumem a forma que a vida exige. Ao selecionar este talento, você define permanentemente o que as suas se tornarão."
+                img="https://i.imgur.com/EunWwxd.png"
+                efeito={<>
+                  <p>Escolha uma das três formas abaixo. Esta escolha é <strong>permanente</strong>. Suas escamas podem receber melhorias rúnicas como se fossem uma armadura convencional (Potency Rune até +3, Resilient Rune e runas de propriedade). Você não pode beneficiar-se deste talento e usar armadura simultaneamente — aplique apenas o maior bônus de item entre os dois.</p>
+                  <p>Para fins de bônus de proficiência e Especialização de Armadura, utilize o maior entre sua proficiência em Desarmado ou sua proficiência na categoria equivalente desta forma de escama.</p>
+                  <p><strong>Escamas Vívidas</strong> (Categoria: Desarmado)<br />
+                  Escamas finas, flexíveis e iridescentes. Não restringem o movimento.<br />
+                  Bônus de Item: +1 · Cap de DES: +5 · Penalidade Testes: — · Penalidade Velocidade: — · Req. Força: —</p>
+                  <p><strong>Escamas Forjadas</strong> (Categoria: Armadura Média)<br />
+                  Escamas sobrepostas e endurecidas como metal temperado.<br />
+                  Bônus de Item: +3 · Cap de DES: +3 · Penalidade Testes: −2 · Penalidade Velocidade: −1,5m (5 pés) · Req. Força: +2<br />
+                  Se o modificador de Força for inferior a +2, aplique −1 adicional em testes e −1,5m de velocidade além das penalidades normais.</p>
+                  <p><strong>Escamas Pétreis</strong> (Categoria: Armadura Pesada)<br />
+                  Placas densas e sobrepostas como basalto solidificado, quase impenetráveis.<br />
+                  Bônus de Item: +6 · Cap de DES: +0 · Penalidade Testes: −3 · Penalidade Velocidade: −3m (10 pés) · Req. Força: +4<br />
+                  Se o modificador de Força for inferior a +4, aplique −1 adicional em testes e −1,5m de velocidade além das penalidades normais.</p>
+                </>}
+              />
+            </>
+          }}
+        </TalentosNiveis>
       </div>
     </details>
 
