@@ -437,7 +437,7 @@ function TalentosNiveis({ children }) {
   ));
 }
 
-function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopout, sing1, sing2, sing3 }) {
+function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopout, sing1, sing2, sing3, talentos }) {
   return (
     <details className="heranca-card">
       <summary className="heranca-card-summary">
@@ -481,7 +481,7 @@ function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopou
         <details className="heranca-secao">
           <summary>Talentos Dependentes</summary>
           <div className="heranca-secao-corpo">
-            <TalentosNiveis />
+            <TalentosNiveis>{talentos}</TalentosNiveis>
           </div>
         </details>
       </div>
@@ -787,6 +787,37 @@ function Drakan() {
         <p><strong>Terra Queimada:</strong> Ao usar sua Arma de Sopro, o magma residual transforma a área afetada em <strong>Hazardous Terrain</strong> por <strong>1 minuto</strong>. Qualquer inimigo que se mova pela área ou termine seu turno nela sofre <strong>1 de dano de Fogo</strong> (+1 a cada 2 níveis acima do 1º).</p>
         <p><strong>Erupção</strong> (2 Ações) [Drakan, Fogo] — <em>Frequência:</em> Uma vez por dia. <em>Requisito:</em> Você possui uma área de Terra Queimada ativa. Você detona a energia do magma represado no solo, provocando uma erupção localizada. Todas as criaturas dentro da área de Terra Queimada devem fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo o mesmo dano que sua Arma de Sopro causaria. A Terra Queimada é então <strong>consumida</strong> pela erupção.</p>
       </>}
+      talentos={{
+        1: <>
+          <TalentoCard
+            titulo="Aspecto Vulcânico"
+            tags="Drakan · Primordus · Fogo"
+            descricao="Há um estado entre carne e magma que você aprendeu a alcançar. Breve, instável e extremamente quente."
+            img="https://i.imgur.com/FOWDm9u.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança Primordus.</em></p>
+              <p>(1 Ação) <em>Frequência:</em> Uma vez por dia. Você assume sua forma vulcânica até o final do seu próximo turno. Durante este período:</p>
+              <ul>
+                <li>O primeiro ataque desarmado que acertar causa <strong>+1 dado de dano de Fogo</strong> adicional.</li>
+                <li>Sua resistência a Fogo é tratada como <strong>imunidade</strong> — qualquer quantidade de dano de Fogo é ignorada.</li>
+                <li>Você pode se mover sobre terreno de lava como se fosse terreno difícil normal e enxerga através dela como se fosse translúcida.</li>
+                <li>Se você sofrer dano de Frio ou dano com o traço Água durante este período, a forma é finalizada imediatamente e você fica <strong>Slowed 1</strong> até o final do seu próximo turno.</li>
+              </ul>
+            </>}
+          />
+          <TalentoCard
+            titulo="Fissura"
+            tags="Drakan · Primordus · Fogo"
+            descricao="Uma rachadura no granito revela o que estava represado. Um golpe forte o suficiente faz o mesmo com você."
+            img="https://i.imgur.com/BpESxdP.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança Primordus.</em></p>
+              <p>(Reação) <em>Frequência:</em> Uma vez por dia. <em>Gatilho:</em> Você sofre um acerto crítico de um ataque corpo a corpo. Você libera uma erupção de calor contido. Todas as criaturas em uma emanação de <strong>1,5 metro (5 pés)</strong> ao seu redor devem fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo <strong>1d6 de dano de Fogo</strong> (+1d6 a cada 2 níveis acima do 1°).</p>
+              <p>Usar <strong>Inalar Elemento</strong> também restaura o uso desta habilidade.</p>
+            </>}
+          />
+        </>
+      }}
     />
 
     <HerancaCard
