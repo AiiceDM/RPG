@@ -641,6 +641,7 @@ function Drakan() {
                     <li>Se você possuir uma <strong>Herança Elemental</strong>, pode utilizá-la para <strong>Causar Impressão (Make an Impression)</strong>.</li>
                     <li>Se você possuir uma <strong>Herança Primordial</strong>, pode utilizá-la para <strong>Coagir (Coerce)</strong>.</li>
                   </ul>
+                  <p><strong>Missão de Energia:</strong> Na primeira vez em cada período de Downtime que você usar Dragon Lore para Causar Impressão ou Coagir um NPC de importância narrativa de forma que gere uma consequência concreta para o grupo — aliança, acordo, acesso ou conflito evitado — você recupera <strong>1 ponto de Energia</strong>.</p>
                 </>}
               />
               <TalentoCard
