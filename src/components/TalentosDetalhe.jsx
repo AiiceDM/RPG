@@ -872,6 +872,28 @@ function Drakan() {
         <p><strong>Luz da Alvorada:</strong> Ao usar sua Arma de Sopro, você pode optar por converter sua energia em luz prismática. Ao fazê-lo, o Sopro causa dano de Vitalidade normalmente, mas criaturas <strong>vivas</strong> na área recebem <strong>Pontos de Vida Temporários</strong> iguais ao dano que teriam sofrido em vez de sofrerem dano (esses PVTs duram <strong>1 minuto</strong>).</p>
         <p><strong>Ascensão</strong> (1 Ação) [Drakan, Luz] — <em>Frequência:</em> Uma vez por dia. <em>Requisito:</em> Você usou sua Arma de Sopro neste turno ou no turno anterior. Você libera um flash de luz prismática em uma <strong>emanação de 4,5 metros (15 pés)</strong>. <strong>Inimigos</strong> na área devem fazer um teste de <strong>Fortitude</strong> contra sua CD de Classe: em uma <strong>falha</strong>, ficam <strong>Dazzled</strong> por <strong>1 rodada</strong>; em uma <strong>falha crítica</strong>, ficam <strong>Blinded</strong> por <strong>1 rodada</strong> e, em seguida, <strong>Dazzled</strong> por <strong>1 rodada</strong>. <strong>Aliados</strong> na área (e você mesmo) recebem <strong>1d6 Pontos de Vida Temporários</strong> (+1d6 a cada 2 níveis acima do 1º), que duram <strong>1 minuto</strong>.</p>
       </>}
+      talentos={{
+        1: <>
+          <TalentoCard
+            titulo="Resquício de um Milagre"
+            tags="Drakan · Aurene · Luz"
+            descricao="Aurene foi a prova de que um Dragão Ancião podia escolher diferente. Você carrega um eco disso: a capacidade de encontrar quem está se perdendo e, por um instante, puxá-lo de volta."
+            img="https://i.imgur.com/S28Ybus.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança Aurene.</em></p>
+              <p>(1 Ação) <em>Frequência:</em> Uma vez por dia. Você percebe instintivamente qual é a criatura neutra ou aliada com menos Pontos de Vida em uma emanação de <strong>9 metros</strong> ao seu redor. Esta identificação é automática e não exige teste. Você mesmo não pode ser o alvo desta identificação.</p>
+              <p>Após usar esta habilidade, você pode optar por gastar <strong>2 Ações adicionais</strong> e o uso da sua <strong>Arma de Sopro</strong> para canalizar sua energia dracônica diretamente na criatura identificada. Ao fazê-lo, ela recupera Pontos de Vida iguais ao <strong>dano máximo possível</strong> que sua Arma de Sopro causaria — trate todos os dados como resultado máximo, sem rolar.</p>
+            </>}
+          />
+          <TalentoCard
+            titulo="Ressonância de Esperança"
+            tags="Drakan · Aurene · Luz"
+            descricao="A energia que você transmite não desaparece quando a cura termina. Parte dela fica, como uma camada invisível entre a criatura e o que quer que venha depois."
+            img="https://i.imgur.com/xANlHTw.png"
+            efeito={<p>Uma vez por turno, ao curar uma ou mais criaturas por qualquer meio, você pode escolher uma delas para reverberar a energia positiva. Por <strong>1 rodada</strong>, essa criatura ganha <strong>resistência 1 a todos os tipos de dano</strong>. Essa resistência aumenta em <strong>+1</strong> para cada 5 níveis que você possui.</p>}
+          />
+        </>
+      }}
     />
     </div>
   </>;
