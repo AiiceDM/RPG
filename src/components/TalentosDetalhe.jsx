@@ -479,7 +479,7 @@ function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopou
           </div>
         </details>
         <details className="heranca-secao">
-          <summary>Talentos</summary>
+          <summary>Talentos Dependentes</summary>
           <div className="heranca-secao-corpo">
             <TalentosNiveis />
           </div>
