@@ -612,6 +612,47 @@ function Drakan() {
                   <p>Além disso, uma vez por dia, você pode convocar a memória dracônica instintiva acumulada em seu sangue para utilizar <strong>Dragon Lore</strong> em um teste de Lembrar Conhecimento sobre qualquer assunto, independente da perícia normalmente exigida. Para isso, seu nível de proficiência em Dragon Lore deve ser compatível com a raridade ou complexidade do assunto (à critério do Mestre).</p>
                 </>}
               />
+              <TalentoCard
+                titulo="Catalisador Elemental"
+                tags="Drakan · Sopro"
+                descricao="O elemento que você respira e a magia que você conjura têm a mesma origem. Com esforço, você aprende a fazê-los coincidir."
+                img="https://i.imgur.com/MiZpV2D.png"
+                efeito={<>
+                  <p>Ao conjurar uma magia que cause dano, você pode gastar <strong>1 Ação adicional</strong> e o uso da sua <strong>Arma de Sopro</strong> para infundir a magia com seu Elemento. Ao fazê-lo, todo o dano da magia é convertido para o tipo do seu Elemento.</p>
+                  <p>Além disso, se a magia atingir apenas uma criatura, ela sofre <strong>+1d6 de dano elemental adicional</strong>. Se a magia causar dano em área, cada criatura atingida sofre <strong>+1 de dano elemental adicional</strong>. Ambos os valores aumentam conforme a progressão de dano da Arma de Sopro (+1d6 ou +1 a cada 2 níveis acima do 1°).</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Baforada à Queima-Roupa"
+                tags="Drakan · Sopro"
+                descricao="Agarrar um inimigo e respirar seu elemento diretamente nele tem uma eficiência que dispensa elegância."
+                img="https://i.imgur.com/pUr1yLS.png"
+                efeito={<p>Quando você usa sua Arma de Sopro enquanto mantém uma criatura na condição <strong>Grabbed</strong>, você pode optar por concentrar o sopro inteiramente nela, em vez de afetar uma área. Ao fazê-lo, a criatura sofre <strong>+2d6 de dano elemental adicional</strong> e tem uma <strong>penalidade de circunstância de −2</strong> em seu teste de resistência contra o sopro.</p>}
+              />
+              <TalentoCard
+                titulo="Herança Legível"
+                tags="Drakan · Social"
+                descricao="Sua linhagem fala antes de você. Para quem reconhece um Drakan, a admiração ou a cautela chegam antes de qualquer palavra."
+                img="https://i.imgur.com/eqRtU8o.png"
+                efeito={<>
+                  <p><em>Pré-requisito: Erudição Ancestral.</em></p>
+                  <p>Uma vez por dia, você pode utilizar <strong>Dragon Lore</strong> no lugar da perícia normalmente exigida para uma das seguintes ações, com <strong>+1 de circunstância</strong> no teste:</p>
+                  <ul>
+                    <li>Se você possuir uma <strong>Herança Elemental</strong>, pode utilizá-la para <strong>Causar Impressão (Make an Impression)</strong>.</li>
+                    <li>Se você possuir uma <strong>Herança Primordial</strong>, pode utilizá-la para <strong>Coagir (Coerce)</strong>.</li>
+                  </ul>
+                </>}
+              />
+              <TalentoCard
+                titulo="Leitura de Território"
+                tags="Drakan · Social"
+                descricao="Dragões reconhecem hierarquia antes de processar palavras. Você entrou na sala e já está lendo quem manda e quem obedece."
+                img="https://i.imgur.com/wYAnJT7.png"
+                efeito={<>
+                  <p>Ao observar um ambiente social por <strong>1 minuto</strong> sem ser percebido fazendo isso, faça um teste de <strong>Sociedade</strong> ou <strong>Percepção</strong> (CD determinada pelo Mestre). Em um sucesso, você identifica a figura de maior e de menor autoridade presentes na situação. Pelo restante da cena, você recebe <strong>+1 de circunstância</strong> em testes de <strong>Fazer um Pedido (Make a Request)</strong> direcionados a qualquer uma dessas duas figuras.</p>
+                  <p><strong>Missão de Energia:</strong> Na primeira vez em cada período de Downtime que você utilizar as informações obtidas por Leitura de Território para garantir acesso, audiência ou favor de uma figura de autoridade que normalmente não o receberia, você recupera <strong>1 ponto de Energia</strong>.</p>
+                </>}
+              />
             </>
           }}
         </TalentosNiveis>
