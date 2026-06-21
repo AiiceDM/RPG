@@ -571,7 +571,7 @@ function Drakan() {
                   Se o modificador de Força for inferior a +2, aplique −1 adicional em testes e −1,5m de velocidade além das penalidades normais.</p>
                   <p><strong>Escamas Pétreis</strong> (Categoria: Armadura Pesada)<br />
                   Placas densas e sobrepostas como basalto solidificado, quase impenetráveis.<br />
-                  Bônus de Item: +6 · Cap de DES: +0 · Penalidade Testes: −3 · Penalidade Velocidade: −3m (10 pés) · Req. Força: +4<br />
+                  Bônus de Item: +6 · Cap de DES: +0 · Penalidade Testes: −3 · Penalidade Velocidade: −3m (10 pés) · Req. Força: +4 · Traço: <strong>Bulwark</strong><br />
                   Se o modificador de Força for inferior a +4, aplique −1 adicional em testes e −1,5m de velocidade além das penalidades normais.</p>
                 </>}
               />
