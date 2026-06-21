@@ -1759,6 +1759,7 @@ body {
 .sing-item {
   padding: var(--s2) 0;
   border-bottom: 1px solid rgba(139,10,80,0.1);
+  font-weight: 400;
 }
 
 .sing-item:last-child { border-bottom: none; }
