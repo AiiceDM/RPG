@@ -729,11 +729,11 @@ function Drakan() {
                       <tr><td>A Tempestade</td><td>Illusory Object, Sure Strike, Shocking Grasp</td></tr>
                       <tr><td>O Nocivo</td><td>Goblin Pox, Grease, Pass Without Trace</td></tr>
                       <tr><td>O Fornalha</td><td>Burning Hands, Fear, Command</td></tr>
-                      <tr><td>O Feral</td><td>Gust of Wind, Pass Without Trace, Sure Strike</td></tr>
-                      <tr><td>O Tectônico</td><td>Shatter, Runic Weapon, Sure Strike</td></tr>
+                      <tr><td>O Feral</td><td>Snowball, Pass Without Trace, Sure Strike</td></tr>
+                      <tr><td>O Tectônico</td><td>Pummeling Rubble, Runic Weapon, Sure Strike</td></tr>
                       <tr><td>Zhaitan</td><td>Grim Tendrils, Enfeeble, Fear</td></tr>
                       <tr><td>Mordremoth</td><td>Summon Plant or Fungus, Command, Sleep</td></tr>
-                      <tr><td>Primordus</td><td>Burning Hands, Shatter, Runic Weapon</td></tr>
+                      <tr><td>Primordus</td><td>Burning Hands, Pummeling Rubble, Runic Weapon</td></tr>
                       <tr><td>Jormag</td><td>Fear, Charm, Sleep</td></tr>
                       <tr><td>Kralkatorrik</td><td>Shocking Grasp, Sure Strike, Command</td></tr>
                       <tr><td>Soo-Won</td><td>Hydraulic Push, Heal, Soothe</td></tr>
