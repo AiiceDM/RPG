@@ -1953,6 +1953,21 @@ body {
   margin-bottom: 0 !important;
 }
 
+/* ── TALENTO RARO ────────────────────────────────────────────── */
+.talento-raro {
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(121,103,65,0.25);
+}
+
+.talento-raro[open] {
+  border-color: var(--gold-light);
+  box-shadow: 0 0 20px rgba(173,165,98,0.3);
+}
+
+.talento-raro .talento-card-tags {
+  color: var(--gold-light);
+}
+
 /* ── RESPONSIVO ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .cabecalho { padding: 0 var(--s4); gap: var(--s3); }

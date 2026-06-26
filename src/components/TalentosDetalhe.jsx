@@ -406,9 +406,9 @@ function HabilidadeCard({ titulo, img, children }) {
   );
 }
 
-function TalentoCard({ titulo, tags, descricao, efeito, img }) {
+function TalentoCard({ titulo, tags, descricao, efeito, img, raro }) {
   return (
-    <details className="talento-card">
+    <details className={`talento-card${raro ? ' talento-raro' : ''}`}>
       <summary className="talento-card-header">
         <div className="talento-card-img">
           {img ? <img src={img} alt={titulo} /> : '📀'}
@@ -692,6 +692,93 @@ function Drakan() {
                     <li><strong>Ampliada:</strong> A área do Sopro aumenta para um cone de <strong>6 metros (20 pés)</strong> ou uma linha de <strong>12 metros (40 pés)</strong>.</li>
                     <li><strong>Reserva:</strong> A Arma de Sopro ganha um uso adicional que pode ser utilizado <strong>uma vez por dia</strong>, independente da frequência normal.</li>
                   </ul>
+                </>}
+              />
+              <TalentoCard
+                titulo="Casca Reativa"
+                tags="Drakan · Defesa"
+                descricao="Suas escamas não apenas protegem. Elas respondem."
+                img="https://i.imgur.com/TGFFoVc.png"
+                efeito={<p>Sempre que uma criatura acertar você com um ataque corpo a corpo, ela sofre <strong>1 de dano do seu Elemento</strong>. Este dano aumenta em <strong>+1</strong> a cada 4 níveis acima do 1º. Contra ataques desarmados ou com armas naturais, o dano é aumentado em <strong>+1 adicional</strong>.</p>}
+              />
+              <TalentoCard
+                titulo="Cuspir Elemento"
+                tags="Drakan · Sopro"
+                descricao="Nem todo sopro precisa ser uma tempestade. Às vezes basta uma faísca no lugar certo."
+                img="https://i.imgur.com/1l8vZ3j.png"
+                efeito={<>
+                  <p><em>Pré-requisito: Hálito Elemental.</em></p>
+                  <p>(1 Ação) [Flourish, Manipulação] — <em>Alcance:</em> <strong>9 metros (30 pés)</strong>. Escolha um dos seguintes modos:</p>
+                  <ul>
+                    <li><strong>Alvo único:</strong> Você cospe uma concentração do seu Elemento contra uma criatura visível dentro do alcance. Ela sofre dano igual à <strong>metade dos dados</strong> da sua Arma de Sopro (arredondado para baixo, mínimo 1d6), usando o mesmo tipo de save da sua Herança Dracônica e sua CD de Classe.</li>
+                    <li><strong>Terreno:</strong> Você cospe o Elemento sobre uma área dentro do alcance. A área de <strong>1,5 metro (5 pés)</strong> torna-se <strong>Hazardous Terrain</strong> por <strong>1 minuto</strong>, causando 1 de dano do seu Elemento por dado que o ataque de alvo único causaria a qualquer criatura que se mova ou termine o turno nela.</li>
+                  </ul>
+                </>}
+              />
+              <TalentoCard
+                titulo="Conexão Dracônica"
+                tags="Drakan · Arcano"
+                descricao="O Dragão que ecoa no seu sangue não é apenas origem. É uma presença que ainda responde, quando você sabe como chamá-la."
+                img="https://i.imgur.com/BnoHzmG.png"
+                efeito={<>
+                  <p>Durante suas preparações diárias, você pode dedicar 10 minutos a uma conexão instintiva com o Dragão da sua Herança. Ao fazê-lo, escolha uma das três magias da lista correspondente abaixo. Até suas próximas preparações diárias, você pode conjurar essa magia como uma <strong>magia inata</strong>, uma vez por dia, usando sua CD de Classe. A magia é automaticamente <strong>heightened</strong> a um nível igual à metade do seu nível (arredondado para baixo, mínimo 1).</p>
+                  <table>
+                    <thead><tr><th>Herança</th><th>Magias</th></tr></thead>
+                    <tbody>
+                      <tr><td>O Corrosivo</td><td>Goblin Pox, Enfeeble, Grease</td></tr>
+                      <tr><td>A Tempestade</td><td>Illusory Object, Sure Strike, Shocking Grasp</td></tr>
+                      <tr><td>O Nocivo</td><td>Goblin Pox, Grease, Pass Without Trace</td></tr>
+                      <tr><td>O Fornalha</td><td>Burning Hands, Fear, Command</td></tr>
+                      <tr><td>O Feral</td><td>Gust of Wind, Pass Without Trace, Sure Strike</td></tr>
+                      <tr><td>O Tectônico</td><td>Shatter, Runic Weapon, Sure Strike</td></tr>
+                      <tr><td>Zhaitan</td><td>Grim Tendrils, Enfeeble, Fear</td></tr>
+                      <tr><td>Mordremoth</td><td>Summon Plant or Fungus, Command, Sleep</td></tr>
+                      <tr><td>Primordus</td><td>Burning Hands, Shatter, Runic Weapon</td></tr>
+                      <tr><td>Jormag</td><td>Fear, Charm, Sleep</td></tr>
+                      <tr><td>Kralkatorrik</td><td>Shocking Grasp, Sure Strike, Command</td></tr>
+                      <tr><td>Soo-Won</td><td>Hydraulic Push, Heal, Soothe</td></tr>
+                      <tr><td>Aurene</td><td>Heal, Color Spray, Sanctuary</td></tr>
+                    </tbody>
+                  </table>
+                </>}
+              />
+              <TalentoCard
+                titulo="Ecos de Escamas"
+                tags="Drakan · Exploração"
+                descricao="O que um dragão foi não desaparece completamente. Fica impresso no material que ele deixou para trás, esperando alguém com sangue suficiente para ouvi-lo."
+                img="https://i.imgur.com/OPiTiib.png"
+                efeito={<>
+                  <p>Ao passar <strong>10 minutos</strong> em contato direto com qualquer um dos seguintes, você experimenta um fragmento da memória mais intensa ou dos últimos momentos daquele ser ou lugar:</p>
+                  <ul>
+                    <li>Restos físicos (ossos, escamas, cinzas, dentes) de um Drakan ou Dragão morto há menos de um século.</li>
+                    <li>Restos físicos de uma criatura com o traço do seu Elemento morta há menos de um século.</li>
+                    <li>Um objeto ou local que possua o traço do seu Elemento de forma concentrada e duradoura.</li>
+                  </ul>
+                  <p>O Mestre determina o que é revelado e como. Esta habilidade não pode ser repetida com os mesmos restos ou local.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Lar do Dragão"
+                tags="Drakan · Exploração"
+                descricao="Um dragão sem território não é um dragão. É apenas um animal perdido. Você aprendeu a diferença."
+                img="https://i.imgur.com/aoD55Kz.png"
+                efeito={<>
+                  <p>Ao longo de <strong>1 dia inteiro</strong> de preparação, você pode marcar uma área de até <strong>1 milha</strong> ao seu redor como seu território, impregnando o ambiente com sua essência elemental através de sopro, marcas físicas e presença contínua. A área não pode já conter uma marca territorial de outro ser, nem possuir criaturas hostis ativas no momento da marcação.</p>
+                  <p>Enquanto estiver dentro do seu território, você recebe <strong>+1 de bônus de status</strong> em todos os testes de perícia, jogadas de ataque e sua CD de Classe.</p>
+                  <p>Você só pode ter um território ativo por vez. A marca se dissipa naturalmente se você ficar mais de <strong>30 dias</strong> sem retornar à área.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Iniciado do Culto do Dragão"
+                tags="Drakan · Raro"
+                descricao="Há conhecimentos que não se encontram em livros, nem se herdam pelo sangue. Eles são transmitidos em rituais fechados, por aqueles que escolheram servir ao Dragão não por linhagem, mas por devoção. Você deu o primeiro passo nesse caminho."
+                img="https://i.imgur.com/bIJJkk8.png"
+                raro
+                efeito={<>
+                  <p><em>Pré-requisito: O personagem deve fazer parte de um Culto de adoração ao Dragão de sua Herança Dracônica. Este talento só pode ser selecionado com permissão explícita do Mestre.</em></p>
+                  <p>Você aprende a primeira magia do Culto do Dragão ao qual você descende. Esta magia pode ser conjurada como <strong>magia inata</strong> uma vez por dia, usando sua CD de Classe.</p>
+                  <p>As magias do Culto são poderosas além do que o corpo e a mente de um Drakan foram moldados para suportar. Cada uso cobra um <strong>preço</strong> — definido pelo Mestre de acordo com a natureza do Dragão cultuado e as circunstâncias da conjuração.</p>
+                  <p>As magias de cada Culto são reveladas ao personagem durante o jogo, conforme seu envolvimento com a organização se aprofunda.</p>
                 </>}
               />
             </>
