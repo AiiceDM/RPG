@@ -654,6 +654,46 @@ function Drakan() {
                   <p><strong>Missão de Energia:</strong> Na primeira vez em cada período de Downtime que você utilizar as informações obtidas por Leitura de Território para garantir acesso, audiência ou favor de uma figura de autoridade que normalmente não o receberia, você recupera <strong>1 ponto de Energia</strong>.</p>
                 </>}
               />
+            </>,
+            5: <>
+              <TalentoCard
+                titulo="Voo Rascunhado"
+                tags="Drakan · Movimento"
+                descricao="Ainda não é voo de verdade. É o reconhecimento de que o ar pode te sustentar por um instante, se você confiar nele."
+                img="https://i.imgur.com/pxLntNI.png"
+                efeito={<>
+                  <p>(1 Ação) <em>Frequência:</em> Uma vez por rodada. Você voa. Se não possuir uma Velocidade de Voo, ganha uma <strong>Velocidade de Voo de 6 metros</strong> para este movimento. Se não estiver em solo firme ao final deste movimento, você cai.</p>
+                  <p><strong>Rajada de Asas:</strong> Uma vez por dia, você pode forçar suas asas ao limite. Gaste <strong>3 Ações</strong> para voar 3 vezes consecutivas, cada uma com um bônus de circunstância de <strong>+1,5 metro (+5 pés)</strong> na Velocidade de Voo. Você ainda deve terminar o último movimento em solo firme ou cai.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Sopro Implacável"
+                tags="Drakan · Sopro"
+                descricao="Seu sopro não apenas atinge. Ele fica."
+                img="https://i.imgur.com/7aQcZAp.png"
+                efeito={<>
+                  <p><em>Pré-requisito: Hálito Elemental.</em></p>
+                  <p>Sua Arma de Sopro ganha permanentemente os seguintes efeitos:</p>
+                  <ul>
+                    <li><strong>Persistente:</strong> Criaturas que falharem no teste de resistência sofrem <strong>Dano Persistente</strong> do seu Elemento igual a <strong>1</strong> por cada 2 dados de dano que o sopro causar, além do dano normal.</li>
+                    <li><strong>Penetrante:</strong> O dano da Arma de Sopro ignora resistências numa quantidade igual à <strong>metade dos dados de dano</strong> que o sopro causar.</li>
+                  </ul>
+                </>}
+              />
+              <TalentoCard
+                titulo="Baforada Analítica"
+                tags="Drakan · Sopro"
+                descricao="Você não apenas respira mais fundo. Você aprendeu a ocupar mais espaço e a guardar o que não usou."
+                img="https://i.imgur.com/1zOP7Jf.png"
+                efeito={<>
+                  <p><em>Pré-requisito: Hálito Elemental.</em></p>
+                  <p>Sua Arma de Sopro ganha permanentemente os seguintes efeitos:</p>
+                  <ul>
+                    <li><strong>Ampliada:</strong> A área do Sopro aumenta para um cone de <strong>6 metros (20 pés)</strong> ou uma linha de <strong>12 metros (40 pés)</strong>.</li>
+                    <li><strong>Reserva:</strong> A Arma de Sopro ganha um uso adicional que pode ser utilizado <strong>uma vez por dia</strong>, independente da frequência normal.</li>
+                  </ul>
+                </>}
+              />
             </>
           }}
         </TalentosNiveis>
