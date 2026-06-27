@@ -603,13 +603,36 @@ function Drakan() {
                 </>}
               />
               <TalentoCard
-                titulo="Erudição Ancestral"
-                tags="Drakan · Conhecimento"
-                descricao="O sangue dracônico acumula memória ao longo de gerações. Às vezes você sabe coisas que nunca aprendeu."
-                img="https://i.imgur.com/qDsM7KL.png"
+                titulo="Estirpe Reconhecível"
+                tags="Drakan · Conhecimento · Social"
+                descricao="O sangue dracônico carrega memória que você não viveu e impõe uma presença que você não precisa anunciar. Quem reconhece o que você é reage a isso antes de qualquer palavra."
+                img="https://i.imgur.com/eqRtU8o.png"
                 efeito={<>
-                  <p>Você recebe o talento <strong>Additional Lore</strong>, escolhendo <strong>Dragon Lore</strong> como a perícia concedida.</p>
-                  <p>Além disso, uma vez por dia, você pode convocar a memória dracônica instintiva acumulada em seu sangue para utilizar <strong>Dragon Lore</strong> em um teste de Lembrar Conhecimento sobre qualquer assunto, independente da perícia normalmente exigida. Para isso, seu nível de proficiência em Dragon Lore deve ser compatível com a raridade ou complexidade do assunto (à critério do Mestre).</p>
+                  <p>Você recebe o talento <strong>Additional Lore</strong>, escolhendo <strong>Dragon Lore</strong> como a perícia concedida. Você ganha os dois benefícios a seguir:</p>
+                  <p><strong>Memória do Sangue:</strong> Uma vez por dia, você pode utilizar <strong>Dragon Lore</strong> em um teste de Lembrar Conhecimento sobre qualquer assunto, independente da perícia normalmente exigida, desde que seu nível de proficiência em Dragon Lore seja compatível com a raridade ou complexidade do assunto (à critério do Mestre).</p>
+                  <p><strong>Presença Reconhecida:</strong> Uma vez por dia, você pode utilizar <strong>Dragon Lore</strong> no lugar da perícia normalmente exigida para uma das seguintes ações, com <strong>+1 de circunstância</strong> no teste:</p>
+                  <ul>
+                    <li>Se você possuir uma <strong>Herança Elemental</strong>, pode utilizá-la para <strong>Causar Impressão (Make an Impression)</strong>.</li>
+                    <li>Se você possuir uma <strong>Herança Primordial</strong>, pode utilizá-la para <strong>Coagir (Coerce)</strong>.</li>
+                  </ul>
+                  <p><strong>Missão de Energia:</strong> Na primeira vez em cada período de Downtime que você usar Dragon Lore para Causar Impressão ou Coagir um NPC de importância narrativa (E3 ou superior) de forma que gere uma consequência concreta para o grupo — aliança, acordo, acesso ou conflito evitado — você recupera <strong>1 ponto de Energia</strong>.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Avareza Dracônica"
+                tags="Drakan · Manufatura · Sanidade"
+                descricao="Todo dragão entende o valor das coisas antes de entender qualquer outra. O ouro não é riqueza para a sua espécie, é propósito. Você carrega essa fome, e ela tanto te sustenta quanto te assombra."
+                img="https://i.imgur.com/04F6U3M.png"
+                efeito={<>
+                  <p>Você se torna Treinado em <strong>Manufatura (Crafting)</strong>. Você também aprende o truque <strong>Approximate</strong> como magia inata, podendo conjurá-lo à vontade.</p>
+                  <p><strong>Apreciar a Riqueza</strong> (Atividade de 10 minutos) — <em>Frequência:</em> Uma vez por dia. Você contempla em silêncio um tesouro que pertença exclusivamente a você. Ao final do período, faça um teste de <strong>Vontade de Sanidade</strong> contra a CD padrão do seu nível:</p>
+                  <ul>
+                    <li><strong>Sucesso Crítico:</strong> Progressão Moderada na Escala de Sanidade.</li>
+                    <li><strong>Sucesso:</strong> Progressão Pequena na Escala de Sanidade.</li>
+                    <li><strong>Falha Crítica:</strong> Regressão Pequena na Escala de Sanidade.</li>
+                  </ul>
+                  <p>Esta habilidade só pode ser utilizada uma vez por tesouro. O que qualifica como um "tesouro" para fins desta habilidade aumenta conforme você sobe de nível, à critério do Mestre, acompanhando aquilo que sua avareza dracônica passa a considerar digno.</p>
+                  <p><strong>Penalidade:</strong> Testemunhar um tesouro seu, ou que poderia ser seu, ser roubado ou destruído coloca sua sanidade em risco, exigindo um teste conforme determinado pelo Mestre.</p>
                 </>}
               />
               <TalentoCard
@@ -628,21 +651,6 @@ function Drakan() {
                 descricao="Agarrar um inimigo e respirar seu elemento diretamente nele tem uma eficiência que dispensa elegância."
                 img="https://i.imgur.com/pUr1yLS.png"
                 efeito={<p>Quando você usa sua Arma de Sopro enquanto mantém uma criatura na condição <strong>Grabbed</strong>, você pode optar por concentrar o sopro inteiramente nela, em vez de afetar uma área. Ao fazê-lo, a criatura sofre <strong>+2d6 de dano elemental adicional</strong> e tem uma <strong>penalidade de circunstância de −2</strong> em seu teste de resistência contra o sopro.</p>}
-              />
-              <TalentoCard
-                titulo="Herança Legível"
-                tags="Drakan · Social"
-                descricao="Sua linhagem fala antes de você. Para quem reconhece um Drakan, a admiração ou a cautela chegam antes de qualquer palavra."
-                img="https://i.imgur.com/eqRtU8o.png"
-                efeito={<>
-                  <p><em>Pré-requisito: Erudição Ancestral.</em></p>
-                  <p>Uma vez por dia, você pode utilizar <strong>Dragon Lore</strong> no lugar da perícia normalmente exigida para uma das seguintes ações, com <strong>+1 de circunstância</strong> no teste:</p>
-                  <ul>
-                    <li>Se você possuir uma <strong>Herança Elemental</strong>, pode utilizá-la para <strong>Causar Impressão (Make an Impression)</strong>.</li>
-                    <li>Se você possuir uma <strong>Herança Primordial</strong>, pode utilizá-la para <strong>Coagir (Coerce)</strong>.</li>
-                  </ul>
-                  <p><strong>Missão de Energia:</strong> Na primeira vez em cada período de Downtime que você usar Dragon Lore para Causar Impressão ou Coagir um NPC de importância narrativa de forma que gere uma consequência concreta para o grupo — aliança, acordo, acesso ou conflito evitado — você recupera <strong>1 ponto de Energia</strong>.</p>
-                </>}
               />
               <TalentoCard
                 titulo="Leitura de Território"
