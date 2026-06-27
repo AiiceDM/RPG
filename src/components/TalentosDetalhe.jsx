@@ -944,6 +944,45 @@ function Drakan() {
               <p>Usar <strong>Inalar Elemento</strong> também restaura o uso desta habilidade.</p>
             </>}
           />
+        </>,
+        5: <>
+          <TalentoCard
+            titulo="Escória Coagulada"
+            tags="Drakan · Primordus · Fogo"
+            descricao="O magma que você deixa para trás não some. Ele esfria lentamente, criando uma crosta que agarra e impede quem tenta cruzá-la."
+            img="https://i.imgur.com/QjyiwKk.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança Primordus.</em></p>
+              <p>Sua Terra Queimada passa a ser tratada como <strong>Difficult Terrain</strong>, além de <strong>Hazardous Terrain</strong>.</p>
+              <p>Além disso, criaturas que falharem no teste de resistência de Erupção têm sua movimentação reduzida em <strong>1,5 metro (5 pés)</strong> até o final do seu próximo turno. Em uma <strong>falha crítica</strong>, essa redução aumenta para <strong>4,5 metros (15 pés)</strong>.</p>
+            </>}
+          />
+          <TalentoCard
+            titulo="Núcleo Turbulento"
+            tags="Drakan · Primordus · Fogo"
+            descricao="A forma vulcânica que você alcança é mais instável e mais violenta do que parecia à primeira vista. O núcleo não escolhe onde queima."
+            img="https://i.imgur.com/qiB3JdK.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança Primordus; Aspecto Vulcânico.</em></p>
+              <p>Enquanto Aspecto Vulcânico estiver ativo, os seguintes aprimoramentos se aplicam:</p>
+              <ul>
+                <li>O dado de dano de Fogo adicional concedido pelo Aspecto Vulcânico se estende a <strong>todos os ataques</strong> pelo restante da forma, não apenas ao primeiro. Isso inclui ataques com armas que o Drakan estiver empunhando.</li>
+                <li>Se você possuir o talento <strong>Fissura</strong>, pode ativá-la ao sofrer dano de Frio ou dano com o traço Água enquanto estiver na forma vulcânica. Usar Fissura desta maneira <strong>não consome</strong> seu uso padrão diário dela.</li>
+              </ul>
+            </>}
+          />
+          <TalentoCard
+            titulo="Memória da Terra"
+            tags="Drakan · Primordus · Exploração"
+            descricao="Primordus existe há tempo suficiente para sentir cada fissura na crosta do mundo. Parte disso chegou até você."
+            img="https://i.imgur.com/LrbEdDc.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança Primordus.</em></p>
+              <p>Este talento possui dois usos distintos, cada um com frequência de <strong>uma vez por dia</strong>:</p>
+              <p><strong>Sentido Sísmico</strong> (2 Ações) — Você pressiona as mãos contra o solo e sintoniza sua percepção com as vibrações da terra. Por <strong>1 hora</strong>, você ganha <strong>Tremorsense Impreciso</strong> de <strong>9 metros (30 pés)</strong>. Este sentido detecta apenas criaturas em contato com o mesmo solo que você e somente se estiverem em movimento.</p>
+              <p><strong>Leitura do Solo</strong> (Atividade de 10 minutos) — Você mantém contato prolongado com o solo natural e absorve o histórico de vibrações acumulado na terra ao redor. Você percebe a passagem de criaturas e eventos ocorridos na área nas <strong>últimas 24 horas</strong>, detectando presença, direção aproximada e peso relativo das criaturas que passaram. Este sentido é impreciso: revela que algo passou e de onde veio, mas não identidade, número exato ou intenção. O Mestre determina o nível de detalhe disponível conforme o ambiente.</p>
+            </>}
+          />
         </>
       }}
     />
