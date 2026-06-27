@@ -1067,6 +1067,46 @@ function Drakan() {
             img="https://i.imgur.com/xANlHTw.png"
             efeito={<p>Uma vez por turno, ao curar uma ou mais criaturas por qualquer meio, você pode escolher uma delas para reverberar a energia positiva. Por <strong>1 rodada</strong>, essa criatura ganha <strong>resistência 1 a todos os tipos de dano</strong>. Essa resistência aumenta em <strong>+1</strong> para cada 5 níveis que você possui.</p>}
           />
+        </>,
+        5: <>
+          <TalentoCard
+            titulo="Sacrifício Protetor"
+            tags="Drakan · Aurene · Luz"
+            descricao="A luz de Aurene não se limita a curar o que já foi ferido. Quando necessário, ela se interpõe, recebendo o golpe que era destinado a outro."
+            img="https://i.imgur.com/3lUZHG0.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança Aurene.</em></p>
+              <p>(Reação) <em>Gatilho:</em> Um aliado a até <strong>9 metros</strong> de você seria atingido por um ataque ou precisaria fazer um teste de Reflexos. Você projeta um véu de luz prismática sobre o aliado. Ele recebe <strong>+2 de circunstância na CA</strong> contra aquele ataque ou <strong>+2 de circunstância no teste de Reflexos</strong>, e ganha <strong>Pontos de Vida Temporários</strong> iguais ao seu nível, que duram <strong>1 minuto</strong> ou até você usar esta reação novamente.</p>
+              <p>Até o início do seu próximo turno, você fica <strong>Off-Guard</strong>, pois desviou sua própria bênção para o aliado. Após usar esta reação, você deve gastar <strong>1 Ação</strong> em um turno subsequente para reativá-la antes de poder usá-la novamente.</p>
+            </>}
+          />
+          <TalentoCard
+            titulo="Salvação"
+            tags="Drakan · Aurene · Luz"
+            descricao="Há um instante entre a queda e a morte em que tudo ainda pode ser revertido. Você aprendeu a alcançar esse instante e a pagar o preço por ele."
+            img="https://i.imgur.com/Vn3GWAj.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança Aurene.</em></p>
+              <p>(Reação) <em>Frequência:</em> Uma vez por dia. <em>Gatilho:</em> Um aliado a até <strong>18 metros (60 pés)</strong> de você cai a <strong>0 Pontos de Vida</strong>. Você se desloca instantaneamente para um espaço desocupado adjacente ao aliado, surgindo em um lampejo de luz prismática. O aliado recupera <strong>3d6 Pontos de Vida</strong> (+1d6 a cada 2 níveis acima do 5°) e não ganha a condição <strong>Wounded</strong> por ter caído.</p>
+              <p>Você assume o peso dessa quase-morte em seu lugar: você ganha a condição <strong>Wounded 1</strong>, ou aumenta o valor da sua condição Wounded em <strong>1</strong> se já a possuir.</p>
+            </>}
+          />
+          <TalentoCard
+            titulo="Graça Vagante"
+            tags="Drakan · Aurene · Exploração"
+            descricao="A bondade de Aurene não fica presa a um corpo. Parte dela se solta e vagueia pelo mundo, atraída por aquilo que pulsa mais forte nos corações ao redor, levando de volta a quem a enviou aquilo que encontrou."
+            img="https://i.imgur.com/x0QyOfP.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança Aurene.</em></p>
+              <p>Você ganha os serviços de uma <strong>Luzéola-errante</strong>, uma pequena criatura espiritual de luz, etérea e angelical, invisível para todos exceto você. Uma vez por dia, você pode invocá-la por meio de um procedimento de <strong>10 minutos</strong>.</p>
+              <p>A Luzéola-errante é atraída por sentimentos intensos. Ao invocá-la, escolha um dos seguintes sentimentos para que ela busque:</p>
+              <ul>
+                <li><strong>Positivos:</strong> Alegria, Afeto, Esperança.</li>
+                <li><strong>Negativos:</strong> Medo, Raiva, Sofrimento.</li>
+              </ul>
+              <p>Pela próxima <strong>hora</strong>, a Luzéola-errante vagueia por uma área de até <strong>1 milha</strong> de diâmetro ao redor do ponto de invocação, procurando pela manifestação mais intensa do sentimento escolhido. Caso encontre, ela busca compreender sua origem e retorna a você trazendo o que descobriu sobre a causa daquele sentimento. O Mestre pode exigir um teste apropriado para determinar o sucesso e o nível de detalhe da busca, e pode ajustar a área conforme a densidade do ambiente.</p>
+            </>}
+          />
         </>
       }}
     />
