@@ -1716,12 +1716,12 @@ body {
   border: 1px solid rgba(139,10,80,0.18);
   border-radius: var(--r-sm);
   margin: var(--s2) 0;
-  overflow: hidden;
 }
 
 .heranca-secao > summary {
   font-family: var(--font-gothic);
   font-size: 0.9rem;
+  border-radius: var(--r-sm);
   letter-spacing: 0.04em;
   color: var(--fg-accent);
   padding: var(--s2) var(--s3);
@@ -1748,7 +1748,7 @@ body {
   flex-shrink: 0;
 }
 
-.heranca-secao[open] > summary { border-bottom: 1px solid rgba(139,10,80,0.18); }
+.heranca-secao[open] > summary { border-bottom: 1px solid rgba(139,10,80,0.18); border-radius: var(--r-sm) var(--r-sm) 0 0; }
 .heranca-secao[open] > summary::before { transform: rotate(90deg); }
 
 .heranca-secao-corpo {
