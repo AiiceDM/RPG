@@ -894,8 +894,8 @@ function Drakan() {
 
     <div className="heranca-grid">
     <HerancaCard
-      identificador="Zhaitan"
-      titulo="A Sombra Eterna"
+      identificador="Primordial"
+      titulo="Zhaitan"
       descricao="Senhor de Orr. Representa a morte inevitável e a estagnação. Seus servos não são apenas mortos, são distorções da vida."
       elemento="Vazio · Fortitude"
       sing1={<>Treinado em <strong>Religião (Religion)</strong>.</>}
@@ -910,8 +910,8 @@ function Drakan() {
     />
 
     <HerancaCard
-      identificador="Mordremoth"
-      titulo="A Selva Senciente"
+      identificador="Primordial"
+      titulo="Mordremoth"
       descricao="Dragão da mente e das plantas. Acredita que a individualidade é ineficiente; todos devem servir à colmeia."
       elemento="Veneno · Fortitude"
       sing1={<>Treinado em <strong>Natureza (Nature)</strong>.</>}
@@ -923,8 +923,8 @@ function Drakan() {
     />
 
     <HerancaCard
-      identificador="Primordus"
-      titulo="A Fornalha"
+      identificador="Primordial"
+      titulo="Primordus"
       descricao="O primeiro dragão. Habita as profundezas da terra. Odeia a vida biológica e busca purificar o mundo transformando tudo em pedra e magma."
       elemento="Fogo · Reflexo"
       img="https://i.imgur.com/AttQm1D.png"
@@ -1008,8 +1008,8 @@ function Drakan() {
     />
 
     <HerancaCard
-      identificador="Jormag"
-      titulo="O Persuasor"
+      identificador="Primordial"
+      titulo="Jormag"
       descricao="Dragão dos segredos e da tentação. Não congela apenas corpos, mas mentes. Seus servos não são escravos, mas fanáticos convertidos por promessas de poder."
       elemento="Mental · Vontade"
       sing1={<>Treinado em <strong>Diplomacia (Diplomacy)</strong>.</>}
@@ -1021,8 +1021,8 @@ function Drakan() {
     />
 
     <HerancaCard
-      identificador="Kralkatorrik"
-      titulo="O Marcador"
+      identificador="Primordial"
+      titulo="Kralkatorrik"
       descricao="Sua energia distorce o espaço e a matéria. Sua presença cria tempestades de raios roxos e cristaliza a terra e seres vivos em uma tentativa de ordem cósmica."
       elemento="Elétrico · Reflexo"
       sing1={<>Treinado em <strong>Ocultismo (Occultism)</strong>.</>}
@@ -1034,8 +1034,8 @@ function Drakan() {
     />
 
     <HerancaCard
-      identificador="Soo-Won"
-      titulo="A Mãe Oceano"
+      identificador="Primordial"
+      titulo="Soo-Won"
       descricao="A dragoa da água e da magia pura. Fluída, protetora e a origem de toda a vida em Tyria, mas capaz de fúria maremotriz."
       elemento="Água/Concussão · Reflexo"
       sing1={<>Treinado em <strong>Arcanismo (Arcana)</strong>.</>}
@@ -1047,8 +1047,8 @@ function Drakan() {
     />
 
     <HerancaCard
-      identificador="Aurene"
-      titulo="A Prismática"
+      identificador="Primordial"
+      titulo="Aurene"
       descricao="Neta de Kralkatorrik e herdeira do equilíbrio. Representa a luz, a esperança e a união de todas as magias."
       elemento="Vitalidade · Vontade"
       img="https://i.imgur.com/feIwZvN.png"
