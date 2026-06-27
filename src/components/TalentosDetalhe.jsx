@@ -410,8 +410,15 @@ function TalentoCard({ titulo, tags, descricao, efeito, img, raro }) {
   return (
     <details className={`talento-card${raro ? ' talento-raro' : ''}`}>
       <summary className="talento-card-header">
-        <div className="talento-card-img">
-          {img ? <img src={img} alt={titulo} /> : '📀'}
+        <div className="talento-thumb-wrapper">
+          <div className="talento-card-img">
+            {img ? <img src={img} alt={titulo} /> : '📀'}
+          </div>
+          {img && (
+            <div className="talento-img-popout">
+              <img src={img} alt={titulo} />
+            </div>
+          )}
         </div>
         <div className="talento-card-meta">
           <h4 className="talento-card-titulo">{titulo}</h4>

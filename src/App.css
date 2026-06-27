@@ -1880,6 +1880,43 @@ body {
   transform: rotate(90deg);
 }
 
+.talento-thumb-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.talento-thumb-wrapper:hover {
+  z-index: 100;
+}
+
+.talento-img-popout {
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  width: 180px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s var(--ease-gothic), transform 0.18s var(--ease-gothic);
+  z-index: 500;
+}
+
+.talento-thumb-wrapper:hover .talento-img-popout {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) translateX(0);
+}
+
+.talento-img-popout img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .talento-card-img {
   width: 56px;
   min-width: 56px;
