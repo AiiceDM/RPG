@@ -707,7 +707,7 @@ function Drakan() {
                 tags="Drakan · Defesa"
                 descricao="Suas escamas não apenas protegem. Elas respondem."
                 img="https://i.imgur.com/TGFFoVc.png"
-                efeito={<p>Sempre que uma criatura acertar você com um ataque corpo a corpo, ela sofre <strong>1 de dano do seu Elemento</strong>. Este dano aumenta em <strong>+1</strong> a cada 4 níveis acima do 1º. Contra ataques desarmados ou com armas naturais, o dano é aumentado em <strong>+1 adicional</strong>.</p>}
+                efeito={<p>Sempre que uma criatura acertar você com um ataque corpo a corpo, ela sofre <strong>2 de dano do seu Elemento</strong>. Este dano aumenta em <strong>+1</strong> a cada 3 níveis acima do 5°. Contra ataques desarmados ou com armas naturais, o dano é aumentado em <strong>+1 adicional</strong>.</p>}
               />
               <TalentoCard
                 titulo="Cuspir Elemento"
@@ -772,8 +772,13 @@ function Drakan() {
                 img="https://i.imgur.com/aoD55Kz.png"
                 efeito={<>
                   <p>Ao longo de <strong>1 dia inteiro</strong> de preparação, você pode marcar uma área de até <strong>1 milha</strong> ao seu redor como seu território, impregnando o ambiente com sua essência elemental através de sopro, marcas físicas e presença contínua. A área não pode já conter uma marca territorial de outro ser, nem possuir criaturas hostis ativas no momento da marcação.</p>
-                  <p>Enquanto estiver dentro do seu território, você recebe <strong>+1 de bônus de status</strong> em todos os testes de perícia, jogadas de ataque e sua CD de Classe.</p>
-                  <p>Você só pode ter um território ativo por vez. A marca se dissipa naturalmente se você ficar mais de <strong>30 dias</strong> sem retornar à área.</p>
+                  <p>Ao marcar o território, escolha uma das três sintonias abaixo. Enquanto estiver dentro do seu território, você recebe o benefício da sintonia ativa. Você pode alterar a sintonia ativa gastando <strong>1 Ação</strong> enquanto estiver no território.</p>
+                  <ul>
+                    <li><strong>Sintonia do Predador:</strong> +1 de circunstância em jogadas de ataque e testes de resistência.</li>
+                    <li><strong>Sintonia do Vigia:</strong> +1 de circunstância em testes de perícia e de Percepção.</li>
+                    <li><strong>Sintonia do Guardião:</strong> +1 de circunstância na CA e em testes de resistência.</li>
+                  </ul>
+                  <p>Você só pode ter um território ativo por vez. A marca se dissipa naturalmente se você ficar mais de <strong>15 dias</strong> sem retornar à área ou marcar uma outra área enquanto tiver uma ativa.</p>
                 </>}
               />
               <TalentoCard
