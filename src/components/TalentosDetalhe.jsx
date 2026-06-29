@@ -444,13 +444,13 @@ function TalentosNiveis({ children }) {
   ));
 }
 
-function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopout, sing1, sing2, sing3, talentos }) {
+function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopout, imgPosition, sing1, sing2, sing3, talentos }) {
   return (
     <details className="heranca-card">
       <summary className="heranca-card-summary">
         <div className="heranca-thumb-wrapper">
           <div className="heranca-card-banner">
-            {img ? <img src={img} alt={titulo} /> : <span className="heranca-banner-placeholder">🐉</span>}
+            {img ? <img src={img} alt={titulo} style={imgPosition ? { objectPosition: imgPosition } : undefined} /> : <span className="heranca-banner-placeholder">🐉</span>}
           </div>
           {imgPopout && (
             <div className="heranca-img-popout">
@@ -830,6 +830,7 @@ function Drakan() {
       elemento="Elétrico · Reflexo"
       img="https://i.pinimg.com/736x/a2/23/0b/a2230b56a585377f8d3549f676df1e46.jpg"
       imgPopout="https://i.imgur.com/OImMaUt.png"
+      imgPosition="center 30%"
       sing1={<>Treinado em <strong>Enganação (Deception)</strong>.</>}
       sing2={<>Voz da Miragem — Você aprende o truque mágico <em>Figment</em> como magia arcana inata, podendo lançá-lo à vontade. Ao contrário do normal, você pode conjurá-lo gastando apenas <strong>1 Ação</strong> em vez de 2.</>}
       sing3={<>
