@@ -846,9 +846,9 @@ function Drakan() {
             img="https://i.imgur.com/wu9seBb.png"
             efeito={<>
 
-              <p>(2 Ações) Realize um Strike corpo a corpo. Este Strike conta como dois ataques para fins de <strong>penalidade de ataque múltiplo (MAP)</strong>. Em um acerto, o ataque causa <strong>+1d6 de dano Elétrico adicional</strong> (+1d6 a cada 4 níveis acima do 1°) e o uso desta habilidade é consumido.</p>
+              <p>(2 Ações) <em>Frequência:</em> Uma vez por dia. Realize um Strike corpo a corpo. Este Strike conta como dois ataques para fins de <strong>penalidade de ataque múltiplo (MAP)</strong>. Em um acerto, o ataque causa <strong>+1d6 de dano Elétrico adicional</strong> (+1d6 a cada 4 níveis acima do 1°) e o uso desta habilidade é consumido.</p>
               <p>Ao acertar, um arco elétrico salta do alvo para um inimigo a até <strong>4,5 metros (15 pés)</strong> dele, e então para um terceiro inimigo a até 4,5 metros do segundo. Cada alvo do arco deve fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo dano igual ao dano Elétrico adicional do Strike.</p>
-              <p>Se o Strike errar, o uso desta habilidade não é consumido. <em>Frequência:</em> Uma vez por dia. Recupera seu uso ao utilizar <strong>Inalar Elemento</strong>.</p>
+              <p>Se o Strike errar, o uso desta habilidade não é consumido. Recupera seu uso ao utilizar <strong>Inalar Elemento</strong>.</p>
             </>}
           />
           <TalentoCard
