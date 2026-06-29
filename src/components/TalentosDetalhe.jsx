@@ -828,12 +828,81 @@ function Drakan() {
       titulo="A Tempestade"
       descricao="Senhor dos ermos áridos e céus abertos. Usa eletricidade estática para caçar. Hierarquia rígida e vaidade baseada em domínio territorial."
       elemento="Elétrico · Reflexo"
+      img="https://i.pinimg.com/736x/a2/23/0b/a2230b56a585377f8d3549f676df1e46.jpg"
+      imgPopout="https://i.imgur.com/OImMaUt.png"
       sing1={<>Treinado em <strong>Enganação (Deception)</strong>.</>}
       sing2={<>Voz da Miragem — Você aprende o truque mágico <em>Figment</em> como magia arcana inata, podendo lançá-lo à vontade. Ao contrário do normal, você pode conjurá-lo gastando apenas <strong>1 Ação</strong> em vez de 2.</>}
       sing3={<>
         <p><strong>Punição Trovejante</strong> (2 Ações) [Drakan, Elétrico, Arcano] — Você gasta o uso da sua <strong>Arma de Sopro</strong> para invocar um raio do céu. Escolha <strong>2 espaços</strong> de 1,5 metro (5 pés) visíveis dentro de <strong>18 metros</strong>, que não precisam ser adjacentes entre si. Criaturas nesses espaços devem fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo o mesmo dano que sua Arma de Sopro causaria. Cada espaço torna-se <strong>Hazardous Terrain</strong> por <strong>1 minuto</strong>. Qualquer inimigo que se mova ou termine seu turno em um desses espaços sofre <strong>1 de dano Elétrico</strong> (+1 a cada 2 níveis acima do 1°).</p>
         <p><strong>Eco da Punição</strong> (2 Ações) [Drakan, Elétrico, Arcano] — <em>Requisito:</em> Você possui pelo menos um espaço de Hazardous Terrain ativo criado por Punição Trovejante. Você invoca um segundo raio sobre o terreno carregado. Todas as criaturas em uma emanação de <strong>1,5 metro (5 pés)</strong> ao redor de cada espaço de Hazardous Terrain ativo devem fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo o mesmo dano que sua Arma de Sopro causaria. O Hazardous Terrain é <strong>consumido</strong> pela detonação.</p>
       </>}
+      talentos={{
+        1: <>
+          <TalentoCard
+            titulo="Flagelo Elétrico"
+            tags="Drakan · A Tempestade · Elétrico"
+            descricao="O relâmpago não para no primeiro alvo. Nunca parou."
+            img="https://i.imgur.com/wu9seBb.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança A Tempestade.</em></p>
+              <p>(2 Ações) Realize um Strike corpo a corpo. Este Strike conta como dois ataques para fins de <strong>penalidade de ataque múltiplo (MAP)</strong>. Em um acerto, o ataque causa <strong>+1d6 de dano Elétrico adicional</strong> (+1d6 a cada 4 níveis acima do 1°) e o uso desta habilidade é consumido.</p>
+              <p>Ao acertar, um arco elétrico salta do alvo para um inimigo a até <strong>4,5 metros (15 pés)</strong> dele, e então para um terceiro inimigo a até 4,5 metros do segundo. Cada alvo do arco deve fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo dano igual ao dano Elétrico adicional do Strike.</p>
+              <p>Se o Strike errar, o uso desta habilidade não é consumido. <em>Frequência:</em> Uma vez por dia. Recupera seu uso ao utilizar <strong>Inalar Elemento</strong>.</p>
+            </>}
+          />
+          <TalentoCard
+            titulo="Distração Relampejante"
+            tags="Drakan · A Tempestade · Elétrico"
+            descricao="A ilusão não precisa ser convincente. Às vezes, basta ser barulhenta o suficiente para que o corpo reaja antes que a mente decida."
+            img="https://i.imgur.com/xZ70LhH.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança A Tempestade.</em></p>
+              <p>Ao conjurar ou sustentar <em>Figment</em>, você pode canalizar uma descarga elétrica através da ilusão para criar uma distração explosiva. Esta ação possui o traço <strong>Manipulate</strong> e produz um som estrondoso audível em um raio significativo ao redor de você, à critério do Mestre.</p>
+              <p>Ao utilizar desta maneira, faça um teste de <strong>Enganação</strong> contra a CD de Percepção do alvo. Em vez dos efeitos normais de Create a Diversion, aplique os seguintes resultados:</p>
+              <ul>
+                <li><strong>Sucesso:</strong> O alvo fica <strong>Clumsy 1</strong> por 1 rodada enquanto realiza movimentos evasivos.</li>
+                <li><strong>Sucesso Crítico:</strong> O alvo fica <strong>Clumsy 2</strong> por 1 rodada.</li>
+              </ul>
+              <p>Independente do resultado, o alvo ganha <strong>+4 de circunstância</strong> em sua CD de Percepção contra tentativas normais de Create a Diversion pelo próximo minuto. Uma vez afetado por Distração Relampejante, o alvo fica <strong>imune</strong> a ela por <strong>24 horas</strong>.</p>
+            </>}
+          />
+        </>,
+        5: <>
+          <TalentoCard
+            titulo="Afinidade Condutora"
+            tags="Drakan · A Tempestade · Elétrico"
+            descricao="Há Drakans que percebem a eletricidade ao redor. Você a respira. O campo elétrico ao seu redor não é um sentido que você ativa, é o estado natural de quem nunca esteve realmente separado do elemento que carrega."
+            img="https://i.imgur.com/R6Ebzyp.png"
+            efeito={<>
+              <p><em>Pré-requisito: Herança A Tempestade; Percepção Elemental.</em></p>
+              <p>O raio de percepção do seu Elemento concedido por Percepção Elemental aumenta para <strong>36 metros</strong>.</p>
+              <p>Ao detectar seu Elemento dentro deste raio, você pode absorvê-lo gastando <strong>1 Ação</strong> em vez de uma atividade de 10 minutos, sem precisar tocar a fonte. A fonte deve estar dentro do seu raio de percepção.</p>
+              <p>Ao usar <strong>Punição Trovejante</strong>, você pode escolher um <strong>terceiro espaço</strong> adicional para o raio cair, seguindo as mesmas regras dos dois espaços originais.</p>
+            </>}
+          />
+          <TalentoCard
+            titulo="Domínio do Arco"
+            tags="Drakan · A Tempestade · Elétrico"
+            descricao="Para um Drakan da Tempestade, Electric Arc não é magia aprendida. É memória muscular. A única diferença entre você e os outros é que você descobriu que o arco não precisa parar em dois alvos."
+            img="https://i.imgur.com/oCZQOWH.png"
+            efeito={<>
+              <p>Você aprende <strong>Electric Arc</strong> como magia arcana inata, podendo conjurá-la à vontade. Se já possuir Electric Arc, aprenda outro truque da lista arcana em vez disso.</p>
+              <p>Ao conjurar Electric Arc, você pode gastar <strong>1 Ação adicional</strong> para alvejar um <strong>terceiro alvo</strong> dentro do alcance normal da magia. O terceiro alvo realiza seu próprio teste de resistência individualmente.</p>
+            </>}
+          />
+          <TalentoCard
+            titulo="Realidade Distorcida"
+            tags="Drakan · A Tempestade · Social"
+            descricao="Toda tempestade começa com uma faísca que ninguém vê. Você aprendeu a ser essa faísca: invisível, silenciosa, já dentro da mente de quem ainda acredita estar a salvo."
+            img="https://i.imgur.com/Y7nakl2.png"
+            efeito={<>
+              <p>Como uma atividade que pode durar até <strong>1 dia</strong>, você conduz uma operação de desinformação, espalhando deliberadamente uma crença falsa sobre um único tópico na mente de até <strong>10 criaturas</strong> escolhidas. Para ser afetada, cada criatura deve estar carregando um objeto físico pequeno previamente marcado por você com sua essência elétrica. Você sustenta fragmentos imperceptíveis de <em>Figment</em> vinculados a esses objetos ao longo do período, ignorando o alcance normal da magia.</p>
+              <p>A desinformação deve ser definida antes de iniciar a atividade e não pode abranger mais de um tópico. O Mestre pode exigir testes de <strong>Enganação</strong> contra a CD de Percepção dos alvos para determinar se a desinformação é absorvida ou detectada. Uma criatura que detecte ou seja submetida a esta habilidade fica <strong>permanentemente imune</strong> a ela.</p>
+              <p><strong>Missão de Energia:</strong> Na primeira vez em cada período de Downtime que você utilizar Realidade Distorcida para espalhar uma desinformação relevante para a trama, você recupera <strong>1 ponto de Energia</strong>.</p>
+            </>}
+          />
+        </>
+      }}
     />
 
     <HerancaCard
