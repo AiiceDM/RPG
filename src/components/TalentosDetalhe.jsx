@@ -844,7 +844,7 @@ function Drakan() {
             descricao="O relâmpago não para no primeiro alvo. Nunca parou."
             img="https://i.imgur.com/wu9seBb.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança A Tempestade.</em></p>
+
               <p>(2 Ações) Realize um Strike corpo a corpo. Este Strike conta como dois ataques para fins de <strong>penalidade de ataque múltiplo (MAP)</strong>. Em um acerto, o ataque causa <strong>+1d6 de dano Elétrico adicional</strong> (+1d6 a cada 4 níveis acima do 1°) e o uso desta habilidade é consumido.</p>
               <p>Ao acertar, um arco elétrico salta do alvo para um inimigo a até <strong>4,5 metros (15 pés)</strong> dele, e então para um terceiro inimigo a até 4,5 metros do segundo. Cada alvo do arco deve fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo dano igual ao dano Elétrico adicional do Strike.</p>
               <p>Se o Strike errar, o uso desta habilidade não é consumido. <em>Frequência:</em> Uma vez por dia. Recupera seu uso ao utilizar <strong>Inalar Elemento</strong>.</p>
@@ -856,7 +856,7 @@ function Drakan() {
             descricao="A ilusão não precisa ser convincente. Às vezes, basta ser barulhenta o suficiente para que o corpo reaja antes que a mente decida."
             img="https://i.imgur.com/xZ70LhH.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança A Tempestade.</em></p>
+
               <p>Ao conjurar ou sustentar <em>Figment</em>, você pode canalizar uma descarga elétrica através da ilusão para criar uma distração explosiva. Esta ação possui o traço <strong>Manipulate</strong> e produz um som estrondoso audível em um raio significativo ao redor de você, à critério do Mestre.</p>
               <p>Ao utilizar desta maneira, faça um teste de <strong>Enganação</strong> contra a CD de Percepção do alvo. Em vez dos efeitos normais de Create a Diversion, aplique os seguintes resultados:</p>
               <ul>
@@ -874,7 +874,7 @@ function Drakan() {
             descricao="Há Drakans que percebem a eletricidade ao redor. Você a respira. O campo elétrico ao seu redor não é um sentido que você ativa, é o estado natural de quem nunca esteve realmente separado do elemento que carrega."
             img="https://i.imgur.com/R6Ebzyp.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança A Tempestade; Percepção Elemental.</em></p>
+              <p><em>Pré-requisito: Percepção Elemental.</em></p>
               <p>O raio de percepção do seu Elemento concedido por Percepção Elemental aumenta para <strong>36 metros</strong>.</p>
               <p>Ao detectar seu Elemento dentro deste raio, você pode absorvê-lo gastando <strong>1 Ação</strong> em vez de uma atividade de 10 minutos, sem precisar tocar a fonte. A fonte deve estar dentro do seu raio de percepção.</p>
               <p>Ao usar <strong>Punição Trovejante</strong>, você pode escolher um <strong>terceiro espaço</strong> adicional para o raio cair, seguindo as mesmas regras dos dois espaços originais.</p>
@@ -1012,7 +1012,7 @@ function Drakan() {
             descricao="Há um estado entre carne e magma que você aprendeu a alcançar. Breve, instável e extremamente quente."
             img="https://i.imgur.com/FOWDm9u.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança Primordus.</em></p>
+
               <p>(1 Ação) <em>Frequência:</em> Uma vez por dia. Você assume sua forma vulcânica até o final do seu próximo turno. Durante este período:</p>
               <ul>
                 <li>O primeiro ataque desarmado que acertar causa <strong>+1 dado de dano de Fogo</strong> adicional.</li>
@@ -1028,7 +1028,7 @@ function Drakan() {
             descricao="Uma rachadura no granito revela o que estava represado. Um golpe forte o suficiente faz o mesmo com você."
             img="https://i.imgur.com/BpESxdP.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança Primordus.</em></p>
+
               <p>(Reação) <em>Frequência:</em> Uma vez por dia. <em>Gatilho:</em> Você sofre um acerto crítico de um ataque corpo a corpo. Você libera uma erupção de calor contido. Todas as criaturas em uma emanação de <strong>1,5 metro (5 pés)</strong> ao seu redor devem fazer um teste de <strong>Reflexos Básico</strong> contra sua CD de Classe, sofrendo <strong>1d6 de dano de Fogo</strong> (+1d6 a cada 2 níveis acima do 1°).</p>
               <p>Usar <strong>Inalar Elemento</strong> também restaura o uso desta habilidade.</p>
             </>}
@@ -1041,7 +1041,7 @@ function Drakan() {
             descricao="O magma que você deixa para trás não some. Ele esfria lentamente, criando uma crosta que agarra e impede quem tenta cruzá-la."
             img="https://i.imgur.com/QjyiwKk.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança Primordus.</em></p>
+
               <p>Sua Terra Queimada passa a ser tratada como <strong>Difficult Terrain</strong>, além de <strong>Hazardous Terrain</strong>.</p>
               <p>Além disso, criaturas que falharem no teste de resistência de Erupção têm sua movimentação reduzida em <strong>1,5 metro (5 pés)</strong> até o final do seu próximo turno. Em uma <strong>falha crítica</strong>, essa redução aumenta para <strong>4,5 metros (15 pés)</strong>.</p>
             </>}
@@ -1052,7 +1052,7 @@ function Drakan() {
             descricao="A forma vulcânica que você alcança é mais instável e mais violenta do que parecia à primeira vista. O núcleo não escolhe onde queima."
             img="https://i.imgur.com/qiB3JdK.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança Primordus; Aspecto Vulcânico.</em></p>
+              <p><em>Pré-requisito: Aspecto Vulcânico.</em></p>
               <p>Enquanto Aspecto Vulcânico estiver ativo, os seguintes aprimoramentos se aplicam:</p>
               <ul>
                 <li>O dado de dano de Fogo adicional concedido pelo Aspecto Vulcânico se estende a <strong>todos os ataques</strong> pelo restante da forma, não apenas ao primeiro. Isso inclui ataques com armas que o Drakan estiver empunhando.</li>
@@ -1066,7 +1066,7 @@ function Drakan() {
             descricao="Primordus existe há tempo suficiente para sentir cada fissura na crosta do mundo. Parte disso chegou até você."
             img="https://i.imgur.com/LrbEdDc.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança Primordus.</em></p>
+
               <p>Este talento possui dois usos distintos, cada um com frequência de <strong>uma vez por dia</strong>:</p>
               <p><strong>Sentido Sísmico</strong> (2 Ações) — Você pressiona as mãos contra o solo e sintoniza sua percepção com as vibrações da terra. Por <strong>1 hora</strong>, você ganha <strong>Tremorsense Impreciso</strong> de <strong>9 metros (30 pés)</strong>. Este sentido detecta apenas criaturas em contato com o mesmo solo que você e somente se estiverem em movimento.</p>
               <p><strong>Leitura do Solo</strong> (Atividade de 10 minutos) — Você mantém contato prolongado com o solo natural e absorve o histórico de vibrações acumulado na terra ao redor. Você percebe a passagem de criaturas e eventos ocorridos na área nas <strong>últimas 24 horas</strong>, detectando presença, direção aproximada e peso relativo das criaturas que passaram. Este sentido é impreciso: revela que algo passou e de onde veio, mas não identidade, número exato ou intenção. O Mestre determina o nível de detalhe disponível conforme o ambiente.</p>
@@ -1136,7 +1136,7 @@ function Drakan() {
             descricao="Aurene foi a prova de que um Dragão Ancião podia escolher diferente. Você carrega um eco disso: a capacidade de encontrar quem está se perdendo e, por um instante, puxá-lo de volta."
             img="https://i.imgur.com/S28Ybus.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança Aurene.</em></p>
+
               <p>(1 Ação) <em>Frequência:</em> Uma vez por dia. Você percebe instintivamente qual é a criatura neutra ou aliada com menos Pontos de Vida em uma emanação de <strong>9 metros</strong> ao seu redor. Esta identificação é automática e não exige teste. Você mesmo não pode ser o alvo desta identificação.</p>
               <p>Após usar esta habilidade, você pode optar por gastar <strong>2 Ações adicionais</strong> e o uso da sua <strong>Arma de Sopro</strong> para canalizar sua energia dracônica diretamente na criatura identificada. Ao fazê-lo, ela recupera Pontos de Vida iguais ao <strong>dano máximo possível</strong> que sua Arma de Sopro causaria — trate todos os dados como resultado máximo, sem rolar.</p>
             </>}
@@ -1156,7 +1156,7 @@ function Drakan() {
             descricao="A luz de Aurene não se limita a curar o que já foi ferido. Quando necessário, ela se interpõe, recebendo o golpe que era destinado a outro."
             img="https://i.imgur.com/3lUZHG0.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança Aurene.</em></p>
+
               <p>(Reação) <em>Gatilho:</em> Um aliado a até <strong>9 metros</strong> de você seria atingido por um ataque ou precisaria fazer um teste de Reflexos. Você projeta um véu de luz prismática sobre o aliado. Ele recebe <strong>+2 de circunstância na CA</strong> contra aquele ataque ou <strong>+2 de circunstância no teste de Reflexos</strong>, e ganha <strong>Pontos de Vida Temporários</strong> iguais ao seu nível, que duram <strong>1 minuto</strong> ou até você usar esta reação novamente.</p>
               <p>Até o início do seu próximo turno, você fica <strong>Off-Guard</strong>, pois desviou sua própria bênção para o aliado. Após usar esta reação, você deve gastar <strong>1 Ação</strong> em um turno subsequente para reativá-la antes de poder usá-la novamente.</p>
             </>}
@@ -1167,7 +1167,7 @@ function Drakan() {
             descricao="Há um instante entre a queda e a morte em que tudo ainda pode ser revertido. Você aprendeu a alcançar esse instante e a pagar o preço por ele."
             img="https://i.imgur.com/Vn3GWAj.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança Aurene.</em></p>
+
               <p>(Reação) <em>Frequência:</em> Uma vez por dia. <em>Gatilho:</em> Um aliado a até <strong>18 metros (60 pés)</strong> de você cai a <strong>0 Pontos de Vida</strong>. Você se desloca instantaneamente para um espaço desocupado adjacente ao aliado, surgindo em um lampejo de luz prismática. O aliado recupera <strong>3d6 Pontos de Vida</strong> (+1d6 a cada 2 níveis acima do 5°) e não ganha a condição <strong>Wounded</strong> por ter caído.</p>
               <p>Você assume o peso dessa quase-morte em seu lugar: você ganha a condição <strong>Wounded 1</strong>, ou aumenta o valor da sua condição Wounded em <strong>1</strong> se já a possuir.</p>
             </>}
@@ -1178,7 +1178,7 @@ function Drakan() {
             descricao="A bondade de Aurene não fica presa a um corpo. Parte dela se solta e vagueia pelo mundo, atraída por aquilo que pulsa mais forte nos corações ao redor, levando de volta a quem a enviou aquilo que encontrou."
             img="https://i.imgur.com/x0QyOfP.png"
             efeito={<>
-              <p><em>Pré-requisito: Herança Aurene.</em></p>
+
               <p>Você ganha os serviços de uma <strong>Luzéola-errante</strong>, uma pequena criatura espiritual de luz, etérea e angelical, invisível para todos exceto você. Uma vez por dia, você pode invocá-la por meio de um procedimento de <strong>10 minutos</strong>.</p>
               <p>A Luzéola-errante é atraída por sentimentos intensos. Ao invocá-la, escolha um dos seguintes sentimentos para que ela busque:</p>
               <ul>
