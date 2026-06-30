@@ -31,59 +31,328 @@ function Stats({ tamanho, idade, pv, habilidades, idiomas, deslocamento }) {
 
 function Humano() {
   return <>
-    <Stats tamanho="1,50–2,00m (Médio)" idade="50–90 anos" pv="8" habilidades="2 escolhidas livremente" idiomas="1 + modificador de Inteligência (mín. 1)" deslocamento="7,5m (25 pés)" />
+    <Stats tamanho="1,50–2,00m (Médio)" idade="50–90 anos" pv="8" habilidades="2 escolhidas livremente" idiomas="Tyrian + metade do valor de Inteligência" deslocamento="7,5m (25 pés)" />
 
     <h2>🎲 Habilidades</h2>
-    <h3>Improvisação [Human]</h3>
-    <p>Você ganha 1 Ponto Heroico ao final de cada descanso (perdido se não usado até o próximo descanso). Ao gastar um Ponto Heroico para rerrolar, adicione +1 bônus de circunstância no resultado final.</p>
-    <h3>Espírito Cooperativo [Human] — 1x ao dia</h3>
-    <p>Quando você usa a ação <strong>Auxiliar (Aid)</strong> em um teste de perícia ou ataque, você pode realizar a atividade com 1 nível de sucesso superior. Pode gastar 1 Ponto Heroico para recuperar o uso sem ação necessária.</p>
+
+    <HabilidadeCard titulo="Improvisação" placeholder="🧑🏻">
+      <p><strong>Descrição.</strong> A determinação humana não depende de favores divinos nem de herança arcana. Ela nasce das preparações, da disciplina e da vontade de estar sempre pronto para o inesperado.</p>
+      <p><strong>Efeito.</strong> Durante suas preparações diárias, você recebe <strong>1 Ponto Heroico</strong>, que dura até o início das suas próximas preparações diárias. Se não for gasto até lá, é perdido. Ao gastar um Ponto Heroico para rerrolar um teste, adicione <strong>+1 bônus de circunstância</strong> ao resultado final.</p>
+    </HabilidadeCard>
+
+    <HabilidadeCard titulo="Espírito Cooperativo" placeholder="🧑🏻">
+      <p><strong>Descrição.</strong> Poucos povos compreendem o poder da cooperação como os humanos. A capacidade de elevar um aliado no momento certo, com uma palavra, um gesto ou um desvio calculado, é parte do que torna a humanidade tão difícil de derrotar.</p>
+      <p><em>Frequência: Uma vez por dia.</em></p>
+      <p><strong>Efeito.</strong> Quando você usa a ação <strong>Auxiliar (Aid)</strong> em um teste de perícia ou ataque, você pode realizar a atividade com <strong>1 nível de sucesso superior</strong>. Você pode gastar 1 Ponto Heroico para recuperar o uso desta habilidade sem necessitar de uma ação.</p>
+    </HabilidadeCard>
+
+    <details className="talentos-ancestralidade">
+      <summary>📀 Talentos de Ancestralidade Independentes</summary>
+      <div className="talentos-corpo">
+        <TalentosNiveis>
+          {{
+            1: <>
+              <TalentoCard
+                titulo="Potencial Inesgotável"
+                tags="Humano"
+                efeito={<p>Escolha entre um <strong>General Feat de 1° nível</strong>, treinamento em <strong>2 perícias</strong>, ou um <strong>Talento de Classe de 1° adicional</strong>.</p>}
+              />
+              <TalentoCard
+                titulo="Natureza Cooperativa"
+                tags="Humano"
+                efeito={<p><strong>+4 de circunstância</strong> em testes de <strong>Aid</strong>.</p>}
+              />
+              <TalentoCard
+                titulo="Resiliência e União"
+                tags="Humano · Mental"
+                efeito={<>
+                  <p><strong>+1 de status</strong> em salvamentos contra Medo e Emoção.</p>
+                  <p><strong>Grito de Solidariedade</strong> (Reação, 1x/dia): quando você ou aliado em 30 pés é alvo de efeito Medo/Emoção, todos na área ganham <strong>+1 de circunstância</strong> contra aquele efeito.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Laços do Submundo"
+                tags="Humano · Social"
+                efeito={<>
+                  <p>Em Estilo de Vida <strong>E1 ou E2</strong>: +2 de circunstância em Gather Information e Percepção para boatos.</p>
+                  <p><strong>Missão de Energia</strong> ao descobrir um Rumor Verdadeiro.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Adaptabilidade Pragmática"
+                tags="Humano · Social"
+                efeito={<>
+                  <p>Escolha <strong>2 perícias</strong> treinadas. Para Earn Income e acesso a empregos, conta como um nível de maestria acima.</p>
+                  <p><strong>Missão de Energia</strong> em Sucesso Crítico nessas perícias.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Camaleão Social"
+                tags="Humano · Social"
+                efeito={<>
+                  <p>Ignora penalidades sociais de <strong>Estilo de Vida inferior</strong>.</p>
+                  <p><strong>Missão de Energia</strong> ao acessar local restrito sem o estilo necessário.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Improviso Talentoso"
+                tags="Humano"
+                efeito={<p><strong>1x/dia:</strong> trata uma perícia não-treinada como <strong>Trained</strong> para aquele teste.</p>}
+              />
+            </>,
+            5: <>
+              <TalentoCard
+                titulo="Empreendedor Tyriano"
+                tags="Humano · Social"
+                efeito={<>
+                  <p><strong>+1 de circunstância</strong> em Earn Income. Reduz tempo de projetos longos em <strong>1 dia por 5 dias</strong> de duração.</p>
+                  <p><strong>Missão de Energia</strong> ao concluir projeto sem Falha Crítica.</p>
+                </>}
+              />
+            </>
+          }}
+        </TalentosNiveis>
+      </div>
+    </details>
 
     <h2>🧬 Heranças</h2>
-    <ul>
-      <li><strong>Habilidoso:</strong> Torna-se Trained em uma perícia; progressão automática (Expert nível 3, Master nível 7, Legendary nível 15). Uma vez a cada 10 minutos, ao usar Ponto Heroico para rerrolar, pode remover o traço Fortune.</li>
-      <li><strong>Versátil:</strong> Selecione um General Feat para o qual você preenche os pré-requisitos.</li>
-      <li><strong>Criomante:</strong> Resistência a Frio = metade do nível (mín. 1). Aprende o truque <em>Criomancia</em> (Arcana/Primal, 2 ações, cria efeitos de gelo/neve inofensivos). +1 de dano por dado em dano de Frio de magias.</li>
-      <li><strong>Piromante:</strong> Resistência a Fogo = metade do nível (mín. 1). Aprende o truque <em>Piromancia</em> (Arcana/Primal, 2 ações, cria chamas inofensivas). +1 de dano por dado em dano de Fogo de magias.</li>
-      <li><strong>Zéfiro:</strong> Velocidade +5 pés. Habilidade <em>Surto de Adrenalina</em> (1 ação, 1x/10min): move-se duas vezes a velocidade ignorando terreno difícil não-mágico.</li>
-      <li><strong>Tenebris:</strong> Ganha Darkvision. +2 circunstancial em Percepção visual em penumbra/escuridão. Área de Seek dobrada.</li>
-      <li><strong>Intelectual:</strong> Ganha os talentos <em>Multilingual</em> e <em>Additional Lore</em>. +1 circunstancial em Recall Knowledge para idiomas conhecidos.</li>
-      <li><strong>Luminar:</strong> Conjura truque Luz em si mesmo (halo de 10 pés). <em>Bênção Radiante</em> (1 ação, 1x/10min): emanação de 10 pés, aliados ganham +1 status em ataques e salvamentos até o fim do próximo turno. <em>Sentir Sofrimento</em> (1 ação, 1x/10min): detecta criatura mais ferida em 60 pés.</li>
-      <li><strong>Tiferino:</strong> Resistência a Dano Mental = metade do nível (mín. 1). Cauda preênsil capaz de manipular objetos de até 1 Light (não pode usar armas ou escudos).</li>
-    </ul>
+    <div className="heranca-grid">
+      <HerancaCard
+        identificador="Herança"
+        titulo="Habilidoso"
+        placeholder="🧑🏻"
+        descricao="Sua origem foi marcada por treino constante e aperfeiçoamento técnico. Onde outros contam com talento bruto ou sorte, você confia em prática, método e repetição."
+        elemento="Técnico · Geral"
+        sing1={<>Torna-se Treinado em uma perícia à escolha; progressão automática: <strong>Expert</strong> nível 3, <strong>Master</strong> nível 7, <strong>Legendary</strong> nível 15.</>}
+        sing2={<>Uma vez a cada <strong>10 minutos</strong>, ao usar Ponto Heroico para rerrolar, pode remover o traço <strong>Fortune</strong> do resultado.</>}
+        talentos={{
+          1: <>
+            <TalentoCard
+              titulo="Execução Forçada"
+              tags="Humano · Habilidoso"
+              efeito={<>
+                <p><strong>1x por combate.</strong> Ao usar a perícia da herança, aumenta <strong>1 grau de sucesso</strong>.</p>
+                <p>Depois: <strong>Clumsy 1</strong> (perícias físicas) ou <strong>Stupefied 1</strong> (mentais) até fim do próximo turno.</p>
+              </>}
+            />
+          </>
+        }}
+      />
 
-    <h2>📀 Talentos de Ancestralidade</h2>
-    <h3>Nível 1</h3>
-    <ul>
-      <li><strong>Potencial Inesgotável:</strong> Escolha entre um General Feat de 1° nível, treinamento em 2 perícias, ou um Talento de Classe de 1° adicional.</li>
-      <li><strong>Natureza Cooperativa:</strong> +4 circunstancial em testes de Aid.</li>
-      <li><strong>Resiliência e União:</strong> +1 status em salvamentos contra Medo e Emoção. Reação <em>Grito de Solidariedade</em> (1x/dia): quando você ou aliado em 30 pés é alvo de efeito Medo/Emoção, todos na área ganham +1 circunstancial contra aquele efeito.</li>
-      <li><strong>Laços do Submundo:</strong> Em Estilo de Vida E1 ou E2: +2 circunstancial em Gather Information e Percepção para boatos. Missão de Energia ao descobrir Rumor Verdadeiro.</li>
-      <li><strong>[HABILIDOSO] Execução Forçada:</strong> 1x por combate. Ao usar a perícia da herança, aumenta 1 grau de sucesso. Depois: Clumsy 1 (perícias físicas) ou Stupefied 1 (mentais) até fim do próximo turno.</li>
-      <li><strong>[VERSÁTIL] Caminhos Entrelaçados:</strong> Permite selecionar uma Multiclass Dedication Feat de nível 2.</li>
-      <li><strong>[CRIOMANTE] Sopro Invernal:</strong> Aprende Frostbite com melhorias: alcance 120 pés; falha aplica fraqueza a Bludgeoning; falha crítica dobra a fraqueza.</li>
-      <li><strong>[PIROMANTE] Centelha Indomável:</strong> Aprende Ignition com melhorias: alcance à distância 60 pés; corpo a corpo 10 pés; dados d6 à distância / d8 corpo a corpo.</li>
-      <li><strong>[ZÉFIRO] Corrente Favorável:</strong> Ao usar Surto de Adrenalina, ignora Reações de movimento. +1 circunstancial em Reflexos até o início do próximo turno.</li>
-      <li><strong>[TENEBRIS] Sentidos do Abismo:</strong> Em ambientes subterrâneos: assume 2 atividades de Exploração simultâneas; bônus de Percepção da herança estende-se a Furtividade.</li>
-      <li><strong>[INTELECTUAL] Argumentação Erudita:</strong> 1x/dia: usa Arcana/Nature/Occultism/Religion no lugar de Diplomacy em Request ou Make an Impression.</li>
-      <li><strong>[LUMINAR] Halo Restaurador:</strong> Luz aumenta para 20 pés. Bênção Radiante cura 1d6 PV (aumenta 1d6/2 níveis acima do 1°). Com Sentir Sofrimento ativo na criatura: cura dobrada.</li>
-      <li><strong>[TIFERINO] Golpe Sorrateiro [Profano, Floreio]:</strong> Cauda pode empunhar arma Agile. Ao atacar com arma Finesse na mão, realiza Strike adicional com a arma da cauda como parte da mesma ação.</li>
-    </ul>
-    <h3>Nível 3</h3>
-    <ul>
-      <li><strong>Adaptabilidade Pragmática:</strong> Escolha 2 perícias treinadas. Para Earn Income e acesso a empregos, conta como um nível de maestria acima. Missão de Energia em Sucesso Crítico nessas perícias.</li>
-      <li><strong>Camaleão Social:</strong> Ignora penalidades sociais de Estilo de Vida inferior. Missão de Energia ao acessar local restrito sem o estilo necessário.</li>
-      <li><strong>Improviso Talentoso:</strong> 1x/dia: trata uma perícia não-treinada como Trained para aquele teste.</li>
-      <li><strong>[LUMINAR] Asas Radiantes [Movimento]:</strong> 1x/10min: 1 ação manifesta asas de luz e realiza um Stride com voo (+10 pés velocidade). Cai se terminar no ar.</li>
-      <li><strong>[VERSÁTIL] Disciplina Compartilhada [Movimento]:</strong> Reação: aliado a 30 pés obtém sucesso crítico → você ganha +1 circunstancial no próximo teste da mesma perícia ou ataque (até 1 minuto).</li>
-    </ul>
-    <h3>Nível 5</h3>
-    <ul>
-      <li><strong>Empreendedor Tyriano:</strong> +1 circunstancial em Earn Income. Reduz tempo de projetos longos em 1 dia/5 dias de duração. Missão de Energia ao concluir projeto sem Falha Crítica.</li>
-      <li><strong>[LUMINAR] Clarão do Julgamento:</strong> Após Sentir Sofrimento em inimigo, gasta ação extra: ataque de magia à distância causando 2d6 Fogo ou Vitalidade (+1d6/2 níveis acima do 5°). Sucesso crítico: Dazzled 1 rodada.</li>
-      <li><strong>[LUMINAR] Iluminação Atenuante:</strong> 1x/dia: ao usar Bênção Radiante, também concede 2d6 PV Temporários na área por 1 minuto (+1d6/2 níveis acima do 5°).</li>
-      <li><strong>[VERSÁTIL] Ambição Desenfreada:</strong> Ganha Talento de Classe adicional de 4° nível ou inferior (própria classe ou de Dedicação).</li>
-    </ul>
+      <HerancaCard
+        identificador="Herança"
+        titulo="Versátil"
+        placeholder="🧑🏻"
+        descricao="Sua ambição lhe concedeu uma habilidade especial, selecionada no início de sua jornada."
+        elemento="Universal · Geral"
+        sing1={<>Selecione um <strong>General Feat</strong> para o qual você preenche os pré-requisitos.</>}
+        talentos={{
+          1: <>
+            <TalentoCard
+              titulo="Caminhos Entrelaçados"
+              tags="Humano · Versátil"
+              efeito={<p>Permite selecionar uma <strong>Multiclass Dedication Feat de nível 2</strong>.</p>}
+            />
+          </>,
+          5: <>
+            <TalentoCard
+              titulo="Disciplina Compartilhada"
+              tags="Humano · Versátil · Movimento"
+              efeito={<p><strong>Reação:</strong> aliado a 30 pés obtém sucesso crítico → você ganha <strong>+1 de circunstância</strong> no próximo teste da mesma perícia ou ataque (até 1 minuto).</p>}
+            />
+            <TalentoCard
+              titulo="Ambição Desenfreada"
+              tags="Humano · Versátil"
+              efeito={<p>Ganha <strong>Talento de Classe adicional de 4° nível</strong> ou inferior (própria classe ou de Dedicação).</p>}
+            />
+          </>
+        }}
+      />
+
+      <HerancaCard
+        identificador="Herança"
+        titulo="Criomante"
+        placeholder="🧑🏻"
+        descricao="O poder do inverno flui em você. Você manipula o frio e o gelo com naturalidade."
+        elemento="Frio · Arcano"
+        sing1={<>Resistência a Frio = <strong>metade do nível</strong> (mín. 1).</>}
+        sing2={<>Aprende o truque <em>Criomancia</em> (Arcana/Primal, 2 ações): cria efeitos de gelo e neve inofensivos.</>}
+        sing3={<><strong>+1 de dano por dado</strong> em dano de Frio de magias.</>}
+        talentos={{
+          1: <>
+            <TalentoCard
+              titulo="Sopro Invernal"
+              tags="Humano · Criomante · Frio"
+              efeito={<>
+                <p>Aprende <strong>Frostbite</strong> com melhorias:</p>
+                <ul>
+                  <li>Alcance: <strong>120 pés</strong>.</li>
+                  <li>Falha: aplica <strong>fraqueza a Bludgeoning</strong>.</li>
+                  <li>Falha crítica: <strong>dobra</strong> a fraqueza.</li>
+                </ul>
+              </>}
+            />
+          </>
+        }}
+      />
+
+      <HerancaCard
+        identificador="Herança"
+        titulo="Piromante"
+        placeholder="🧑🏻"
+        descricao="Você possui uma afinidade natural com altas temperaturas, manipulando calor e chamas com facilidade."
+        elemento="Fogo · Arcano"
+        sing1={<>Resistência a Fogo = <strong>metade do nível</strong> (mín. 1).</>}
+        sing2={<>Aprende o truque <em>Piromancia</em> (Arcana/Primal, 2 ações): cria chamas inofensivas.</>}
+        sing3={<><strong>+1 de dano por dado</strong> em dano de Fogo de magias.</>}
+        talentos={{
+          1: <>
+            <TalentoCard
+              titulo="Centelha Indomável"
+              tags="Humano · Piromante · Fogo"
+              efeito={<>
+                <p>Aprende <strong>Ignition</strong> com melhorias:</p>
+                <ul>
+                  <li>Alcance à distância: <strong>60 pés</strong>.</li>
+                  <li>Corpo a corpo: <strong>10 pés</strong>.</li>
+                  <li>Dados: <strong>d6</strong> à distância / <strong>d8</strong> corpo a corpo.</li>
+                </ul>
+              </>}
+            />
+          </>
+        }}
+      />
+
+      <HerancaCard
+        identificador="Herança"
+        titulo="Zéfiro"
+        placeholder="🧑🏻"
+        descricao="Você herdou um preparo físico notório, movendo-se com uma velocidade que poucos conseguem acompanhar."
+        elemento="Vento · Físico"
+        sing1={<>Velocidade base <strong>+5 pés</strong>.</>}
+        sing2={<><strong>Surto de Adrenalina</strong> (1 ação, 1x/10min): move-se duas vezes a velocidade, ignorando terreno difícil não-mágico.</>}
+        talentos={{
+          1: <>
+            <TalentoCard
+              titulo="Corrente Favorável"
+              tags="Humano · Zéfiro · Movimento"
+              efeito={<>
+                <p>Ao usar Surto de Adrenalina, <strong>ignora Reações de movimento</strong>.</p>
+                <p><strong>+1 de circunstância</strong> em Reflexos até o início do próximo turno.</p>
+              </>}
+            />
+          </>
+        }}
+      />
+
+      <HerancaCard
+        identificador="Herança"
+        titulo="Tenebris"
+        placeholder="🧑🏻"
+        descricao="A adaptabilidade a ambientes escuros foi herdada por você, afiando sua percepção nas sombras."
+        elemento="Sombras · Furtividade"
+        sing1={<>Ganha <strong>Darkvision</strong>.</>}
+        sing2={<><strong>+2 de circunstância</strong> em Percepção visual em penumbra e escuridão.</>}
+        sing3={<>Área de <strong>Seek dobrada</strong>.</>}
+        talentos={{
+          1: <>
+            <TalentoCard
+              titulo="Sentidos do Abismo"
+              tags="Humano · Tenebris"
+              efeito={<>
+                <p>Em ambientes subterrâneos: assume <strong>2 atividades de Exploração</strong> simultaneamente.</p>
+                <p>O bônus de Percepção da herança estende-se também a <strong>Furtividade</strong>.</p>
+              </>}
+            />
+          </>
+        }}
+      />
+
+      <HerancaCard
+        identificador="Herança"
+        titulo="Intelectual"
+        placeholder="🧑🏻"
+        descricao="Você herdou um dom mental admirável, acumulando idiomas e conhecimento com facilidade incomum."
+        elemento="Arcano · Mental"
+        sing1={<>Ganha os talentos <strong>Multilingual</strong> e <strong>Additional Lore</strong>.</>}
+        sing2={<><strong>+1 de circunstância</strong> em Recall Knowledge para idiomas conhecidos.</>}
+        talentos={{
+          1: <>
+            <TalentoCard
+              titulo="Argumentação Erudita"
+              tags="Humano · Intelectual"
+              efeito={<p><strong>1x/dia:</strong> usa Arcana, Nature, Occultism ou Religion no lugar de Diplomacy em <strong>Request</strong> ou <strong>Make an Impression</strong>.</p>}
+            />
+          </>
+        }}
+      />
+
+      <HerancaCard
+        identificador="Herança"
+        titulo="Luminar"
+        placeholder="🧑🏻"
+        descricao="Uma centelha de graça celestial arde em sua alma, manifestando um halo luminoso e bênçãos que curam e protegem."
+        elemento="Luz · Divino"
+        sing1={<>Conjura o truque <strong>Luz</strong> em si mesmo, criando um halo de <strong>10 pés</strong>.</>}
+        sing2={<><strong>Bênção Radiante</strong> (1 ação, 1x/10min): emanação de 10 pés; aliados ganham <strong>+1 de status</strong> em ataques e salvamentos até o fim do próximo turno.</>}
+        sing3={<><strong>Sentir Sofrimento</strong> (1 ação, 1x/10min): detecta a criatura mais ferida em <strong>60 pés</strong>.</>}
+        talentos={{
+          1: <>
+            <TalentoCard
+              titulo="Halo Restaurador"
+              tags="Humano · Luminar · Luz"
+              efeito={<>
+                <p>Luz aumenta para <strong>20 pés</strong>.</p>
+                <p>Bênção Radiante <strong>cura 1d6 PV</strong> (+1d6 a cada 2 níveis acima do 1°).</p>
+                <p>Com Sentir Sofrimento ativo na criatura: <strong>cura dobrada</strong>.</p>
+              </>}
+            />
+          </>,
+          5: <>
+            <TalentoCard
+              titulo="Asas Radiantes"
+              tags="Humano · Luminar · Movimento"
+              efeito={<p><strong>1x/10min, 1 ação:</strong> manifesta asas de luz e realiza um Stride com voo (+10 pés de velocidade). Cai se terminar no ar.</p>}
+            />
+            <TalentoCard
+              titulo="Clarão do Julgamento"
+              tags="Humano · Luminar · Luz"
+              efeito={<>
+                <p>Após Sentir Sofrimento em inimigo, gasta ação extra: ataque de magia à distância causando <strong>2d6 Fogo ou Vitalidade</strong> (+1d6 a cada 2 níveis acima do 5°).</p>
+                <p>Sucesso crítico: <strong>Dazzled</strong> por 1 rodada.</p>
+              </>}
+            />
+            <TalentoCard
+              titulo="Iluminação Atenuante"
+              tags="Humano · Luminar · Luz"
+              efeito={<p><strong>1x/dia:</strong> ao usar Bênção Radiante, concede também <strong>2d6 PV Temporários</strong> na área por 1 minuto (+1d6 a cada 2 níveis acima do 5°).</p>}
+            />
+          </>
+        }}
+      />
+
+      <HerancaCard
+        identificador="Herança"
+        titulo="Tiferino"
+        placeholder="🧑🏻"
+        descricao="Uma linhagem infernal corre em suas veias, concedendo-lhe uma cauda preênsil e resistência mental."
+        elemento="Infernal · Mental"
+        sing1={<>Resistência a Dano Mental = <strong>metade do nível</strong> (mín. 1).</>}
+        sing2={<><strong>Cauda preênsil</strong> capaz de manipular objetos de até 1 Light (não pode usar armas ou escudos).</>}
+        talentos={{
+          1: <>
+            <TalentoCard
+              titulo="Golpe Sorrateiro"
+              tags="Humano · Tiferino · Profano · Floreio"
+              efeito={<>
+                <p>Cauda pode empunhar arma <strong>Agile</strong>.</p>
+                <p>Ao atacar com arma <strong>Finesse</strong> na mão, realiza um Strike adicional com a arma da cauda como parte da mesma ação.</p>
+              </>}
+            />
+          </>
+        }}
+      />
+    </div>
   </>;
 }
 
@@ -394,10 +663,10 @@ function Skritt() {
   </>;
 }
 
-function HabilidadeCard({ titulo, img, children }) {
+function HabilidadeCard({ titulo, img, placeholder = '🐉', children }) {
   return (
     <div className="habilidade-card">
-      <div className="habilidade-card-img">{img ? <img src={img} alt={titulo} /> : '🐉'}</div>
+      <div className="habilidade-card-img">{img ? <img src={img} alt={titulo} /> : placeholder}</div>
       <div className="habilidade-card-corpo">
         <h3>{titulo}</h3>
         {children}
@@ -426,8 +695,8 @@ function TalentoCard({ titulo, tags, descricao, efeito, img, raro }) {
         </div>
       </summary>
       <div className="talento-card-corpo">
-        {descricao && <p className="talento-card-descricao">{descricao}</p>}
-        {efeito && <div className="talento-card-efeito">{efeito}</div>}
+        {descricao && <p className="talento-card-descricao"><strong>Descrição.</strong> {descricao}</p>}
+        {efeito && <div className="talento-card-efeito">{descricao && <p><strong>Efeito.</strong></p>}{efeito}</div>}
       </div>
     </details>
   );
@@ -444,13 +713,13 @@ function TalentosNiveis({ children }) {
   ));
 }
 
-function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopout, imgPosition, sing1, sing2, sing3, talentos }) {
+function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopout, imgPosition, placeholder = '🐉', sing1, sing2, sing3, talentos }) {
   return (
     <details className="heranca-card">
       <summary className="heranca-card-summary">
         <div className="heranca-thumb-wrapper">
           <div className="heranca-card-banner">
-            {img ? <img src={img} alt={titulo} style={imgPosition ? { objectPosition: imgPosition } : undefined} /> : <span className="heranca-banner-placeholder">🐉</span>}
+            {img ? <img src={img} alt={titulo} style={imgPosition ? { objectPosition: imgPosition } : undefined} /> : <span className="heranca-banner-placeholder">{placeholder}</span>}
           </div>
           {imgPopout && (
             <div className="heranca-img-popout">
@@ -471,18 +740,18 @@ function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopou
         <details className="heranca-secao">
           <summary>Singularidades</summary>
           <div className="heranca-secao-corpo">
-            <div className="sing-item">
+            {sing1 && <div className="sing-item">
               <span className="sing-label">Singularidade 1</span>
               {sing1}
-            </div>
-            <div className="sing-item">
+            </div>}
+            {sing2 && <div className="sing-item">
               <span className="sing-label">Singularidade 2</span>
               {sing2}
-            </div>
-            <div className="sing-item">
+            </div>}
+            {sing3 && <div className="sing-item">
               <span className="sing-label">Singularidade 3</span>
               {sing3}
-            </div>
+            </div>}
           </div>
         </details>
         <details className="heranca-secao">
@@ -503,7 +772,8 @@ function Drakan() {
     <h2>🎲 Habilidades</h2>
 
     <HabilidadeCard titulo="Fisiologia Dracônica" img="https://i.imgur.com/2AwpMYu.png">
-      <p>Seu sangue é elemental. Ao escolher sua Herança Dracônica, você define seu Elemento e Tipo de Baforada. Você recebe as seguintes habilidades:</p>
+      <p><strong>Descrição.</strong> Seu sangue é elemental. Ao escolher sua Herança Dracônica, você define seu Elemento e Tipo de Baforada. Você recebe as seguintes habilidades:</p>
+      <p><strong>Efeito.</strong></p>
       <p><strong>Armas Naturais.</strong> Escolha uma das opções abaixo. Seus ataques desarmados causam dano físico + 1 de dano do seu Elemento.</p>
       <ul>
         <li><strong>Garras:</strong> 1d4 Cortante (Traços: Unarmed, Agile, Finesse).</li>
@@ -514,7 +784,8 @@ function Drakan() {
     </HabilidadeCard>
 
     <HabilidadeCard titulo="Hálito Elemental" img="https://i.imgur.com/p2FSlU1.png">
-      <p>Você é capaz de manifestar o Elemento de sua Herança Dracônica através de uma baforada mortal.</p>
+      <p><strong>Descrição.</strong> Você é capaz de manifestar o Elemento de sua Herança Dracônica através de uma baforada mortal.</p>
+      <p><strong>Efeito.</strong></p>
       <p><strong>Arma de Sopro</strong> (2 Ações) <code>[Drakan] [Arcane] [Evocation] [Elemental]</code><br /><em>Frequência: Uma vez a cada 1 hora.</em></p>
       <p>Você exala energia pura. Todas as criaturas na área de um cone de 15 pés ou uma linha de 30 pés (sua escolha ao utilizar esta habilidade) sofrem <strong>2d6 de dano</strong> do seu Elemento (Tipo de Save varia de acordo com sua Herança Draconiana e usa sua CD de Classe). O dano aumenta em +1d6 a cada 2 níveis depois do 1º.</p>
       <p><strong>Inalar Elemento</strong> (Reação) <code>[Drakan] [Arcane] [Elemental]</code><br /><em>Gatilho: Você sofre dano do mesmo tipo do seu Elemento. Frequência: Uma vez por dia.</em></p>
@@ -522,7 +793,8 @@ function Drakan() {
     </HabilidadeCard>
 
     <HabilidadeCard titulo="Graciosidade do Dragão" img="https://i.imgur.com/d62pOKw.png">
-      <p>Sua presença impõe respeito e você reconhece instintivamente a linhagem do poder. Você ganha um bônus de circunstância de +2 em testes de Percepção, Sobrevivência e Diplomacia contra:</p>
+      <p><strong>Descrição.</strong> Sua presença impõe respeito e você reconhece instintivamente a linhagem do poder.</p>
+      <p><strong>Efeito.</strong> Você ganha um bônus de circunstância de +2 em testes de Percepção, Sobrevivência e Diplomacia contra:</p>
       <ul>
         <li>Criaturas com o traço <strong>Dragão</strong>.</li>
         <li>Criaturas com o traço do seu <strong>Elemento</strong> (ex: Fogo, Frio).</li>
