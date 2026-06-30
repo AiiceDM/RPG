@@ -696,7 +696,7 @@ function TalentoCard({ titulo, tags, descricao, efeito, img, raro }) {
       </summary>
       <div className="talento-card-corpo">
         {descricao && <p className="talento-card-descricao"><strong>Descrição.</strong> {descricao}</p>}
-        {efeito && <div className="talento-card-efeito">{descricao && <p><strong>Efeito.</strong></p>}{efeito}</div>}
+        {efeito && <div className={`talento-card-efeito${descricao ? ' com-rotulo' : ''}`}>{efeito}</div>}
       </div>
     </details>
   );
@@ -773,8 +773,7 @@ function Drakan() {
 
     <HabilidadeCard titulo="Fisiologia Dracônica" img="https://i.imgur.com/2AwpMYu.png">
       <p><strong>Descrição.</strong> Seu sangue é elemental. Ao escolher sua Herança Dracônica, você define seu Elemento e Tipo de Baforada. Você recebe as seguintes habilidades:</p>
-      <p><strong>Efeito.</strong></p>
-      <p><strong>Armas Naturais.</strong> Escolha uma das opções abaixo. Seus ataques desarmados causam dano físico + 1 de dano do seu Elemento.</p>
+      <p><strong>Efeito.</strong> <strong>Armas Naturais.</strong> Escolha uma das opções abaixo. Seus ataques desarmados causam dano físico + 1 de dano do seu Elemento.</p>
       <ul>
         <li><strong>Garras:</strong> 1d4 Cortante (Traços: Unarmed, Agile, Finesse).</li>
         <li><strong>Mordida:</strong> 1d8 Perfurante (Traços: Unarmed, Forceful).</li>
@@ -785,8 +784,7 @@ function Drakan() {
 
     <HabilidadeCard titulo="Hálito Elemental" img="https://i.imgur.com/p2FSlU1.png">
       <p><strong>Descrição.</strong> Você é capaz de manifestar o Elemento de sua Herança Dracônica através de uma baforada mortal.</p>
-      <p><strong>Efeito.</strong></p>
-      <p><strong>Arma de Sopro</strong> (2 Ações) <code>[Drakan] [Arcane] [Evocation] [Elemental]</code><br /><em>Frequência: Uma vez a cada 1 hora.</em></p>
+      <p><strong>Efeito.</strong> <strong>Arma de Sopro</strong> (2 Ações) <code>[Drakan] [Arcane] [Evocation] [Elemental]</code><br /><em>Frequência: Uma vez a cada 1 hora.</em></p>
       <p>Você exala energia pura. Todas as criaturas na área de um cone de 15 pés ou uma linha de 30 pés (sua escolha ao utilizar esta habilidade) sofrem <strong>2d6 de dano</strong> do seu Elemento (Tipo de Save varia de acordo com sua Herança Draconiana e usa sua CD de Classe). O dano aumenta em +1d6 a cada 2 níveis depois do 1º.</p>
       <p><strong>Inalar Elemento</strong> (Reação) <code>[Drakan] [Arcane] [Elemental]</code><br /><em>Gatilho: Você sofre dano do mesmo tipo do seu Elemento. Frequência: Uma vez por dia.</em></p>
       <p>Você inspira o próprio elemento, recarregando suas glândulas mortais. Reduza o dano sofrido pela metade e, se você já tiver utilizado sua Arma de Sopro, recupere imediatamente seu uso dela.</p>

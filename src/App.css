@@ -1384,6 +1384,91 @@ body {
   margin-bottom: 0;
 }
 
+/* ── ALTERAÇÕES OFICIAIS ────────────────────────────────────── */
+.pagina-alteracoes .alteracoes-secao {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  margin: var(--s6) 0;
+}
+
+.pagina-alteracoes .alteracoes-secao > summary {
+  font-family: var(--font-gothic);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  color: var(--fg-accent);
+  padding: var(--s4) var(--s6);
+  cursor: pointer;
+  border-radius: var(--r-md);
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  transition: background 0.15s;
+}
+
+.pagina-alteracoes .alteracoes-secao > summary::-webkit-details-marker { display: none; }
+.pagina-alteracoes .alteracoes-secao > summary::marker { display: none; }
+
+.pagina-alteracoes .alteracoes-secao > summary::after {
+  content: '▸';
+  margin-left: auto;
+  color: var(--crimson);
+  transition: transform 0.2s var(--ease-gothic);
+  flex-shrink: 0;
+}
+
+.pagina-alteracoes .alteracoes-secao > summary:hover {
+  background: rgba(139,10,80,0.04);
+}
+
+.pagina-alteracoes .alteracoes-secao[open] > summary {
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--r-md) var(--r-md) 0 0;
+}
+
+.pagina-alteracoes .alteracoes-secao[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.pagina-alteracoes .alteracoes-secao-icone {
+  font-size: 1.1rem;
+}
+
+.pagina-alteracoes .alteracoes-secao-corpo {
+  padding: var(--s4) var(--s6);
+}
+
+.pagina-alteracoes .alteracoes-secao-corpo h3 {
+  font-family: var(--font-gothic);
+  font-size: 1rem;
+  color: var(--fg-accent);
+  margin: var(--s4) 0 var(--s2);
+  letter-spacing: 0.03em;
+}
+
+.pagina-alteracoes .alteracoes-secao-corpo h3:first-child {
+  margin-top: 0;
+}
+
+.pagina-alteracoes .alteracoes-placeholder {
+  color: var(--fg-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.pagina-alteracoes .alteracoes-ongoing {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--fg-gold);
+  background: rgba(212,175,55,0.08);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: var(--r-sm);
+  padding: var(--s3) var(--s4);
+  text-align: center;
+}
+
 /* ── TALENTOS ANCESTRALIDADE ─────────────────────────────────── */
 .talentos-ancestralidade {
   background: var(--surface);
@@ -1980,6 +2065,12 @@ body {
 
 .talento-card-efeito {
   font-size: 0.9rem;
+  color: var(--fg);
+}
+
+.talento-card-efeito.com-rotulo > p:first-child::before {
+  content: "Efeito. ";
+  font-weight: bold;
   color: var(--fg);
 }
 
