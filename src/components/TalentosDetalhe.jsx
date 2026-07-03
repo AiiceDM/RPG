@@ -35,15 +35,15 @@ function Humano() {
 
     <h2>🎲 Habilidades</h2>
 
-    <HabilidadeCard titulo="Improvisação" placeholder="🧑🏻">
+    <HabilidadeCard titulo="Improvisação" img="https://i.imgur.com/KYubu3P.png" placeholder="🧑🏻">
       <p><strong>Descrição.</strong> A determinação humana não depende de favores divinos nem de herança arcana. Ela nasce das preparações, da disciplina e da vontade de estar sempre pronto para o inesperado.</p>
-      <p><strong>Efeito.</strong> Durante suas preparações diárias, você recebe <strong>1 Ponto Heroico</strong>, que dura até o início das suas próximas preparações diárias. Se não for gasto até lá, é perdido. Ao gastar um Ponto Heroico para rerrolar um teste, adicione <strong>+1 bônus de circunstância</strong> ao resultado final.</p>
+      <p><strong>Efeito.</strong> Durante suas preparações diárias, você recebe <strong>1 Ponto Heroico</strong>, que dura até o início das suas próximas preparações diárias. Se não for gasto até lá, é perdido. Ao gastar um Ponto Heroico para rerrolar um teste, adicione <strong>+1 de bônus de circunstância</strong> ao resultado final.</p>
     </HabilidadeCard>
 
-    <HabilidadeCard titulo="Espírito Cooperativo" placeholder="🧑🏻">
+    <HabilidadeCard titulo="Espírito Cooperativo" img="https://i.imgur.com/WNFaIhY.png" placeholder="🧑🏻">
       <p><strong>Descrição.</strong> Poucos povos compreendem o poder da cooperação como os humanos. A capacidade de elevar um aliado no momento certo, com uma palavra, um gesto ou um desvio calculado, é parte do que torna a humanidade tão difícil de derrotar.</p>
       <p><em>Frequência: Uma vez por dia.</em></p>
-      <p><strong>Efeito.</strong> Quando você usa a ação <strong>Auxiliar (Aid)</strong> em um teste de perícia ou ataque, você pode realizar a atividade com <strong>1 nível de sucesso superior</strong>. Você pode gastar 1 Ponto Heroico para recuperar o uso desta habilidade sem necessitar de uma ação.</p>
+      <p><strong>Efeito.</strong> Quando você usa a ação <strong>Auxiliar (Aid)</strong> em um teste de perícia ou ataque, você pode realizar a atividade com <strong>1 nível de sucesso superior</strong>. Uma vez por dia, você pode gastar 1 Ponto Heroico para recuperar o uso desta habilidade.</p>
     </HabilidadeCard>
 
     <details className="talentos-ancestralidade">
@@ -53,60 +53,221 @@ function Humano() {
           {{
             1: <>
               <TalentoCard
-                titulo="Potencial Inesgotável"
-                tags="Humano"
-                efeito={<p>Escolha entre um <strong>General Feat de 1° nível</strong>, treinamento em <strong>2 perícias</strong>, ou um <strong>Talento de Classe de 1° adicional</strong>.</p>}
+                titulo="Potencial Multifacetado"
+                tags="Humano · Versatilidade"
+                img="https://i.imgur.com/6YdgdZU.png"
+                descricao="Você nunca se contentou em ser bom em uma única coisa. Da forja ao mercado, da estrada à corte, você absorve um pouco de cada ofício que cruza seu caminho, moldando uma competência ampla que poucos conseguem igualar."
+                efeito={<p>Você se torna <strong>Trained</strong> em duas perícias à sua escolha. Além disso, você recebe um <strong>General Feat de 1° nível</strong>, desde que atenda aos pré-requisitos.</p>}
               />
               <TalentoCard
-                titulo="Natureza Cooperativa"
-                tags="Humano"
-                efeito={<p><strong>+4 de circunstância</strong> em testes de <strong>Aid</strong>.</p>}
+                titulo="Potencial Cosmopolita"
+                tags="Humano · Linguístico"
+                img="https://i.imgur.com/5kD6k7H.png"
+                descricao="Sua ambição não se limita à sua terra natal. Você busca aperfeiçoar seu ofício enquanto absorve os costumes e as línguas de todos que encontra pelo caminho, tornando-se tão fluente em seu chamado quanto em conversa."
+                efeito={<p>Você aprende <strong>dois idiomas adicionais</strong> à sua escolha. Além disso, você recebe um <strong>Talento de Classe de 1° nível adicional</strong> da sua classe, desde que atenda aos pré-requisitos.</p>}
+              />
+              <TalentoCard
+                titulo="Elo de Confiança"
+                tags="Humano · Suporte"
+                img="https://i.imgur.com/ojKGCti.png"
+                descricao="Você não enxerga seus aliados como peças isoladas, mas como extensões da mesma vontade humana de superar tudo em conjunto. Quando escolhe alguém para proteger, sua atenção se torna total, e nada o distrai desse propósito até que a ajuda seja prestada."
+                efeito={<>
+                  <p><em>Frequência: Uma vez por cena (combate, exploração, negociação, ou qualquer outra situação que o Mestre considere uma cena).</em></p>
+                  <p>No início de uma cena, como uma <strong>ação livre com o traço Concentração</strong>, você escolhe um aliado para prestar atenção. Enquanto estiver focado dessa forma, você não pode usar Auxiliar (Aid) em nenhum outro aliado, e ainda precisa estar em uma posição plausível para ajudar o aliado escolhido. Esse foco permite que você use a reação de Auxiliar nesse aliado mesmo sem ter especificado previamente como estava se preparando para ajudar, e você recebe um <strong>bônus de circunstância de +4</strong> no seu teste de Auxiliar realizado dessa forma. Assim que você usa a reação no aliado escolhido, seja qual for o resultado, a atenção termina.</p>
+                </>}
               />
               <TalentoCard
                 titulo="Resiliência e União"
                 tags="Humano · Mental"
+                img="https://i.imgur.com/iQcmOZY.png"
+                descricao="Você é o pilar que sustenta a coragem do grupo. Sua mera presença e suas palavras de ordem impedem que o desespero se instale no coração de seus aliados."
                 efeito={<>
-                  <p><strong>+1 de status</strong> em salvamentos contra Medo e Emoção.</p>
-                  <p><strong>Grito de Solidariedade</strong> (Reação, 1x/dia): quando você ou aliado em 30 pés é alvo de efeito Medo/Emoção, todos na área ganham <strong>+1 de circunstância</strong> contra aquele efeito.</p>
-                </>}
-              />
-              <TalentoCard
-                titulo="Laços do Submundo"
-                tags="Humano · Social"
-                efeito={<>
-                  <p>Em Estilo de Vida <strong>E1 ou E2</strong>: +2 de circunstância em Gather Information e Percepção para boatos.</p>
-                  <p><strong>Missão de Energia</strong> ao descobrir um Rumor Verdadeiro.</p>
-                </>}
-              />
-              <TalentoCard
-                titulo="Adaptabilidade Pragmática"
-                tags="Humano · Social"
-                efeito={<>
-                  <p>Escolha <strong>2 perícias</strong> treinadas. Para Earn Income e acesso a empregos, conta como um nível de maestria acima.</p>
-                  <p><strong>Missão de Energia</strong> em Sucesso Crítico nessas perícias.</p>
-                </>}
-              />
-              <TalentoCard
-                titulo="Camaleão Social"
-                tags="Humano · Social"
-                efeito={<>
-                  <p>Ignora penalidades sociais de <strong>Estilo de Vida inferior</strong>.</p>
-                  <p><strong>Missão de Energia</strong> ao acessar local restrito sem o estilo necessário.</p>
+                  <p>Você recebe um <strong>bônus de status de +1</strong> em testes de resistência contra efeitos de Medo e contra efeitos com o traço Sanidade. Ademais, você ganha a seguinte habilidade:</p>
+                  <p><strong>Grito de Solidariedade</strong> (Reação) [Auditório] [Linguístico]<br />
+                  <em>Frequência: Uma vez a cada 1 hora.</em><br />
+                  <em>Gatilho: Você ou um aliado dentro de uma emanação de 30 pés é alvo de um efeito com o traço Medo ou Sanidade.</em><br />
+                  Você solta um grito de encorajamento ou uma ordem direta. Você e todos os aliados na área recebem um <strong>bônus de circunstância de +1</strong> no teste de resistência contra o efeito gatilho.</p>
                 </>}
               />
               <TalentoCard
                 titulo="Improviso Talentoso"
-                tags="Humano"
-                efeito={<p><strong>1x/dia:</strong> trata uma perícia não-treinada como <strong>Trained</strong> para aquele teste.</p>}
+                tags="Humano · Reação"
+                img="https://i.imgur.com/TPZOrSW.png"
+                descricao="A versatilidade humana permite que você tente tarefas mesmo sem treinamento formal, confiando em criatividade e experiência de vida."
+                efeito={<>
+                  <p>(Reação)<br />
+                  <em>Frequência: 1 vez por dia. Você pode gastar 1 Ponto Heroico para recuperar o uso desta habilidade.</em><br />
+                  <em>Gatilho: Você está prestes a realizar um teste com uma perícia (que não seja Lore) na qual não possui treinamento.</em></p>
+                  <p>Você trata sua proficiência como <strong>Trained</strong> para esse teste.</p>
+                  <p><strong>Nota:</strong> Esta habilidade não pode ser usada em atividades de longo prazo ou de Downtime (como Pesquisa, Artesanato, Ganhar Dinheiro ao longo de vários dias, etc.), já que essas tarefas permitiriam reutilizá-la repetidas vezes sobre o mesmo teste. Ela serve apenas para testes pontuais, de uma única rolagem.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Vontade Emprestada"
+                tags="Humano · Reação"
+                img="https://i.imgur.com/Qz4nTtf.png"
+                descricao="Sua determinação não se esgota em você mesmo. No instante exato em que um companheiro hesita ou falha, você empresta a ele um pedaço da sua própria vontade, e por um momento a sorte dele se torna a sua."
+                efeito={<>
+                  <p>(Reação)<br />
+                  <em>Gatilho: Um aliado falha em um teste de resistência ou de perícia enquanto você está adjacente a ele, ou um aliado erra um Strike contra um inimigo ao qual você está adjacente.</em></p>
+                  <p>Você gasta <strong>1 Ponto Heroico</strong>. O aliado rerrola o teste ou ataque que disparou esta reação e recebe um <strong>bônus de circunstância de +1</strong> ao novo resultado.</p>
+                  <p>Uma vez por dia, se o aliado obtiver um acerto crítico no resultado da rerrolagem concedida por este talento, você recupera 1 Ponto Heroico.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Vanguarda Instintiva"
+                tags="Humano · Combate"
+                img="https://i.imgur.com/HsAIz86.png"
+                descricao="O perigo desperta em você um arranque que poucos conseguem acompanhar. Antes que os outros sequer compreendam o que acontece, você já está em movimento, golpeando, avançando, agindo enquanto o resto ainda hesita."
+                efeito={<>
+                  <p>Você recebe um <strong>bônus de circunstância de +2</strong> em testes de iniciativa.</p>
+                  <p>Além disso, no seu primeiro turno em um combate, você pode gastar <strong>1 Ponto Heroico</strong> para ficar <strong>Quickened</strong>. Você só pode usar a ação adicional desse Quickened para realizar uma ação de Strike, Stride, Step ou Interact.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Têmpera Inabalável"
+                tags="Humano · Vitalidade"
+                img="https://i.imgur.com/TWKf0JW.png"
+                descricao="Há em você uma teimosia física que beira o sobrenatural. Onde outros desabam, você apenas range os dentes e segue de pé, sustentado por um vigor bruto que se recusa a ceder."
+                efeito={<p>Você aumenta seus <strong>Pontos de Vida máximos em 1</strong> para cada nível que possuir. Além disso, você recebe um <strong>bônus de status de +1</strong> em testes de resistência de Fortitude contra efeitos com o traço Doença ou Vitalidade.</p>}
+              />
+              <TalentoCard
+                titulo="Crônica dos Mil Caminhos"
+                tags="Humano · Social"
+                img="https://i.imgur.com/59NP4FV.png"
+                descricao="Cada vila, cada porto, cada cidade murada deixou uma página em sua memória. Você já viu tantos lugares que os reconhece quase de relance: o jeito como as pessoas se cumprimentam, a quem baixam os olhos, qual nome sussurram em prece. Onde os outros veem estranhos, você lê uma comunidade inteira."
+                efeito={<>
+                  <p><em>Pré-requisito: Treinado em Sociedade.</em></p>
+                  <p><em>Frequência: Uma vez por dia, e apenas uma vez por assentamento. No caso de cidades grandes ou capitais, o Mestre pode permitir o uso mais de uma vez, desde que em bairros ou distritos diferentes.</em></p>
+                  <p>Ao adentrar um novo assentamento habitado, você pode observá-lo e circular por ele durante <strong>1 hora</strong>. Ao final, realize um teste de <strong>Sociedade</strong>. Este teste é sempre resolvido com um grau de sucesso superior ao obtido.</p>
+                  <ul>
+                    <li><strong>Sucesso Crítico:</strong> Como o Sucesso, e você ainda pode fazer ao Mestre duas perguntas adicionais sobre a comunidade, que ele responde com aquilo que seu personagem conseguiria razoavelmente inferir após uma hora de observação atenta.</li>
+                    <li><strong>Sucesso:</strong> Como a Falha, e você também identifica a divindade mais cultuada, a principal autoridade local, e um Anathema e um Edito da comunidade.</li>
+                    <li><strong>Falha:</strong> Você identifica o idioma e a ancestralidade predominantes da comunidade.</li>
+                  </ul>
+                </>}
+              />
+              <TalentoCard
+                titulo="Memória Afetiva"
+                tags="Humano · Mental"
+                img="https://i.imgur.com/TGql2Zg.png"
+                descricao="A vida humana é curta, e talvez por isso cada rosto, cada despedida e cada vitória pese tanto. Você carrega suas lembranças mais preciosas como brasas guardadas no peito: elas o aquecem em silêncio durante a jornada, e, quando você mais precisa, pode soprá-las até virarem chama."
+                efeito={<>
+                  <p>Você designa <strong>3 Memórias Afetivas</strong>, momentos significativos vividos durante a campanha ou que façam parte da sua história pessoal na Lore. A ideia e a narrativa de cada memória cabem a você; o que define sua mecânica é a temática do momento, encaixada em uma das três naturezas abaixo.</p>
+                  <p>Durante suas preparações diárias, você ativa uma de suas Memórias Afetivas, ganhando seu efeito passivo até as próximas preparações. A qualquer momento, você pode reviver intensamente essa memória para usar seu efeito ativo; ao fazê-lo, a memória se esvai e você perde o efeito passivo pelo resto do dia.</p>
+                  <p>Uma Memória Afetiva ativada não pode ser ativada novamente até que todas as suas três memórias tenham sido usadas. Após um ciclo completo, o Mestre pode pedir que você designe novas memórias para continuar utilizando este talento.</p>
+                  <p><strong>Memória de Movimento</strong> (uma fuga, uma perseguição, uma corrida que importou)</p>
+                  <ul>
+                    <li><strong>Passivo:</strong> Você recebe +5 pés de Velocidade.</li>
+                    <li><strong>Ativo:</strong> Com uma ação, você realiza dois Strides e ignora terreno difícil durante esse movimento.</li>
+                  </ul>
+                  <p><strong>Memória de Conflito</strong> (uma batalha, uma perda, um instante de coragem)</p>
+                  <ul>
+                    <li><strong>Passivo:</strong> Para cada nível de penalidade de Ataque Múltiplo (MAP) que você tiver acumulado, você recebe +1 em jogadas de ataque e +1 no dano.</li>
+                    <li><strong>Ativo:</strong> Após realizar um Strike, você gasta 2 ações para realizar dois ataques adicionais. Ambos usam um MAP de 2, independentemente de quantos ataques você já tenha feito no turno.</li>
+                  </ul>
+                  <p><strong>Memória de Vínculo</strong> (um laço, um reencontro, alguém que ainda importa)</p>
+                  <ul>
+                    <li><strong>Passivo:</strong> O bônus de circunstância concedido ao gastar um Ponto Heroico para rerrolar aumenta de +1 para +2.</li>
+                    <li><strong>Ativo:</strong> Você imediatamente ganha 1 Ponto Heroico, que dura até as suas próximas preparações diárias.</li>
+                  </ul>
+                </>}
+              />
+              <TalentoCard
+                titulo="Fôlego Arcano"
+                tags="Humano · Arcano"
+                img="https://i.imgur.com/aeYEulO.png"
+                descricao="Onde um conjurador comum aceitaria que a fonte secou, você se recusa. Por pura teimosia, você mergulha fundo e arranca da exaustão uma última fagulha de poder, como quem puxa um fôlego que já não deveria ter."
+                efeito={<>
+                  <p><em>Pré-requisito: Capaz de conjurar magias.</em></p>
+                  <p><em>Frequência: Uma vez por dia.</em></p>
+                  <p>Gastando <strong>1 ação</strong> e <strong>1 Ponto Heroico</strong>, você recupera um <strong>espaço de magia de 1º nível</strong> que já tenha utilizado, ou, se for um conjurador preparado, recupera uma <strong>magia preparada de 1º nível</strong> que já tenha conjurado neste dia.</p>
+                </>}
               />
             </>,
             5: <>
               <TalentoCard
-                titulo="Empreendedor Tyriano"
-                tags="Humano · Social"
+                titulo="Potencial Consolidado"
+                tags="Humano · Versatilidade"
+                img="https://i.imgur.com/fiJunlP.png"
+                descricao="O potencial que um dia foi apenas promessa agora se firmou em maestria. Anos de prática, estrada e convívio consolidaram em você uma competência que poucos alcançam, e uma fluência que atravessa fronteiras."
+                efeito={<p>Você recebe um <strong>Talento de Classe de 3° nível adicional</strong> da sua classe, desde que atenda aos pré-requisitos. Além disso, você se torna <strong>Expert</strong> em uma perícia na qual já seja Treinado, e aprende um <strong>idioma adicional</strong> à sua escolha.</p>}
+              />
+              <TalentoCard
+                titulo="Arranque Resiliente"
+                tags="Humano · Combate"
+                img="https://i.imgur.com/8EqZKMz.png"
+                descricao="Você não apenas reage mais rápido que os outros: você entra na luta blindado pela própria prontidão. O mesmo ímpeto que o coloca à frente também o mantém de pé quando os primeiros golpes chegam."
                 efeito={<>
-                  <p><strong>+1 de circunstância</strong> em Earn Income. Reduz tempo de projetos longos em <strong>1 dia por 5 dias</strong> de duração.</p>
-                  <p><strong>Missão de Energia</strong> ao concluir projeto sem Falha Crítica.</p>
+                  <p><em>Pré-requisito: Vanguarda Instintiva.</em></p>
+                  <p><em>Frequência: Uma vez a cada 1 hora.</em></p>
+                  <p>Sempre que você rola iniciativa no início de um combate, você recebe <strong>Pontos de Vida Temporários</strong> iguais ao seu nível. Esses Pontos de Vida Temporários duram até o final da primeira rodada de combate.</p>
+                  <p>Se você utilizar o Quickened concedido por Vanguarda Instintiva nesse combate, esses Pontos de Vida Temporários são <strong>dobrados</strong> (igual ao dobro do seu nível) e passam a durar até o final do combate ou até serem consumidos.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Fonte Inesgotável"
+                tags="Humano · Versatilidade"
+                img="https://i.imgur.com/EG3AHbW.png"
+                descricao="A sorte que outros esperam encontrar, você aprendeu a carregar consigo. Sua reserva de vontade heroica transbordou os limites que prendem os mortais comuns."
+                efeito={<p>Ao final de suas preparações diárias, você ganha <strong>1 Ponto Heroico adicional</strong> (além do concedido pela Improvisação). Ademais, o limite máximo de Pontos Heroicos que você pode acumular aumenta de <strong>3 para 4</strong>.</p>}
+              />
+              <TalentoCard
+                titulo="Virada ao Acaso"
+                tags="Humano · Reação"
+                img="https://i.imgur.com/OO1VORY.png"
+                descricao="No instante entre o golpe e o impacto, algo em você torce a realidade a seu favor. A lâmina desliza um triz para o lado, a flecha perde o curso, e o preço disso é o breve desequilíbrio de quem forçou a própria sorte."
+                efeito={<>
+                  <p>(Reação)<br />
+                  <em>Frequência: Uma vez por dia. Você pode gastar 1 Ponto Heroico para recuperar o uso desta habilidade.</em><br />
+                  <em>Gatilho: Você é alvo de uma jogada de ataque de um inimigo.</em></p>
+                  <p>Você força a sorte contra o ataque. O inimigo resolve essa jogada de ataque com um <strong>grau de sucesso inferior</strong> (um acerto crítico vira acerto, um acerto vira erro, e assim por diante).</p>
+                  <p>Após usar esta reação, você fica <strong>Desajeitado 1 (Clumsy 1)</strong>. Este Desajeitado dura indefinidamente até que você gaste 1 ação para retomar o equilíbrio e removê-lo. Se, mesmo com o grau reduzido, o ataque ainda acertar você, o preço é maior: você fica <strong>Desajeitado 2 (Clumsy 2)</strong> e precisa gastar 2 ações para retomar o equilíbrio (que podem ser fracionadas). Você não pode usar esta reação novamente enquanto estiver Desajeitado por ela.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Laços de Passagem"
+                tags="Humano · Social"
+                img="https://i.imgur.com/VmjTk0l.png"
+                descricao="Não basta ler uma comunidade de fora: você sabe entrar nela. Um nome citado no lugar certo, um sotaque reconhecido, um costume respeitado, e portas que permaneceriam fechadas se abrem para você."
+                efeito={<>
+                  <p><em>Pré-requisito: Crônica dos Mil Caminhos.</em></p>
+                  <p>Você se torna <strong>Expert em Sociedade</strong> (ou, se já for Expert, em outra perícia relacionada na qual seja Treinado). Além disso, ao adentrar um novo assentamento habitado, você pode passar 1 hora circulando por ele e realizar um teste de Sociedade, separado do teste de Crônica dos Mil Caminhos. Este teste é sempre resolvido com um grau de sucesso superior ao obtido. A frequência é de uma vez por dia, e apenas uma vez por assentamento (no caso de cidades grandes ou capitais, o Mestre pode permitir o uso mais de uma vez, em bairros ou distritos diferentes).</p>
+                  <ul>
+                    <li><strong>Sucesso Crítico:</strong> Como o Sucesso, e você possui outro indivíduo com atitude Prestativa (Helpful) no assentamento, possivelmente disposto a ajudar ou fornecer informações.</li>
+                    <li><strong>Sucesso:</strong> Como a Falha, e você possui um indivíduo com atitude Amigável (Friendly) no assentamento, possivelmente disposto a negociar ajuda ou informações.</li>
+                    <li><strong>Falha:</strong> Você sabe o nome e a temática de uma instituição ou organização deste assentamento.</li>
+                  </ul>
+                </>}
+              />
+              <TalentoCard
+                titulo="Deixa e Golpe"
+                tags="Humano · Suporte"
+                img="https://i.imgur.com/iCWJXEG.png"
+                descricao="Prestar atenção em um aliado deixou de ser apenas cuidado: virou oportunidade. Você acompanha cada movimento dele com tamanha sintonia que, no instante em que ele abre uma brecha na defesa inimiga, você já está lá para aproveitá-la."
+                efeito={<>
+                  <p><em>Pré-requisito: Elo de Confiança.</em></p>
+                  <p><em>Frequência: Uma vez por encontro.</em> Com 2 ações, quando sua atenção sobre um aliado termina (por Elo de Confiança), você pode imediatamente reestabelecer a atenção sobre outro aliado.</p>
+                  <p>Além disso, enquanto estiver prestando atenção em um aliado (por Elo de Confiança), você tem acesso às duas opções de reação a seguir. Cada uma pode ser usada uma vez por atenção, e usá-las não encerra sua atenção sobre o aliado.</p>
+                  <p><strong>Golpe em Uníssono</strong> (Reação)<br />
+                  <em>Gatilho: Um aliado em quem você está prestando atenção obtém um acerto crítico em um Strike corpo a corpo.</em><br />
+                  Você realiza imediatamente um Strike corpo a corpo contra o mesmo inimigo.</p>
+                  <p><strong>Eco Feiticeiro</strong> (Reação)<br />
+                  <em>Gatilho: Um aliado adjacente em quem você está prestando atenção, por meio de uma magia, faz com que um inimigo falhe criticamente em um teste de resistência.</em><br />
+                  Você imediatamente conjura um truque (cantrip) com tempo de conjuração de até 2 ações contra esse inimigo. Após usar esta reação, você fica <strong>Lento 1 (Slowed 1)</strong> no seu próximo turno.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Poço Arcano"
+                tags="Humano · Arcano"
+                img="https://i.imgur.com/9oR4r6C.png"
+                descricao="A fonte que você um dia arranhou com esforço revelou-se um poço fundo, e você aprendeu a mergulhar mais longe nele. Cada gole que traz de volta arde com mais força que o anterior."
+                efeito={<>
+                  <p><em>Pré-requisito: Fôlego Arcano.</em></p>
+                  <p><em>Frequência: Uma vez por dia.</em></p>
+                  <p>A recuperação de um espaço de magia de 1º nível concedida por Fôlego Arcano não exige mais o gasto de um <strong>Ponto Heroico</strong>.</p>
+                  <p>(1 Ação) Você gasta <strong>1 Ponto Heroico</strong>, recuperando um <strong>espaço de magia de 2º nível</strong> que já tenha utilizado (ou, se for um conjurador preparado, uma magia preparada de 2º nível que já tenha conjurado neste dia).</p>
+                  <p>Ademais, sempre que utilizar a recuperação tanto do Poço Arcano quanto do Fôlego Arcano, você recebe um <strong>bônus de circunstância de +1</strong> em jogadas de ataque com magia e a CD de suas magias aumenta em 1 até o final do turno.</p>
                 </>}
               />
             </>
@@ -249,19 +410,78 @@ function Humano() {
         identificador="Herança"
         titulo="Tenebris"
         placeholder="🧑🏻"
-        descricao="A adaptabilidade a ambientes escuros foi herdada por você, afiando sua percepção nas sombras."
+        img="https://i.pinimg.com/736x/25/f5/79/25f57960fb4d7f09d9b89445c98d9e50.jpg"
+        imgPopout="https://i.pinimg.com/736x/b2/c7/61/b2c761e7af8bbca9ef9ed6f7fbacb0d1.jpg"
+        imgPosition="center 20%"
+        descricao="A escuridão nunca foi um obstáculo para você, mas um lar. Onde outros tateiam às cegas, você se move com a naturalidade de quem pertence ao subsolo e ao vazio entre as luzes."
         elemento="Sombras · Furtividade"
-        sing1={<>Ganha <strong>Darkvision</strong>.</>}
-        sing2={<><strong>+2 de circunstância</strong> em Percepção visual em penumbra e escuridão.</>}
-        sing3={<>Área de <strong>Seek dobrada</strong>.</>}
+        sing1={<>Treinado em <strong>Furtividade (Stealth)</strong>.</>}
+        sing2={<><strong>Adaptação Sombria:</strong> Você ganha Visão na Penumbra (Low-Light Vision) e recebe um bônus de circunstância de +1 em testes de Percepção baseados em visão em ambientes de penumbra ou escuridão.</>}
+        sing3={<><strong>Olhos do Abismo (1 Ação)</strong> — <em>Frequência: Uma vez a cada 1 hora.</em><br />Você concentra sua visão e desperta a herança adormecida em seus olhos. Por 1 minuto, desde que não haja luz solar direta nem outra fonte de luz extrema no horizonte, seus olhos distinguem detalhes finos a longas distâncias que seriam um borrão indistinto para a visão comum: os traços de um rosto do outro lado de um vale, a inscrição em um estandarte no alto de uma torre, o movimento de uma criatura tão distante quanto o alcance de uma flecha bem lançada. Durante esse período, você também recebe um <strong>bônus de circunstância de +2</strong> em testes de Percepção baseados em visão, inclusive ao usar a ação Buscar (Seek) ou observar ativamente algo à distância (este bônus substitui o +1 de Adaptação Sombria enquanto durar).</>}
         talentos={{
           1: <>
             <TalentoCard
-              titulo="Sentidos do Abismo"
+              titulo="Presságio das Profundezas"
               tags="Humano · Tenebris"
+              img="https://i.imgur.com/T68R1g7.png"
+              descricao="O que começou como um vislumbre distante tornou-se um estado de caça. Seus olhos não apenas alcançam a escuridão, eles a dominam, e cada alvo distante é apenas uma presa que ainda não sabe que foi vista."
               efeito={<>
-                <p>Em ambientes subterrâneos: assume <strong>2 atividades de Exploração</strong> simultaneamente.</p>
-                <p>O bônus de Percepção da herança estende-se também a <strong>Furtividade</strong>.</p>
+                <p><em>Pré-requisito: Herança Tenebris.</em></p>
+                <p>Enquanto Olhos do Abismo estiver ativo e você não estiver sob luz solar direta nem em um ambiente totalmente iluminado, você recebe os seguintes benefícios:</p>
+                <ul>
+                  <li>Você recebe um <strong>bônus de circunstância de +1</strong> em Strikes contra criaturas a 9 metros (30 pés) ou mais de você.</li>
+                  <li>Seus Strikes com armas contra criaturas a 9 metros (30 pés) ou mais causam <strong>1 de dano Vazio (Void) adicional</strong>. Este dano aumenta conforme a runa de Impacto (Striking) da arma: +2 com Striking, +3 com Greater Striking, +4 com Major Striking.</li>
+                </ul>
+              </>}
+            />
+            <TalentoCard
+              titulo="Pupilas do Vazio"
+              tags="Humano · Tenebris"
+              img="https://i.imgur.com/ma8CeqM.png"
+              descricao="Uma vida nas trevas ensinou seus olhos a se protegerem. A luz súbita que cega os outros é, para você, apenas mais um clarão que você aprendeu a atravessar."
+              efeito={<>
+                <p>Você ganha <strong>Visão no Escuro (Darkvision)</strong>. Ademais, você recebe um <strong>bônus de circunstância de +1</strong> em testes de resistência contra efeitos visuais.</p>
+                <p>Uma vez por dia (você pode gastar 1 Ponto Heroico para recuperar o uso desta habilidade), ao realizar um teste de resistência contra um efeito visual que possa deixá-lo com a condição Cego (Blinded) ou Ofuscado (Dazzled), você realiza esse teste com um <strong>grau de sucesso superior</strong>.</p>
+              </>}
+            />
+            <TalentoCard
+              titulo="Manto de Sombras"
+              tags="Humano · Tenebris"
+              img="https://i.imgur.com/1xF3nRR.png"
+              descricao="Você não se esconde na escuridão. Você veste a escuridão. Onde há ausência de luz, há um lugar para você desaparecer, e reaparecer só quando for tarde demais para o inimigo."
+              efeito={<>
+                <p>Enquanto estiver em uma área de penumbra ou escuridão, você pode usar a ação <strong>Esconder-se (Hide)</strong> mesmo sem cobertura ou ocultação, desde que esteja a pelo menos 3 metros (10 pés) de qualquer fonte de luz plena.</p>
+                <p>Ademais, uma vez por rodada, quando você realiza um Strike com uma arma contra uma criatura a 9 metros (30 pés) ou mais da qual está Escondido (Hidden) ou Indetectável (Undetected), você não revela sua posição em uma falha (você ainda a revela normalmente em um acerto).</p>
+              </>}
+            />
+          </>,
+          5: <>
+            <TalentoCard
+              titulo="Passo Umbral"
+              tags="Humano · Tenebris"
+              img="https://i.imgur.com/HbSZ1kt.png"
+              descricao="A escuridão não é um lugar. É um único lugar, dobrado sobre si mesmo incontáveis vezes. Você aprendeu a atravessar a dobra."
+              efeito={<>
+                <p><em>Pré-requisito: Pupilas do Vazio.</em></p>
+                <p>(1 Ação) [Teleportation]<br />
+                <em>Frequência: Uma vez por dia. Você pode gastar 1 Ponto Heroico para recuperar o uso desta habilidade (sem ação necessária).</em></p>
+                <p>Você deve estar em uma área de penumbra ou escuridão. Você desaparece e reaparece instantaneamente em outra área de penumbra ou escuridão à sua escolha, dentro de 36 metros (120 pés) e para a qual você tenha linha de visão. Este movimento não provoca reações.</p>
+              </>}
+            />
+            <TalentoCard
+              titulo="Refúgio da Meia-Noite"
+              tags="Humano · Tenebris"
+              img="https://i.imgur.com/7Osh7tj.png"
+              descricao="Há um ponto além da furtividade em que você deixa de se esconder e simplesmente deixa de existir para os olhos alheios. A noite se fecha sobre você como um manto, e enquanto ela durar, o mundo esquece que você está lá."
+              efeito={<>
+                <p>(1 Ação)<br />
+                <em>Requisito: Você está Indetectável (Undetected) por todas as criaturas e em uma área de penumbra ou escuridão.</em></p>
+                <p>Você se torna <strong>Invisível</strong> por até 1 hora. Esta invisibilidade termina prematuramente se você entrar em uma área de luz plena ou for exposto a ela, ou se você realizar uma ação hostil.</p>
+                <p>Enquanto estiver invisível dessa forma, você tem acesso a duas ações especiais:</p>
+                <ul>
+                  <li><strong>Deslizar nas Sombras (2 Ações) [Movimento]:</strong> você se teletransporta através de um trecho contínuo de penumbra ou escuridão que possa ver, por uma distância de até sua Velocidade de caminhada.</li>
+                  <li><strong>Sufocar a Chama (2 Ações):</strong> você apaga uma única fonte de luz simples e não mágica que não esteja sendo carregada por uma criatura, como uma tocha em um suporte, uma vela ou uma lamparina, dentro de 9 metros (30 pés).</li>
+                </ul>
               </>}
             />
           </>
@@ -291,41 +511,82 @@ function Humano() {
         identificador="Herança"
         titulo="Luminar"
         placeholder="🧑🏻"
-        descricao="Uma centelha de graça celestial arde em sua alma, manifestando um halo luminoso e bênçãos que curam e protegem."
+        img="https://i.pinimg.com/736x/bd/6c/bc/bd6cbc86fb5310c3d60ec68b62b7d2d9.jpg"
+        imgPopout="https://i.pinimg.com/736x/8b/bd/9b/8bbd9bdd7b1ddff61f4f30c442fc908b.jpg"
+        imgPosition="center 20%"
+        descricao="Uma centelha de graça celestial arde em sua alma, manifestando-se como um halo de luz que paira sobre sua cabeça. Onde você caminha, o sofrimento encontra alívio e os aliados encontram coragem."
         elemento="Luz · Divino"
-        sing1={<>Conjura o truque <strong>Luz</strong> em si mesmo, criando um halo de <strong>10 pés</strong>.</>}
-        sing2={<><strong>Bênção Radiante</strong> (1 ação, 1x/10min): emanação de 10 pés; aliados ganham <strong>+1 de status</strong> em ataques e salvamentos até o fim do próximo turno.</>}
-        sing3={<><strong>Sentir Sofrimento</strong> (1 ação, 1x/10min): detecta a criatura mais ferida em <strong>60 pés</strong>.</>}
+        sing1={<>Treinado em <strong>Medicina</strong>.</>}
+        sing2={<><strong>Luz Inata:</strong> Um halo angelical paira sobre sua cabeça, queimando com luz plena em uma emanação de 10 pés ao seu redor. Gastando 1 ação, você pode acender ou apagar esse halo conforme sua vontade. O halo se apaga automaticamente caso você fique inconsciente.</>}
+        sing3={<><strong>Graça Celestial:</strong> Você recebe as duas habilidades a seguir.<br /><br /><strong>Benção Radiante (1 Ação)</strong> — <em>Frequência: Uma vez a cada 10 minutos. Requisito: Seu halo de Luz Inata está ativo.</em><br />Você emana energia sagrada na área iluminada pelo seu halo (uma emanação de 10 pés centrada em você). Até o final do seu próximo turno, você e seus aliados na área recebem <strong>+1 de bônus de status</strong> em jogadas de ataque e testes de resistência.<br /><br /><strong>Sentir Sofrimento (1 Ação)</strong> — <em>Frequência: Uma vez a cada 10 minutos.</em><br />Você estende sua percepção espiritual em uma emanação de 60 pés e identifica a criatura viva mais ferida dentro da área (aquela com menor proporção de Pontos de Vida restantes). Você apenas percebe qual criatura é, não seus valores exatos de vida.</>}
         talentos={{
           1: <>
             <TalentoCard
+              titulo="Salvação Pelas Mãos"
+              tags="Humano · Luminar"
+              img="https://i.imgur.com/wZYZ00m.png"
+              descricao="A mesma luz que paira sobre você pode se concentrar em suas mãos. Onde você toca, a dor recua e a coragem se firma, ainda que por um breve instante."
+              efeito={<>
+                <p><em>Frequência: Uma vez a cada 1 hora. Você pode gastar 1 Ponto Heroico para recuperar o uso desta habilidade (sem ação necessária).</em></p>
+                <p>(1 Ação) Você toca uma criatura adjacente (ou a si mesmo) e canaliza sua luz interior. O alvo recupera <strong>1d8 Pontos de Vida</strong> e recebe um <strong>bônus de status de +1 na CA</strong> até o início do seu próximo turno. A cura aumenta em 1d8 para cada 2 níveis que você tiver acima do 1°.</p>
+              </>}
+            />
+            <TalentoCard
               titulo="Halo Restaurador"
               tags="Humano · Luminar · Luz"
+              img="https://i.imgur.com/nXusSB5.png"
+              descricao="Seu halo brilha com intensidade reconfortante, e sua presença traz alívio imediato aos que sofrem."
               efeito={<>
-                <p>Luz aumenta para <strong>20 pés</strong>.</p>
-                <p>Bênção Radiante <strong>cura 1d6 PV</strong> (+1d6 a cada 2 níveis acima do 1°).</p>
-                <p>Com Sentir Sofrimento ativo na criatura: <strong>cura dobrada</strong>.</p>
+                <p>O raio do seu halo de Luz Inata (e, consequentemente, da emanação da Bênção Radiante) aumenta de 10 para <strong>20 pés</strong>. Além disso, quando você utiliza Bênção Radiante, todos os aliados dentro da emanação recuperam <strong>1d6 Pontos de Vida</strong>. Uma criatura só pode se beneficiar dessa cura uma vez por hora.</p>
+                <p>Ademais, se você tiver utilizado Sentir Sofrimento desde o seu último turno e a criatura identificada estiver dentro da área de sua Bênção Radiante, ela recupera o <strong>dobro da cura</strong>.</p>
+                <p>A cura aumenta em 1d6 para cada 4 níveis que você tiver acima do 1°.</p>
               </>}
             />
           </>,
           5: <>
             <TalentoCard
-              titulo="Asas Radiantes"
+              titulo="Ímpeto Seráfico"
               tags="Humano · Luminar · Movimento"
-              efeito={<p><strong>1x/10min, 1 ação:</strong> manifesta asas de luz e realiza um Stride com voo (+10 pés de velocidade). Cai se terminar no ar.</p>}
+              img="https://i.imgur.com/GcNpxxi.png"
+              descricao="Por um breve instante, a graça celestial manifesta-se fisicamente em você. Asas de pura luz se abrem às suas costas, permitindo um voo impossível aos mortais comuns."
+              efeito={<>
+                <p>Você ganha os dois modos de voo a seguir.</p>
+                <p><strong>Voo Radiante (1 Ação) [Flourish]:</strong> Você manifesta asas de luz e realiza um Stride com velocidade de voo igual à sua Velocidade de caminhada. Como esta ação possui o traço Flourish, você só pode usá-la uma vez por turno. Se você terminar esse movimento no ar sem suporte, você cai normalmente.</p>
+                <p><strong>Investida Celestial (2 Ações)</strong> — <em>Frequência: Uma vez por dia.</em><br />
+                Suas asas irrompem em plena glória e você cruza o campo como um meteoro sagrado. Você voa por uma distância de até 3 vezes a sua Velocidade, podendo mudar de direção ao final de cada trecho igual à sua Velocidade. Você pode atravessar o espaço de outras criaturas durante esse movimento. Este movimento não provoca reações. Cada criatura cujo espaço você atravessa é afetada uma única vez por uso:</p>
+                <ul>
+                  <li>Aliados recuperam <strong>2d6 Pontos de Vida</strong>.</li>
+                  <li>Inimigos realizam um <strong>teste de resistência de Fortitude Básico</strong> contra sua CD de Classe, sofrendo 2d6 de dano de vitalidade ou espiritual (sua escolha ao utilizar esta habilidade).</li>
+                </ul>
+                <p>A cura e o dano aumentam ambos em 1d6 para cada 2 níveis que você possuir acima do 5°. Se você terminar esse movimento no ar sem suporte, você cai normalmente.</p>
+              </>}
             />
             <TalentoCard
               titulo="Clarão do Julgamento"
               tags="Humano · Luminar · Luz"
+              img="https://i.imgur.com/XsTW22e.png"
+              descricao="O halo sobre sua cabeça irrompe em um julgamento radiante: quatro lanças de luz que amparam o inocente e punem os cruéis que o cercam."
               efeito={<>
-                <p>Após Sentir Sofrimento em inimigo, gasta ação extra: ataque de magia à distância causando <strong>2d6 Fogo ou Vitalidade</strong> (+1d6 a cada 2 níveis acima do 5°).</p>
-                <p>Sucesso crítico: <strong>Dazzled</strong> por 1 rodada.</p>
+                <p>(3 Ações) <em>Frequência: Uma vez por dia.</em></p>
+                <p>Você imediatamente ativa sua habilidade Sentir Sofrimento sem gastar o uso dela, identificando o aliado mais ferido e, a partir dele, os alvos abaixo. Em seguida, você manifesta quatro lanças de luz sagrada:</p>
+                <ul>
+                  <li><strong>Primeira lança (cura):</strong> atinge o aliado mais ferido dentro da área, curando-o em 2d6 Pontos de Vida (metade do dano das lanças ofensivas).</li>
+                  <li><strong>Segunda, terceira e quarta lanças (ataque):</strong> cada uma atinge um dos três inimigos mais próximos do aliado curado (três inimigos diferentes). Faça uma jogada de ataque com o seu bônus de ataque de Strike normal contra cada um; essas jogadas não sofrem nem aplicam penalidade de ataque múltiplo (MAP). Em um acerto, o inimigo sofre 2d6 de dano de fogo mais 2d6 de dano de vitalidade ou espiritual (sua escolha ao utilizar esta habilidade). Em um acerto crítico, dobre o dano.</li>
+                </ul>
+                <p>Todos os valores de dano e de cura aumentam em 1d6 (dano de cada tipo) e 1d6 (cura) para cada 2 níveis que você possuir acima do 5°.</p>
+                <p>O esforço de canalizar tamanho poder sagrado cobra seu preço: no início do seu próximo turno, você fica <strong>Lento 1 (Slowed 1)</strong>, perdendo 1 ação naquele turno.</p>
               </>}
             />
             <TalentoCard
-              titulo="Iluminação Atenuante"
+              titulo="Auréola Protetora"
               tags="Humano · Luminar · Luz"
-              efeito={<p><strong>1x/dia:</strong> ao usar Bênção Radiante, concede também <strong>2d6 PV Temporários</strong> na área por 1 minuto (+1d6 a cada 2 níveis acima do 5°).</p>}
+              img="https://i.imgur.com/0b8ISm9.png"
+              descricao="Sua centelha celestial não apenas restaura, ela protege. A mesma luz que cura os aliados permanece sobre eles como uma barreira, amortecendo os golpes que ainda estão por vir."
+              efeito={<>
+                <p><em>Pré-requisito: Halo Restaurador.</em></p>
+                <p>O raio do seu halo de Luz Inata (e, consequentemente, da emanação da Bênção Radiante) aumenta de 20 para <strong>30 pés</strong>. Além disso, a cura concedida pelo Halo Restaurador é aprimorada: seus dados de cura passam de <strong>d6 para d8</strong> (mantendo a mesma quantidade de dados).</p>
+                <p>Sempre que um aliado (ou você mesmo) recupera Pontos de Vida por meio do Halo Restaurador, ele também recebe uma quantidade igual de <strong>Pontos de Vida Temporários</strong>, que duram 1 minuto.</p>
+              </>}
             />
           </>
         }}

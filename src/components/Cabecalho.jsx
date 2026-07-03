@@ -26,7 +26,7 @@ const MENUS = [
     id: 'mecanicas',
     label: 'Mecânicas',
     itens: [
-      { label: 'Alterações Oficiais', pagina: null },
+      { label: 'Alterações Oficiais', pagina: 'alteracoes-oficiais' },
       { label: 'Experiência',         pagina: 'experiencia' },
       { label: 'Inspiração',          pagina: 'inspiracao' },
       { label: 'Descanso',            pagina: 'descanso' },

@@ -16,34 +16,59 @@ const NOMES = {
   oficiais: 'Oficiais',
 };
 
-function Humano() {
+function IdiomaPadrao() {
+  return <>
+    <h2>Idiomas</h2>
+    <p>Você conhece o <strong>Tyrian</strong> e um número adicional de idiomas igual à metade do seu valor de Inteligência.</p>
+  </>;
+}
+
+function Humano({ setPaginaAtual }) {
   return <>
     <blockquote>
       <p><em>"Sob a sombra da Serpente, nós florescemos. Com forja, pena e lâmina, nós vivemos. Mais que um povo espalhado pelo chão: Somos a marcha eterna da União."</em></p>
       <footer>— Rainha Jennah VIII</footer>
     </blockquote>
 
-    <h2>Heranças</h2>
-    <ul>
-      <li><strong>Habilidoso:</strong> Sua origem foi marcada por treino constante e aperfeiçoamento técnico. Onde outros contam com talento bruto ou sorte, você confia em prática, método e repetição.</li>
-      <li><strong>Versátil:</strong> Sua ambição lhe concedeu uma habilidade especial, selecionada no início de sua jornada.</li>
-      <li><strong>Criomante:</strong> O poder do inverno flui em você. Você manipula o frio e o gelo com naturalidade.</li>
-      <li><strong>Piromante:</strong> Você possui uma afinidade natural com altas temperaturas, manipulando calor e chamas com facilidade.</li>
-      <li><strong>Zéfiro:</strong> Você herdou um preparo físico notório, movendo-se com uma velocidade que poucos conseguem acompanhar.</li>
-      <li><strong>Tenebris:</strong> A adaptabilidade à ambientes escuros foi herdada por você, afiando sua percepção nas sombras.</li>
-      <li><strong>Intelectual:</strong> Você herdou um dom mental admirável, acumulando idiomas e conhecimento com facilidade incomum.</li>
-      <li><strong>Luminar:</strong> Uma centelha de graça celestial arde em sua alma, manifestando um halo luminoso e bênçãos que curam e protegem.</li>
-      <li><strong>Tiferino:</strong> Uma linhagem infernal corre em suas veias, concedendo-lhe uma cauda preênsil e resistência mental.</li>
-    </ul>
+    <IdiomaPadrao />
 
     <h2>História</h2>
-    <p>Os humanos são tão imprevisíveis e variados quanto qualquer outro povo de Tyria. Têm uma motivação fora do comum e uma enorme capacidade de suportar, aprender e crescer. Muitas civilizações brilharam antes da ascensão da humanidade, mas os humanos ergueram algumas das maiores e mais prósperas sociedades da história — e, hoje, são o segundo povo mais numeroso do mundo.</p>
-    <p>Ambição, versatilidade e um potencial raro fizeram da humanidade uma ancestralidade predominante. Seus impérios e nações são vastos e seguem se expandindo. Há quem faça seu nome pela força da espada, pelo poder da magia ou pela revolução de suas invenções. A humanidade é diversa e agitada: vai do nômade ao imperial, do sombrio ao santo. Muitos partem para terras distantes, traçam mapas do que ainda é desconhecido, procuram tesouros esquecidos ou reúnem exércitos contra as grandes ameaças — às vezes, apenas porque podem.</p>
-    <p>Você encontra humanos em praticamente todas as capitais de Tyria: de Divinity's Reach, onde são maioria, a Rata Sum, famosa por ser menos acolhedora com forasteiros. Passam por mercados charr em Black Citadel, por portos norn e por cidades que mudam tão rápido quanto as marés. Onde houver caminho, haverá pegadas humanas.</p>
-    <p>Fisicamente, os humanos refletem a variedade dos climas do mundo. Tons de pele e de olhos, tipos de corpo e traços faciais mudam de região para região. Em geral, alcançam a maturidade física por volta dos 15 anos e vivem cerca de 90 anos.</p>
-    <p>A diversidade também aparece nas formas de governar e conviver. As culturas humanas mais antigas compartilham raízes centenárias, mas, ao contrário dos sylvari e dos asura, parecem estar sempre em movimento: impérios se fragmentam, reinos jovens substituem velhos tronos, leis mudam, costumes nascem e morrem. É um povo que se refaz sem cessar.</p>
-    <p>Talvez por isso a humanidade seja a mais heterogênea de todas as ancestralidades. Carrega capacidade para grande mal e para bondade sem medida. Os humanos também cultuam muitos deuses e seguem religiões diversas, buscando o favor de seres divinos onde quer que os encontrem.</p>
-    <p>Quando as outras raças olham para os humanos, veem algo difícil de prever. Para uns, somos impacientes; para outros, corajosos demais; para muitos, uma incógnita viva. É que a nossa pluralidade não cabe numa só história. E é justamente nisso que está a nossa força: enquanto a Serpente do Mundo aponta novos rumos, nós já estamos a caminho — trabalhando, aprendendo, criando e lutando, não como um só tipo de gente, mas como uma União de possibilidades.</p>
+    <div className="povo-secao-flex">
+      <div className="povo-texto">
+        <p>Os humanos são tão imprevisíveis e variados quanto qualquer outro povo de Tyria. Têm uma motivação fora do comum e uma enorme capacidade de suportar, aprender e crescer. Muitas civilizações brilharam antes da ascensão da humanidade, mas os humanos ergueram algumas das maiores e mais prósperas sociedades da história — e, hoje, são o segundo povo mais numeroso do mundo.</p>
+        <p>Ambição, versatilidade e um potencial raro fizeram da humanidade uma ancestralidade predominante. Seus impérios e nações são vastos e seguem se expandindo. Há quem faça seu nome pela força da espada, pelo poder da magia ou pela revolução de suas invenções. A humanidade é diversa e agitada: vai do nômade ao imperial, do sombrio ao santo. Muitos partem para terras distantes, traçam mapas do que ainda é desconhecido, procuram tesouros esquecidos ou reúnem exércitos contra as grandes ameaças — às vezes, apenas porque podem.</p>
+        <p>Você encontra humanos em praticamente todas as capitais de Tyria: de Divinity's Reach, onde são maioria, a Rata Sum, famosa por ser menos acolhedora com forasteiros. Passam por mercados charr em Black Citadel, por portos norn e por cidades que mudam tão rápido quanto as marés. Onde houver caminho, haverá pegadas humanas.</p>
+        <p>Fisicamente, os humanos refletem a variedade dos climas do mundo. Tons de pele e de olhos, tipos de corpo e traços faciais mudam de região para região. Em geral, alcançam a maturidade física por volta dos 15 anos e vivem cerca de 90 anos.</p>
+        <p>A diversidade também aparece nas formas de governar e conviver. As culturas humanas mais antigas compartilham raízes centenárias, mas, ao contrário dos sylvari e dos asura, parecem estar sempre em movimento: impérios se fragmentam, reinos jovens substituem velhos tronos, leis mudam, costumes nascem e morrem. É um povo que se refaz sem cessar.</p>
+        <p>Talvez por isso a humanidade seja a mais heterogênea de todas as ancestralidades. Carrega capacidade para grande mal e para bondade sem medida. Os humanos também cultuam muitos deuses e seguem religiões diversas, buscando o favor de seres divinos onde quer que os encontrem.</p>
+        <p>Quando as outras raças olham para os humanos, veem algo difícil de prever. Para uns, somos impacientes; para outros, corajosos demais; para muitos, uma incógnita viva. É que a nossa pluralidade não cabe numa só história. E é justamente nisso que está a nossa força: enquanto a Serpente do Mundo aponta novos rumos, nós já estamos a caminho — trabalhando, aprendendo, criando e lutando, não como um só tipo de gente, mas como uma União de possibilidades.</p>
+      </div>
+      <div className="povo-img-placeholder">🧑🏻</div>
+    </div>
+
+    <h2>Heranças</h2>
+    <div className="povo-secao-flex">
+      <div className="povo-img-placeholder">🧑🏻</div>
+      <div className="povo-texto">
+        <ul>
+          <li><strong>Habilidoso:</strong> Sua origem foi marcada por treino constante e aperfeiçoamento técnico. Onde outros contam com talento bruto ou sorte, você confia em prática, método e repetição.</li>
+          <li><strong>Versátil:</strong> Sua ambição lhe concedeu uma habilidade especial, selecionada no início de sua jornada.</li>
+          <li><strong>Criomante:</strong> O poder do inverno flui em você. Você manipula o frio e o gelo com naturalidade.</li>
+          <li><strong>Piromante:</strong> Você possui uma afinidade natural com altas temperaturas, manipulando calor e chamas com facilidade.</li>
+          <li><strong>Zéfiro:</strong> Você herdou um preparo físico notório, movendo-se com uma velocidade que poucos conseguem acompanhar.</li>
+          <li><strong>Tenebris:</strong> A adaptabilidade a ambientes escuros foi herdada por você, afiando sua percepção nas sombras.</li>
+          <li><strong>Intelectual:</strong> Você herdou um dom mental admirável, acumulando idiomas e conhecimento com facilidade incomum.</li>
+          <li><strong>Luminar:</strong> Uma centelha de graça celestial arde em sua alma, manifestando um halo luminoso e bênçãos que curam e protegem.</li>
+          <li><strong>Tiferino:</strong> Uma linhagem infernal corre em suas veias, concedendo-lhe uma cauda preênsil e resistência mental.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="botao-habilidades-wrapper">
+      <button className="botao-habilidades" onClick={() => setPaginaAtual('talento-humano')}>
+        ⚔ Ver Habilidades e Talentos dos Humanos
+      </button>
+    </div>
   </>;
 }
 
@@ -62,6 +87,8 @@ function Asura() {
       <li><strong>Mente Blindada:</strong> A enxaqueca constante causada pela Sensibilidade Arcana fez você desenvolver uma barreira mental natural. Sua mente é uma fortaleza de teimosia e foco.</li>
       <li><strong>Hiper-Processador:</strong> Seus neurônios disparam em uma frequência mais alta que a das outras raças. Você vê o combate como uma equação matemática a ser resolvida, processando fraquezas em milissegundos.</li>
     </ul>
+
+    <IdiomaPadrao />
 
     <h2>História</h2>
     <p>Originalmente habitantes das profundezas de Tyria, os Asura governavam uma civilização subterrânea vasta e tecnologicamente superior, conectada por uma rede de portais mágicos. Esta era de ouro terminou abruptamente com o despertar do Dragão Ancião Primordus. Seus campeões, os Destruidores, inundaram as cavernas com fogo e magma, dizimando as grandes cidadelas. Forçados a fugir para a superfície, os sobreviventes emergiram não como refugiados desesperados, mas como conquistadores intelectuais prontos para reivindicar um novo domínio.</p>
@@ -89,6 +116,8 @@ function Charr() {
       <li><strong>Sem Legião (Gladium):</strong> Você não tem bando para te proteger. Teve que aprender a ser um exército de um soldado só, desenvolvendo versatilidade forçada.</li>
     </ul>
 
+    <IdiomaPadrao />
+
     <h2>História</h2>
     <p>Os Charr não são ateus por ignorância; eles reconhecem a existência de entidades poderosas e deuses, mas se recusam terminantemente a curvar-se diante deles. Após séculos sendo manipulados por falsos deuses (os Titãs) e pela casta de xamãs da Legião da Chama, a sociedade Charr quebrou suas correntes em uma revolução sangrenta. Hoje, sua filosofia central é a Vontade Ardente: a crença inabalável de que nenhum ser deve depender de favores divinos. Para um Charr, o destino não é escrito nas estrelas, mas forjado no ferro e conquistado com as próprias garras.</p>
     <p>A sociedade Charr é, antes de tudo, uma máquina militar. Desde o nascimento, a lealdade de um filhote é transferida de seus pais biológicos para sua Fahrar (o bando de treinamento) e sua Legião. É nas Legiões — Sangue (linha de frente), Ferro (indústria e cerco) e Cinzas (espionagem e subterfúgio) — que um Charr encontra sua identidade. Membros de diferentes legiões são reconhecidos pela postura física e cicatrizes rituais.</p>
@@ -112,6 +141,8 @@ function Animus() {
       <li><strong>Modelo Caótico (Filhos do Caos):</strong> Nascido de uma explosão de emoção e cataclismo, seu corpo é uma amálgama caótica de sucata, madeira e destroços, unidos por pura força de vontade. Você acordou confuso e intenso em meio a escombros.</li>
     </ul>
 
+    <IdiomaPadrao />
+
     <h2>História</h2>
     <p>Os Animus são a anomalia definitiva de Tyria, uma contradição viva onde a matéria inerte ganha alma. Eles não nascem de ventres, não chocam de ovos e não são cultivados em vagens. Um Animus simplesmente "acorda". O fenômeno, conhecido entre eles como "A Centelha", ocorre quando uma estrutura artificial — seja de metal, pedra ou cristal — é submetida a uma sobrecarga de magia ambiente ou energia emocional tão intensa que desenvolve uma consciência espontânea.</p>
     <p>Diferente de um golem, que obedece a um código, ou de um morto-vivo, que é uma alma reciclada, o Animus é uma vida nova. Eles são seres melancólicos e curiosos, presos em uma casca fria, buscando entender por que sentem frio se não possuem pele, ou por que sentem solidão se não têm coração.</p>
@@ -132,6 +163,8 @@ function Kodan() {
 
     <h2>Bênçãos Espirituais</h2>
     <p>Em vez de heranças fixas, os Kodan escolhem duas <strong>Bênçãos Espirituais</strong> no início de sua jornada, refletindo quais aspectos do equilíbrio de Koda os guiam.</p>
+
+    <IdiomaPadrao />
 
     <h2>História</h2>
     <p>Os Kodan são, possivelmente, a raça mais antiga a caminhar sobre Tyria, considerando-se os "primeiros a despertar". Eles são seres de imensa estatura e sabedoria, assemelhando-se a ursos polares eretos, vestidos com armaduras cerimoniais e peles grossas. Enquanto outras raças construíam cabanas de madeira, os Kodan já esculpiam cidades inteiras em icebergs colossais que flutuam pelos mares árticos do extremo norte. Essas cidades-estado flutuantes, conhecidas como Santuários, não são apenas lares, mas templos vivos dedicados à contemplação e à sobrevivência.</p>
@@ -156,6 +189,8 @@ function Sylvari() {
       <li><strong>Nascido do Crepúsculo:</strong> Nascido na hora dourada entre o dia e a noite, você é reflexivo e fascinado pelos padrões da magia. O Sonho lhe permite puxar fios de memórias arcanas que não são suas. Folhagens predominantemente azuis.</li>
       <li><strong>Nascido da Noite:</strong> Você despertou sob a luz das estrelas e da lua. Secretivo e solitário, prefere caminhar onde a luz não alcança. Seu corpo possui uma bioluminescência estranha, capaz de hipnotizar presas desavisadas. Folhagens predominantemente negras.</li>
     </ul>
+
+    <IdiomaPadrao />
 
     <h2>História</h2>
     <p>Os Sylvari são uma ancestralidade antiga, mas incrivelmente rara em Tyria, existindo há mais de 500 anos. Eles não nascem de um ventre; eles "despertam" adultos e plenamente formados de grandes vagens da Árvore Pálida, cuja consciência se manifesta como Freya Paletree, a guia de todos os Sylvari.</p>
@@ -184,6 +219,8 @@ function Norn() {
       <li><strong>Boi (Ox), Coruja (Owl), Baleia (Whale), Centopeia (Centipede), Águia (Eagle), Minotauro</strong> — entre outros espíritos secundários que guiam tribos menores.</li>
     </ul>
 
+    <IdiomaPadrao />
+
     <h2>História</h2>
     <p>Os Norn viveram por séculos nas montanhas Shiverpeaks do Extremo Norte, uma sociedade de caçadores e contadores de histórias, forjando suas lendas contra as bestas mais selvagens. Sua cultura é centrada no orgulho individual, na caça e na busca por feitos lendários. Essa vida épica foi interrompida pelo despertar do Dragão Ancião do Gelo, Jormag. O poder corruptor de Jormag e a expansão de seu exército Forjado pelo Gelo forçaram os Norn a abandonar sua terra natal, iniciando uma longa e amarga marcha para o sul.</p>
     <p>Sem uma capital centralizada ou um governo formal, a sociedade Norn se organiza em grandes Acampamentos Descentralizados, cada um supervisionado por um Xamã ou por um Caçador Lendário. O maior e mais importante desses assentamentos é Hoelbrak. No centro de Hoelbrak, ergue-se uma relíquia temida e respeitada: um Dente quebrado e colossal de Jormag.</p>
@@ -209,6 +246,8 @@ function Skritt() {
       <li><strong>Pestilento:</strong> Seu sangue é veneno, seu hálito é contágio. Você é uma arma biológica viva.</li>
     </ul>
 
+    <IdiomaPadrao />
+
     <h2>História</h2>
     <p>Os Skritt são uma visão desconcertante para os desavisados: humanoides pequenos e curvados que parecem um cruzamento infeliz entre um rato e um morcego. Seus corpos são cobertos por pelos curtos e ásperos, e suas orelhas são grandes e membranosas, captando o menor som nos túneis. Essa aparência, combinada com seus movimentos frenéticos, faz com que sejam frequentemente confundidos com bestas ou pragas, gerando um estigma racial profundo em Tyria.</p>
     <p>A inteligência Skritt é um paradoxo biológico. Sozinho, um Skritt é um animal ansioso, capaz apenas de pensamentos rudimentares de fuga e alimentação. Contudo, quando em grupo, eles se comunicam em uma frequência acelerada, "atropelando" frases e compartilhando informações tão rapidamente que funcionam como uma rede neural orgânica. Um grupo de Skritt pode analisar uma ameaça, discutir filosofia ou planejar uma emboscada complexa em segundos, tornando-os adversários letais para quem subestima seu intelecto coletivo. Para ouvidos estrangeiros, isso soa apenas como um chiado insuportável.</p>
@@ -224,6 +263,8 @@ function Drakan({ setPaginaAtual }) {
       <p><em>"Do pico mais gelado ao magma que aflora, a escama Drakan a história reescreve agora."</em></p>
       <footer>— Mjolnir</footer>
     </blockquote>
+
+    <IdiomaPadrao />
 
     <h2>História</h2>
     <div className="povo-secao-flex">
@@ -297,6 +338,8 @@ function Quaggan() {
       <li><strong>Amorfo:</strong> Feito de substância viscosa dourada que escorre e se recompõe constantemente. Sem pescoço definido, braços que gotejam.</li>
     </ul>
 
+    <IdiomaPadrao />
+
     <h2>História</h2>
     <p>Diferente de todas as outras raças de Tyria, os Quaggans não nascem de um ventre nem chocam de ovos. A lenda diz que, eras atrás, a deusa Melandru chorou ao testemunhar a brutalidade incessante das guerras no mundo. Suas lágrimas, carregadas de pura compaixão e desejo de paz, solidificaram-se ao tocar o solo de Tyria, transformando-se nas Pérolas da Gênese. Essas pérolas, espalhadas pelos cantos mais remotos do mundo, absorvem a energia elemental do ambiente onde repousam. Quando saturadas, elas se rompem, e de dentro surge um Quaggan totalmente formado, moldado pelos elementos que o chocaram.</p>
     <p>Devido à sua origem divina, os Quaggans são vistos como "Cidadãos Universais". Enquanto os Sylvari são admirados por sua beleza e os Kodan respeitados por sua força, os Quaggans são genuinamente amados. Eles despertam um instinto de proteção natural nas outras raças. Utilizam essa adoração e seus maneirismos ("Coo", "Foo") para atuar como diplomatas e mediadores onde ninguém mais conseguiria, desarmando conflitos com inocência.</p>
@@ -321,6 +364,8 @@ function Hylek() {
       <li><strong>Quott Hylek:</strong> Os Quott carregam sua casa e fortaleza nas costas em forma de carapaça. Os verdes-vivos são gentis e hospitaleiros; os de verde-musgo escuro, notoriamente preguiçosos e rabugentos.</li>
     </ul>
 
+    <IdiomaPadrao />
+
     <h2>História</h2>
     <p>Os Hylek são nativos indisputáveis das regiões selvagens e úmidas de Tyria. Lembram sapos humanoides de porte variado, adaptados para sobreviver onde outras raças apodreceriam. Cada Hylek é uma fábrica química ambulante; seus corpos produzem toxinas únicas às quais eles próprios são imunes. Essa biologia singular fez deles os maiores alquimistas e envenenadores do continente, capazes de criar compostos medicinais ou letais com recursos que carregam no próprio sangue.</p>
     <p>A espiritualidade Hylek flui de Tahm Kench, o Deus do Rio e o Primogênito Ancestral. Tahm Kench prega a importância da água, da barganha e, acima de tudo, da Gula. Para um Hylek, um banquete farto não é apenas uma refeição, é um ritual sagrado; a capacidade de consumir o mundo ao seu redor é vista como a maior benção. Secundariamente, cada sub-raça venera um Primogênito Menor que reflete seus valores: Itzel (A Caça), Nuhoch (A Comunidade), Krait (A Morte) e Quott (A Hospitalidade).</p>
@@ -331,6 +376,7 @@ function Hylek() {
 
 function Magnus() {
   return <>
+    <IdiomaPadrao />
     <h2>Em Breve</h2>
     <p>O conteúdo sobre os Magnus ainda está sendo desenvolvido. Retorne em breve para conhecer este povo de Tyria.</p>
   </>;
@@ -338,6 +384,7 @@ function Magnus() {
 
 function Oficiais() {
   return <>
+    <IdiomaPadrao />
     <h2>Ancestralidades Oficiais em Tyria</h2>
     <p>Além das ancestralidades únicas de Tyria, as seguintes ancestralidades do Pathfinder 2e também existem neste mundo. Consulte a documentação oficial do sistema para seus detalhes completos de história e cultura.</p>
     <ul>

@@ -24,6 +24,7 @@ import Divindades from './components/Divindades';
 import DivindadesDetalhe from './components/DivindadesDetalhe';
 import TalentosHabilidades from './components/TalentosHabilidades';
 import TalentosDetalhe from './components/TalentosDetalhe';
+import AlteracoesOficiais from './components/AlteracoesOficiais';
 
 export default function App() {
   const [paginaAtual, setPaginaAtual] = useState('inicio');
@@ -55,6 +56,7 @@ export default function App() {
       {paginaAtual.startsWith('povo-') && <PovosDetalhe ancestralId={paginaAtual.replace('povo-', '')} setPaginaAtual={setPaginaAtual} />}
       {paginaAtual === 'divindades' && <Divindades setPaginaAtual={setPaginaAtual} />}
       {paginaAtual.startsWith('divindade-') && <DivindadesDetalhe divindadeId={paginaAtual.replace('divindade-', '')} setPaginaAtual={setPaginaAtual} />}
+      {paginaAtual === 'alteracoes-oficiais' && <AlteracoesOficiais />}
       {paginaAtual === 'talentos-habilidades' && <TalentosHabilidades setPaginaAtual={setPaginaAtual} />}
       {paginaAtual.startsWith('talento-') && <TalentosDetalhe ancestralId={paginaAtual.replace('talento-', '')} setPaginaAtual={setPaginaAtual} />}
     </>
