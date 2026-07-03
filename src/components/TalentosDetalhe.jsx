@@ -181,7 +181,7 @@ function Humano() {
                 efeito={<>
                   <p><em>Pré-requisito: Capaz de conjurar magias.</em></p>
                   <p><em>Frequência: Uma vez por dia.</em></p>
-                  <p>Gastando <strong>1 ação</strong> e <strong>1 Ponto Heroico</strong>, você recupera um <strong>espaço de magia de 1º nível</strong> que já tenha utilizado, ou, se for um conjurador preparado, recupera uma <strong>magia preparada de 1º nível</strong> que já tenha conjurado neste dia.</p>
+                  <p>Gastando <strong>1 ação</strong> e <strong>1 Ponto Heroico</strong>, você recupera um <strong>espaço de magia de 1º nível</strong> que já tenha utilizado, ou, se for um conjurador preparado, recupera uma <strong>magia preparada de 1º nível</strong> que já tenha conjurado neste dia. A magia recuperada é automaticamente <strong>Heightened em 1 nível</strong> (tornando-se efetivamente uma magia de 2º nível), desde que você seja capaz de conjurá-la dessa forma.</p>
                 </>}
               />
             </>,
