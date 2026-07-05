@@ -427,7 +427,7 @@ function Humano() {
               descricao="O que começou como um vislumbre distante tornou-se um estado de caça. Seus olhos não apenas alcançam a escuridão, eles a dominam, e cada alvo distante é apenas uma presa que ainda não sabe que foi vista."
               efeito={<>
                 <p><em>Pré-requisito: Herança Tenebris.</em></p>
-                <p>Enquanto Olhos do Abismo estiver ativo e você não estiver sob luz plena direta (incluindo, mas não se limitando a, luz solar), você recebe os seguintes benefícios:</p>
+                <p>Enquanto Olhos do Abismo estiver ativo e você não estiver sob luz plena direta, você recebe os seguintes benefícios:</p>
                 <ul>
                   <li>Você recebe um <strong>bônus de circunstância de +1</strong> em Strikes contra criaturas a 9 metros (30 pés) ou mais de você.</li>
                   <li>Seus Strikes com armas contra criaturas a 9 metros (30 pés) ou mais causam <strong>1 de dano Vazio (Void) adicional</strong>. Este dano aumenta conforme a runa de Impacto (Striking) da arma: +2 com Striking, +3 com Greater Striking, +4 com Major Striking.</li>
