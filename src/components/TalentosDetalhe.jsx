@@ -555,10 +555,10 @@ function Humano() {
                 <p><strong>Investida Celestial (2 Ações)</strong> — <em>Frequência: Uma vez por dia.</em><br />
                 Suas asas irrompem em plena glória e você cruza o campo como um meteoro sagrado. Você voa por uma distância de até 3 vezes a sua Velocidade, podendo mudar de direção ao final de cada trecho igual à sua Velocidade. Você pode atravessar o espaço de outras criaturas durante esse movimento. Este movimento não provoca reações. Cada criatura cujo espaço você atravessa é afetada uma única vez por uso:</p>
                 <ul>
-                  <li>Aliados recuperam <strong>4d6 Pontos de Vida</strong>.</li>
-                  <li>Inimigos realizam um <strong>teste de resistência de Fortitude Básico</strong> contra sua CD de Classe, sofrendo <strong>4d6</strong> de dano de vitalidade ou espiritual (sua escolha ao utilizar esta habilidade).</li>
+                  <li>Aliados recuperam <strong>2d6 Pontos de Vida</strong> (+1d6 a cada 2 níveis acima do 5°).</li>
+                  <li>Inimigos realizam um <strong>teste de resistência de Fortitude Básico</strong> contra sua CD de Classe, sofrendo o <strong>dobro da cura</strong> em dano de vitalidade ou espiritual (sua escolha ao utilizar esta habilidade).</li>
                 </ul>
-                <p>A cura e o dano aumentam ambos em 2d6 para cada 2 níveis que você possuir acima do 5°. Se você terminar esse movimento no ar sem suporte, você cai normalmente. Após usar esta habilidade, você fica <strong>Lento 1 (Slowed 1)</strong> no início do seu próximo turno.</p>
+                <p>Se você terminar esse movimento no ar sem suporte, você cai normalmente. Após usar esta habilidade, você fica <strong>Lento 1 (Slowed 1)</strong> no início do seu próximo turno.</p>
               </>}
             />
             <TalentoCard
