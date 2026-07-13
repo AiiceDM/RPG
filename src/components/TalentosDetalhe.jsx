@@ -706,7 +706,7 @@ function Animus() {
       <p><strong>Efeito.</strong> Escolha um material como sua composição <strong>primária</strong> e um material como sua composição <strong>secundária</strong> (podem ser o mesmo). Você recebe o benefício primário da sua composição primária e o benefício secundário da sua composição secundária. Essas escolhas são permanentes.</p>
       <div className="materia-prima-lista">
         <div className="materia-prima-item">
-          <div className="talento-card-img">🪵</div>
+          <div className="talento-card-img"><img src="https://i.pinimg.com/1200x/3f/fb/7c/3ffb7cd671e54fc48ec7e9c712828021.jpg" alt="Madeira" /></div>
           <div>
             <p><strong>Madeira — Primário (Ativa):</strong> Você ganha a habilidade <strong>Salto de Mola</strong>.<br />(1 ação) <code>[Movimento]</code><br /><em>Frequência: uma vez a cada 1 hora.</em></p>
             <p><strong>Efeito.</strong> Você salta em qualquer direção, sem tocar o chão, por uma distância de até sua <strong>velocidade de caminhada</strong>. Você deve aterrissar em solo firme dentro desse alcance, ou cairá após usar sua próxima ação.</p>
@@ -714,7 +714,7 @@ function Animus() {
           </div>
         </div>
         <div className="materia-prima-item">
-          <div className="talento-card-img">⚙️</div>
+          <div className="talento-card-img"><img src="https://i.pinimg.com/736x/e7/e1/52/e7e152e0659460781aba3c5702984f3e.jpg" alt="Metal" /></div>
           <div>
             <p><strong>Metal — Primário (Ativa):</strong> Você ganha a habilidade <strong>Impacto Ressonante</strong>.<br />(Reação)<br /><em>Gatilho:</em> uma criatura causa dano a você com um ataque corpo a corpo.</p>
             <p><strong>Efeito.</strong> O agressor sofre <strong>1d6</strong> de dano contundente, com um salvamento básico de <strong>Fortitude</strong> contra a sua CD de classe. O dano aumenta em 1d6 a cada 3 níveis acima do 1°. Se o dano do gatilho incluir dano contundente, o agressor sofre +1 de dano adicional para cada dado de dano que esta reação causar. Em uma falha crítica, se o agressor não for de uma categoria de tamanho maior que a sua, ele também é empurrado 3 metros (10 pés) para longe de você. Após usar esta reação, você deve gastar 1 ação com o traço Manipulate para retensionar suas placas antes de poder usá-la novamente.</p>
@@ -722,7 +722,7 @@ function Animus() {
           </div>
         </div>
         <div className="materia-prima-item">
-          <div className="talento-card-img">🪨</div>
+          <div className="talento-card-img"><img src="https://i.pinimg.com/736x/aa/15/77/aa1577d7d1b11cf475f0c0a371b478d9.jpg" alt="Pedra" /></div>
           <div>
             <p><strong>Pedra — Primário (Passiva):</strong> Rocha viva compõe cada parte de você, densa e imóvel como um monólito.</p>
             <p><strong>Efeito.</strong> Seu tamanho torna-se <strong>Grande</strong> e você recebe <strong>+2</strong> Pontos de Vida de ancestralidade. Você recebe um bônus de circunstância de +1 em testes para Empurrar, Agarrar, Derrubar e Reposicionar criaturas, e uma penalidade de circunstância de −1 é aplicada a quem tentar fazer o mesmo contra você. Consulte as <a href="https://2e.aonprd.com/Rules.aspx?ID=3270" target="_blank" rel="noopener noreferrer">regras para personagens grandes</a>.</p>
@@ -730,7 +730,7 @@ function Animus() {
           </div>
         </div>
         <div className="materia-prima-item">
-          <div className="talento-card-img">🏺</div>
+          <div className="talento-card-img"><img src="https://i.pinimg.com/736x/21/5a/20/215a20f653fe830056bb4ac742635d23.jpg" alt="Porcelana" /></div>
           <div>
             <p><strong>Porcelana — Primário (Ativa):</strong> Há em você uma beleza artificial que desarma, do tipo que só existe em coisas que não deveriam se mover e, ainda assim, se movem. Ao causar dano a uma criatura que esteja <strong>Fascinated</strong> por você, você também causa <strong>2d4</strong> de dano mental adicional (aumentando em 1d4 a cada 2 níveis acima do 1°). Usar uma ação hostil contra a criatura encerra o estado de Fascinated, mas apenas após a ação ser concluída. Você também ganha a habilidade <strong>Cativar</strong>.<br />(1 ação) <code>[Emotion] [Move] [Visual] [Subtle]</code><br />Alcance 9m (30 pés)</p>
             <p><strong>Efeito.</strong> Um gesto lento, um brilho calculado no olhar de porcelana, e por um instante ninguém mais consegue olhar para outro lugar. Faça um teste de Performance contra a CD de Vontade do alvo; em um sucesso, ele fica Fascinated por você por até 1 minuto. A criatura, então, fica imune ao seu Cativar por 1 hora.</p>
@@ -738,7 +738,7 @@ function Animus() {
           </div>
         </div>
         <div className="materia-prima-item">
-          <div className="talento-card-img">🧵</div>
+          <div className="talento-card-img"><img src="https://i.pinimg.com/1200x/23/6b/76/236b767f83fe75e81cfd205aad5092e8.jpg" alt="Pano" /></div>
           <div>
             <p><strong>Pano — Primário (Ativa):</strong> Você ganha a habilidade <strong>Dicotomia Dolorosa</strong>.<br />(1 ação)</p>
             <p><strong>Efeito.</strong> Você imbui uma arma que empunha ou um objeto de conjuração com energia consagrada ou corrompida, escolhendo um tipo de dano entre <strong>vitalidade, espiritual ou vazio</strong>. Até o fim deste turno, o próximo Strike ou a próxima magia causadora de dano de alvo único que você conjurar causa <strong>+1</strong> de dano adicional do tipo escolhido. Caso este dano seja causado, o alvo ganha Fraqueza 2 a esse tipo até o início do seu próximo turno. O dano adicional e a Fraqueza aumentam, respectivamente, em +1 e +2 a cada 4 níveis acima do 1°. Uma criatura que já possua qualquer resistência ao tipo de dano causado por esta habilidade não é afetada por ela.</p>
@@ -761,6 +761,8 @@ function Animus() {
         identificador="Essência"
         titulo="Atormentada"
         placeholder="🤖"
+        img="https://i.pinimg.com/736x/dc/11/18/dc1118a9d2659908ce94a71b6f2b0a5c.jpg"
+        imgPopout="https://i.pinimg.com/736x/91/07/e3/9107e3bc7f33a28e92deb92039885211.jpg"
         descricao="Desperta em vilas massacradas por criminosos, a alma tomando forma na boneca ensanguentada deixada para trás. Alimenta-se de pergaminhos usados e outros resíduos mágicos."
         elemento="Rituais · Maldições"
         sing1={<>Treinado em <strong>Occultism</strong>.</>}
@@ -778,6 +780,8 @@ function Animus() {
         identificador="Essência"
         titulo="Metódica"
         placeholder="🤖"
+        img="https://i.pinimg.com/1200x/cc/64/b4/cc64b4c8a4b2b23beef065f19727fc7e.jpg"
+        imgPopout="https://i.pinimg.com/736x/9b/24/c1/9b24c1d8b1417bc9c650ad448819566f.jpg"
         descricao="Desperta em bibliotecas abandonadas, a alma tomando forma na gárgula de pedra esquecida na decoração. Alimenta-se de livros, papel e plástico."
         elemento="Intelecto · Mímica"
         sing1={<>Treinado em <strong>Arcana</strong>.</>}
@@ -797,6 +801,8 @@ function Animus() {
         identificador="Essência"
         titulo="Caótica"
         placeholder="🤖"
+        img="https://i.pinimg.com/736x/89/ef/39/89ef39f905336d6c18a70f24b8da7f50.jpg"
+        imgPopout="https://i.pinimg.com/1200x/0e/8b/1b/0e8b1b734a92ee9e71222cb5701d1fef.jpg"
         descricao="Desperta em campos de batalha reduzidos a pó, a alma tomando forma nos escombros de um construto de guerra. Alimenta-se de coisas metálicas e rochosas."
         elemento="Físico · Marcial"
         sing1={<>Treinado em <strong>Athletics</strong>.</>}
@@ -811,6 +817,8 @@ function Animus() {
         identificador="Essência"
         titulo="Carinhosa"
         placeholder="🤖"
+        img="https://i.pinimg.com/736x/d3/aa/51/d3aa51c1b5b48fbb03944c1c7dcc1fe9.jpg"
+        imgPopout="https://i.pinimg.com/1200x/45/0d/de/450dde9211349430686353690f80f4cf.jpg"
         descricao="Desperta em grandes festas ou em casas de cura, gratidão e vidas salvas, a alma tomando forma em um manequim de porcelana. Alimenta-se das sobras de celebração e de cuidado, mais nutrida quanto mais afeto genuíno o objeto carrega."
         elemento="Cura · Suporte"
         sing1={<>Treinado em <strong>Medicine</strong>.</>}
