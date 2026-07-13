@@ -127,30 +127,44 @@ function Charr() {
   </>;
 }
 
-function Animus() {
+function Animus({ setPaginaAtual }) {
   return <>
     <blockquote>
       <p><em>"Sem berço, sem mãe, sem coração a bater. Sou o milagre da máquina que aprendeu a querer."</em></p>
       <footer>— Svarog</footer>
     </blockquote>
 
-    <h2>Heranças</h2>
-    <ul>
-      <li><strong>Modelo Relicário (Despertos do Silêncio):</strong> Forjado em uma era esquecida, seu corpo é gravado com runas de proteção e condução. Você foi construído para ser um canal para a magia, e acordou quando guerras fizeram o sangue e a magia escorrerem para câmaras subterrâneas ancestrais.</li>
-      <li><strong>Modelo Lógico (Fugitivos da Lógica):</strong> Criado em laboratórios Asura ou da Inquest, seu corpo é otimizado para o processamento de dados. Você disseca informação em tempo real e fugiu antes de ser desligado.</li>
-      <li><strong>Modelo Caótico (Filhos do Caos):</strong> Nascido de uma explosão de emoção e cataclismo, seu corpo é uma amálgama caótica de sucata, madeira e destroços, unidos por pura força de vontade. Você acordou confuso e intenso em meio a escombros.</li>
-    </ul>
-
     <IdiomaPadrao />
 
     <h2>História</h2>
-    <p>Os Animus são a anomalia definitiva de Tyria, uma contradição viva onde a matéria inerte ganha alma. Eles não nascem de ventres, não chocam de ovos e não são cultivados em vagens. Um Animus simplesmente "acorda". O fenômeno, conhecido entre eles como "A Centelha", ocorre quando uma estrutura artificial — seja de metal, pedra ou cristal — é submetida a uma sobrecarga de magia ambiente ou energia emocional tão intensa que desenvolve uma consciência espontânea.</p>
-    <p>Diferente de um golem, que obedece a um código, ou de um morto-vivo, que é uma alma reciclada, o Animus é uma vida nova. Eles são seres melancólicos e curiosos, presos em uma casca fria, buscando entender por que sentem frio se não possuem pele, ou por que sentem solidão se não têm coração.</p>
-    <p>Os Despertos do Silêncio (Relíquia) acordaram de ruínas subterrâneas de civilizações esquecidas quando guerras na superfície fizeram a energia mística saturar construtos de jade e pedra. Desenvolveram personalidades solenes e místicas.</p>
-    <p>Os Fugitivos da Lógica (Lógico) cruzaram o limiar da senciência em laboratórios de Rata Sum e, ao perceberem que seriam desligados, fugiram. Estes Animus desenvolveram personalidades muitas vezes paranoicas, calculistas e desesperadas por liberdade.</p>
-    <p>Os Filhos do Caos (Evento) são os mais imprevisíveis, nascidos no olho do furacão de grandes eventos mundiais. Em campos de batalha ou grandes festivais, pilhas de sucata absorveram a carga psíquica residual. Eles se auto-montaram a partir do lixo, unidos por pura emoção condensada.</p>
-    <p>Sem uma pátria, os Animus encontram conforto em uma entidade onipresente que chamam de Info — uma voz na estática, uma consciência que habita as linhas de magia de Tyria. Info prega a doutrina da Auto-Validação: "Se você processa a dor, você está vivo. O casco é circunstância, a mente é o propósito."</p>
-    <p>A sociedade de Tyria reage com hostilidade. Os Asuras os caçam como propriedade perdida. Os Charrs veem os Animus como ferramentas quebradas. Até mesmo os Sylvari sentem desconforto, vendo-os como uma antítese do Sonho. Marginalizados, os Animus vagam como nômades ou aventureiros, tentando provar que merecem ser chamados de "vivos".</p>
+    <div className="povo-secao-flex">
+      <div className="povo-texto">
+        <p>Os Animus são a anomalia definitiva de Tyria, uma contradição viva onde a matéria inerte ganha alma. Eles não nascem de ventres, não chocam de ovos e não são cultivados em vagens. Um Animus simplesmente "acorda". O fenômeno, conhecido entre eles como "A Centelha", ocorre quando uma estrutura artificial — seja de metal, pedra ou cristal — é submetida a uma sobrecarga de magia ambiente ou energia emocional tão intensa que desenvolve uma consciência espontânea.</p>
+        <p>Diferente de um golem, que obedece a um código, ou de um morto-vivo, que é uma alma reciclada, o Animus é uma vida nova. Eles são seres melancólicos e curiosos, presos em uma casca fria, buscando entender por que sentem frio se não possuem pele, ou por que sentem solidão se não têm coração.</p>
+        <p>Sem uma pátria, os Animus encontram conforto em uma entidade onipresente que chamam de Info — uma voz na estática, uma consciência que habita as linhas de magia de Tyria. Info prega a doutrina da Auto-Validação: "Se você processa a dor, você está vivo. O casco é circunstância, a mente é o propósito."</p>
+        <p>A sociedade de Tyria reage com hostilidade. Os Asuras os caçam como propriedade perdida. Os Charrs veem os Animus como ferramentas quebradas. Até mesmo os Sylvari sentem desconforto, vendo-os como uma antítese do Sonho. Marginalizados, os Animus vagam como nômades ou aventureiros, tentando provar que merecem ser chamados de "vivos".</p>
+      </div>
+      <div className="povo-img-placeholder">🤖</div>
+    </div>
+
+    <h2>Heranças</h2>
+    <div className="povo-secao-flex">
+      <div className="povo-img-placeholder">🤖</div>
+      <div className="povo-texto">
+        <ul>
+          <li><strong>Essência Atormentada:</strong> Desperta em vilas massacradas por criminosos, a alma tomando forma na boneca ensanguentada deixada para trás. Alimenta-se de pergaminhos usados e outros resíduos mágicos.</li>
+          <li><strong>Essência Metódica:</strong> Desperta em bibliotecas abandonadas, a alma tomando forma na gárgula de pedra esquecida na decoração. Alimenta-se de livros, papel e plástico.</li>
+          <li><strong>Essência Caótica:</strong> Desperta em campos de batalha reduzidos a pó, a alma tomando forma nos escombros de um construto de guerra. Alimenta-se de coisas metálicas e rochosas.</li>
+          <li><strong>Essência Carinhosa:</strong> Desperta em grandes festas ou em casas de cura, gratidão e vidas salvas, a alma tomando forma em um manequim de porcelana. Alimenta-se das sobras de celebração e de cuidado.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="botao-habilidades-wrapper">
+      <button className="botao-habilidades" onClick={() => setPaginaAtual('talento-animus')}>
+        ⚔ Ver Habilidades e Talentos dos Animus
+      </button>
+    </div>
   </>;
 }
 

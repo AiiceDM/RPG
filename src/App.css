@@ -1384,6 +1384,24 @@ body {
   margin-bottom: 0;
 }
 
+.materia-prima-lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  margin-top: var(--s3);
+}
+
+.materia-prima-item {
+  display: flex;
+  gap: var(--s4);
+  align-items: flex-start;
+}
+
+.materia-prima-item p {
+  margin: 0;
+  flex: 1;
+}
+
 /* ── ALTERAÇÕES OFICIAIS ────────────────────────────────────── */
 .pagina-alteracoes .alteracoes-secao {
   background: var(--surface);

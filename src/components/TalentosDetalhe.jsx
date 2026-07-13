@@ -677,57 +677,146 @@ function Charr() {
 
 function Animus() {
   return <>
-    <Stats tamanho="1,00–2,00m (Médio)" idade="Indeterminada" pv="8" habilidades="Constituição, Inteligência + 1 livre. Penalidade em Carisma" idiomas="1 + modificador de Inteligência (mín. 1)" deslocamento="7,5m (25 pés)" />
+    <Stats tamanho="1,00–2,00m (Médio)" idade="Indeterminada" pv="8" habilidades="Constituição, Inteligência + 1 livre. Penalidade em Carisma" idiomas="Tyrian + metade do valor de Inteligência" deslocamento="7,5m (25 pés)" />
 
     <h2>🎲 Habilidades</h2>
-    <h3>Casco Vivo [Animus, Construct]</h3>
-    <ul>
-      <li><strong>Combustível Variável:</strong> Não consome comida; precisa de materiais brutos diariamente (tipo varia com a Herança). Se não o fizer, sofre regras de Fome e Sede.</li>
-      <li><strong>Ciclo de Descanso:</strong> 4h de "Modo de Espera" (−4 Percepção) + 4h de atividades leves = descanso diário. Não dorme.</li>
-      <li><strong>Corrosão e Infiltração:</strong> Não é imune a Doenças/Venenos/Sickened; recebe +1 circunstancial em salvamentos contra esses efeitos e Resistência a Veneno = metade do nível.</li>
-    </ul>
-    <h3>Fisiologia Robótica [Animus, Healing]</h3>
-    <ul>
-      <li>Treinado em Crafting. Manutenção (10 min) funciona como Treat Wounds usando Crafting no lugar de Medicina. Com o talento Quick Repair, pode ser feito em 1 ação durante combate (como Battle Medicine).</li>
-    </ul>
+
+    <HabilidadeCard titulo="Casco Vivo" placeholder="🤖">
+      <p><strong>Descrição.</strong> Embora sua alma queime com a intensidade de qualquer ser vivo, ela habita uma carcaça que obedece às leis da engenharia, não da biologia. Seu corpo é uma máquina complexa que exige manutenção constante para sustentar o milagre da sua existência.</p>
+      <p><strong>Efeito.</strong> Você recebe as seguintes características:</p>
+      <ul>
+        <li><strong>Combustível Variável:</strong> Você não consome comida orgânica para nutrição. Você precisa consumir materiais brutos diariamente para manter seu núcleo ativo (equivalente a rações). Se não o fizer, sofre as regras de Fome e Sede. O tipo de material depende da sua Essência.</li>
+        <li><strong>Ciclo de Descanso:</strong> Você não dorme. Você precisa de 4 horas de "Modo de Espera" (inatividade consciente, −4 em Percepção) seguidas de 4 horas de atividades leves (manutenção) para completar um descanso diário.</li>
+        <li><strong>Corrosão e Infiltração:</strong> Você não possui biologia para adoecer, mas sua lataria mofa e seus circuitos oxidam. Você não é imune a Doenças, Venenos ou à condição Sickened. Em vez disso, você recebe um bônus de circunstância de +1 em testes de salvamento contra esses efeitos e resistência a Dano de Veneno igual à metade do seu nível (mínimo 1).</li>
+      </ul>
+    </HabilidadeCard>
+
+    <HabilidadeCard titulo="Fisiologia Robótica" placeholder="🤖">
+      <p><strong>Descrição.</strong> A medicina tradicional é inútil contra metal rasgado e pedra trincada. Para um Animus, a cura não vem de ervas ou curativos, mas de solda mágica, rebites e engenharia de precisão.</p>
+      <p><strong>Efeito.</strong> Você recebe as seguintes características:</p>
+      <ul>
+        <li><strong>Engenharia Médica:</strong> Você recebe um bônus de circunstância de +1 em testes de Crafting para realizar reparos de qualquer tipo, seja a atividade Repair, a sua Manutenção ou o conserto de constructos.</li>
+        <li><strong>Manutenção:</strong> Você (ou qualquer criatura adjacente também treinada em Crafting) pode gastar 10 minutos para reparar seu corpo. Isso funciona exatamente como a atividade Treat Wounds, mas usa Crafting em vez de Medicina para o teste e as CDs.</li>
+        <li><strong>Integração de Combate:</strong> Devido à sua construção modular, você pode ser reparado rapidamente sob pressão. Qualquer criatura (incluindo você mesmo) que possua o talento Quick Repair pode realizar a atividade de Manutenção em você como 1 ação. Isso conta como se fosse o uso de Battle Medicine (o alvo fica imune a essa cura temporária por 1 dia).</li>
+      </ul>
+    </HabilidadeCard>
+
+    <HabilidadeCard titulo="Matéria-Prima" placeholder="🤖">
+      <p><strong>Descrição.</strong> Seu corpo é construído a partir de matérias-primas específicas, e a composição molda o que você é.</p>
+      <p><strong>Efeito.</strong> Escolha um material como sua composição <strong>primária</strong> e um material como sua composição <strong>secundária</strong> (podem ser o mesmo). Você recebe o benefício primário da sua composição primária e o benefício secundário da sua composição secundária. Essas escolhas são permanentes.</p>
+      <div className="materia-prima-lista">
+        <div className="materia-prima-item">
+          <div className="talento-card-img">🪵</div>
+          <p>
+            <strong>Madeira</strong> — <strong>Primário (Ativa):</strong> <strong>Salto de Mola.</strong> (1 ação) <code>[Movimento]</code> <em>Frequência: uma vez a cada 1 hora.</em> Você salta em qualquer direção, sem tocar o chão, por uma distância de até sua Velocidade de caminhada. Você deve aterrissar em solo firme dentro desse alcance, ou cai após usar sua próxima ação.
+            <br /><strong>Secundário (Passiva):</strong> Sua estrutura leve alivia o passo. Seu Deslocamento aumenta em 1,5 metro (5 pés).
+          </p>
+        </div>
+        <div className="materia-prima-item">
+          <div className="talento-card-img">⚙️</div>
+          <p>
+            <strong>Metal</strong> — <strong>Primário (Ativa):</strong> <strong>Impacto Ressonante.</strong> (Reação) <em>Gatilho:</em> uma criatura causa dano a você com um ataque corpo a corpo. O agressor sofre 1d6 de dano contundente, com um salvamento básico de Fortitude contra a CD mais alta entre sua CD de classe e de magia (o dano aumenta em 1d6 a cada 3 níveis acima do 1°). Se o dano do gatilho incluía dano contundente, o agressor sofre +1 de dano adicional para cada dado de dano que esta reação causar. Em uma falha crítica, se o agressor não for de uma categoria de tamanho maior que a sua, ele é empurrado 3 metros (10 pés) para longe de você. Após usar esta reação, você deve gastar 1 ação com o traço Manipulate para retensionar suas placas antes de poder usá-la novamente.
+            <br /><strong>Secundário (Passiva):</strong> Placas densas revestem seu chassi. Você recebe um bônus de circunstância de +1 na CA.
+          </p>
+        </div>
+        <div className="materia-prima-item">
+          <div className="talento-card-img">🪨</div>
+          <p>
+            <strong>Pedra</strong> — <strong>Primário (Passiva):</strong> Rocha viva compõe cada parte de você, densa e imóvel como um monólito. Seu tamanho torna-se <strong>Grande</strong> e você recebe +2 Pontos de Vida de ancestralidade. Você recebe um bônus de circunstância de +1 em testes para Empurrar, Agarrar, Derrubar e Reposicionar criaturas, e uma penalidade de circunstância de −1 é aplicada a quem tentar fazer o mesmo contra você. Consulte as <a href="https://2e.aonprd.com/Rules.aspx?ID=3270" target="_blank" rel="noopener noreferrer">regras para personagens grandes</a>.
+            <br /><strong>Secundário (Passiva):</strong> Seu núcleo denso resiste ao colapso. Você aumenta seus Pontos de Vida máximos em um valor igual ao seu nível.
+          </p>
+        </div>
+        <div className="materia-prima-item">
+          <div className="talento-card-img">🏺</div>
+          <p>
+            <strong>Porcelana</strong> — <strong>Primário (Ativa):</strong> Ao causar dano a uma criatura que esteja Fascinated por você, você também causa 2d4 de dano mental adicional (aumentando em 1d4 a cada 2 níveis acima do 1°). Usar uma ação hostil contra a criatura encerra o estado de Fascinated, mas apenas após a ação ser concluída. Você também ganha a habilidade <strong>Cativar</strong> (1 ação) <code>[Emotion] [Move] [Visual]</code>, alcance 9m (30 pés): faça um teste de Performance contra a CD de Vontade do alvo; em um sucesso, ele fica Fascinated por você por até 1 minuto (podendo gastar 1 ação para se livrar da condição). Você não pode usar Cativar contra a mesma criatura por 10 minutos.
+            <br /><strong>Secundário (Passiva):</strong> Você pode usar Performance no lugar de Diplomacia para Causar Boa Impressão (Make an Impression). Você também recebe um bônus de circunstância de +2 em testes de perícia para interagir socialmente com criaturas Fascinated por você.
+          </p>
+        </div>
+        <div className="materia-prima-item">
+          <div className="talento-card-img">🧵</div>
+          <p>
+            <strong>Pano</strong> — <strong>Primário (Ativa):</strong> <strong>Dicotomia Dolorosa.</strong> (1 ação) Você imbui uma arma que empunha ou um objeto de conjuração com energia consagrada ou corrompida, escolhendo um tipo de dano entre vitalidade, espiritual ou vazio. Até o fim deste turno, o próximo Strike ou magia de alvo único que você fizer causa +1 de dano adicional do tipo escolhido; se esse dano for causado, o alvo ganha Fraqueza 2 a esse tipo até o início do seu próximo turno (o dano adicional e a Fraqueza aumentam, respectivamente, em +1 e +2 a cada 4 níveis acima do 1°). Sem efeito contra uma criatura que já possua resistência a esse tipo de dano.
+            <br /><strong>Secundário (Passiva):</strong> Seu tecido carrega uma corrente sobrenatural. Escolha dano de vazio ou espiritual ao adquirir esta melhoria: você ganha resistência a esse tipo igual à metade do seu nível (mínimo 1) e um bônus de +1 em salvamentos contra efeitos com o traço vazio, vitalidade ou espiritual.
+          </p>
+        </div>
+      </div>
+    </HabilidadeCard>
+
+    <details className="talentos-ancestralidade">
+      <summary>📀 Talentos de Ancestralidade Independentes</summary>
+      <div className="talentos-corpo">
+        <TalentosNiveis>{{}}</TalentosNiveis>
+      </div>
+    </details>
 
     <h2>🧬 Heranças</h2>
-    <ul>
-      <li><strong>Modelo Relicário (Despertos do Silêncio):</strong> Combustível = Resíduos Mágicos. <em>Casco de Nulação:</em> Resistência a Dano de Magias = metade do nível. <em>Conduíte Ritualístico:</em> Treinado em 1 perícia mágica; pode conjurar Rituais (começa com 2 de nível 1); +1 circunstancial em testes de Perícia Primária em rituais. <em>Sentido do Fluxo:</em> detecta rituais ativos/sendo conjurados em 100 pés.</li>
-      <li><strong>Modelo Lógico (Fugitivos da Lógica):</strong> Combustível = livros, pergaminhos, dados. <em>Banco de Dados:</em> Additional Lore em tópico técnico/arcano. <em>Algoritmo de Mimetismo</em> (Reação): ao ver criatura a 60 pés conjurar magia de rank ≤ 1/3 do nível, tenta identificá-la (DC Fácil); Sucesso = armazena e pode conjurar a magia até o fim do próximo turno usando Int; recarga de 10 minutos.</li>
-      <li><strong>Modelo Caótico (Filhos do Caos):</strong> Combustível = matéria orgânica/carvão/sucata. <em>Ressonância Emocional:</em> Escolhe Fúria (Fogo), Tristeza (Frio) ou Alegria (Eletricidade); Resistência ao tipo = metade do nível. <em>Sobrecarga Caótica</em> (Ação Livre): fica Quickened 1 até fim do turno (apenas Stride/Strike); ataques causam +1d6 dano elemental (+1d6 nos níveis 5, 10, 15, 20); no início do próximo turno fica Slowed 1 e Clumsy 1 por 1 rodada.</li>
-    </ul>
+    <div className="heranca-grid">
+      <HerancaCard
+        identificador="Essência"
+        titulo="Atormentada"
+        placeholder="🤖"
+        descricao="Desperta em vilas massacradas por criminosos, a alma tomando forma na boneca ensanguentada deixada para trás. Alimenta-se de pergaminhos usados e outros resíduos mágicos."
+        elemento="Rituais · Maldições"
+        sing1={<>Treinado em <strong>Occultism</strong>.</>}
+        sing2={<><strong>Casco de Nulação</strong> — A violência que te deu origem queimou marcas no seu casco, e elas agem como um para-raios diante da magia hostil, escoando para o chão o que deveria te ferir. Você ganha resistência a Dano de Magias, de qualquer tradição ou escola, igual à metade do seu nível (mínimo 1).</>}
+        sing3={<>
+          <p><strong>Conduíte Ritualístico</strong> — Você despertou onde o sangue encharcou a terra e um rito interrompido ainda pairava no ar, e desde então a geometria da magia cerimonial se desenha sozinha diante dos seus olhos.</p>
+          <ul>
+            <li>Você pode aprender e realizar Rituais, e conta como 1 nível superior para ter acesso a eles e para conjurá-los.</li>
+            <li>Você começa o jogo conhecendo 1 Ritual de Nível 1.</li>
+          </ul>
+        </>}
+      />
 
-    <h2>📀 Talentos de Ancestralidade</h2>
-    <h3>Nível 1</h3>
-    <ul>
-      <li><strong>Essência da Matéria:</strong> Escolhe composição (Porcelana, Pano, Metal ou Rocha) com habilidades únicas de interação e combate.</li>
-      <li><strong>Compartimento de Estoque:</strong> Compartimento interno de 1 Bulk. Itens internos não contam para peso; inserir/retirar = 1 ação [Manipulate].</li>
-      <li><strong>Protocolo Investigativo:</strong> 10 min observando criatura → descobre o tipo sem teste; CD de Recall Knowledge sobre ela −2 pelo dia.</li>
-      <li><strong>Frequência Oculta:</strong> Aprende truque Message (inato oculto). +1 circunstancial em Recall Knowledge sobre tecnologia, construtos e fenômenos mágicos antigos.</li>
-      <li><strong>Protocolo de Estabilização:</strong> Ao estabilizar com Dying, recupera 1 PV e acorda imediatamente (permanece Caído).</li>
-      <li><strong>Nódulo de Reparo Rápido:</strong> Aprende Mending (inato). Ponto de Foco para conjurar Mending em 1 ação: cura 5 PV + 5 PV Temporários em construto/você mesmo (+5 de ambos/2 níveis acima do 1°).</li>
-      <li><strong>[RELICÁRIO] Sensibilidade Cerimonial:</strong> Ao tocar local de ritual, rola 1d4 para descobrir informações (4 = 2 palavras-chave; 1 = Stupefied 1 por 10 min).</li>
-      <li><strong>[RELICÁRIO] Arquivo Ritualístico de Info I:</strong> Aprende 1 ritual de 1° rank; aprende novos rituais de 1° rank 25% mais rápido. Missão de Energia ao aprender novo ritual.</li>
-    </ul>
-    <h3>Nível 3</h3>
-    <ul>
-      <li><strong>Nódulo Emergencial:</strong> Escolhe Modo Ofensivo (+2 status em ataques) ou Modo Arcano (+2 status em CDs de magia) até fim do turno. Depois: Slowed 1 enquanto reestabiliza. Mais de 1 uso por dia causa dano direto à Vitalidade.</li>
-      <li><strong>Diplomacia Apática [Mental]:</strong> Usa Inteligência no lugar de Carisma em Diplomacia (Make Impression) e Intimidação (Coerce/Demoralize) contra alvos com Int ≥ −3 que entendam seu idioma.</li>
-      <li><strong>Eco da Centelha:</strong> 1x/dia em local com forte carga emocional/mágica: impressão sensorial do que ocorreu ali. +1 status no próximo Recall Knowledge sobre o local. Ganha 1 Ponto Heroico.</li>
-      <li><strong>Previsibilidade Artificial:</strong> 1 ação [Concentrate, Visual]: declara previsão de Ataque, Magia ou Avanço. Se o gatilho ocorrer antes do próximo turno, gasta Reação: +2 circunstancial na CA / salvamento / Passo para longe.</li>
-      <li><strong>[RELICÁRIO] Oferenda de Metal e Óleo [Sacrifício]:</strong> 1x/semana: substitui componente material de ritual por partes do próprio corpo. Depois: Drained 1 (requer 8h + dobro de combustível para curar).</li>
-      <li><strong>[RELICÁRIO] Arquivo Ritualístico de Info II:</strong> Pré-req: Info I. Aprende 1 ritual de 2° rank; aprende novos de 2° rank 25% mais rápido.</li>
-    </ul>
-    <h3>Nível 5</h3>
-    <ul>
-      <li><strong>Protocolo de Autopreservação [Reação]:</strong> 1x/10min. Gatilho: cai abaixo de metade dos PV máximos pela 1ª vez no combate. Fica Quickened 1 até fim do próximo turno (apenas Stride, Step, recuperação).</li>
-      <li><strong>Empatia Ecoante:</strong> Pré-req: Eco da Centelha. Ao usar Eco da Centelha, recebe efeito baseado no sentimento do local (Alegria, Admiração, Ternura, Curiosidade, Desespero, Desesperança — cada um com mecânica específica).</li>
-      <li><strong>Cerne Desperto:</strong> Pré-req: Essência da Matéria. Desbloqueia habilidade ativa baseada na composição (Porcelana: magias; Pano: defesa por colapso; Metal: sobrecarga de Escudo; Rocha: enraizamento tectônico).</li>
-      <li><strong>Os Três Pilares:</strong> Designa 3 NPCs/PCs como Porto Seguro, Horizonte Inspirador e Tesouro Precioso, cada um concedendo bônus mecânicos específicos. Perdas causam dano à Sanidade.</li>
-      <li><strong>[RELICÁRIO] Ritualismo Mímico:</strong> Ao testemunhar ritual completo como assistente, gasta 1 dia + teste de perícia (CD do ritual); Sucesso = aprende o ritual temporariamente por 1 semana (1 uso) e progride 2x mais rápido para aprendizado permanente.</li>
-      <li><strong>[RELICÁRIO] Arquivo Ritualístico de Info III:</strong> Pré-req: Info II. Aprende 1 ritual de 3° rank; aprende novos de 3° rank 25% mais rápido.</li>
-    </ul>
+      <HerancaCard
+        identificador="Essência"
+        titulo="Metódica"
+        placeholder="🤖"
+        descricao="Desperta em bibliotecas abandonadas, a alma tomando forma na gárgula de pedra esquecida na decoração. Alimenta-se de livros, papel e plástico."
+        elemento="Intelecto · Mímica"
+        sing1={<>Treinado em <strong>Arcana</strong>.</>}
+        sing2={<>Você ganha o talento <strong>Recognize Spell</strong>.</>}
+        sing3={<>
+          <p><strong>Algoritmo de Mimetismo</strong> (Reação) — <em>Gatilho: uma criatura a até 18 metros (60 pés) que você possa ver conjura uma magia cujo nível seja igual ou inferior a um terço do seu nível de personagem, arredondado para baixo (mínimo 1).</em></p>
+          <p>Sua mente disseca a fórmula de um feitiço no instante em que ele é lançado, e a reconstrói como se fosse sua. Faça um teste de Lembrar Conhecimento (Arcana, Nature, Occultism ou Religion) para identificar a magia, contra a CD padrão do nível dela reduzida em 2. Em um sucesso, você armazena a magia na memória e pode conjurá-la até o fim do seu próximo turno, exatamente como a original, gastando as ações que ela exigir.</p>
+          <ul>
+            <li>Você conjura a magia copiada usando a maior entre sua CD de classe e sua CD de conjuração, e ignora seus requisitos de componente material e de foco, tratando-a como uma cópia puramente mimética.</li>
+            <li>Você é Treinado na CD de Magia e na Jogada de Ataque de Magia desta habilidade, subindo para Especialista no 12° nível e Mestre no 16°.</li>
+            <li>Depois de conjurar a magia, ou se seu próximo turno terminar sem que você a use, seus circuitos de mimetismo entram em resfriamento por 1 hora.</li>
+          </ul>
+        </>}
+      />
+
+      <HerancaCard
+        identificador="Essência"
+        titulo="Caótica"
+        placeholder="🤖"
+        descricao="Desperta em campos de batalha reduzidos a pó, a alma tomando forma nos escombros de um construto de guerra. Alimenta-se de coisas metálicas e rochosas."
+        elemento="Físico · Marcial"
+        sing1={<>Treinado em <strong>Athletics</strong>.</>}
+        sing2={<>Escolha um tipo de dano entre cortante, perfurante ou contundente ao adquirir esta Essência. Você ganha resistência a esse tipo igual à metade do seu nível (mínimo 1).</>}
+        sing3={<>
+          <p><strong>Sobrecarga Caótica</strong> (Ação Livre) — <em>Frequência: uma vez por turno.</em></p>
+          <p>Você canaliza a energia bruta do núcleo e fica Quickened 1 até o fim deste turno. Você só pode usar essa ação extra para Stride, Step ou Strike. No início do seu próximo turno, o esforço cobra o preço: você fica Slowed 1 até o fim desse turno, enquanto os pistões esfriam e sua alma se reassenta.</p>
+        </>}
+      />
+
+      <HerancaCard
+        identificador="Essência"
+        titulo="Carinhosa"
+        placeholder="🤖"
+        descricao="Desperta em grandes festas ou em casas de cura, gratidão e vidas salvas, a alma tomando forma em um manequim de porcelana. Alimenta-se das sobras de celebração e de cuidado, mais nutrida quanto mais afeto genuíno o objeto carrega."
+        elemento="Cura · Suporte"
+        sing1={<>Treinado em <strong>Medicine</strong>.</>}
+        sing2={<>Você ganha o talento <strong>Cooperative Nature</strong>.</>}
+        sing3={<>
+          <p><strong>Ressonância Afetiva</strong> — Cada gesto de cuidado e cada triunfo ao seu redor reverbera no seu núcleo e te fortalece.</p>
+          <p><strong>Eco do Cuidado:</strong> uma vez por rodada, quando uma criatura aliada a até 9 metros (30 pés) recupera Pontos de Vida de um efeito, você recebe Pontos de Vida Temporários iguais ao seu nível, que duram até o fim do seu próximo turno.</p>
+          <p><strong>Eco do Triunfo:</strong> uma vez por rodada, quando uma criatura aliada a até 9 metros (30 pés) obtém um sucesso crítico em uma jogada de ataque, teste de perícia ou salvamento, você recebe um bônus de status de +1 na sua próxima jogada de ataque, teste de perícia ou salvamento, até o fim do seu próximo turno.</p>
+        </>}
+      />
+    </div>
   </>;
 }
 
