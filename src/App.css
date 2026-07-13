@@ -1397,6 +1397,18 @@ body {
   align-items: flex-start;
 }
 
+.materia-prima-item .talento-card-img {
+  width: 84px;
+  min-width: 84px;
+  height: 84px;
+}
+
+.materia-prima-item .talento-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .materia-prima-item > div {
   flex: 1;
   min-width: 0;
