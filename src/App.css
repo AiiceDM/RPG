@@ -1397,9 +1397,17 @@ body {
   align-items: flex-start;
 }
 
-.materia-prima-item p {
-  margin: 0;
+.materia-prima-item > div {
   flex: 1;
+  min-width: 0;
+}
+
+.materia-prima-item p {
+  margin: 0 0 var(--s2);
+}
+
+.materia-prima-item p:last-child {
+  margin-bottom: 0;
 }
 
 /* ── ALTERAÇÕES OFICIAIS ────────────────────────────────────── */

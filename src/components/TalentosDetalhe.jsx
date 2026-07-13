@@ -707,38 +707,43 @@ function Animus() {
       <div className="materia-prima-lista">
         <div className="materia-prima-item">
           <div className="talento-card-img">🪵</div>
-          <p>
-            <strong>Madeira</strong> — <strong>Primário (Ativa):</strong> <strong>Salto de Mola.</strong> (1 ação) <code>[Movimento]</code> <em>Frequência: uma vez a cada 1 hora.</em> Você salta em qualquer direção, sem tocar o chão, por uma distância de até sua Velocidade de caminhada. Você deve aterrissar em solo firme dentro desse alcance, ou cai após usar sua próxima ação.
-            <br /><strong>Secundário (Passiva):</strong> Sua estrutura leve alivia o passo. Seu Deslocamento aumenta em 1,5 metro (5 pés).
-          </p>
+          <div>
+            <p><strong>Madeira — Primário (Ativa):</strong> Você ganha a habilidade <strong>Salto de Mola</strong>.<br />(1 ação) <code>[Movimento]</code><br /><em>Frequência: uma vez a cada 1 hora.</em></p>
+            <p><strong>Efeito.</strong> Você salta em qualquer direção, sem tocar o chão, por uma distância de até sua <strong>velocidade de caminhada</strong>. Você deve aterrissar em solo firme dentro desse alcance, ou cairá após usar sua próxima ação.</p>
+            <p><strong>Secundário (Passiva):</strong> Sua estrutura leve alivia o passo. Seu Deslocamento aumenta em 1,5 metro (5 pés).</p>
+          </div>
         </div>
         <div className="materia-prima-item">
           <div className="talento-card-img">⚙️</div>
-          <p>
-            <strong>Metal</strong> — <strong>Primário (Ativa):</strong> <strong>Impacto Ressonante.</strong> (Reação) <em>Gatilho:</em> uma criatura causa dano a você com um ataque corpo a corpo. O agressor sofre 1d6 de dano contundente, com um salvamento básico de Fortitude contra a CD mais alta entre sua CD de classe e de magia (o dano aumenta em 1d6 a cada 3 níveis acima do 1°). Se o dano do gatilho incluía dano contundente, o agressor sofre +1 de dano adicional para cada dado de dano que esta reação causar. Em uma falha crítica, se o agressor não for de uma categoria de tamanho maior que a sua, ele é empurrado 3 metros (10 pés) para longe de você. Após usar esta reação, você deve gastar 1 ação com o traço Manipulate para retensionar suas placas antes de poder usá-la novamente.
-            <br /><strong>Secundário (Passiva):</strong> Placas densas revestem seu chassi. Você recebe um bônus de circunstância de +1 na CA.
-          </p>
+          <div>
+            <p><strong>Metal — Primário (Ativa):</strong> Você ganha a habilidade <strong>Impacto Ressonante</strong>.<br />(Reação)<br /><em>Gatilho:</em> uma criatura causa dano a você com um ataque corpo a corpo.</p>
+            <p><strong>Efeito.</strong> O agressor sofre <strong>1d6</strong> de dano contundente, com um salvamento básico de <strong>Fortitude</strong> contra a sua CD de classe. O dano aumenta em 1d6 a cada 3 níveis acima do 1°. Se o dano do gatilho incluir dano contundente, o agressor sofre +1 de dano adicional para cada dado de dano que esta reação causar. Em uma falha crítica, se o agressor não for de uma categoria de tamanho maior que a sua, ele também é empurrado 3 metros (10 pés) para longe de você. Após usar esta reação, você deve gastar 1 ação com o traço Manipulate para retensionar suas placas antes de poder usá-la novamente.</p>
+            <p><strong>Secundário (Passiva):</strong> Placas densas revestem seu chassi. Você recebe um bônus de circunstância de +1 na CA.</p>
+          </div>
         </div>
         <div className="materia-prima-item">
           <div className="talento-card-img">🪨</div>
-          <p>
-            <strong>Pedra</strong> — <strong>Primário (Passiva):</strong> Rocha viva compõe cada parte de você, densa e imóvel como um monólito. Seu tamanho torna-se <strong>Grande</strong> e você recebe +2 Pontos de Vida de ancestralidade. Você recebe um bônus de circunstância de +1 em testes para Empurrar, Agarrar, Derrubar e Reposicionar criaturas, e uma penalidade de circunstância de −1 é aplicada a quem tentar fazer o mesmo contra você. Consulte as <a href="https://2e.aonprd.com/Rules.aspx?ID=3270" target="_blank" rel="noopener noreferrer">regras para personagens grandes</a>.
-            <br /><strong>Secundário (Passiva):</strong> Seu núcleo denso resiste ao colapso. Você aumenta seus Pontos de Vida máximos em um valor igual ao seu nível.
-          </p>
+          <div>
+            <p><strong>Pedra — Primário (Passiva):</strong> Rocha viva compõe cada parte de você, densa e imóvel como um monólito.</p>
+            <p><strong>Efeito.</strong> Seu tamanho torna-se <strong>Grande</strong> e você recebe <strong>+2</strong> Pontos de Vida de ancestralidade. Você recebe um bônus de circunstância de +1 em testes para Empurrar, Agarrar, Derrubar e Reposicionar criaturas, e uma penalidade de circunstância de −1 é aplicada a quem tentar fazer o mesmo contra você. Consulte as <a href="https://2e.aonprd.com/Rules.aspx?ID=3270" target="_blank" rel="noopener noreferrer">regras para personagens grandes</a>.</p>
+            <p><strong>Secundário (Passiva):</strong> Seu núcleo denso resiste ao colapso. Você aumenta seus Pontos de Vida máximos em um valor igual ao seu nível.</p>
+          </div>
         </div>
         <div className="materia-prima-item">
           <div className="talento-card-img">🏺</div>
-          <p>
-            <strong>Porcelana</strong> — <strong>Primário (Ativa):</strong> Ao causar dano a uma criatura que esteja Fascinated por você, você também causa 2d4 de dano mental adicional (aumentando em 1d4 a cada 2 níveis acima do 1°). Usar uma ação hostil contra a criatura encerra o estado de Fascinated, mas apenas após a ação ser concluída. Você também ganha a habilidade <strong>Cativar</strong> (1 ação) <code>[Emotion] [Move] [Visual]</code>, alcance 9m (30 pés): faça um teste de Performance contra a CD de Vontade do alvo; em um sucesso, ele fica Fascinated por você por até 1 minuto (podendo gastar 1 ação para se livrar da condição). Você não pode usar Cativar contra a mesma criatura por 10 minutos.
-            <br /><strong>Secundário (Passiva):</strong> Você pode usar Performance no lugar de Diplomacia para Causar Boa Impressão (Make an Impression). Você também recebe um bônus de circunstância de +2 em testes de perícia para interagir socialmente com criaturas Fascinated por você.
-          </p>
+          <div>
+            <p><strong>Porcelana — Primário (Ativa):</strong> Há em você uma beleza artificial que desarma, do tipo que só existe em coisas que não deveriam se mover e, ainda assim, se movem. Ao causar dano a uma criatura que esteja <strong>Fascinated</strong> por você, você também causa <strong>2d4</strong> de dano mental adicional (aumentando em 1d4 a cada 2 níveis acima do 1°). Usar uma ação hostil contra a criatura encerra o estado de Fascinated, mas apenas após a ação ser concluída. Você também ganha a habilidade <strong>Cativar</strong>.<br />(1 ação) <code>[Emotion] [Move] [Visual] [Subtle]</code><br />Alcance 9m (30 pés)</p>
+            <p><strong>Efeito.</strong> Um gesto lento, um brilho calculado no olhar de porcelana, e por um instante ninguém mais consegue olhar para outro lugar. Faça um teste de Performance contra a CD de Vontade do alvo; em um sucesso, ele fica Fascinated por você por até 1 minuto. A criatura, então, fica imune ao seu Cativar por 1 hora.</p>
+            <p><strong>Secundário (Passiva):</strong> Você pode usar Performance no lugar de Diplomacia para Causar Boa Impressão (Make an Impression). Você também recebe um bônus de circunstância de +2 em testes de perícia para interagir socialmente com criaturas Fascinated por você.</p>
+          </div>
         </div>
         <div className="materia-prima-item">
           <div className="talento-card-img">🧵</div>
-          <p>
-            <strong>Pano</strong> — <strong>Primário (Ativa):</strong> <strong>Dicotomia Dolorosa.</strong> (1 ação) Você imbui uma arma que empunha ou um objeto de conjuração com energia consagrada ou corrompida, escolhendo um tipo de dano entre vitalidade, espiritual ou vazio. Até o fim deste turno, o próximo Strike ou magia de alvo único que você fizer causa +1 de dano adicional do tipo escolhido; se esse dano for causado, o alvo ganha Fraqueza 2 a esse tipo até o início do seu próximo turno (o dano adicional e a Fraqueza aumentam, respectivamente, em +1 e +2 a cada 4 níveis acima do 1°). Sem efeito contra uma criatura que já possua resistência a esse tipo de dano.
-            <br /><strong>Secundário (Passiva):</strong> Seu tecido carrega uma corrente sobrenatural. Escolha dano de vazio ou espiritual ao adquirir esta melhoria: você ganha resistência a esse tipo igual à metade do seu nível (mínimo 1) e um bônus de +1 em salvamentos contra efeitos com o traço vazio, vitalidade ou espiritual.
-          </p>
+          <div>
+            <p><strong>Pano — Primário (Ativa):</strong> Você ganha a habilidade <strong>Dicotomia Dolorosa</strong>.<br />(1 ação)</p>
+            <p><strong>Efeito.</strong> Você imbui uma arma que empunha ou um objeto de conjuração com energia consagrada ou corrompida, escolhendo um tipo de dano entre <strong>vitalidade, espiritual ou vazio</strong>. Até o fim deste turno, o próximo Strike ou a próxima magia causadora de dano de alvo único que você conjurar causa <strong>+1</strong> de dano adicional do tipo escolhido. Caso este dano seja causado, o alvo ganha Fraqueza 2 a esse tipo até o início do seu próximo turno. O dano adicional e a Fraqueza aumentam, respectivamente, em +1 e +2 a cada 4 níveis acima do 1°. Uma criatura que já possua qualquer resistência ao tipo de dano causado por esta habilidade não é afetada por ela.</p>
+            <p><strong>Secundário (Passiva):</strong> Seu tecido carrega uma corrente sobrenatural. Escolha dano de vazio ou espiritual ao adquirir esta melhoria: você ganha resistência a esse tipo igual à metade do seu nível (mínimo 1) e um bônus de +1 em salvamentos contra efeitos com o traço vazio, vitalidade ou espiritual.</p>
+          </div>
         </div>
       </div>
     </HabilidadeCard>
