@@ -778,7 +778,7 @@ function Animus() {
         placeholder="🤖"
         img="https://i.pinimg.com/736x/dc/11/18/dc1118a9d2659908ce94a71b6f2b0a5c.jpg"
         imgPopout="https://i.pinimg.com/736x/91/07/e3/9107e3bc7f33a28e92deb92039885211.jpg"
-        descricao="Desperta em vilas massacradas por criminosos, a alma tomando forma na boneca ensanguentada deixada para trás. Alimenta-se de pergaminhos usados e outros resíduos mágicos."
+        descricao="A Herança Atormentada desperta onde o sofrimento foi grande demais para se dissipar junto com os corpos. Uma vila inteira passada ao fio da espada por bandidos, um cadafalso que enforcou inocentes junto com os culpados: é nesses lugares, ainda ecoando de dor, que uma alma se acende dentro do primeiro objeto que reste, uma boneca encharcada de sangue, um sino rachado, um espantalho esfarrapado. Ela se alimenta do que guarda magia gasta, pergaminhos vencidos, incensos queimados, varinhas partidas, como quem rói as sobras de um rito interrompido. E carrega o peso do berço por onde anda: é reservada, grave, atenta a maldições e a mortos inquietos, uma presença que parece sempre escutar algo que os outros não ouvem."
         elemento="Rituais · Maldições"
         sing1={<>Treinado em <strong>Occultism</strong>.</>}
         sing2={<><strong>Casco de Nulação</strong> — A violência que te deu origem queimou marcas no seu casco, e elas agem como um para-raios diante da magia hostil, escoando para o chão o que deveria te ferir. Você ganha resistência a Dano de Magias, de qualquer tradição ou escola, igual à metade do seu nível (mínimo 1).</>}
@@ -797,7 +797,7 @@ function Animus() {
         placeholder="🤖"
         img="https://i.pinimg.com/1200x/cc/64/b4/cc64b4c8a4b2b23beef065f19727fc7e.jpg"
         imgPopout="https://i.pinimg.com/736x/9b/24/c1/9b24c1d8b1417bc9c650ad448819566f.jpg"
-        descricao="Desperta em bibliotecas abandonadas, a alma tomando forma na gárgula de pedra esquecida na decoração. Alimenta-se de livros, papel e plástico."
+        descricao="A Herança Metódica nasce onde o conhecimento se acumulou por tempo demais e a curiosidade impregnou as paredes. Uma biblioteca abandonada de portas fechadas há décadas, um observatório onde um velho astrônomo morreu sem terminar seus cálculos: é ali que uma alma desperta, preenchendo o corpo mais próximo, a gárgula de pedra da decoração, uma estátua, um autômato empoeirado de exposição. Ela se alimenta de informação em forma física, livros, papel, plástico, tudo que um dia serviu de suporte a algum saber. E se comporta como uma eterna estudante do mundo: observadora, analítica, incapaz de deixar uma pergunta sem resposta, catalogando tudo que vê com uma frieza que os outros às vezes confundem com desinteresse, quando é justamente o oposto."
         elemento="Intelecto · Mímica"
         sing1={<>Treinado em <strong>Arcana</strong>.</>}
         sing2={<>Você ganha o talento <strong>Recognize Spell</strong>.</>}
@@ -818,7 +818,7 @@ function Animus() {
         placeholder="🤖"
         img="https://i.pinimg.com/736x/89/ef/39/89ef39f905336d6c18a70f24b8da7f50.jpg"
         imgPopout="https://i.pinimg.com/1200x/0e/8b/1b/0e8b1b734a92ee9e71222cb5701d1fef.jpg"
-        descricao="Desperta em campos de batalha reduzidos a pó, a alma tomando forma nos escombros de um construto de guerra. Alimenta-se de coisas metálicas e rochosas."
+        descricao="A Herança Caótica surge onde a violência foi absoluta e quase nada sobrou além de poeira. Um campo de batalha varrido até o último osso, uma fortaleza sitiada e reduzida a escombros fumegantes: é nesse resto que uma alma se enrosca, ocupando os destroços que ainda têm forma, a carcaça de um construto de guerra, um amontoado de armaduras retorcidas. Ela devora o que é duro, metal e pedra, lascas de arma e cacos de muralha, como se ainda mastigasse a batalha que a fez nascer. E nunca fica quieta: é impulsiva, inquieta, movida por uma energia que mal cabe no próprio corpo, sempre a um segundo de explodir em movimento, como um núcleo que insiste em girar mais rápido do que deveria."
         elemento="Físico · Marcial"
         sing1={<>Treinado em <strong>Athletics</strong>.</>}
         sing2={<>Escolha um tipo de dano entre cortante, perfurante ou contundente ao adquirir esta Essência. Você ganha resistência a esse tipo igual à metade do seu nível (mínimo 1).</>}
@@ -834,7 +834,7 @@ function Animus() {
         placeholder="🤖"
         img="https://i.pinimg.com/736x/d3/aa/51/d3aa51c1b5b48fbb03944c1c7dcc1fe9.jpg"
         imgPopout="https://i.pinimg.com/1200x/45/0d/de/450dde9211349430686353690f80f4cf.jpg"
-        descricao="Desperta em grandes festas ou em casas de cura, gratidão e vidas salvas, a alma tomando forma em um manequim de porcelana. Alimenta-se das sobras de celebração e de cuidado, mais nutrida quanto mais afeto genuíno o objeto carrega."
+        descricao="A Herança Carinhosa desperta onde o afeto foi tão intenso que impregnou o ar. Uma grande festa em que a alegria transbordou por dias, uma casa de cura onde muitas vidas foram salvas e muitas preces de gratidão foram ditas: é nesses lugares que uma alma floresce, no corpo mais delicado à mão, um manequim de porcelana, uma boneca de presente, uma imagem de santo. Ela se alimenta das sobras do cuidado e da celebração, cera de vela, flores, fitas e ataduras, e se nutre mais quanto mais amor genuíno o objeto tiver carregado. E se comporta como aquilo que é: acolhedora, atenta, sempre voltada para os outros, encontrando a própria força no bem-estar de quem está ao seu lado."
         elemento="Cura · Suporte"
         sing1={<>Treinado em <strong>Medicine</strong>.</>}
         sing2={<>Você ganha o talento <strong>Cooperative Nature</strong>.</>}
