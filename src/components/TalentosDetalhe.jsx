@@ -681,7 +681,7 @@ function Animus() {
 
     <h2>🎲 Habilidades</h2>
 
-    <HabilidadeCard titulo="Casco Vivo" placeholder="🤖">
+    <HabilidadeCard titulo="Casco Vivo" img="https://i.imgur.com/NC7PfGM.png" placeholder="🤖">
       <p><strong>Descrição.</strong> Embora sua alma queime com a intensidade de qualquer ser vivo, ela habita uma carcaça que obedece às leis da engenharia, não da biologia. Seu corpo é uma máquina complexa que exige manutenção constante para sustentar o milagre da sua existência.</p>
       <p><strong>Efeito.</strong> Você recebe as seguintes características:</p>
       <ul>
@@ -691,7 +691,7 @@ function Animus() {
       </ul>
     </HabilidadeCard>
 
-    <HabilidadeCard titulo="Fisiologia Robótica" placeholder="🤖">
+    <HabilidadeCard titulo="Fisiologia Robótica" img="https://i.imgur.com/3w2Olb9.png" placeholder="🤖">
       <p><strong>Descrição.</strong> A medicina tradicional é inútil contra metal rasgado e pedra trincada. Para um Animus, a cura não vem de ervas ou curativos, mas de solda mágica, rebites e engenharia de precisão.</p>
       <p><strong>Efeito.</strong> Você recebe as seguintes características:</p>
       <ul>
@@ -701,7 +701,7 @@ function Animus() {
       </ul>
     </HabilidadeCard>
 
-    <HabilidadeCard titulo="Matéria-Prima" placeholder="🤖">
+    <HabilidadeCard titulo="Matéria-Prima" img="https://i.imgur.com/A1Mr4eY.png" placeholder="🤖">
       <p><strong>Descrição.</strong> Seu corpo é construído a partir de matérias-primas específicas, e a composição molda o que você é.</p>
       <p><strong>Efeito.</strong> Escolha um material como sua composição <strong>primária</strong> e um material como sua composição <strong>secundária</strong> (podem ser o mesmo). Você recebe o benefício primário da sua composição primária e o benefício secundário da sua composição secundária. Essas escolhas são permanentes.</p>
       <div className="materia-prima-lista">
