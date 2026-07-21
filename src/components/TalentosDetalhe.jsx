@@ -31,7 +31,7 @@ function Stats({ tamanho, idade, pv, habilidades, idiomas, deslocamento }) {
 
 function Humano() {
   return <>
-    <Stats tamanho="1,50–2,00m (Médio)" idade="50–90 anos" pv="8" habilidades="2 escolhidas livremente" idiomas="Tyrian + metade do valor de Inteligência" deslocamento="7,5m (25 pés)" />
+    <Stats tamanho="1,50–2,00m (Médio)" idade="50–90 anos" pv="8" habilidades="2 escolhidas livremente" idiomas="Tyrian + Metade do Modificador de Inteligência (arredondado para cima)" deslocamento="7,5m (25 pés)" />
 
     <h2>🎲 Habilidades</h2>
 
@@ -677,7 +677,7 @@ function Charr() {
 
 function Animus() {
   return <>
-    <Stats tamanho="1,00–2,00m (Médio)" idade="Indeterminada" pv="8" habilidades="Constituição, Inteligência + 1 livre. Penalidade em Carisma" idiomas="Tyrian + metade do valor de Inteligência" deslocamento="7,5m (25 pés)" />
+    <Stats tamanho="1,00–2,00m (Médio)" idade="Indeterminada" pv="8" habilidades="Constituição, Inteligência + 1 livre. Penalidade em Carisma" idiomas="Tyrian + Metade do Modificador de Inteligência (arredondado para cima)" deslocamento="7,5m (25 pés)" />
 
     <h2>🎲 Habilidades</h2>
 
@@ -1145,7 +1145,7 @@ function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopou
 
 function Drakan() {
   return <>
-    <Stats tamanho="1,50–2,00m (Médio)" idade="50–90 anos" pv="10" habilidades="2 escolhidas livremente" idiomas="1 + modificador de Inteligência (mín. 1)" deslocamento="7,5m (25 pés)" />
+    <Stats tamanho="1,50–2,00m (Médio)" idade="50–90 anos" pv="10" habilidades="2 escolhidas livremente" idiomas="Tyrian + Metade do Modificador de Inteligência (arredondado para cima)" deslocamento="7,5m (25 pés)" />
 
     <h2>🎲 Habilidades</h2>
 
