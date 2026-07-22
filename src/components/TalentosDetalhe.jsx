@@ -1670,6 +1670,7 @@ function Drakan() {
                 <li>Você pode se mover sobre terreno de lava como se fosse terreno normal e enxerga através dela como se fosse translúcida.</li>
                 <li>Se você sofrer dano de Frio ou dano com o traço Água durante este período, a forma é finalizada imediatamente e você fica <strong>Slowed 1</strong> até o final do seu próximo turno.</li>
               </ul>
+              <p>Utilizar <strong>Inalar Elemento</strong> recupera o uso desta habilidade.</p>
             </>}
           />
           <TalentoCard
