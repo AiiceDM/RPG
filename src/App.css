@@ -2125,6 +2125,47 @@ body {
   margin-bottom: 0 !important;
 }
 
+/* ── OTIMIZAÇÃO (Animus) ────────────────────────────────────── */
+.talento-otimizacao {
+  background: rgba(62,74,80,0.16);
+  border: 1px solid rgba(148,165,174,0.30);
+  border-left: 2px solid var(--steel);
+  border-radius: var(--r-sm);
+  padding: var(--s3) var(--s4);
+  margin: var(--s2) 0 !important;
+}
+
+.talento-otimizacao-label {
+  font-family: var(--font-gothic);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-steel);
+  display: block;
+  margin-bottom: var(--s2);
+}
+
+.talento-otimizacao p {
+  margin: 0 0 var(--s2);
+}
+
+.talento-otimizacao p:last-child {
+  margin-bottom: 0;
+}
+
+.talento-otimizacao ul {
+  margin: var(--s2) 0 0;
+  padding-left: 1.2rem;
+}
+
+.talento-otimizacao li {
+  margin-bottom: var(--s2);
+}
+
+.talento-otimizacao li:last-child {
+  margin-bottom: 0;
+}
+
 /* ── TALENTO RARO ────────────────────────────────────────────── */
 .talento-raro {
   border-color: var(--gold);
