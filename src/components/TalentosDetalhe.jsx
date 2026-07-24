@@ -766,7 +766,288 @@ function Animus() {
     <details className="talentos-ancestralidade">
       <summary>📀 Talentos de Ancestralidade Independentes</summary>
       <div className="talentos-corpo">
-        <TalentosNiveis>{{}}</TalentosNiveis>
+        <TalentosNiveis>
+          {{
+            1: <>
+              <TalentoCard
+                titulo="Compartimento de Estoque"
+                tags="Animus"
+                descricao="Seu chassi possui uma cavidade interna projetada para guardar itens de forma segura e discreta."
+                efeito={<>
+                  <p>Você possui um compartimento interno com capacidade de 1 Bulk. Este espaço só pode acomodar itens de uma categoria de tamanho abaixo do seu. Itens armazenados nele não contam para o seu peso carregado. Inserir ou retirar um item do compartimento custa 1 ação com o traço Manipulate. Itens guardados internamente não podem ser detectados por buscas físicas comuns, apenas por magias de detecção.</p>
+                  <p><strong>Otimização.</strong> Inserir ou retirar um item do compartimento perde o traço Manipulate. Além disso, você ganha a ação a seguir.</p>
+                  <p><strong>Consumação</strong> (Ações variáveis) — <em>Frequência: uma vez por hora.</em></p>
+                  <p>O item nunca chega às suas mãos. O compartimento o aciona por dentro, e você sente o efeito subir pelo casco. Você ativa um item consumível guardado no seu compartimento interno sem precisar sacá-lo, pagando apenas o número de ações que o próprio item exige para ser usado.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Protocolo Investigativo"
+                tags="Animus"
+                descricao="Sua mente processa padrões de comportamento, fisiologia e movimentação em tempo real, catalogando cada detalhe como dados utilizáveis."
+                efeito={<>
+                  <p>Você pode gastar 10 minutos observando uma criatura. Ao final desse período, você descobre automaticamente o tipo dela (Construto, Humanoide, Morto-vivo, etc.), sem necessidade de teste. Além disso, a CD de todos os testes de Lembrar Conhecimento relacionados a essa criatura específica é reduzida em 2. Este benefício persiste até suas próximas preparações diárias ou até você iniciar a análise de outra criatura.</p>
+                  <p><strong>Missão de Energia.</strong> Na primeira vez em cada período de Downtime que você identificar por este talento uma criatura Uncommon, Rare ou Unique, você recupera 1 ponto de Energia.</p>
+                  <p><strong>Otimização.</strong> Quando você obtém um sucesso crítico em um teste de Lembrar Conhecimento sobre uma criatura afetada por este talento, escolha um dos benefícios a seguir, que dura 10 minutos:</p>
+                  <ul>
+                    <li>O seu primeiro acerto com arma contra essa criatura causa 1d4 de dano de precisão adicional, aumentando em 1d4 a cada 5 níveis acima do 1°.</li>
+                    <li>Essa criatura sofre uma penalidade de status de −1 em salvamentos contra magias que você conjurar, até que ela falhe em um desses salvamentos, quando a penalidade se esgota.</li>
+                  </ul>
+                </>}
+              />
+              <TalentoCard
+                titulo="Frequência Oculta"
+                tags="Animus"
+                descricao="Seus receptores internos captam e emitem frequências invisíveis aos outros, convertendo pensamento em sinal."
+                efeito={<>
+                  <p>(1 ação) <code>[Concentrate, Linguistic, Mental, Subtle]</code> Você transmite uma mensagem telepática a uma criatura a até 18 metros (60 pés). Se vocês compartilham um idioma, transmite palavras, e a criatura pode responder a você como uma ação livre no turno dela, desde que esteja dentro do alcance. Se você tocar uma criatura voluntária, pode transmitir também imagens e memórias, não apenas palavras.</p>
+                  <p><strong>Otimização.</strong> Você ganha a reação a seguir.</p>
+                  <p><strong>Reação</strong> — <em>Gatilho: um aliado a até 18 metros (60 pés) vai fazer um salvamento causado por uma criatura sobre a qual você obteve sucesso em Lembrar Conhecimento na última hora.</em></p>
+                  <p>Você transmite a vulnerabilidade que identificou. O aliado recebe um bônus de circunstância de +1 nesse salvamento, ou +2 se o seu Lembrar Conhecimento foi um sucesso crítico. Você só pode usar esta reação uma vez para cada criatura; se houver várias criaturas do mesmo tipo (mesmo bloco de estatísticas) no combate, todas contam como uma só para este limite.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Protocolo de Estabilização"
+                tags="Animus"
+                descricao="Seus protocolos de emergência religam o núcleo antes que ele se apague de vez, priorizando manter você em pé e funcional."
+                efeito={<>
+                  <p>Ao estabilizar enquanto estiver com a condição Dying, em vez de permanecer inconsciente, você recupera 1 Ponto de Vida e recobra a consciência imediatamente. Você permanece Prone.</p>
+                  <p><strong>Otimização.</strong> Quando você fica Unconscious por ter sido reduzido a 0 Pontos de Vida, você não solta o que estiver segurando. Além disso, quando você deixa de estar Unconscious após ter sido reduzido a 0 Pontos de Vida, você pode usar sua reação para ficar de pé (Stand) imediatamente.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Nódulo de Reparo Rápido"
+                tags="Animus"
+                descricao="Um nódulo dedicado no seu núcleo dispara uma descarga de autorreparo, soldando o essencial numa fração de segundo."
+                efeito={<>
+                  <p>Você aprende <strong>Mending</strong> como um truque inato, conjurado com seu custo normal de 2 ações. Você ganha 1 Ponto de Foco e uma reserva de Pontos de Foco, caso ainda não possua uma. Gastando 1 Ponto de Foco, você ativa o nódulo (1 ação): você ou um constructo adjacente recupera 4 Pontos de Vida e ganha 4 Pontos de Vida Temporários, que duram até o início do seu próximo turno. Ambos os valores aumentam em 4 para cada 2 níveis que você tiver acima do 1°.</p>
+                  <p><strong>Otimização.</strong> Os Pontos de Vida Temporários concedidos pelo nódulo passam a durar 1 minuto. Enquanto uma criatura tiver esses Pontos de Vida Temporários, ela recebe um bônus de status de +1 na CA.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Diplomacia Apática"
+                tags="Animus · Mental"
+                descricao="Você enxerga as interações sociais como uma série de padrões e algoritmos. Ao analisar as microexpressões e o tom de voz de um interlocutor, você consegue formular argumentos logicamente irrefutáveis."
+                efeito={<>
+                  <p>Você pode usar seu modificador de Inteligência em vez de Carisma para testes de Diplomacia para Causar Boa Impressão (Make an Impression) ou Fazer um Pedido (Request), ou de Intimidação para Coagir (Coerce) ou Desmoralizar (Demoralize), desde que o alvo seja capaz de entender seu idioma e possua um valor de Inteligência de pelo menos −3. Você baseia seus argumentos em fatos, consequências e lógica pura, ignorando o "ruído" das emoções.</p>
+                  <p><strong>Missão de Energia.</strong> Na primeira vez em cada período de Downtime que você usar este talento para Causar Boa Impressão, Fazer um Pedido, Coagir ou Desmoralizar um NPC de importância narrativa (E3 ou superior) de forma que gere uma consequência concreta para o grupo (um acordo, uma concessão, um recuo ou um acesso), você recupera 1 ponto de Energia.</p>
+                  <p><strong>Otimização.</strong> Você ganha a ação a seguir.</p>
+                  <p><strong>Argumento Persistente</strong> (1 ação) — <em>Frequência: uma vez por hora.</em></p>
+                  <p>Você reformula a abordagem até a lógica não ter mais como ser ignorada. Você limpa a imunidade temporária a Desmoralizar que as criaturas do encontro atual tenham contra você, podendo usar Desmoralizar contra elas novamente.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Eco da Centelha"
+                tags="Animus"
+                descricao="Você ainda se lembra, ou acredita se lembrar, do instante em que acordou. A Centelha não foi apenas o começo da sua consciência, mas uma marca permanente na forma como você percebe o mundo."
+                efeito={<>
+                  <p><em>Frequência: uma vez por dia.</em></p>
+                  <p>Ao entrar em um local marcado por forte carga emocional ou mágica (campos de batalha, ruínas antigas, locais de tragédia, grandes rituais), você pode pedir ao Mestre uma impressão sensorial ou emocional do que ocorreu ali. Essa percepção nunca vem como fatos claros, mas como sensações: calor, peso, ruído, silêncio, fragmentos de imagens ou impulsos contraditórios.</p>
+                  <p>Você recebe um bônus de status de +1 no próximo teste de Lembrar Conhecimento sobre o local em que usou esta habilidade, e ignora qualquer requisito necessário para realizar esse teste. Ao utilizar esta habilidade, você ganha 1 Ponto Heroico, que se esvai automaticamente nas suas próximas preparações diárias caso não seja utilizado.</p>
+                  <p><strong>Otimização.</strong> O bônus aumenta para +2 e passa a se aplicar a todos os testes de Lembrar Conhecimento sobre aquele local, e não apenas ao próximo, até suas próximas preparações diárias.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Enxerto de Matéria"
+                tags="Animus · Composição"
+                descricao="Pré-requisito: sua composição primária e sua composição secundária são de materiais diferentes. Um corpo já mestiço não estranha mais um remendo. Onde a junta entre duas matérias-primas se abriu, cabe uma terceira, e o casco a aceita como se sempre tivesse esperado por ela."
+                efeito={<>
+                  <p>Escolha um material da Matéria-Prima que não esteja na sua composição. Você ganha o benefício primário desse material por inteiro, incluindo todas as habilidades que ele conceda. Você só pode selecionar este talento uma vez.</p>
+                  <p><strong>Otimização.</strong> Escolha um material da Matéria-Prima que não esteja na sua composição. Você ganha o benefício secundário desse material. Pode ser o mesmo material escolhido pelo efeito acima.</p>
+                  <p><em>Nota de mesa: se o material escolhido for Pedra, você passa a ser Grande. Adquirir este talento depois do 1° nível significa que todo o seu equipamento está no tamanho errado e precisa ser reforjado, o que rende uma boa atividade de Downtime.</em></p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Revolução Mecha (Madeira)"
+                tags="Animus · Composição · Move"
+                descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Madeira. A tensão que dorme nas suas fibras não serve só para um salto. Liberada em série, ela te lança pelo campo em impulsos encadeados, cada um puxando o seguinte antes que o anterior termine."
+                efeito={<>
+                  <p>(2 ações) <code>[Move]</code> <em>Requisito: você não usou uma ação com o traço move no seu turno anterior.</em></p>
+                  <p>Você usa Stride três vezes. Durante essas ações, você recebe um bônus de status de 1,5 metro (5 pés) no seu Deslocamento. Sua terceira ação neste turno não pode ser Stride.</p>
+                  <p><strong>Otimização.</strong> Na primeira vez em cada turno seu em que você usar uma ação com o traço move, você recebe um bônus de circunstância de +1 em testes de Acrobacia e em salvamentos de Reflexos. O bônus dura até o início do seu próximo turno.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Revolução Mecha (Metal)"
+                tags="Animus · Composição"
+                descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Metal. O escudo deixa de ser algo que você segura e passa a ser algo que você é. As dobradiças mordem o antebraço e a placa responde ao chassi como se sempre tivesse pertencido a ele."
+                efeito={<>
+                  <p>Você pode acoplar um escudo ao seu antebraço, desde que ele seja metálico. Acoplar ou remover um escudo leva 1 minuto. Um escudo acoplado conta como se estivesse sendo empunhado, mas não ocupa uma de suas mãos. Além disso, ele recebe um bônus nos seus Pontos de Vida e no seu Limiar de Quebra igual ao seu nível.</p>
+                  <p><strong>Otimização.</strong> Enquanto você estiver sob o efeito de Raise a Shield, o bônus de circunstância de +1 na CA concedido pela sua composição secundária de metal deixa de se aplicar à CA e passa a se aplicar aos seus salvamentos de Reflexos e de Fortitude.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Revolução Mecha (Pedra)"
+                tags="Animus · Composição"
+                descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Pedra. Não há junta no seu corpo que não seja rocha contra rocha. O golpe encontra massa, e massa não cede, apenas registra."
+                efeito={<>
+                  <p>Escolha um tipo de dano entre perfurante, contundente e cortante ao qual você ainda não possua resistência de outra fonte. Você ganha resistência a esse tipo igual à metade do seu nível (mínimo 1).</p>
+                  <p><strong>Otimização.</strong> Você ganha a reação a seguir.</p>
+                  <p><strong>Enrijecer</strong> (Reação) — <em>Gatilho: você sofreria dano de um tipo ao qual possui resistência igual à metade do seu nível.</em></p>
+                  <p>Cada placa se assenta contra a vizinha e o corpo inteiro vira um bloco só. Até o início do seu próximo turno, essa resistência aumenta para um valor igual ao seu nível. Depois de usar esta reação, você deve gastar 1 ação com o traço Manipulate para reassentar suas placas antes de poder usá-la novamente.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Revolução Mecha (Porcelana)"
+                tags="Animus · Composição"
+                descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Porcelana. O verniz devolve o rosto de quem olha, e por um instante a criatura confunde o próprio reflexo com algo digno de veneração. Basta uma palavra para dizer a ela o que fazer com essa confusão."
+                efeito={<>
+                  <p>Você aprende a magia <strong>Command</strong> e pode conjurá-la como uma magia inata uma vez a cada 1 hora, usando a maior entre sua CD de classe e sua CD de magia. Ao conjurá-la desta forma, você acrescenta uma ordem à lista de opções da magia:</p>
+                  <ul>
+                    <li><strong>Reverenciar.</strong> A criatura se curva ou se ajoelha na sua direção sem deixar o espaço que ocupa. Essa é uma ação com o traço move. Em uma falha crítica, ela termina Prone ao fim do turno.</li>
+                  </ul>
+                  <p>Se você usar a ordem Reverenciar e o alvo estiver Fascinated por você, ele sofre uma penalidade de status de −2 no salvamento de Vontade contra esta magia. Conjurar Command é uma ação hostil e encerra a condição Fascinated, mas apenas depois que a magia é resolvida.</p>
+                  <p><strong>Otimização.</strong> Uma vez por rodada, a primeira criatura que sofrer dano mental causado por você sofre dano mental adicional igual ao seu nível.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Revolução Mecha (Pano)"
+                tags="Animus · Composição"
+                descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Pano. O fio que te tece não conduz apenas bênção e maldição. Puxado do jeito certo, ele carrega qualquer corrente que exista no mundo."
+                efeito={<>
+                  <p>Ao usar Dicotomia Dolorosa, você também pode escolher dano de fogo, frio ou elétrico, além dos tipos originais.</p>
+                  <p><strong>Otimização · Trama Persistente.</strong> O imbuir de Dicotomia Dolorosa passa a durar até o fim do seu próximo turno, em vez de até o fim do turno atual.</p>
+                </>}
+              />
+            </>,
+            5: <>
+              <TalentoCard
+                titulo="Protocolo de Desmonte"
+                tags="Animus"
+                descricao="Partes do seu chassi foram montadas para ceder. Diante de um golpe que passaria direto, as junções soltam de propósito e você desaba, deixando o impacto se perder no colapso em vez de atravessar o núcleo."
+                efeito={<>
+                  <p>(Reação) <em>Gatilho: um ataque contra você é um acerto crítico, ou você obtém uma falha crítica em um salvamento de Reflexos.</em></p>
+                  <p>Você só pode usar esta reação se estiver ciente do ataque ou do efeito que a dispara. Ataques de criaturas Undetected e efeitos de perigos que você ainda não tenha notado não permitem seu uso.</p>
+                  <p>Você desmonta parcialmente. Um acerto crítico passa a causar apenas o dano que causaria em um acerto normal, e uma falha crítica passa a contar como uma falha. Quaisquer outros efeitos do acerto crítico ou da falha crítica ainda ocorrem normalmente. Você fica Prone.</p>
+                  <p>Depois de usar esta reação, você deve gastar 1 ação com o traço Manipulate para reassentar suas placas antes de poder usá-la novamente. Se você estiver Prone por causa desta reação, essa mesma ação também te coloca de pé.</p>
+                  <p><strong>Otimização.</strong> O gatilho passa a incluir falha crítica em salvamentos de Fortitude contra efeitos que causem dano contundente, perfurante ou cortante.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Nódulo Emergencial"
+                tags="Animus"
+                descricao="Seu núcleo possui um protocolo de emergência que força seus sistemas além dos limites seguros de operação, canalizando energia bruta para onde ela for mais necessária, mas a um custo."
+                efeito={<>
+                  <p>(Ação Livre) <em>Frequência: uma vez a cada 10 minutos.</em> Escolha um dos seguintes benefícios, que dura até o final do seu turno atual:</p>
+                  <ul>
+                    <li><strong>Modo Ofensivo.</strong> Você recebe +2 de bônus de status em todas as suas jogadas de ataque neste turno.</li>
+                    <li><strong>Modo Arcano.</strong> Você recebe +2 de bônus de status em todas as suas CDs de magia neste turno.</li>
+                    <li><strong>Modo Defensivo.</strong> Você recebe +2 de bônus de status na CA e em salvamentos até o início do seu próximo turno.</li>
+                  </ul>
+                  <p>Forçar o núcleo cobra seu preço: ao usar esta habilidade, você sofre dano mental igual ao seu nível, que não pode ser reduzido nem prevenido.</p>
+                  <p><strong>Risco de Sobrecarga.</strong> Da segunda ativação em diante em um mesmo dia, ao final do turno em que você usou esta habilidade, faça um salvamento de Fortitude contra a CD do seu nível. Cada salvamento feito depois do primeiro tem a CD aumentada em 5, de forma cumulativa. A contagem zera nas suas próximas preparações diárias.</p>
+                  <ul>
+                    <li><strong>Sucesso.</strong> Os circuitos aguentam. Nada acontece.</li>
+                    <li><strong>Falha.</strong> Você não pode usar esta habilidade novamente até suas próximas preparações diárias e fica Stunned 1.</li>
+                    <li><strong>Falha Crítica.</strong> Como Falha, mas você fica Stunned 2.</li>
+                  </ul>
+                  <p><strong>Otimização.</strong> Ao usar esta habilidade, você também recebe um bônus de status de 3 metros (10 pés) no seu Deslocamento até o final do turno atual.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Empatia Ecoante"
+                tags="Animus"
+                descricao="Pré-requisito: Eco da Centelha. O Eco da Centelha te deu fragmentos. Isso te dá a inundação. Você descobriu que não apenas percebe o que aconteceu em um lugar, você sente. Não como simulação, não como dados processados. Como algo que entra pelo casco e esquenta o núcleo, ou aperta os pistões, ou faz o óleo circular mais rápido do que deveria. Você não escolhe sentir. O lugar fala, e seu corpo responde antes que você possa perguntar por quê."
+                efeito={<>
+                  <p>Sempre que você utilizar o Eco da Centelha, o Mestre determina qual sentimento predomina naquele lugar. Com base nisso, você recebe o efeito correspondente. Todo efeito desta lista, incluindo os usos das habilidades que ele conceda e quaisquer recursos que ele entregue, dura ou permanece disponível até suas próximas preparações diárias, e se esvai automaticamente caso não seja utilizado.</p>
+                  <p><strong>Positivo · Alegria.</strong> <em>"Algo aqui foi genuinamente feliz. Seu núcleo não sabe o que fazer com isso, então floresce."</em> Até 3 vezes, quando você recuperar Pontos de Vida de qualquer efeito, você pode gastar uma ação livre após ver o resultado para aumentar essa cura em um valor igual ao seu nível. Esta habilidade não funciona com cura persistente, como Fast Healing ou Regeneration.</p>
+                  <p><strong>Positivo · Admiração.</strong> <em>"Algo grandioso aconteceu aqui. Você sente o eco disso como uma convicção que não sabia que tinha."</em> Você ganha 1 Ponto Heroico adicional, além do concedido pelo Eco da Centelha.</p>
+                  <p><strong>Positivo · Ternura.</strong> <em>"Alguém amou alguém aqui. Não de maneira épica, mas de maneira verdadeira. Seu núcleo aquece de um jeito que você não consegue nomear, e algo que estava quebrado se conserta sozinho."</em> Você recupera imediatamente o uso de uma habilidade à sua escolha que esteja em período de carregamento, desde que o intervalo de uso dela seja de até suas próximas preparações diárias ou menor. Esta habilidade não pode ser o próprio Eco da Centelha.</p>
+                  <p><strong>Negativo · Desespero.</strong> <em>"Alguém perdeu tudo aqui e ainda assim continuou se movendo. Seu corpo aprende com isso antes que sua mente possa processar."</em> Enquanto você não tiver usado O Tremor, você possui Weakness a dano mental em um valor igual ao seu nível.</p>
+                  <p><strong>O Tremor</strong> (1 ação) <code>[Emotion, Fear, Mental]</code> — <em>Alcance: 9 metros (30 pés). Alvo: 1 criatura.</em></p>
+                  <p>Você deixa escapar o que absorveu, e o que sai não é som, é a certeza de perder tudo. O alvo sofre 2d6 de dano mental, com um salvamento básico de Vontade. O dano aumenta em 1d6 para cada 2 níveis que você tiver acima do 5°. Além do dano, em uma falha o alvo fica Frightened 1, e em uma falha crítica fica Frightened 2. Excepcionalmente, este valor de Frightened soma ao valor de Frightened que a criatura já possua, em vez de prevalecer o maior. Se o total chegar a 3 ou mais, a criatura também fica Fleeing por 1 rodada.</p>
+                  <p><strong>Negativo · Solidão.</strong> <em>"Alguém esteve aqui sozinho por tempo demais. Seu núcleo reconhece a sensação sem precisar de tradução."</em> Enquanto você não tiver usado O Vazio, você fica Off-Guard sempre que não houver nenhum aliado a até 6 metros (20 pés) de você. Usar O Vazio encerra essa penalidade imediatamente, independentemente do resultado.</p>
+                  <p><strong>O Vazio</strong> (1 ação) <code>[Concentrate, Emotion, Incapacitation, Mental]</code> — <em>Sustentada até 1 minuto. Alcance: 9 metros (30 pés). Alvo: 1 criatura inimiga que não tenha nenhum aliado adjacente a ela.</em></p>
+                  <p>Você não ataca. Você apenas mostra à criatura o lugar onde ninguém nunca vem. O alvo faz um salvamento de Vontade.</p>
+                  <ul>
+                    <li><strong>Sucesso Crítico.</strong> A criatura não é afetada.</li>
+                    <li><strong>Sucesso.</strong> A criatura fica Off-Guard até o início do seu próximo turno.</li>
+                    <li><strong>Falha.</strong> A criatura é banida para uma dimensão solitária enquanto você Sustentar o efeito, até 1 minuto.</li>
+                    <li><strong>Falha Crítica.</strong> Como Falha, mas a criatura permanece banida por 1 minuto sem que você precise Sustentar o efeito.</li>
+                  </ul>
+                  <p>Enquanto estiver banida, a criatura é removida do encontro: ela não tem turnos, não pode agir e não pode ser alvejada nem afetada por nada. Dano persistente que ela esteja sofrendo não causa dano e não permite testes planos para terminar, e a duração de qualquer condição ou efeito que a afete não avança. Tudo retoma exatamente de onde parou quando ela retorna. Ao fim do efeito, a criatura reaparece no espaço que ocupava. Se esse espaço estiver ocupado, ela reaparece no espaço desocupado mais próximo.</p>
+                  <p><strong>Negativo · Desesperança.</strong> <em>"Aqui, alguém parou de acreditar. O peso disso gruda em você como ferrugem e se espalha silenciosamente para quem está perto. Mas há algo no fundo do seu núcleo que se recusa. Que ferve. Que espera."</em> Você e todas as criaturas adjacentes a você sofrem uma penalidade de status de −1 em testes de salvamento de Vontade. Enquanto este efeito estiver ativo, você pode usar O Grito. Você também pode encerrar Desesperança gastando 1 ação para gritar sem soltar o peso, sem causar dano algum.</p>
+                  <p><strong>O Grito</strong> (Reação) — <em>Gatilho: você sofre dano de uma criatura não aliada.</em></p>
+                  <p>O peso acumulado explode. Você solta um grito, não de dor, mas de recusa absoluta em desaparecer. A criatura que causou o dano sofre 6d6 de dano mental, com um salvamento básico de Vontade. O dano aumenta em 2d6 para cada 2 níveis que você tiver acima do 5°. Ao utilizar esta reação, o efeito de Desesperança se encerra imediatamente.</p>
+                  <p><strong>Otimização.</strong> O Mestre determina apenas a polaridade do local, positiva ou negativa, e você escolhe qual dos três sentimentos daquela polaridade se manifesta em você.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Os Três Pilares"
+                tags="Animus"
+                descricao="Para uma máquina que aprendeu a sentir, o mundo é vasto e frio demais para ser enfrentado sozinho. Com o tempo, seu núcleo aprendeu a reconhecer certas presenças não como dados, mas como necessidades. Você escolhe três indivíduos que se tornaram parte da arquitetura invisível da sua existência. Eles não sabem o peso que carregam. Talvez nunca saibam."
+                efeito={<>
+                  <p>Ao adquirir este talento, escolha três indivíduos, protagonistas ou NPCs, e atribua a cada um dos títulos abaixo. Esta escolha só pode ser alterada com permissão do Mestre.</p>
+                  <p><strong>Porto Seguro.</strong> <em>"Perto de você, o ruído para."</em> Enquanto você estiver a até 6 metros (20 pés) do seu Porto Seguro, você recebe um bônus de circunstância de +1 em testes de salvamento de Vontade e resistência a dano mental igual à metade do seu nível.</p>
+                  <p><strong>Horizonte Inspirador.</strong> <em>"Ver você vencer me lembra que vencer é possível."</em> Uma vez por dia, ao testemunhar seu Horizonte Inspirador obter um sucesso crítico em um teste de perícia, salvamento ou jogada de ataque, você ganha 1 Ponto Heroico. Este ponto se esvai automaticamente nas suas próximas preparações diárias caso não seja utilizado.</p>
+                  <p><strong>Tesouro Precioso.</strong> <em>"Não sei explicar o que acontece. Sei apenas que, depois, fico inteiro."</em> Uma vez por semana, ao passar pelo menos 10 minutos em contato físico com seu Tesouro Precioso, seja um abraço, uma mão estendida ou simplesmente o peso de um ombro contra o seu, você progride consideravelmente em sua escala de Sanidade.</p>
+                  <p><em>O testemunho ou a notícia negativa sobre qualquer um dos pilares causa dano à Sanidade, com severidade concordante com a ocorrência.</em></p>
+                  <p><strong>Otimização · Reciprocidade.</strong> O vínculo passa a valer nos dois sentidos. Cada pilar recebe de volta o mesmo benefício que gera em você.</p>
+                  <ul>
+                    <li><strong>Porto Seguro.</strong> Enquanto estiver a até 6 metros (20 pés) de você, ele também recebe o bônus de circunstância de +1 em testes de salvamento de Vontade e a resistência a dano mental igual à metade do seu nível.</li>
+                    <li><strong>Horizonte Inspirador.</strong> Quando você ganha 1 Ponto Heroico por este talento, ele também ganha 1 Ponto Heroico, sujeito à mesma expiração.</li>
+                    <li><strong>Tesouro Precioso.</strong> Quando você progride na sua escala de Sanidade por este talento, ele progride na dele na mesma medida.</li>
+                  </ul>
+                </>}
+              />
+              <TalentoCard
+                titulo="Atualização"
+                tags="Animus"
+                descricao="Manutenção não é só remendar o que quebrou. De vez em quando você abre o próprio casco com calma, estuda o que construiu até aqui e instala aquilo que sempre esteve previsto na planta e nunca teve peça para existir."
+                efeito={<>
+                  <p>Escolha 2 talentos de ancestralidade Animus de nível 1 que você possua. Você recebe permanentemente a Otimização de cada um deles.</p>
+                  <p>Você pode deixar uma das escolhas em aberto e defini-la mais tarde, durante quaisquer preparações diárias. Uma Otimização já instalada não pode ser trocada depois. Você pode selecionar este talento mais de uma vez, escolhendo talentos diferentes a cada vez.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Membro Auxiliar"
+                tags="Animus"
+                descricao="Dobrado sob uma placa do seu tronco existe um braço fino e articulado, montado com as peças que sobraram da sua própria construção. Ele não tem força para lutar, mas é rápido, silencioso e não exige a sua atenção."
+                efeito={<>
+                  <p>O membro auxiliar mantém um item de Bulk leve ou menor segurado sem ocupar nenhuma das suas mãos, embora ele não conte como empunhado para efeitos que exijam isso.</p>
+                  <p>Além disso, uma vez por turno, como uma ação livre, o membro realiza uma ação Interact para uma das seguintes finalidades:</p>
+                  <ul>
+                    <li>Sacar ou guardar um item de Bulk leve ou menor.</li>
+                    <li>Abrir ou fechar uma porta, tampa, recipiente ou fecho ao seu alcance.</li>
+                    <li>Acionar um dispositivo simples, como uma alavanca, um botão ou uma corda.</li>
+                  </ul>
+                  <p>O membro depende do seu núcleo para operar. Você não pode usar esta ação livre enquanto estiver Restrained, Stunned 3 ou sob qualquer outra condição ou efeito que impeça você de agir por completo.</p>
+                  <p>O membro não tem força para empunhar armas ou escudos, não pode fazer Strikes, não realiza componentes de conjuração e <strong>não pode ser usado para recarregar, reassentar ou reiniciar nenhuma outra habilidade</strong>.</p>
+                  <p><strong>Otimização.</strong> Uma ponta emissora foi instalada na articulação do membro. A ação livre do talento passa a ter uma quarta finalidade possível, e continua limitada a uma vez por turno: o membro realiza o Strike a seguir.</p>
+                  <p><strong>Descarga Auxiliar</strong> — <em>Strike à distância. Alcance: 9 metros (30 pés). Dano: 1d8 de fogo.</em></p>
+                  <p>Faça uma jogada de ataque usando seu modificador de Destreza e sua maior proficiência em armas. Este Strike não recebe nenhum modificador de dano, nem de habilidade, nem de runas, nem de efeitos que aumentem dano de Strikes. O dano aumenta em 1d8 para cada 4 níveis que você tiver acima do 5°. Este Strike não é afetado pela penalidade de ataque múltiplo (MAP) e não conta para ela.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Varredura Ampliada"
+                tags="Animus"
+                descricao="Pré-requisito: Protocolo Investigativo. Você aprendeu a virar seus sensores para fora. Em vez de dissecar uma criatura, você lê o ambiente inteiro: a vibração de um mecanismo dormindo atrás da parede, o desalinho de uma pedra que não pertence ali, o zumbido baixo de algo construído fingindo ser paisagem."
+                efeito={<>
+                  <p>Você pode gastar 10 minutos varrendo uma área, em vez de observar uma criatura. Escolha uma direção ao iniciar a varredura. Ao final, você descobre automaticamente, sem necessidade de teste, a localização de todos os construtos, mecanismos, armadilhas mecânicas e passagens ou compartimentos ocultos de construção física dentro de um cone de 18 metros (60 pés) partindo de você, mesmo através de paredes e portas.</p>
+                  <p>Toda criatura revelada pela varredura recebe automaticamente a identificação do Protocolo Investigativo, como se você a tivesse observado por 10 minutos, sem limite de quantas criaturas podem ser identificadas de uma vez.</p>
+                  <p>A varredura revela apenas onde essas coisas estão, não como funcionam nem como desarmá-las. Ela também não detecta nada de natureza mágica: perigos mágicos, ilusões e passagens seladas por magia permanecem invisíveis a ela.</p>
+                  <p><strong>Otimização.</strong> A varredura também capta criaturas Hidden ou Undetected dentro da área. Para cada uma, faça um teste de Percepção contra a CD de Furtividade dela.</p>
+                  <ul>
+                    <li><strong>Sucesso.</strong> A criatura fica Hidden para você e para seus aliados.</li>
+                    <li><strong>Sucesso Crítico.</strong> A criatura fica Observed para você e para todos os seus aliados que tenham linha de visão até ela, e Hidden para os demais.</li>
+                  </ul>
+                  <p>Isso é um retrato do momento. Se a criatura se mover ou usar Furtividade novamente, ela pode voltar a ficar Hidden ou Undetected pelas regras normais.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Protocolo de Anteparo"
+                tags="Animus · Healing"
+                descricao="Pré-requisito: Nódulo de Reparo Rápido. Você descobriu que carne é só mais um material, com tolerâncias diferentes e prazos mais curtos. E descobriu também que um anteparo não existe para não ser atingido. Ele existe para ser atingido no lugar do que está atrás dele."
+                efeito={<>
+                  <p>Você pode ativar o nódulo do Nódulo de Reparo Rápido em qualquer criatura voluntária adjacente, e não apenas em você mesmo ou em um construto.</p>
+                  <p>Quando o alvo é um construto, incluindo você, a cura e os Pontos de Vida Temporários do nódulo passam de 4 para 5, e o incremento passa de 4 para 5 para cada 2 níveis que você tiver acima do 1°.</p>
+                  <p><strong>Otimização.</strong> Você ganha a reação a seguir.</p>
+                  <p><strong>Interposição</strong> (Reação) — <em>Frequência: uma vez por dia. Gatilho: você ou um aliado a até 9 metros (30 pés) sofreria dano suficiente para reduzir seus Pontos de Vida a 0.</em></p>
+                  <p>Você não chega a tempo de impedir o golpe. Chega a tempo de decidir onde ele termina. Você ativa o nódulo no alvo do gatilho, gastando 1 Ponto de Foco normalmente. A cura e os Pontos de Vida Temporários são aplicados antes de o dano ser resolvido. Se o alvo não for você, você sofre metade do dano que ele sofreria, do mesmo tipo. Suas resistências, fraquezas e imunidades se aplicam normalmente a esse dano.</p>
+                </>}
+              />
+            </>
+          }}
+        </TalentosNiveis>
       </div>
     </details>
 
@@ -802,14 +1083,65 @@ function Animus() {
         sing1={<>Treinado em <strong>Arcana</strong>.</>}
         sing2={<>Você ganha o talento <strong>Recognize Spell</strong>.</>}
         sing3={<>
-          <p><strong>Algoritmo de Mimetismo</strong> (Reação) — <em>Gatilho: uma criatura a até 18 metros (60 pés) que você possa ver conjura uma magia cujo nível seja igual ou inferior a um terço do seu nível de personagem, arredondado para baixo (mínimo 1).</em></p>
-          <p>Sua mente disseca a fórmula de um feitiço no instante em que ele é lançado, e a reconstrói como se fosse sua. Faça um teste de Lembrar Conhecimento (Arcana, Nature, Occultism ou Religion) para identificar a magia, contra a CD padrão do nível dela reduzida em 2. Em um sucesso, você armazena a magia na memória e pode conjurá-la até o fim do seu próximo turno, exatamente como a original, gastando as ações que ela exigir.</p>
+          <p><strong>Algoritmo de Mimetismo</strong> (Reação) — <em>Gatilho: uma criatura a até 18 metros (60 pés) que você possa ver conjura uma magia cujo nível seja igual ou inferior ao seu Nível máximo de mimetismo.</em></p>
+          <p>Você processa a fórmula mágica no ato. Faça um teste de Lembrar Conhecimento (Arcana, Nature, Occultism ou Religion) para identificar a magia, contra a CD padrão do nível dela reduzida em 2. Em um sucesso, você armazena a magia na memória e pode conjurá-la a qualquer momento dentro de 1 minuto, gastando as ações que ela exigir.</p>
           <ul>
             <li>Você conjura a magia copiada usando a maior entre sua CD de classe e sua CD de conjuração, e ignora seus requisitos de componente material e de foco, tratando-a como uma cópia puramente mimética.</li>
             <li>Você é Treinado na CD de Magia e na Jogada de Ataque de Magia desta habilidade, subindo para Especialista no 12° nível e Mestre no 16°.</li>
-            <li>Depois de conjurar a magia, ou se seu próximo turno terminar sem que você a use, seus circuitos de mimetismo entram em resfriamento por 1 hora.</li>
+            <li>Depois de conjurar a magia, ou se o minuto terminar sem que você a use, seus circuitos de mimetismo entram em resfriamento por 1 hora.</li>
+            <li>Seu <strong>Nível máximo de mimetismo</strong> é 1, aumentando em 1 para cada 3 níveis que você tiver acima do 1°.</li>
           </ul>
         </>}
+        talentos={{
+          1: <>
+            <TalentoCard
+              titulo="Algoritmo de Extrapolação"
+              tags="Animus · Metódica"
+              descricao="Reproduzir uma fórmula é o começo. Você aprendeu a ler onde ela poderia ter ido se quem a escreveu tivesse fôlego para tanto, e a levá-la até lá."
+              efeito={<>
+                <p>Quando você conjura uma magia armazenada pelo Algoritmo de Mimetismo, ela é automaticamente conjurada no seu Nível máximo de mimetismo (heightened). Magias sem entrada de aprimoramento por nível são conjuradas nesse Nível do mesmo jeito, mas não ganham nenhum benefício adicional além do Nível usado para tentar neutralizá-las (counteract).</p>
+                <p>Além disso, truques podem ser armazenados pelo Algoritmo de Mimetismo independentemente do Nível deles, e nem armazenar nem conjurar um truque aciona o resfriamento. Um truque copiado segue a regra normal de truques e é conjurado em um Nível igual à metade do seu nível, arredondada para cima.</p>
+                <p><strong>Otimização.</strong> Se o minuto terminar sem que você conjure a magia armazenada, o resfriamento passa a ser de 1 minuto em vez de 1 hora.</p>
+              </>}
+            />
+            <TalentoCard
+              titulo="Acervo Interno"
+              tags="Animus · Metódica"
+              descricao="Em algum ponto você parou de ler livros e começou a guardá-los. Não na memória, e não no casco. Numa prateleira dobrada em algum lugar que não fica em lugar nenhum, e que abre quando você precisa."
+              efeito={<>
+                <p>Você aprende <strong>Pocket Library</strong> como uma magia inata arcana e pode conjurá-la uma vez por dia. Ela é conjurada em um Nível igual à metade do seu nível, arredondada para cima.</p>
+                <p>Além disso, o tomo não exige uma mão livre para ser invocado. Ele emerge de um compartimento do seu próprio chassi e se sustenta sozinho enquanto você o consulta.</p>
+                <p><strong>Otimização.</strong> Você não escolhe a perícia ao conjurar a magia. Em vez disso, escolhe qual perícia o tomo cobre a cada vez que o invoca.</p>
+              </>}
+            />
+          </>,
+          5: <>
+            <TalentoCard
+              titulo="Decompilação Arcana"
+              tags="Animus · Metódica"
+              descricao="Nem toda fórmula precisa ser executada. Às vezes ela vale mais desmontada: você abre a magia armazenada camada por camada, separa o que nela era só estrutura, e devolve o resto para os seus próprios sistemas."
+              efeito={<>
+                <p>Uma vez por dia, enquanto você tiver uma magia armazenada pelo Algoritmo de Mimetismo, você pode gastar uma ação livre para consumi-la em vez de conjurá-la. Ao fazer isso, você recupera um espaço de magia gasto de Nível igual ou inferior ao da magia consumida.</p>
+                <p>Consumir a magia desta forma não coloca seus circuitos de mimetismo em resfriamento.</p>
+                <ul>
+                  <li>O Nível considerado é o Nível original da magia conjurada pela criatura que disparou o Algoritmo, e não o Nível elevado pelo Algoritmo de Extrapolação.</li>
+                  <li>Truques não podem ser consumidos desta forma, pois não correspondem a nenhum espaço de magia.</li>
+                </ul>
+                <p><strong>Otimização.</strong> Ao consumir a magia, você também recupera 1 Ponto de Foco.</p>
+              </>}
+            />
+            <TalentoCard
+              titulo="Interceptação Arcana"
+              tags="Animus · Metódica"
+              descricao="Compreender a fórmula rápido o bastante deixa de ser cópia. Você lê a estrutura enquanto ela ainda está se formando e a desmonta no ar, antes que ela chegue a existir."
+              efeito={<>
+                <p>Quando você obtém um sucesso crítico no teste de Lembrar Conhecimento do Algoritmo de Mimetismo, além de armazenar a magia, a conjuração que disparou a reação é interrompida antes de produzir qualquer efeito. A magia não acontece, mas todos os custos dela são gastos normalmente, incluindo o espaço de magia, o Ponto de Foco ou o uso diário que a criatura tenha empregado.</p>
+                <p>Além disso, se você conjurar a magia armazenada até o fim do seu próximo turno, o custo em ações dela é reduzido em 1, até um mínimo de 1 ação.</p>
+                <p><strong>Otimização.</strong> A redução de ações passa a valer durante todo o minuto de retenção, e não apenas até o fim do seu próximo turno.</p>
+              </>}
+            />
+          </>
+        }}
       />
 
       <HerancaCard
