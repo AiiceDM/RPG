@@ -828,12 +828,22 @@ function Animus() {
               <TalentoCard
                 titulo="Nódulo de Reparo Rápido"
                 tags="Animus"
-                descricao="Um nódulo dedicado no seu núcleo dispara uma descarga de autorreparo, soldando o essencial numa fração de segundo."
+                descricao="Um nódulo dedicado no seu núcleo concentra energia capaz de recompor matéria danificada, fechando rachaduras, religando circuitos e reconstruindo partes essenciais em poucos segundos."
                 efeito={<>
-                  <p>Você aprende <strong>Mending</strong> como um truque inato, conjurado com seu custo normal de 2 ações. Você ganha 1 Ponto de Foco e uma reserva de Pontos de Foco, caso ainda não possua uma. Gastando 1 Ponto de Foco, você ativa o nódulo (1 ação): você ou um constructo adjacente recupera 4 Pontos de Vida e ganha 4 Pontos de Vida Temporários, que duram até o início do seu próximo turno. Ambos os valores aumentam em 4 para cada 2 níveis que você tiver acima do 1°.</p>
+                  <p>Você ganha 1 Focus Point. Você aprende a focus spell arcana <strong>Reconstituição Nodal</strong>. Para qualquer efeito que exija uma DC de Reconstituição Nodal, use a maior entre sua class DC e sua spell DC.</p>
+                  <div className="caixa-info">
+                    <p><strong>Reconstituição Nodal</strong> (1 ou 2 ações) <code>[Uncommon] [Animus] [Arcane] [Concentrate] [Focus] [Manipulate]</code></p>
+                    <p><em>Alcance: toque. Alvo: 1 criatura voluntária com o traço Construct ou 1 objeto mágico ou não mágico de até 5 Bulk.</em></p>
+                    <p>Você direciona a energia do nódulo para reconstruir matéria danificada. O efeito depende do número de ações utilizado para conjurá-la.</p>
+                    <ul>
+                      <li><strong>1 ação, Construct.</strong> O alvo recupera 4 Hit Points e recebe 4 Temporary Hit Points. Esses Temporary Hit Points duram até o início do seu próximo turno.</li>
+                      <li><strong>2 ações, objeto.</strong> O alvo recupera 8 Hit Points. Se isso elevar seus Hit Points acima do Broken Threshold, ele deixa de estar Broken. A magia não substitui partes ausentes e não pode restaurar um objeto reduzido a 0 Hit Points.</li>
+                    </ul>
+                    <p><strong>Heightened (+1).</strong> A recuperação e os Temporary Hit Points concedidos a uma criatura com o traço Construct aumentam em 4 cada. A recuperação concedida a um objeto aumenta em 8.</p>
+                  </div>
                   <div className="talento-otimizacao">
                     <span className="talento-otimizacao-label">Otimização</span>
-                    <p>Os Pontos de Vida Temporários concedidos pelo nódulo passam a durar 1 minuto. Enquanto uma criatura tiver esses Pontos de Vida Temporários, ela recebe um bônus de status de +1 na CA.</p>
+                    <p>Os Temporary Hit Points concedidos por Reconstituição Nodal passam a durar 1 minuto. Enquanto uma criatura possuir esses Temporary Hit Points, ela recebe um bônus de status de +1 na AC.</p>
                   </div>
                 </>}
               />
@@ -1092,12 +1102,18 @@ function Animus() {
                 tags="Animus · Healing"
                 descricao="Pré-requisito: Nódulo de Reparo Rápido. Você descobriu que carne é só mais um material, com tolerâncias diferentes e prazos mais curtos. E descobriu também que um anteparo não existe para não ser atingido. Ele existe para ser atingido no lugar do que está atrás dele."
                 efeito={<>
-                  <p>Você pode ativar o nódulo do Nódulo de Reparo Rápido em qualquer criatura voluntária adjacente, e não apenas em você mesmo ou em um construto.</p>
-                  <p>Quando o alvo é um construto, incluindo você, a cura e os Pontos de Vida Temporários do nódulo passam de 4 para 5, e o incremento passa de 4 para 5 para cada 2 níveis que você tiver acima do 1°.</p>
+                  <p>Você pode conjurar a versão de 1 ação de Reconstituição Nodal em qualquer criatura voluntária adjacente, não apenas em criaturas com o traço Construct. Quando o alvo não possuir o traço Construct, a magia recebe o traço Healing durante essa conjuração.</p>
+                  <p>Os valores da magia são modificados conforme o alvo:</p>
+                  <ul>
+                    <li><strong>Criatura sem o traço Construct.</strong> Ela recupera 4 Hit Points e recebe 4 Temporary Hit Points. Ambos os valores aumentam em 4 para cada Rank acima do 1º.</li>
+                    <li><strong>Criatura com o traço Construct, incluindo você.</strong> Ela recupera 6 Hit Points e recebe 6 Temporary Hit Points. Ambos os valores aumentam em 6 para cada Rank acima do 1º.</li>
+                    <li><strong>Objeto.</strong> A versão de 2 ações restaura 12 Hit Points. Esse valor aumenta em 12 para cada Rank acima do 1º.</li>
+                  </ul>
                   <div className="talento-otimizacao">
                     <span className="talento-otimizacao-label">Otimização</span>
-                    <p><strong>Interposição</strong> (Reação) — <em>Frequência: uma vez por dia. Gatilho: você ou um aliado a até 9 metros (30 pés) sofreria dano suficiente para reduzir seus Pontos de Vida a 0.</em></p>
-                    <p>Você não chega a tempo de impedir o golpe. Chega a tempo de decidir onde ele termina. Você ativa o nódulo no alvo do gatilho, gastando 1 Ponto de Foco normalmente. A cura e os Pontos de Vida Temporários são aplicados antes de o dano ser resolvido. Se o alvo não for você, você sofre metade do dano que ele sofreria, do mesmo tipo. Suas resistências, fraquezas e imunidades se aplicam normalmente a esse dano.</p>
+                    <p><strong>Interposição</strong> (Reação)<br /><em>Frequência: uma vez por dia. Gatilho: você ou um aliado a até 9 metros (30 pés) sofreria dano suficiente para reduzir seus Hit Points a 0.</em></p>
+                    <p><em>Você não chega a tempo de impedir o golpe. Chega a tempo de decidir onde ele termina.</em></p>
+                    <p>Você conjura Reconstituição Nodal sobre o alvo do gatilho, gastando 1 Focus Point normalmente. Para esta conjuração, use a versão de 1 ação sem gastar as ações exigidas por ela e ignore o alcance normal da magia. A recuperação e os Temporary Hit Points são aplicados antes de o dano ser resolvido.</p>
                   </div>
                 </>}
               />
