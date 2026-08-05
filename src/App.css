@@ -2106,6 +2106,12 @@ body {
   margin: 0 !important;
 }
 
+.talento-card-prerequisito {
+  font-size: 0.85rem;
+  color: var(--fg);
+  margin: 0 !important;
+}
+
 .talento-card-efeito {
   font-size: 0.9rem;
   color: var(--fg);

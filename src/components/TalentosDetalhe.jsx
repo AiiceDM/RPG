@@ -998,7 +998,8 @@ function Animus() {
               <TalentoCard
                 titulo="Empatia Ecoante"
                 tags="Animus"
-                descricao="Pré-requisito: Eco da Centelha. O Eco da Centelha te deu fragmentos. Isso te dá a inundação. Você descobriu que não apenas percebe o que aconteceu em um lugar, você sente. Não como simulação, não como dados processados. Como algo que entra pelo casco e esquenta o núcleo, ou aperta os pistões, ou faz o óleo circular mais rápido do que deveria. Você não escolhe sentir. O lugar fala, e seu corpo responde antes que você possa perguntar por quê."
+                prerequisito="Eco da Centelha"
+                descricao="O Eco da Centelha te deu fragmentos. Isso te dá a inundação. Você descobriu que não apenas percebe o que aconteceu em um lugar, você sente. Não como simulação, não como dados processados. Como algo que entra pelo casco e esquenta o núcleo, ou aperta os pistões, ou faz o óleo circular mais rápido do que deveria. Você não escolhe sentir. O lugar fala, e seu corpo responde antes que você possa perguntar por quê."
                 efeito={<>
                   <p>Sempre que você utilizar o Eco da Centelha, o Mestre determina qual sentimento predomina naquele lugar. Com base nisso, você recebe o efeito correspondente. Todo efeito desta lista, incluindo os usos das habilidades que ele conceda e quaisquer recursos que ele entregue, dura ou permanece disponível até suas próximas preparações diárias, e se esvai automaticamente caso não seja utilizado.</p>
                   <p><strong>Positivo · Alegria.</strong> <em>"Algo aqui foi genuinamente feliz. Seu núcleo não sabe o que fazer com isso, então floresce."</em> Até 3 vezes, quando você recuperar Pontos de Vida de qualquer efeito, você pode gastar uma ação livre após ver o resultado para aumentar essa cura em um valor igual ao seu nível. Esta habilidade não funciona com cura persistente, como Fast Healing ou Regeneration.</p>
@@ -1081,7 +1082,8 @@ function Animus() {
               <TalentoCard
                 titulo="Varredura Ampliada"
                 tags="Animus"
-                descricao="Pré-requisito: Protocolo Investigativo. Você aprendeu a virar seus sensores para fora. Em vez de dissecar uma criatura, você lê o ambiente inteiro: a vibração de um mecanismo dormindo atrás da parede, o desalinho de uma pedra que não pertence ali, o zumbido baixo de algo construído fingindo ser paisagem."
+                prerequisito="Protocolo Investigativo"
+                descricao="Você aprendeu a virar seus sensores para fora. Em vez de dissecar uma criatura, você lê o ambiente inteiro: a vibração de um mecanismo dormindo atrás da parede, o desalinho de uma pedra que não pertence ali, o zumbido baixo de algo construído fingindo ser paisagem."
                 efeito={<>
                   <p>Você pode gastar 10 minutos varrendo uma área, em vez de observar uma criatura. Escolha uma direção ao iniciar a varredura. Ao final, você descobre automaticamente, sem necessidade de teste, a localização de todos os construtos, mecanismos, armadilhas mecânicas e passagens ou compartimentos ocultos de construção física dentro de um cone de 18 metros (60 pés) partindo de você, mesmo através de paredes e portas.</p>
                   <p>Toda criatura revelada pela varredura recebe automaticamente a identificação do Protocolo Investigativo, como se você a tivesse observado por 10 minutos, sem limite de quantas criaturas podem ser identificadas de uma vez.</p>
@@ -1100,7 +1102,8 @@ function Animus() {
               <TalentoCard
                 titulo="Protocolo de Anteparo"
                 tags="Animus · Healing"
-                descricao="Pré-requisito: Nódulo de Reparo Rápido. Você descobriu que carne é só mais um material, com tolerâncias diferentes e prazos mais curtos. E descobriu também que um anteparo não existe para não ser atingido. Ele existe para ser atingido no lugar do que está atrás dele."
+                prerequisito="Nódulo de Reparo Rápido"
+                descricao="Você descobriu que carne é só mais um material, com tolerâncias diferentes e prazos mais curtos. E descobriu também que um anteparo não existe para não ser atingido. Ele existe para ser atingido no lugar do que está atrás dele."
                 efeito={<>
                   <p>Você pode conjurar a versão de 1 ação de Reconstituição Nodal em qualquer criatura voluntária adjacente, não apenas em criaturas com o traço Construct. Quando o alvo não possuir o traço Construct, a magia recebe o traço Healing durante essa conjuração.</p>
                   <p>Os valores da magia são modificados conforme o alvo:</p>
@@ -1469,7 +1472,7 @@ function HabilidadeCard({ titulo, img, placeholder = '🐉', children }) {
   );
 }
 
-function TalentoCard({ titulo, tags, descricao, efeito, img, raro }) {
+function TalentoCard({ titulo, tags, prerequisito, descricao, efeito, img, raro }) {
   return (
     <details className={`talento-card${raro ? ' talento-raro' : ''}`}>
       <summary className="talento-card-header">
@@ -1489,6 +1492,7 @@ function TalentoCard({ titulo, tags, descricao, efeito, img, raro }) {
         </div>
       </summary>
       <div className="talento-card-corpo">
+        {prerequisito && <p className="talento-card-prerequisito"><strong>Pré-requisito.</strong> {prerequisito}</p>}
         {descricao && <p className="talento-card-descricao"><strong>Descrição.</strong> {descricao}</p>}
         {efeito && <div className={`talento-card-efeito${descricao ? ' com-rotulo' : ''}`}>{efeito}</div>}
       </div>
