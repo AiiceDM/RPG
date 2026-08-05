@@ -831,7 +831,7 @@ function Animus() {
                 descricao="Um nódulo dedicado no seu núcleo concentra energia capaz de recompor matéria danificada, fechando rachaduras, religando circuitos e reconstruindo partes essenciais em poucos segundos."
                 efeito={<>
                   <p>Você ganha 1 Focus Point. Você aprende a focus spell arcana <strong>Reconstituição Nodal</strong>. Para qualquer efeito que exija uma DC de Reconstituição Nodal, use a maior entre sua class DC e sua spell DC.</p>
-                  <div className="caixa-info">
+                  <div className="caixa-info talento-magia-foco">
                     <p><strong>Reconstituição Nodal</strong> (1 ou 2 ações) <code>[Uncommon] [Animus] [Arcane] [Concentrate] [Focus] [Manipulate]</code></p>
                     <p><em>Alcance: toque. Alvo: 1 criatura voluntária com o traço Construct ou 1 objeto mágico ou não mágico de até 5 Bulk.</em></p>
                     <p>Você direciona a energia do nódulo para reconstruir matéria danificada. O efeito depende do número de ações utilizado para conjurá-la.</p>

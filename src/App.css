@@ -2131,6 +2131,11 @@ body {
   margin-bottom: 0 !important;
 }
 
+.talento-magia-foco p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
 /* ── OTIMIZAÇÃO (Animus) ────────────────────────────────────── */
 .talento-otimizacao {
   background: rgba(62,74,80,0.16);
