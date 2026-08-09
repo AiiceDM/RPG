@@ -771,6 +771,7 @@ function Animus() {
             1: <>
               <TalentoCard
                 titulo="Compartimento de Estoque"
+                img="https://i.imgur.com/wSLfxgS.png"
                 tags="Animus"
                 descricao="Seu chassi possui uma cavidade interna projetada para guardar itens de forma segura e discreta."
                 efeito={<>
@@ -785,6 +786,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Protocolo Investigativo"
+                img="https://i.imgur.com/LX4tmRE.png"
                 tags="Animus"
                 descricao="Sua mente processa padrões de comportamento, fisiologia e movimentação em tempo real, catalogando cada detalhe como dados utilizáveis."
                 efeito={<>
@@ -802,6 +804,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Frequência Oculta"
+                img="https://i.imgur.com/WmBAQNH.png"
                 tags="Animus"
                 descricao="Seus receptores internos captam e emitem frequências invisíveis aos outros, convertendo pensamento em sinal."
                 efeito={<>
@@ -815,6 +818,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Protocolo de Estabilização"
+                img="https://i.imgur.com/Cb6viic.png"
                 tags="Animus"
                 descricao="Seus protocolos de emergência religam o núcleo antes que ele se apague de vez, priorizando manter você em pé e funcional."
                 efeito={<>
@@ -827,6 +831,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Nódulo de Reparo Rápido"
+                img="https://i.imgur.com/ucf0mrZ.png"
                 tags="Animus"
                 descricao="Um nódulo dedicado no seu núcleo concentra energia capaz de recompor matéria danificada, fechando rachaduras, religando circuitos e reconstruindo partes essenciais em poucos segundos."
                 efeito={<>
@@ -849,6 +854,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Diplomacia Apática"
+                img="https://i.imgur.com/DOJY7DH.png"
                 tags="Animus · Mental"
                 descricao="Você enxerga as interações sociais como uma série de padrões e algoritmos. Ao analisar as microexpressões e o tom de voz de um interlocutor, você consegue formular argumentos logicamente irrefutáveis."
                 efeito={<>
@@ -863,6 +869,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Eco da Centelha"
+                img="https://i.imgur.com/bwafhNP.png"
                 tags="Animus"
                 descricao="Você ainda se lembra, ou acredita se lembrar, do instante em que acordou. A Centelha não foi apenas o começo da sua consciência, mas uma marca permanente na forma como você percebe o mundo."
                 efeito={<>
@@ -877,6 +884,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Enxerto de Matéria"
+                img="https://i.imgur.com/LY9Lns4.png"
                 tags="Animus · Composição"
                 descricao="Pré-requisito: sua composição primária e sua composição secundária são de materiais diferentes. Um corpo já mestiço não estranha mais um remendo. Onde a junta entre duas matérias-primas se abriu, cabe uma terceira, e o casco a aceita como se sempre tivesse esperado por ela."
                 efeito={<>
@@ -890,6 +898,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Revolução Mecha (Madeira)"
+                img="https://i.imgur.com/vHO17qb.png"
                 tags="Animus · Composição · Move"
                 descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Madeira. A tensão que dorme nas suas fibras não serve só para um salto. Liberada em série, ela te lança pelo campo em impulsos encadeados, cada um puxando o seguinte antes que o anterior termine."
                 efeito={<>
@@ -903,6 +912,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Revolução Mecha (Metal)"
+                img="https://i.imgur.com/NfpTMvh.png"
                 tags="Animus · Composição"
                 descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Metal. O escudo deixa de ser algo que você segura e passa a ser algo que você é. As dobradiças mordem o antebraço e a placa responde ao chassi como se sempre tivesse pertencido a ele."
                 efeito={<>
@@ -915,6 +925,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Revolução Mecha (Pedra)"
+                img="https://i.imgur.com/6tHR1iI.png"
                 tags="Animus · Composição"
                 descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Pedra. Não há junta no seu corpo que não seja rocha contra rocha. O golpe encontra massa, e massa não cede, apenas registra."
                 efeito={<>
@@ -928,6 +939,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Revolução Mecha (Porcelana)"
+                img="https://i.imgur.com/AuF2GP0.png"
                 tags="Animus · Composição"
                 descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Porcelana. O verniz devolve o rosto de quem olha, e por um instante a criatura confunde o próprio reflexo com algo digno de veneração. Basta uma palavra para dizer a ela o que fazer com essa confusão."
                 efeito={<>
@@ -944,6 +956,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Revolução Mecha (Pano)"
+                img="https://i.imgur.com/QBwO1dh.png"
                 tags="Animus · Composição"
                 descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Pano. O fio que te tece não conduz apenas bênção e maldição. Puxado do jeito certo, ele carrega qualquer corrente que exista no mundo."
                 efeito={<>
@@ -958,6 +971,7 @@ function Animus() {
             5: <>
               <TalentoCard
                 titulo="Protocolo de Desmonte"
+                img="https://i.imgur.com/61hoVVg.png"
                 tags="Animus"
                 descricao="Partes do seu chassi foram montadas para ceder. Diante de um golpe que passaria direto, as junções soltam de propósito e você desaba, deixando o impacto se perder no colapso em vez de atravessar o núcleo."
                 efeito={<>
@@ -973,6 +987,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Nódulo Emergencial"
+                img="https://i.imgur.com/J9XfIXn.png"
                 tags="Animus"
                 descricao="Seu núcleo possui um protocolo de emergência que força seus sistemas além dos limites seguros de operação, canalizando energia bruta para onde ela for mais necessária, mas a um custo."
                 efeito={<>
@@ -997,6 +1012,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Empatia Ecoante"
+                img="https://i.imgur.com/XR5iLUd.png"
                 tags="Animus"
                 prerequisito="Eco da Centelha"
                 descricao="O Eco da Centelha te deu fragmentos. Isso te dá a inundação. Você descobriu que não apenas percebe o que aconteceu em um lugar, você sente. Não como simulação, não como dados processados. Como algo que entra pelo casco e esquenta o núcleo, ou aperta os pistões, ou faz o óleo circular mais rápido do que deveria. Você não escolhe sentir. O lugar fala, e seu corpo responde antes que você possa perguntar por quê."
@@ -1029,6 +1045,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Os Três Pilares"
+                img="https://i.imgur.com/3DiE3nd.png"
                 tags="Animus"
                 descricao="Para uma máquina que aprendeu a sentir, o mundo é vasto e frio demais para ser enfrentado sozinho. Com o tempo, seu núcleo aprendeu a reconhecer certas presenças não como dados, mas como necessidades. Você escolhe três indivíduos que se tornaram parte da arquitetura invisível da sua existência. Eles não sabem o peso que carregam. Talvez nunca saibam."
                 efeito={<>
@@ -1050,6 +1067,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Atualização"
+                img="https://i.imgur.com/qFn75mc.png"
                 tags="Animus"
                 descricao="Manutenção não é só remendar o que quebrou. De vez em quando você abre o próprio casco com calma, estuda o que construiu até aqui e instala aquilo que sempre esteve previsto na planta e nunca teve peça para existir."
                 efeito={<>
@@ -1059,6 +1077,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Membro Auxiliar"
+                img="https://i.imgur.com/V2lw9iV.png"
                 tags="Animus"
                 descricao="Dobrado sob uma placa do seu tronco existe um braço fino e articulado, montado com as peças que sobraram da sua própria construção. Ele não tem força para lutar, mas é rápido, silencioso e não exige a sua atenção."
                 efeito={<>
@@ -1081,6 +1100,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Varredura Ampliada"
+                img="https://i.imgur.com/dhsucqj.png"
                 tags="Animus"
                 prerequisito="Protocolo Investigativo"
                 descricao="Você aprendeu a virar seus sensores para fora. Em vez de dissecar uma criatura, você lê o ambiente inteiro: a vibração de um mecanismo dormindo atrás da parede, o desalinho de uma pedra que não pertence ali, o zumbido baixo de algo construído fingindo ser paisagem."
@@ -1101,6 +1121,7 @@ function Animus() {
               />
               <TalentoCard
                 titulo="Protocolo de Anteparo"
+                img="https://i.imgur.com/shmoqjn.png"
                 tags="Animus · Healing"
                 prerequisito="Nódulo de Reparo Rápido"
                 descricao="Você descobriu que carne é só mais um material, com tolerâncias diferentes e prazos mais curtos. E descobriu também que um anteparo não existe para não ser atingido. Ele existe para ser atingido no lugar do que está atrás dele."
@@ -1171,6 +1192,7 @@ function Animus() {
           1: <>
             <TalentoCard
               titulo="Algoritmo de Extrapolação"
+              img="https://i.imgur.com/fKLqkH3.png"
               tags="Animus · Metódica"
               descricao="Reproduzir uma fórmula é o começo. Você aprendeu a ler onde ela poderia ter ido se quem a escreveu tivesse fôlego para tanto, e a levá-la até lá."
               efeito={<>
@@ -1184,6 +1206,7 @@ function Animus() {
             />
             <TalentoCard
               titulo="Acervo Interno"
+              img="https://i.imgur.com/fg5sdJk.png"
               tags="Animus · Metódica"
               descricao="Em algum ponto você parou de ler livros e começou a guardá-los. Não na memória, e não no casco. Numa prateleira dobrada em algum lugar que não fica em lugar nenhum, e que abre quando você precisa."
               efeito={<>
@@ -1193,12 +1216,28 @@ function Animus() {
                   <span className="talento-otimizacao-label">Otimização</span>
                   <p>Você não escolhe a perícia ao conjurar a magia. Em vez disso, escolhe qual perícia o tomo cobre a cada vez que o invoca.</p>
                 </div>
+                </>}
+            />
+            <TalentoCard
+              titulo="Contramedida Algorítmica"
+              img="https://i.imgur.com/cgyoQ51.png"
+              tags="Animus · Metódica"
+              descricao="Reconhecer uma fórmula é apenas o primeiro passo. Seus circuitos aprenderam a capturar o padrão destrutivo de uma magia, dobrá-lo sobre si mesmo e devolver parte da energia ao ponto de origem."
+              efeito={<>
+                <p><strong>Contramedida Algorítmica</strong> (Reação) <code>[Concentrate]</code><br /><em>Gatilho: uma criatura a até 18 metros (60 pés) que você possa ver conjura uma magia que cause dano e você pode usar Recognize Spell para identificá-la.</em></p>
+                <p>Você usa Recognize Spell contra a magia como parte desta reação. Além dos efeitos normais de Recognize Spell, aplique o efeito correspondente ao resultado do seu teste.</p>
+                <ul>
+                  <li><strong>Sucesso Crítico.</strong> O conjurador sofre dano igual ao seu nível, de um dos tipos de dano que a magia causaria, à sua escolha.</li>
+                  <li><strong>Sucesso.</strong> Você recebe resistência a todo o dano causado pela magia igual à metade do seu nível (mínimo 1).</li>
+                </ul>
+                <p>Depois de usar esta reação, você deve gastar 1 ação com o traço Manipulate para recalibrar seu mecanismo antes de poder usá-la novamente.</p>
               </>}
             />
           </>,
           5: <>
             <TalentoCard
               titulo="Decompilação Arcana"
+              img="https://i.imgur.com/Tdqc2uW.png"
               tags="Animus · Metódica"
               descricao="Nem toda fórmula precisa ser executada. Às vezes ela vale mais desmontada: você abre a magia armazenada camada por camada, separa o que nela era só estrutura, e devolve o resto para os seus próprios sistemas."
               efeito={<>
@@ -1216,6 +1255,7 @@ function Animus() {
             />
             <TalentoCard
               titulo="Interceptação Arcana"
+              img="https://i.imgur.com/ZxYIidH.png"
               tags="Animus · Metódica"
               descricao="Compreender a fórmula rápido o bastante deixa de ser cópia. Você lê a estrutura enquanto ela ainda está se formando e a desmonta no ar, antes que ela chegue a existir."
               efeito={<>
