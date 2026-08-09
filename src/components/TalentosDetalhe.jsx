@@ -823,6 +823,8 @@ function Animus() {
                 descricao="Seus protocolos de emergência religam o núcleo antes que ele se apague de vez, priorizando manter você em pé e funcional."
                 efeito={<>
                   <p>Ao estabilizar enquanto estiver com a condição Dying, em vez de permanecer inconsciente, você recupera 1 Ponto de Vida e recobra a consciência imediatamente. Você permanece Prone.</p>
+                  <p><strong>Reinicialização de Emergência</strong> (Ação Livre)<br /><em>Frequência: uma vez por hora. Gatilho: seu turno começa e você está consciente.</em></p>
+                  <p>Você reduz sua condição Wounded em 1.</p>
                   <div className="talento-otimizacao">
                     <span className="talento-otimizacao-label">Otimização</span>
                     <p>Quando você fica Unconscious por ter sido reduzido a 0 Pontos de Vida, você não solta o que estiver segurando. Além disso, quando você deixa de estar Unconscious após ter sido reduzido a 0 Pontos de Vida, você pode usar sua reação para ficar de pé (Stand) imediatamente.</p>
@@ -961,6 +963,7 @@ function Animus() {
                 descricao="Pré-requisito: sua composição primária e sua composição secundária são ambas Pano. O fio que te tece não conduz apenas bênção e maldição. Puxado do jeito certo, ele carrega qualquer corrente que exista no mundo."
                 efeito={<>
                   <p>Ao usar Dicotomia Dolorosa, você também pode escolher dano de fogo, frio ou elétrico, além dos tipos originais.</p>
+                  <p>Além disso, uma vez a cada 10 minutos, você pode usar Dicotomia Dolorosa como uma ação livre.</p>
                   <div className="talento-otimizacao">
                     <span className="talento-otimizacao-label">Otimização · Trama Persistente</span>
                     <p>O imbuir de Dicotomia Dolorosa passa a durar até o fim do seu próximo turno, em vez de até o fim do turno atual.</p>
