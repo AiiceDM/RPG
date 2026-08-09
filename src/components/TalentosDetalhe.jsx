@@ -1231,6 +1231,10 @@ function Animus() {
                   <li><strong>Sucesso.</strong> Você recebe resistência a todo o dano causado pela magia igual à metade do seu nível (mínimo 1).</li>
                 </ul>
                 <p>Depois de usar esta reação, você deve gastar 1 ação com o traço Manipulate para recalibrar seu mecanismo antes de poder usá-la novamente.</p>
+                <div className="talento-otimizacao">
+                  <span className="talento-otimizacao-label">Otimização</span>
+                  <p>A resistência concedida por Contramedida Algorítmica passa a ser igual ao seu nível, em vez de igual à metade do seu nível. Além disso, em um Sucesso Crítico, o dano causado ao conjurador passa a ser igual ao dobro do seu nível.</p>
+                </div>
               </>}
             />
           </>,
