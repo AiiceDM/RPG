@@ -790,7 +790,7 @@ function Animus() {
                 tags="Animus"
                 descricao="Sua mente processa padrões de comportamento, fisiologia e movimentação em tempo real, catalogando cada detalhe como dados utilizáveis."
                 efeito={<>
-                  <p>Você pode gastar 10 minutos observando uma criatura. Ao final desse período, você descobre automaticamente o tipo dela (Construto, Humanoide, Morto-vivo, etc.), sem necessidade de teste. Além disso, a CD de todos os testes de Lembrar Conhecimento relacionados a essa criatura específica é reduzida em 2. Este benefício persiste até suas próximas preparações diárias ou até você iniciar a análise de outra criatura.</p>
+                  <p>Você pode gastar 1 minuto observando uma criatura. Ao final desse período, você descobre automaticamente o tipo dela (Construto, Humanoide, Morto-vivo, etc.), sem necessidade de teste. Além disso, a CD de todos os testes de Lembrar Conhecimento relacionados a essa criatura específica é reduzida em 2. Este benefício persiste até suas próximas preparações diárias ou até você iniciar a análise de outra criatura.</p>
                   <p><strong>Missão de Energia.</strong> Na primeira vez em cada período de Downtime que você identificar por este talento uma criatura Uncommon, Rare ou Unique, você recupera 1 ponto de Energia.</p>
                   <div className="talento-otimizacao">
                     <span className="talento-otimizacao-label">Otimização</span>
@@ -978,7 +978,7 @@ function Animus() {
                   <p>(Reação) <em>Gatilho: um ataque contra você é um acerto crítico, ou você obtém uma falha crítica em um salvamento de Reflexos.</em></p>
                   <p>Você só pode usar esta reação se estiver ciente do ataque ou do efeito que a dispara. Ataques de criaturas Undetected e efeitos de perigos que você ainda não tenha notado não permitem seu uso.</p>
                   <p>Você desmonta parcialmente. Um acerto crítico passa a causar apenas o dano que causaria em um acerto normal, e uma falha crítica passa a contar como uma falha. Quaisquer outros efeitos do acerto crítico ou da falha crítica ainda ocorrem normalmente. Você fica Prone.</p>
-                  <p>Depois de usar esta reação, você deve gastar 1 ação com o traço Manipulate para reassentar suas placas antes de poder usá-la novamente. Se você estiver Prone por causa desta reação, essa mesma ação também te coloca de pé.</p>
+                  <p>Depois de usar esta reação, você deve gastar 1 ação com o traço Manipulate para reassentar suas placas antes de poder usá-la novamente. Você só pode reassentar suas placas enquanto não estiver Prone.</p>
                   <div className="talento-otimizacao">
                     <span className="talento-otimizacao-label">Otimização</span>
                     <p>O gatilho passa a incluir falha crítica em salvamentos de Fortitude contra efeitos que causem dano contundente, perfurante ou cortante.</p>
@@ -998,7 +998,7 @@ function Animus() {
                     <li><strong>Modo Defensivo.</strong> Você recebe +2 de bônus de status na CA e em salvamentos até o início do seu próximo turno.</li>
                   </ul>
                   <p>Forçar o núcleo cobra seu preço: ao usar esta habilidade, você sofre dano mental igual ao seu nível, que não pode ser reduzido nem prevenido.</p>
-                  <p><strong>Risco de Sobrecarga.</strong> Da segunda ativação em diante em um mesmo dia, ao final do turno em que você usou esta habilidade, faça um salvamento de Fortitude contra a CD do seu nível. Cada salvamento feito depois do primeiro tem a CD aumentada em 5, de forma cumulativa. A contagem zera nas suas próximas preparações diárias.</p>
+                  <p><strong>Risco de Sobrecarga.</strong> Sempre que usar esta habilidade, incluindo a primeira vez no dia, ao final do turno faça um salvamento de Fortitude contra a CD do seu nível. Cada salvamento realizado depois do primeiro aumenta essa CD em 5, de forma cumulativa. A contagem zera nas suas próximas preparações diárias.</p>
                   <ul>
                     <li><strong>Sucesso.</strong> Os circuitos aguentam. Nada acontece.</li>
                     <li><strong>Falha.</strong> Você não pode usar esta habilidade novamente até suas próximas preparações diárias e fica Stunned 1.</li>
@@ -1105,8 +1105,8 @@ function Animus() {
                 prerequisito="Protocolo Investigativo"
                 descricao="Você aprendeu a virar seus sensores para fora. Em vez de dissecar uma criatura, você lê o ambiente inteiro: a vibração de um mecanismo dormindo atrás da parede, o desalinho de uma pedra que não pertence ali, o zumbido baixo de algo construído fingindo ser paisagem."
                 efeito={<>
-                  <p>Você pode gastar 10 minutos varrendo uma área, em vez de observar uma criatura. Escolha uma direção ao iniciar a varredura. Ao final, você descobre automaticamente, sem necessidade de teste, a localização de todos os construtos, mecanismos, armadilhas mecânicas e passagens ou compartimentos ocultos de construção física dentro de um cone de 18 metros (60 pés) partindo de você, mesmo através de paredes e portas.</p>
-                  <p>Toda criatura revelada pela varredura recebe automaticamente a identificação do Protocolo Investigativo, como se você a tivesse observado por 10 minutos, sem limite de quantas criaturas podem ser identificadas de uma vez.</p>
+                  <p>Você pode gastar 1 minuto varrendo uma área, em vez de observar uma criatura. Escolha uma direção ao iniciar a varredura. Ao final, você descobre automaticamente, sem necessidade de teste, a localização de todos os construtos, mecanismos, armadilhas mecânicas e passagens ou compartimentos ocultos de construção física dentro de um cone de 18 metros (60 pés) partindo de você, mesmo através de paredes e portas.</p>
+                  <p>Toda criatura revelada pela varredura recebe automaticamente a identificação do Protocolo Investigativo, como se você a tivesse observado por 1 minuto, sem limite de quantas criaturas podem ser identificadas de uma vez.</p>
                   <p>A varredura revela apenas onde essas coisas estão, não como funcionam nem como desarmá-las. Ela também não detecta nada de natureza mágica: perigos mágicos, ilusões e passagens seladas por magia permanecem invisíveis a ela.</p>
                   <div className="talento-otimizacao">
                     <span className="talento-otimizacao-label">Otimização</span>
