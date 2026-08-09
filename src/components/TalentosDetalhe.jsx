@@ -1227,7 +1227,7 @@ function Animus() {
                 <p><strong>Contramedida Algorítmica</strong> (Reação) <code>[Concentrate]</code><br /><em>Gatilho: uma criatura a até 18 metros (60 pés) que você possa ver conjura uma magia que cause dano e você pode usar Recognize Spell para identificá-la.</em></p>
                 <p>Você usa Recognize Spell contra a magia como parte desta reação. Além dos efeitos normais de Recognize Spell, aplique o efeito correspondente ao resultado do seu teste.</p>
                 <ul>
-                  <li><strong>Sucesso Crítico.</strong> O conjurador sofre dano igual ao seu nível, de um dos tipos de dano que a magia causaria, à sua escolha.</li>
+                  <li><strong>Sucesso Crítico.</strong> Como o Sucesso, e o conjurador sofre dano igual ao seu nível, de um dos tipos de dano que a magia causaria, à sua escolha.</li>
                   <li><strong>Sucesso.</strong> Você recebe resistência a todo o dano causado pela magia igual à metade do seu nível (mínimo 1).</li>
                 </ul>
                 <p>Depois de usar esta reação, você deve gastar 1 ação com o traço Manipulate para recalibrar seu mecanismo antes de poder usá-la novamente.</p>
