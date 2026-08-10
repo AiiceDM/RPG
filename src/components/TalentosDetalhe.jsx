@@ -790,7 +790,7 @@ function Animus() {
                 tags="Animus"
                 descricao="Sua mente processa padrões de comportamento, fisiologia e movimentação em tempo real, catalogando cada detalhe como dados utilizáveis."
                 efeito={<>
-                  <p>Você pode gastar 1 minuto observando uma criatura. Ao final desse período, você descobre automaticamente o tipo dela (Construto, Humanoide, Morto-vivo, etc.), sem necessidade de teste. Além disso, a CD de todos os testes de Lembrar Conhecimento relacionados a essa criatura específica é reduzida em 2. Este benefício persiste até suas próximas preparações diárias ou até você iniciar a análise de outra criatura.</p>
+                  <p>Você pode gastar 10 minutos observando uma criatura. Ao final desse período, você descobre automaticamente o tipo dela (Construto, Humanoide, Morto-vivo, etc.), sem necessidade de teste. Além disso, a CD de todos os testes de Lembrar Conhecimento relacionados a essa criatura específica é reduzida em 2. Este benefício persiste até suas próximas preparações diárias ou até você iniciar a análise de outra criatura.</p>
                   <p><strong>Missão de Energia.</strong> Na primeira vez em cada período de Downtime que você identificar por este talento uma criatura Uncommon, Rare ou Unique, você recupera 1 ponto de Energia.</p>
                   <div className="talento-otimizacao">
                     <span className="talento-otimizacao-label">Otimização</span>
@@ -1108,7 +1108,8 @@ function Animus() {
                 prerequisito="Protocolo Investigativo"
                 descricao="Você aprendeu a virar seus sensores para fora. Em vez de dissecar uma criatura, você lê o ambiente inteiro: a vibração de um mecanismo dormindo atrás da parede, o desalinho de uma pedra que não pertence ali, o zumbido baixo de algo construído fingindo ser paisagem."
                 efeito={<>
-                  <p>Você pode gastar 1 minuto varrendo uma área, em vez de observar uma criatura. Escolha uma direção ao iniciar a varredura. Ao final, você descobre automaticamente, sem necessidade de teste, a localização de todos os construtos, mecanismos, armadilhas mecânicas e passagens ou compartimentos ocultos de construção física dentro de um cone de 18 metros (60 pés) partindo de você, mesmo através de paredes e portas.</p>
+                  <p>O tempo necessário para observar uma criatura usando Protocolo Investigativo é reduzido para 1 minuto.</p>
+                  <p>Além disso, você pode gastar 10 minutos varrendo uma área. Escolha uma direção ao iniciar a varredura. Ao final, você descobre automaticamente, sem necessidade de teste, a localização de todos os construtos, mecanismos, armadilhas mecânicas e passagens ou compartimentos ocultos de construção física dentro de um cone de 18 metros (60 pés) partindo de você, mesmo através de paredes e portas.</p>
                   <p>Toda criatura revelada pela varredura recebe automaticamente a identificação do Protocolo Investigativo, como se você a tivesse observado por 1 minuto, sem limite de quantas criaturas podem ser identificadas de uma vez.</p>
                   <p>A varredura revela apenas onde essas coisas estão, não como funcionam nem como desarmá-las. Ela também não detecta nada de natureza mágica: perigos mágicos, ilusões e passagens seladas por magia permanecem invisíveis a ela.</p>
                   <div className="talento-otimizacao">
@@ -1246,9 +1247,14 @@ function Animus() {
               titulo="Decompilação Arcana"
               img="https://i.imgur.com/Tdqc2uW.png"
               tags="Animus · Metódica"
+              prerequisito="Capacidade de conjurar magias usando espaços de magia"
               descricao="Nem toda fórmula precisa ser executada. Às vezes ela vale mais desmontada: você abre a magia armazenada camada por camada, separa o que nela era só estrutura, e devolve o resto para os seus próprios sistemas."
               efeito={<>
-                <p>Uma vez por dia, enquanto você tiver uma magia armazenada pelo Algoritmo de Mimetismo, você pode gastar uma ação livre para consumi-la em vez de conjurá-la. Ao fazer isso, você recupera um espaço de magia gasto de Nível igual ou inferior ao da magia consumida.</p>
+                <p>Uma vez por dia, enquanto você tiver uma magia armazenada pelo Algoritmo de Mimetismo, você pode gastar uma ação livre para consumi-la em vez de conjurá-la. Ao fazer isso, recupere uma magia ou um espaço de magia de acordo com seu tipo de conjuração:</p>
+                <ul>
+                  <li><strong>Conjuração espontânea.</strong> Você recupera um espaço de magia gasto de Nível igual ou inferior ao da magia consumida.</li>
+                  <li><strong>Conjuração preparada.</strong> Escolha uma magia de Nível igual ou inferior ao da magia consumida que você tenha conjurado de um espaço de magia preparado. Você recupera essa magia no espaço em que ela estava preparada.</li>
+                </ul>
                 <p>Consumir a magia desta forma não coloca seus circuitos de mimetismo em resfriamento.</p>
                 <ul>
                   <li>O Nível considerado é o Nível original da magia conjurada pela criatura que disparou o Algoritmo, e não o Nível elevado pelo Algoritmo de Extrapolação.</li>
