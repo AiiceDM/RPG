@@ -618,28 +618,90 @@ function Humano() {
 }
 
 function Asura() {
+  const talentosPendentes = Object.fromEntries(
+    [1, 5, 9, 13, 17].map(nivel => [nivel, <p><em>A preencher.</em></p>])
+  );
+
   return <>
-    <Stats tamanho="0,60–1,00m (Pequeno)" idade="80–150 anos" pv="6" habilidades="Inteligência, Sabedoria + 1 livre. Penalidade em Força" idiomas="1 + modificador de Inteligência (mín. 1)" deslocamento="7,5m (25 pés)" />
+    <Stats tamanho="0,60 a 1,00m (Pequeno)" idade="80 a 150 anos" pv="6" habilidades="Inteligência, Sabedoria + 1 livre. Penalidade em Força" idiomas="Tyrian + Metade do Modificador de Inteligência (arredondado para cima)" deslocamento="7,5m (25 pés)" />
 
     <h2>🎲 Habilidades</h2>
-    <h3>Sensibilidade Arcana [Asura, Arcane]</h3>
-    <p>Conjura <strong>Detectar Magia</strong> como truque arcano inato (1 ação em vez de 2). Passivamente percebe fontes mágicas notórias ou poderosas próximas sem precisar agir.</p>
-    <h3>Visão na Penumbra</h3>
-    <p>Enxerga na luz fraca como luz plena. Ignora a condição Camuflado por luz fraca.</p>
-    <h3>Intelecto Superior [Asura]</h3>
-    <p>Usa modificador de <strong>Inteligência</strong> no lugar de Sabedoria (Percepção) para rolagens de <strong>Iniciativa</strong>.</p>
+
+    <HabilidadeCard titulo="Estabilização Mental" img="https://i.imgur.com/sJHuiBb.jpeg" placeholder="🧠">
+      <p><strong>Descrição.</strong> A mente de um Asura raramente conhece o silêncio. Pensamentos, cálculos e estímulos se acumulam em uma velocidade que poucas criaturas seriam capazes de suportar. Com alguns instantes de concentração, porém, um Asura consegue ordenar esse caos e recuperar parte de sua clareza.</p>
+      <p><strong>Efeito.</strong> Você ganha a seguinte habilidade:</p>
+      <p><strong>Restauração Cognitiva</strong> (1 a 3 Ações)<br /><code>[Concentrate]</code><br /><em>Frequência: Uma vez a cada <strong>10 minutos</strong>.</em></p>
+      <p>Você pode gastar de <strong>1 a 3 ações</strong> para estabilizar sua mente. Reduza o valor da condição <strong>Stupefied</strong> recebida através de habilidades Asura em uma quantidade igual ao número de ações utilizadas.</p>
+    </HabilidadeCard>
+
+    <HabilidadeCard titulo="Sensibilidade Arcana" img="https://i.imgur.com/obyngUP.jpeg" placeholder="🧠">
+      <p><strong>Descrição.</strong> Para um Asura, magia nunca é verdadeiramente invisível. As menores oscilações arcanas pressionam sua mente como ruídos constantes ao fundo de seus pensamentos. Quando necessário, um Asura pode abrir ainda mais seus sentidos para esse fluxo, embora tamanha percepção cobre seu preço.</p>
+      <p><strong>Efeito.</strong> Você recebe <strong>Detect Magic</strong> como uma magia inata arcana à vontade. Ademais, enquanto estiver consciente, você percebe continuamente a presença de magia como se estivesse utilizando <strong>Detect Magic</strong>, mas sua emanação é reduzida para <strong>15 pés</strong>. Por fim, quando conjura <strong>Detect Magic</strong> voluntariamente, você utiliza apenas <strong>1 ação</strong>, em vez de seu número normal de ações. Ao conjurá-la dessa forma, caso não esteja <strong>Stupefied</strong>, você pode escolher <strong>Forçar sua Sensibilidade</strong>. Se o fizer, fica <strong>Stupefied 1</strong> e aumenta a emanação de <strong>Detect Magic</strong> para <strong>60 pés</strong> durante essa utilização.</p>
+      <p>Durante o <strong>Modo de Exploração</strong>, você pode realizar a atividade <strong>Detect Magic</strong> adicionalmente a outra atividade de exploração. Caso as atividades possuam diferentes restrições de deslocamento, utilize a mais restritiva.</p>
+    </HabilidadeCard>
+
+    <HabilidadeCard titulo="Processamento Acelerado" img="https://i.imgur.com/HllBAjn.jpeg" placeholder="🧠">
+      <p><strong>Descrição.</strong> Quando a mente de um Asura começa a exceder seus próprios limites, seus pensamentos se tornam dolorosamente acelerados. Palavras, símbolos e informações passam diante de seus olhos em ritmo vertiginoso, permitindo que processe grandes quantidades de texto antes que a maioria sequer termine a primeira página.</p>
+      <p><strong>Efeito.</strong> Enquanto estiver <strong>Stupefied 1</strong> ou superior, você lê e escreve <strong>duas vezes mais rápido</strong>, reduzindo pela metade o tempo necessário para essas tarefas. Este benefício se aplica em atividades como <strong>Decipher Writing</strong> e <strong>Research</strong>, desde que elas envolvam predominantemente leitura, escrita ou análise de textos e documentos.</p>
+    </HabilidadeCard>
+
+    <details className="talentos-ancestralidade">
+      <summary>📀 Talentos de Ancestralidade Independentes</summary>
+      <div className="talentos-corpo">
+        <TalentosNiveis>{talentosPendentes}</TalentosNiveis>
+      </div>
+    </details>
 
     <h2>🧬 Heranças</h2>
-    <ul>
-      <li><strong>Eletrostático:</strong> <em>Capacitor Vivo</em> (Reação): ao sofrer dano elétrico, reduz dano em Nível + Con. Se reduzir a 0, recarrega Martelo Voltaico. <em>Condutividade Segura:</em> +1 em Reflexos contra dano elétrico. <em>Martelo Voltaico</em> (2 ações, 1x/10min): 1d8 Elétrico em alvo a 60 pés (Reflexo Básico); terreno eletrificado por 1 minuto causando 1 elétrico por turno. Escala +1d8/2 níveis.</li>
-      <li><strong>Habitante da Escuridão:</strong> Ganha Darkvision; imune a Dazzled por luzes fortes. <em>Fulgor Fotônico</em> (2 ações, 1x/hora): Cone de 15 pés, Fortitude: Sucesso = Dazzled 1 rodada; Falha = Blinded 1 rodada; Falha Crítica = Blinded 1 rodada + Dazzled 1 minuto.</li>
-      <li><strong>Audição Absoluta:</strong> <em>Ecolocalização Ativa:</em> 1 ação para ignorar Concealed e Invisible de criaturas a 30 pés (exceto sob silêncio mágico). <em>Triangular Alvo</em> (1 ação, 1x/10min): criatura ouvida perde benefícios de Hidden para aliados que te ouçam; aliados +1 circunstancial no primeiro ataque contra ela.</li>
-      <li><strong>Mente Blindada:</strong> Resistência a Dano Mental = metade do nível. +1 circunstancial em salvamentos contra efeitos mentais. <em>Feedback Cognitivo:</em> quando criatura falha em te afetar com efeito Mental/Emoção, sofre 1d6 dano Mental (+1d6/4 níveis). <em>Lógica Fria</em> (1–3 ações, 1x/hora): reduz condição Frightened em 1 por ação gasta.</li>
-      <li><strong>Hiper-Processador:</strong> Lê/escreve 2x mais rápido. Reduz à metade o tempo de Learn a Spell e Decipher Writing. Treinado em 2 perícias de conhecimento à escolha. <em>Algoritmo de Combate</em> (1 ação): Recall Knowledge; Sucesso = próximo ataque/CD contra o alvo ganha +1 circunstancial; Sucesso Crítico = +2.</li>
-    </ul>
+    <div className="heranca-grid">
+      <HerancaCard
+        identificador="Herança"
+        titulo="Herança 1"
+        placeholder="🧠"
+        descricao="A preencher."
+        elemento="A definir"
+        sing1={<>A preencher.</>}
+        sing2={<>A preencher.</>}
+        sing3={<>A preencher.</>}
+        talentos={talentosPendentes}
+      />
 
-    <h2>📀 Talentos de Ancestralidade</h2>
-    <p><em>Em desenvolvimento — consulte o Mestre para talentos disponíveis.</em></p>
+      <HerancaCard
+        identificador="Herança"
+        titulo="Herança 2"
+        placeholder="🧠"
+        descricao="A preencher."
+        elemento="A definir"
+        sing1={<>A preencher.</>}
+        sing2={<>A preencher.</>}
+        sing3={<>A preencher.</>}
+        talentos={talentosPendentes}
+      />
+
+      <HerancaCard
+        identificador="Herança"
+        titulo="Herança 3"
+        placeholder="🧠"
+        descricao="A preencher."
+        elemento="A definir"
+        sing1={<>A preencher.</>}
+        sing2={<>A preencher.</>}
+        sing3={<>A preencher.</>}
+        talentos={talentosPendentes}
+      />
+
+      <HerancaCard
+        identificador="Herança"
+        titulo="Herança 4"
+        placeholder="🧠"
+        descricao="A preencher."
+        elemento="A definir"
+        sing1={<>A preencher.</>}
+        sing2={<>A preencher.</>}
+        sing3={<>A preencher.</>}
+        talentos={talentosPendentes}
+      />
+    </div>
   </>;
 }
 
