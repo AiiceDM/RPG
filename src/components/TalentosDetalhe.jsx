@@ -656,25 +656,71 @@ function Asura() {
     <div className="heranca-grid">
       <HerancaCard
         identificador="Herança"
-        titulo="Herança 1"
+        titulo="Lâmina Arcana"
         placeholder="🧠"
         descricao="A preencher."
         elemento="A definir"
-        sing1={<>A preencher.</>}
-        sing2={<>A preencher.</>}
-        sing3={<>A preencher.</>}
+        sing1={<>
+          <p><strong>Descrição.</strong> Seu treinamento combina preparo físico e precisão.</p>
+          <p><strong>Efeito.</strong> Você se torna treinado em Atletismo ou Acrobacia, à sua escolha.</p>
+        </>}
+        sing2={<>
+          <p><strong>Descrição.</strong> Para você, aço e magia são partes da mesma equação.</p>
+          <p><strong>Efeito.</strong> Você aprende 1 truque arcano de 1 ou 2 ações que exija ataque mágico ou salvamento. Ele se torna uma magia inata arcana que utiliza Inteligência como atributo de conjuração. Você também ganha:</p>
+          <p><strong>Imbuir a Lâmina</strong> (2 Ações)<br /><code>[Arcane] [Concentrate]</code><br /><strong>Frequência:</strong> Uma vez por Preparações Diárias.<br /><strong>Requisitos:</strong> Empunhar uma arma corpo a corpo.</p>
+          <p>Conjure o truque concedido por esta singularidade através da arma e realize um Strike corpo a corpo. A atividade conta como dois ataques, mas a penalidade por ataques múltiplos aumenta somente após sua conclusão.</p>
+          <ul>
+            <li><strong>Truque com ataque mágico:</strong> O resultado do Strike determina o grau de sucesso da arma e da magia. Em Falha ou Falha Crítica, o uso da habilidade não é gasto.</li>
+            <li><strong>Truque com salvamento:</strong> O alvo realiza o salvamento mesmo se o Strike falhar. Em Falha Crítica, a magia é interrompida e o uso não é gasto. Uma Falha normal gasta o uso.</li>
+          </ul>
+          <p>Quando o Strike acerta, combine o dano da arma e da magia para determinar resistências e fraquezas.</p>
+          <p><strong>Interação com Magus:</strong> Uma vez por Preparações Diárias, após resolver um Spellstrike, se não estiver Stupefied, você pode ficar Stupefied 1 para recarregá-lo imediatamente.</p>
+        </>}
+        sing3={<>
+          <p><strong>Descrição.</strong> Seu corpo se fortaleceu para suportar o esforço da canalização arcana.</p>
+          <p><strong>Efeito.</strong> Seu máximo de Pontos de Vida aumenta em 2.</p>
+        </>}
+        sing4={<>
+          <p><strong>Descrição.</strong> Você transforma a sobrecarga de sua mente em poder para sua lâmina.</p>
+          <p><strong>Efeito.</strong> Enquanto estiver Stupefied, magias que causem dano usadas em Imbuir a Lâmina ou Spellstrike causam dano adicional igual a 2 × seu valor de Stupefied, até +6. Escolha um dos tipos de dano da magia para esse dano adicional. Você também ganha:</p>
+          <p><strong>Ruptura Sináptica</strong> (Ação Livre)<br /><code>[Arcane]</code><br /><strong>Frequência:</strong> Uma vez por Preparações Diárias.<br /><strong>Gatilho:</strong> Você falha no flat check de Stupefied ao conjurar um truque através de Imbuir a Lâmina ou Spellstrike.</p>
+          <p>O truque é resolvido normalmente, em vez de ser interrompido. Se causar dano, acrescente 1d6 por ponto de Stupefied, até 3d6, de um dos tipos de dano do truque, à sua escolha.</p>
+          <p>Após resolver completamente Imbuir a Lâmina ou Spellstrike, reduza a 0 todo o Stupefied recebido através de habilidades Asura.</p>
+        </>}
         talentos={talentosPendentes}
       />
 
       <HerancaCard
         identificador="Herança"
-        titulo="Herança 2"
+        titulo="Elementalista"
         placeholder="🧠"
         descricao="A preencher."
         elemento="A definir"
-        sing1={<>A preencher.</>}
-        sing2={<>A preencher.</>}
-        sing3={<>A preencher.</>}
+        sing1={<>
+          <p><strong>Descrição.</strong> Seu estudo dos elementos lhe deu uma sólida compreensão dos fenômenos naturais e das estruturas mágicas que os governam.</p>
+          <p><strong>Efeito.</strong> Você se torna Treinado em Natureza. Caso já seja Treinado em Natureza por outra fonte, você pode se tornar Treinado em Arcana, Occultism ou em uma perícia de Lore relacionada à magia, elementos ou fenômenos naturais, a critério do GM.</p>
+        </>}
+        sing2={<>
+          <p><strong>Descrição.</strong> Durante suas preparações, você escolhe um fenômeno elemental para transformar no centro de seus estudos, analisando suas manifestações até reconhecer padrões que passariam despercebidos por outras mentes.</p>
+          <p><strong>Efeito.</strong> Durante suas Preparações Diárias, escolha Fogo, Frio ou Eletricidade como sua Hipótese Elemental. Essa escolha permanece até suas próximas Preparações Diárias. Ao utilizar Detect Magic, você também consegue discernir se uma fonte mágica detectada possui uma associação significativa com o elemento escolhido.</p>
+          <p>Ademais, recebe +1 de bônus de circunstância em Recall Knowledge para identificar Fraquezas, Resistências ou Imunidades relacionadas ao elemento de sua Hipótese Elemental.</p>
+          <p>Você também ganha a seguinte magia inata arcana:</p>
+          <p><strong>Axioma Elemental</strong> (1 Ação)<br /><code>[Arcane] [Attack]</code><br /><strong>Alcance:</strong> 30 pés<br /><strong>Frequência:</strong> Uma vez a cada 10 minutos</p>
+          <p>Faça um spell attack contra uma criatura no alcance. Em um sucesso, você causa 1d4 de dano correspondente ao elemento de sua Hipótese Elemental. O dano aumenta em 1d4 no 3º nível e a cada 2 níveis posteriormente.</p>
+          <p>Sempre que você se tornar Stupefied, caso não estivesse Stupefied anteriormente, recupere imediatamente o uso de Axioma Elemental.</p>
+        </>}
+        sing3={<>
+          <p><strong>Descrição.</strong> Para você, diferentes manifestações elementais são apenas formas distintas de expressar a mesma estrutura mágica. Com a fórmula correta, uma pode ser reinterpretada como outra.</p>
+          <p><strong>Efeito.</strong> Você ganha a seguinte habilidade:</p>
+          <p><strong>Metáfora Elemental</strong> (Ação Livre)<br /><code>[Arcane] [Concentrate]</code><br /><strong>Frequência:</strong> Uma vez por Preparações Diárias<br /><strong>Gatilho:</strong> Você conjura uma magia que causaria dano de Fogo, Frio ou Eletricidade a uma ou mais criaturas.</p>
+          <p>Altere todo o dano de Fogo, Frio ou Eletricidade causado pela magia para o tipo correspondente à sua Hipótese Elemental. Após resolver a magia, você fica Stupefied 1. Caso já possua um valor maior de Stupefied, ele não é reduzido.</p>
+        </>}
+        sing4={<>
+          <p><strong>Descrição.</strong> Ser exposto diretamente ao objeto de seus estudos fornece dados que nenhuma teoria poderia reproduzir. Mesmo sob ataque, sua mente analisa padrões, falhas e propriedades da energia que o atinge.</p>
+          <p><strong>Efeito.</strong> Você ganha a seguinte habilidade:</p>
+          <p><strong>Decodificação Elemental</strong> (Reação)<br /><code>[Arcane] [Concentrate]</code><br /><strong>Frequência:</strong> Uma vez por hora<br /><strong>Gatilho:</strong> Você sofreria dano correspondente ao elemento de sua Hipótese Elemental, causado por uma criatura hostil ou hazard.</p>
+          <p>Reduza o dano recebido em uma quantidade igual a 2 × seu nível. Em seguida, recupere o uso de Metáfora Elemental e fique Stupefied 1. Caso já possua um valor maior de Stupefied, ele não é reduzido.</p>
+        </>}
         talentos={talentosPendentes}
       />
 
@@ -1626,7 +1672,7 @@ function TalentosNiveis({ children }) {
   ));
 }
 
-function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopout, imgPosition, placeholder = '🐉', sing1, sing2, sing3, talentos }) {
+function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopout, imgPosition, placeholder = '🐉', sing1, sing2, sing3, sing4, talentos }) {
   return (
     <details className="heranca-card">
       <summary className="heranca-card-summary">
@@ -1664,6 +1710,10 @@ function HerancaCard({ identificador, titulo, descricao, elemento, img, imgPopou
             {sing3 && <div className="sing-item">
               <span className="sing-label">Singularidade 3</span>
               {sing3}
+            </div>}
+            {sing4 && <div className="sing-item">
+              <span className="sing-label">Singularidade 4</span>
+              {sing4}
             </div>}
           </div>
         </details>
