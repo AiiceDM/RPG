@@ -17,6 +17,7 @@ A single-page Portuguese-language RPG campaign reference site (a Guild Wars 2-in
 There is no separate content/data layer. Lore text (histórias, heranças, blockquotes, etc.) is written directly inline as JSX in the component files themselves — heaviest in `PovosDetalhe.jsx`, `TalentosDetalhe.jsx`, `DivindadesDetalhe.jsx`, `Geografia.jsx`. Copy edits mean editing those strings in place in `src/components/`; there is nowhere else to put them.
 
 ## Conventions
+- Os rótulos "Singularidade 1", "Singularidade 2" etc. usam a classe compartilhada `.sing-label`, com `font-size: 0.8rem` em `src/App.css`. Mantenha esse padrão em todas as heranças existentes e futuras, reutilizando `HerancaCard` e sem sobrescrever o tamanho por ancestralidade.
 - Filenames/component names are PascalCase Portuguese nouns matching the in-app page name; variables and handlers are Portuguese too (`paginaAtual`, `setPaginaAtual`, `navegar`).
 - Dropdown menus are pure CSS `:hover` (`.dropdown:hover .dropdown-conteudo` in App.css), not React state — keep new nav interactivity CSS-driven unless there's a real reason for JS state.
 - Region-style summary text: 2-3 short, direct sentences (Kryta's blurb in `Geografia.jsx` is the length reference). Never use em/en dashes (—) in any project copy — use a period or comma instead.

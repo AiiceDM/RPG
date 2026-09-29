@@ -1897,7 +1897,7 @@ body {
 .sing-label {
   display: block;
   font-family: var(--font-ui);
-  font-size: 0.67rem;
+  font-size: 0.8rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--crimson);
