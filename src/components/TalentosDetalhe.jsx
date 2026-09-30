@@ -656,7 +656,7 @@ function Asura() {
     <div className="heranca-grid">
       <HerancaCard
         identificador="Herança"
-        titulo="Lâmina Arcana"
+        titulo="Taumacinético"
         placeholder="🧠"
         descricao="A preencher."
         elemento="A definir"
@@ -667,7 +667,7 @@ function Asura() {
         sing2={<>
           <p><strong>Descrição.</strong> Para você, aço e magia são partes da mesma equação.</p>
           <p><strong>Efeito.</strong> Você aprende 1 truque arcano de 1 ou 2 ações que exija ataque mágico ou salvamento. Ele se torna uma magia inata arcana que utiliza Inteligência como atributo de conjuração. Você também ganha:</p>
-          <p><strong>Imbuir a Lâmina</strong> (2 Ações)<br /><code>[Arcane] [Concentrate]</code><br /><strong>Frequência:</strong> Uma vez por Preparações Diárias.<br /><strong>Requisitos:</strong> Empunhar uma arma corpo a corpo.</p>
+          <p><strong>Convergência de Impacto</strong> (2 Ações)<br /><code>[Arcane] [Concentrate]</code><br /><strong>Frequência:</strong> Uma vez por Preparações Diárias.<br /><strong>Requisitos:</strong> Empunhar uma arma corpo a corpo.</p>
           <p>Conjure o truque concedido por esta singularidade através da arma e realize um Strike corpo a corpo. A atividade conta como dois ataques, mas a penalidade por ataques múltiplos aumenta somente após sua conclusão.</p>
           <ul>
             <li><strong>Truque com ataque mágico:</strong> O resultado do Strike determina o grau de sucesso da arma e da magia. Em Falha ou Falha Crítica, o uso da habilidade não é gasto.</li>
@@ -682,10 +682,10 @@ function Asura() {
         </>}
         sing4={<>
           <p><strong>Descrição.</strong> Você transforma a sobrecarga de sua mente em poder para sua lâmina.</p>
-          <p><strong>Efeito.</strong> Enquanto estiver Stupefied, magias que causem dano usadas em Imbuir a Lâmina ou Spellstrike causam dano adicional igual a 2 × seu valor de Stupefied, até +6. Escolha um dos tipos de dano da magia para esse dano adicional. Você também ganha:</p>
-          <p><strong>Ruptura Sináptica</strong> (Ação Livre)<br /><code>[Arcane]</code><br /><strong>Frequência:</strong> Uma vez por Preparações Diárias.<br /><strong>Gatilho:</strong> Você falha no flat check de Stupefied ao conjurar um truque através de Imbuir a Lâmina ou Spellstrike.</p>
+          <p><strong>Efeito.</strong> Enquanto estiver Stupefied, magias que causem dano usadas em Convergência de Impacto ou Spellstrike causam dano adicional igual a 2 × seu valor de Stupefied, até +6. Escolha um dos tipos de dano da magia para esse dano adicional. Você também ganha:</p>
+          <p><strong>Ruptura Sináptica</strong> (Ação Livre)<br /><code>[Arcane]</code><br /><strong>Frequência:</strong> Uma vez por Preparações Diárias.<br /><strong>Gatilho:</strong> Você falha no flat check de Stupefied ao conjurar um truque através de Convergência de Impacto ou Spellstrike.</p>
           <p>O truque é resolvido normalmente, em vez de ser interrompido. Se causar dano, acrescente 1d6 por ponto de Stupefied, até 3d6, de um dos tipos de dano do truque, à sua escolha.</p>
-          <p>Após resolver completamente Imbuir a Lâmina ou Spellstrike, reduza a 0 todo o Stupefied recebido através de habilidades Asura.</p>
+          <p>Após resolver completamente Convergência de Impacto ou Spellstrike, reduza a 0 todo o Stupefied recebido através de habilidades Asura.</p>
         </>}
         talentos={talentosPendentes}
       />
