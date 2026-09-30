@@ -726,13 +726,77 @@ function Asura() {
 
       <HerancaCard
         identificador="Herança"
-        titulo="Herança 3"
+        titulo="Tecnosináptico"
         placeholder="🧠"
         descricao="A preencher."
         elemento="A definir"
-        sing1={<>A preencher.</>}
-        sing2={<>A preencher.</>}
-        sing3={<>A preencher.</>}
+        sing1={<>
+          <p><strong>Descrição.</strong> Sua mente possui uma facilidade incomum para compreender mecanismos, desmontar estruturas e imaginar como diferentes peças poderiam funcionar em conjunto.</p>
+          <p><strong>Efeito.</strong> Você se torna Treinado em Crafting ou Thievery, à sua escolha. Caso já seja Treinado na perícia escolhida por outra fonte, você pode se tornar Treinado em Arcana, Nature, Occultism, Religion, Society ou em uma Lore relacionada à tecnologia, a critério do GM.</p>
+        </>}
+        sing2={<>
+          <p><strong>Descrição.</strong> Máquinas não são silenciosas para você. Fluxos de energia, peças em movimento e pequenos desvios em mecanismos formam padrões que sua mente reconhece quase instintivamente.</p>
+          <p><strong>Efeito.</strong> Ao utilizar Detect Magic, você também consegue distinguir a presença de fontes tecnológicas ativas, como Construtos, Inovações, engenhocas, dispositivos energizados e mecanismos complexos em funcionamento. Ademais, recebe +1 de bônus de circunstância em testes de Crafting para Recall Knowledge sobre Construtos, invenções, Inovações e mecanismos complexos, assim como em testes de Thievery para Disable a Device quando o alvo for um mecanismo ou dispositivo tecnológico.</p>
+          <p><strong>Interação com Inventor:</strong> Se você possuir a classe Inventor, a DC do flat check realizado após utilizar uma ação com o traço Unstable é reduzida de 15 para 14.</p>
+        </>}
+        sing3={<>
+          <p><strong>Descrição.</strong> Sua mente transforma problemas cotidianos em protótipos descartáveis. Algumas peças, uma boa hipótese e uma quantidade questionável de confiança costumam ser suficientes para produzir exatamente a ferramenta necessária.</p>
+          <p><strong>Efeito.</strong> Durante suas Preparações Diárias, escolha 3 Engenhocas diferentes da tabela abaixo e construa uma unidade de cada uma. Cada Engenhoca possui Bulk L, é consumida após sua utilização e não pode ser escolhida mais de uma vez durante as mesmas Preparações Diárias.</p>
+          <p>Você não pode ativar Engenhocas enquanto estiver Stupefied. Para ativar uma Engenhoca, ela deve estar a até 30 pés de você e em sua linha de visão, salvo quando especificado o contrário. Caso ative uma segunda Engenhoca durante a mesma rodada, após resolver seus efeitos você fica Stupefied 1.</p>
+          <table aria-label="Engenhocas do Tecnosináptico">
+            <thead>
+              <tr><th scope="col">Engenhoca</th><th scope="col">Efeito</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Restaurador de Integridade Estrutural</strong></td>
+                <td>Acople a Engenhoca a um escudo. Quando o escudo sofrer dano através de Shield Block, você pode ativá-la como reação para restaurar 4 HP ao escudo após o dano ser aplicado. A restauração aumenta para 8 como Expert em Crafting, 12 como Master e 16 como Legendary. Caso você tenha utilizado sua reação para realizar o Shield Block, pode ativar a Engenhoca como parte dessa mesma reação.</td>
+              </tr>
+              <tr>
+                <td><strong>Corretor Vetorial de Trajetória</strong></td>
+                <td>Acoplar esta Engenhoca a uma munição exige 1 ação com o traço Manipulate. Quando a munição for utilizada em um Strike, você pode consumir a Engenhoca para ignorar o bônus de AC concedido por Lesser Cover, Standard Cover ou Greater Cover. Ela não permite atingir um alvo completamente protegido por cobertura.</td>
+              </tr>
+              <tr>
+                <td><strong>Proxy Taumatúrgico</strong></td>
+                <td>A Engenhoca pode ser carregada por uma criatura, presa a um objeto ou permanecer em qualquer outro local adequado. Quando você conjurar uma magia, pode consumi-la como ação livre para considerar a posição do Proxy como a origem da magia ao determinar alcance e linha de efeito. Não funciona com magias de alcance pessoal ou Emanations.</td>
+              </tr>
+              <tr>
+                <td><strong>Compensador de Momento Reverso</strong></td>
+                <td>Acople a Engenhoca a uma arma com Backswing. Quando o usuário dessa arma acertar um Strike após ter falhado em um Strike anterior com ela durante o mesmo turno, você pode consumir a Engenhoca como reação para adicionar 1d4 de dano ao ataque. O dano aumenta em 1d4 nos níveis 5, 9, 13 e 17. Você não precisa ser o usuário da arma para ativá-la.</td>
+              </tr>
+              <tr>
+                <td><strong>Redistribuidor de Momento Angular</strong></td>
+                <td>Acople a Engenhoca a uma arma com Sweep. Quando o usuário obtiver uma Falha, mas não uma Falha Crítica, em um Strike contra uma segunda ou terceira criatura diferente durante seu turno, você pode consumir a Engenhoca como reação. O alvo sofre 1d4 de dano do mesmo tipo físico da arma. O dano aumenta em 1d4 nos níveis 5, 9, 13 e 17. Você não precisa ser o usuário da arma para ativá-la.</td>
+              </tr>
+              <tr>
+                <td><strong>Estabilizador Somático de Contingência</strong></td>
+                <td>Acople a Engenhoca a uma criatura. Quando o portador sofrer dano físico de um acerto crítico e permanecer acima de 0 HP, você pode consumi-la como reação para restaurar 1d6 HP. A cura aumenta em 1d6 nos níveis 5, 9, 13 e 17. Esta Engenhoca não pode curar criaturas com o traço Void Healing.</td>
+              </tr>
+              <tr>
+                <td><strong>Sonda Parallax</strong></td>
+                <td>Com 1 ação, lance a Sonda em um espaço desocupado a até 30 pés. Até o início do seu próximo turno, você pode enxergar e ouvir a partir do espaço ocupado por ela. A Sonda não exige linha de visão após ser lançada. Ao final do efeito, ela é consumida.</td>
+              </tr>
+              <tr>
+                <td><strong>Fixador Vetorial Autônomo</strong></td>
+                <td>Com 1 ação, dispare o Fixador contra uma superfície adequada. Ele cria um ponto de ancoragem capaz de prender uma corda e auxiliar em escaladas, descidas, travessias ou sustentação de objetos. O Fixador permanece funcional por 10 minutos ou até você desativá-lo, sendo então consumido.</td>
+              </tr>
+              <tr>
+                <td><strong>Matriz Instrumental Polimórfica</strong></td>
+                <td>Com 1 ação, transforme a Engenhoca em um healer's toolkit, thieves' toolkit, picareta, pá, ferramentas simples de construção ou pé de cabra. Ela fornece os instrumentos necessários para uma única atividade ou tarefa apropriada, sem conceder bônus de item, sendo consumida ao final dessa utilização.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>A progressão de dano e cura das Engenhocas correspondentes é de 1 dado nos níveis 1 a 4, 2 dados no 5º nível, 3 dados no 9º, 4 dados no 13º e 5 dados no 17º.</p>
+        </>}
+        sing4={<>
+          <p><strong>Descrição.</strong> Para você, uma engenhoca utilizada não é necessariamente uma engenhoca perdida. Sob pressão, sua mente consegue reconstruir componentes descartados ou executar reparos que normalmente exigiriam muito mais cuidado, embora esse processamento acelerado cobre seu preço.</p>
+          <p><strong>Efeito.</strong> Você ganha a seguinte habilidade:</p>
+          <p><strong>Recalibração de Campo</strong> (2 Ações)<br /><code>[Concentrate]</code><br /><strong>Requisito:</strong> Você não está Stupefied.</p>
+          <p>Escolha um dos efeitos abaixo. Cada efeito pode ser utilizado uma vez por Preparações Diárias.</p>
+          <p><strong>Reparo de Emergência:</strong> Faça um teste de Crafting para Repair um escudo, Construto ou dispositivo tecnológico adjacente. A atividade leva apenas 2 ações e restaura metade dos HP que seriam restaurados por uma utilização normal de Repair.</p>
+          <p><strong>Reciclagem de Engenhocas:</strong> Faça um teste de Crafting contra a DC padrão do seu nível. Em um Sucesso, recupere uma Engenhoca consumida desde suas últimas Preparações Diárias. Em um Sucesso Crítico, recupere duas Engenhocas consumidas.</p>
+          <p>Após resolver qualquer um dos efeitos, você fica Stupefied 1.</p>
+        </>}
         talentos={talentosPendentes}
       />
 
