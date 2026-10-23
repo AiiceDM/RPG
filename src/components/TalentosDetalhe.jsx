@@ -802,13 +802,34 @@ function Asura() {
 
       <HerancaCard
         identificador="Herança"
-        titulo="Herança 4"
+        titulo="Nexial"
         placeholder="🧠"
-        descricao="A preencher."
+        descricao="Alguns Asura possuem uma compreensão incomum das conexões entre dois pontos do espaço. Para eles, distância é menos uma barreira e mais um problema que pode ser contornado. Essa predisposição se manifesta através da criação de pequenos portais temporários, inicialmente capazes de transportar objetos leves, mas que, com esforço suficiente, podem permitir a passagem do próprio Asura ou até de outras criaturas."
         elemento="A definir"
-        sing1={<>A preencher.</>}
-        sing2={<>A preencher.</>}
-        sing3={<>A preencher.</>}
+        sing1={<>
+          <p><strong>Descrição.</strong> Mesmo antes de conseguir produzir portais estáveis, você desenvolveu uma compreensão intuitiva das estruturas mágicas responsáveis por conectar diferentes pontos do espaço.</p>
+          <p><strong>Efeito.</strong> Você se torna Treinado em Arcana. Se já for Treinado em Arcana por outra fonte, torne-se Treinado em Society ou em uma Lore relacionada a portais, teletransporte, fenômenos dimensionais ou estruturas espaciais, a critério do GM.</p>
+        </>}
+        sing2={<>
+          <p><strong>Descrição.</strong> Você consegue abrir pares de pequenos portais temporários, permitindo que objetos leves atravessem instantaneamente a curta distância entre eles.</p>
+          <p><strong>Efeito.</strong> Você recebe a ação Transposição da Matéria.</p>
+          <p><strong>Transposição da Matéria</strong> (1 Ação)<br /><code>[Arcane] [Concentrate] [Teleportation]</code><br /><strong>Frequência:</strong> Uma vez a cada 10 minutos</p>
+          <p>Escolha um objeto não mágico, Pequeno ou menor, de Bulk L ou inferior, a até 30 pés de você. O objeto deve estar completamente visível para você e não pode possuir qualquer grau de Cover em relação a você. Ele também não pode estar sendo carregado, vestido, empunhado, preso, fixado ou conectado a outra criatura, objeto ou superfície.</p>
+          <p>Você abre dois pequenos portais interligados, um ao redor do objeto e outro próximo de você. O objeto atravessa os portais e reaparece instantaneamente em uma de suas mãos livres ou em um espaço desocupado adjacente a você.</p>
+        </>}
+        sing3={<>
+          <p><strong>Descrição.</strong> Seus pequenos portais já são estáveis o suficiente para permitir sua própria passagem. Normalmente, a conexão dura apenas uma fração de segundo, mas sua mente pode ser forçada além de seus limites para calcular imediatamente uma segunda abertura.</p>
+          <p><strong>Efeito.</strong> Você recebe a ação Salto Interespacial.</p>
+          <p><strong>Salto Interespacial</strong> (1 Ação)<br /><code>[Arcane] [Concentrate] [Teleportation]</code><br /><strong>Frequência:</strong> Uma vez a cada 10 minutos</p>
+          <p>Você abre um pequeno portal e se teleporta para um espaço desocupado que possa ver a até 10 pés.</p>
+          <p>Após realizar esse teletransporte, caso não esteja Stupefied, você pode escolher ficar Stupefied 1. Se fizer isso, até o final do seu turno atual, você pode utilizar Salto Interespacial uma segunda vez como uma Free Action. Essa segunda utilização não conta contra a Frequência da habilidade.</p>
+        </>}
+        sing4={<>
+          <p><strong>Descrição.</strong> Sua compreensão dos pequenos portais já permite envolver outra criatura em uma conexão espacial estável. Ao adaptar uma magia de deslocamento conhecida, você pode substituir o percurso entre dois pontos por uma passagem instantânea.</p>
+          <p><strong>Efeito.</strong> Você recebe Friendfetch como uma magia arcana inata de Rank 1. Você pode conjurá-la uma vez por Preparações Diárias.</p>
+          <p>Quando conjurar Friendfetch e escolher apenas uma criatura voluntária como alvo, você pode modificar a manifestação da magia. Em vez de realizar o movimento normalmente causado por Friendfetch, pequenos portais se abrem ao redor do alvo e no ponto de destino. A criatura se teleporta para qualquer espaço desocupado que você possa ver dentro do alcance da magia.</p>
+          <p>Se escolher dois alvos, Friendfetch funciona normalmente.</p>
+        </>}
         talentos={talentosPendentes}
       />
     </div>
