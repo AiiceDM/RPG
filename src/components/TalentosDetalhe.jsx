@@ -293,6 +293,25 @@ function Humano() {
                   <p>Quando o aliado gasta esse Ponto Heroico para rerrolar um teste, ele recebe o mesmo bônus de circunstância que sua habilidade Improvisação concederia ao resultado final. Caso também possua Improvisação, utiliza o maior dos dois bônus, sem acumulá-los. Uma criatura não pode possuir mais de 1 Ponto Heroico concedido por Centelha Compartilhada ao mesmo tempo, independentemente da fonte.</p>
                 </>}
               />
+              <TalentoCard
+                titulo="Potencial Adaptável"
+                tags="Humano · Versatilidade"
+                descricao="A versatilidade humana não nasce de dominar todas as técnicas ao mesmo tempo, mas de reconhecer qual delas será necessária. A cada novo dia, você reorganiza experiências, hábitos e ensinamentos para se preparar exatamente para os desafios que o aguardam."
+                efeito={<>
+                  <p>Durante suas <strong>Preparações Diárias</strong>, escolha um <strong>Talento Geral de até 3° nível</strong> ou um <strong>Talento de Perícia de até 7° nível</strong> ao qual você tenha acesso e cujos pré-requisitos cumpra independentemente deste talento. Você recebe o talento escolhido até o início de suas próximas Preparações Diárias, realizando nesse momento quaisquer escolhas exigidas por ele. Todas as escolhas e benefícios concedidos diretamente pelo talento terminam quando você o perde.</p>
+                  <p><strong>Restrições.</strong> O talento escolhido:</p>
+                  <ul>
+                    <li>Não pode possuir o traço Arquétipo.</li>
+                    <li>Não pode conceder outro talento, fórmulas, pet, familiar, companheiro animal ou vínculo permanente.</li>
+                    <li>Não pode torná-lo Treinado nem aumentar diretamente seu grau de proficiência em uma perícia ou Lore.</li>
+                    <li>Não pode ser utilizado para cumprir os pré-requisitos de outro talento ou opção de personagem.</li>
+                    <li>Não pode ser utilizado em atividades de Downtime.</li>
+                    <li>Não pode ser utilizado para adquirir permanentemente uma magia, criatura, treinamento ou outra opção de personagem.</li>
+                    <li>Não pode produzir um efeito cuja duração ultrapasse suas próximas Preparações Diárias.</li>
+                  </ul>
+                  <p>Efeitos instantâneos já resolvidos não são revertidos quando você perde o talento. Perder e escolher novamente o mesmo talento não recupera usos nem encerra imunidades antes do momento em que isso ocorreria normalmente.</p>
+                </>}
+              />
             </>
           }}
         </TalentosNiveis>
