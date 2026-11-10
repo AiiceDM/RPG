@@ -284,6 +284,15 @@ function Humano() {
                   <p>Uma vez entre suas Preparações Diárias, caso já tenha utilizado Momento Decisivo, quando obtiver um <strong>Sucesso Crítico</strong> em um teste de resistência provocado por uma criatura inimiga de nível igual ou superior ao seu nível +2, você recupera o uso deste talento.</p>
                 </>}
               />
+              <TalentoCard
+                titulo="Centelha Compartilhada"
+                tags="Humano · Suporte"
+                descricao="Durante as horas silenciosas antes da jornada, você deposita em um companheiro parte da vontade que o mantém de pé. Quando a sorte vacila, essa centelha desperta e o impulsiona adiante."
+                efeito={<>
+                  <p>Durante suas <strong>Preparações Diárias</strong>, escolha um aliado presente. Ele recebe <strong>1 Ponto Heroico</strong>, respeitando seu limite máximo. Esse ponto dura até o início de suas próximas Preparações Diárias e é perdido caso não seja utilizado.</p>
+                  <p>Quando o aliado gasta esse Ponto Heroico para rerrolar um teste, ele recebe o mesmo bônus de circunstância que sua habilidade Improvisação concederia ao resultado final. Caso também possua Improvisação, utiliza o maior dos dois bônus, sem acumulá-los. Uma criatura não pode possuir mais de 1 Ponto Heroico concedido por Centelha Compartilhada ao mesmo tempo, independentemente da fonte.</p>
+                </>}
+              />
             </>
           }}
         </TalentosNiveis>
