@@ -312,6 +312,16 @@ function Humano() {
                   <p>Efeitos instantâneos já resolvidos não são revertidos quando você perde o talento. Perder e escolher novamente o mesmo talento não recupera usos nem encerra imunidades antes do momento em que isso ocorreria normalmente.</p>
                 </>}
               />
+              <TalentoCard
+                titulo="Mestre do Improviso"
+                tags="Humano · Perícia"
+                descricao="Para você, improvisar deixou de ser uma tentativa desesperada e se tornou uma demonstração de verdadeira competência. Mesmo diante de uma tarefa completamente desconhecida, sua experiência permite reproduzir por instinto técnicas que outros levaram anos para dominar."
+                efeito={<>
+                  <p><em>Pré-requisitos: Improviso Talentoso; Master em pelo menos uma perícia.</em></p>
+                  <p>Você pode utilizar <strong>Improviso Talentoso duas vezes</strong> entre suas Preparações Diárias, em vez de uma. Sempre que gastar <strong>1 Ponto Heroico</strong> para recuperar o uso de Improviso Talentoso, você recupera apenas um desses usos.</p>
+                  <p>Uma vez entre suas Preparações Diárias, ao utilizar Improviso Talentoso, você pode tratar seu grau de proficiência como <strong>Master</strong>, em vez de Trained, para o teste que acionou a reação. Isso permite realizar uma ação que exija um grau de proficiência de até Master. Recuperar um uso de Improviso Talentoso não recupera este aprimoramento. Todas as limitações de Improviso Talentoso continuam se aplicando a estes usos.</p>
+                </>}
+              />
             </>
           }}
         </TalentosNiveis>
