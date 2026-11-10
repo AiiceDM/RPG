@@ -270,6 +270,20 @@ function Humano() {
                   <p>Ademais, sempre que utilizar a recuperação tanto do Poço Arcano quanto do Fôlego Arcano, você recebe um <strong>bônus de circunstância de +1</strong> em jogadas de ataque com magia e a CD de suas magias aumenta em 1 até o final do turno.</p>
                 </>}
               />
+            </>,
+            9: <>
+              <TalentoCard
+                titulo="Momento Decisivo"
+                tags="Humano · Fortuna"
+                descricao="Há instantes em que sorte e talento deixam de importar. Diante do golpe que decidiria tudo, sua vontade se impõe ao medo, à dor e ao próprio acaso."
+                efeito={<>
+                  <p><strong>(Ação Livre)</strong> [Fortune]<br />
+                  <em>Frequência: Uma vez. Você recupera o uso durante suas Preparações Diárias.</em><br />
+                  <em>Gatilho: Você está prestes a realizar um teste de resistência.</em><br />
+                  Você gasta <strong>1 Ponto Heroico</strong>. Se a fonte do teste possuir nível igual ou inferior ao seu nível +2, você não realiza o teste e obtém automaticamente um <strong>Sucesso</strong>. Se a fonte possuir nível igual ou superior ao seu nível +3, realize o teste normalmente; caso obtenha uma Falha Crítica ou Falha, melhore o resultado em um grau. Um Sucesso ou Sucesso Crítico não é alterado. Para determinar o nível da fonte, utilize o nível da criatura, perigo ou item responsável pelo efeito. Caso ela não possua um nível definido, o Mestre determina qual parte deste talento se aplica.</p>
+                  <p>Uma vez entre suas Preparações Diárias, caso já tenha utilizado Momento Decisivo, quando obtiver um <strong>Sucesso Crítico</strong> em um teste de resistência provocado por uma criatura inimiga de nível igual ou superior ao seu nível +2, você recupera o uso deste talento.</p>
+                </>}
+              />
             </>
           }}
         </TalentosNiveis>
