@@ -322,6 +322,27 @@ function Humano() {
                   <p>Uma vez entre suas Preparações Diárias, ao utilizar Improviso Talentoso, você pode tratar seu grau de proficiência como <strong>Master</strong>, em vez de Trained, para o teste que acionou a reação. Isso permite realizar uma ação que exija um grau de proficiência de até Master. Recuperar um uso de Improviso Talentoso não recupera este aprimoramento. Todas as limitações de Improviso Talentoso continuam se aplicando a estes usos.</p>
                 </>}
               />
+              <TalentoCard
+                titulo="Entrada Triunfal"
+                tags="Humano · Presença"
+                descricao="Você sabe transformar sua chegada no momento que redefine uma cena. Seja por meio de uma aparição heroica, uma ameaça incontestável ou uma ordem dada no instante perfeito, sua presença concede aos aliados a certeza de que a vitória ainda é possível e faz os inimigos hesitarem."
+                efeito={<>
+                  <p><strong>Entrada Triunfal (Ação Livre)</strong><br />
+                  <em>Frequência: Uma vez. Você recupera o uso durante suas Preparações Diárias.</em><br />
+                  <em>Gatilho: Você rola iniciativa.</em><br />
+                  <em>Requisito: Pelo menos uma outra criatura consegue perceber você.</em></p>
+                  <p>Escolha uma das entradas abaixo. Entrada Triunfal recebe os traços indicados pela opção escolhida.</p>
+                  <ul>
+                    <li><strong>Entrada Inspiradora</strong> [Visual] [Emotion] [Mental]<br />
+                    Escolha até <strong>3 aliados</strong> a até 30 pés que possam vê-lo. Eles recebem Pontos de Vida Temporários iguais à metade do seu nível, arredondada para cima, que duram até o final da primeira rodada do combate. Ao gastar <strong>1 Ponto Heroico</strong>, você também recebe esses Pontos de Vida Temporários e todas as criaturas afetadas recebem +1 de bônus de status em seu primeiro Strike realizado durante a primeira rodada.</li>
+                    <li><strong>Entrada Imponente</strong> [Auditory] [Emotion] [Mental]<br />
+                    Escolha <strong>1 inimigo</strong> a até 30 pés que possa ouvi-lo. Até o final da primeira rodada do combate, esse inimigo não pode utilizar reações. Ao gastar <strong>1 Ponto Heroico</strong>, escolha um segundo inimigo válido. Ele sofre o mesmo efeito e ambos recebem uma penalidade de circunstância de 5 pés em todas as suas Velocidades até o final da primeira rodada.</li>
+                    <li><strong>Entrada Decisiva</strong> [Mental]<br />
+                    Escolha até <strong>2 aliados</strong> a até 30 pés que possam perceber sua presença. Cada aliado pode utilizar sua reação para realizar imediatamente um Step. Ao gastar <strong>1 Ponto Heroico</strong>, você também pode utilizar sua reação para realizar esse Step, e todos os Steps concedidos por esta entrada podem percorrer até 10 pés, em vez de 5 pés, seguindo as demais regras de Step.</li>
+                  </ul>
+                  <p>Sempre que gastar <strong>1 Ponto Heroico</strong> para aprimorar uma das opções de Entrada Triunfal, você recupera o uso deste talento após resolver seus efeitos. Cada uma das três entradas só pode ser escolhida uma vez entre suas Preparações Diárias, mesmo que você recupere o uso de Entrada Triunfal.</p>
+                </>}
+              />
             </>
           }}
         </TalentosNiveis>
