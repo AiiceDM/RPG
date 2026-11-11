@@ -232,7 +232,7 @@ function Humano() {
                 descricao="Não basta ler uma comunidade de fora: você sabe entrar nela. Um nome citado no lugar certo, um sotaque reconhecido, um costume respeitado, e portas que permaneceriam fechadas se abrem para você."
                 efeito={<>
                   <p><em>Pré-requisito: Crônica dos Mil Caminhos.</em></p>
-                  <p>Você se torna <strong>Expert em Sociedade</strong> (ou, se já for Expert, em outra perícia relacionada na qual seja Treinado). Além disso, ao adentrar um novo assentamento habitado, você pode passar 1 hora circulando por ele e realizar um teste de Sociedade, separado do teste de Crônica dos Mil Caminhos. Este teste é sempre resolvido com um grau de sucesso superior ao obtido. A frequência é de uma vez por dia, e apenas uma vez por assentamento (no caso de cidades grandes ou capitais, o Mestre pode permitir o uso mais de uma vez, em bairros ou distritos diferentes).</p>
+                  <p>Você se torna <strong>Expert em Sociedade</strong> (ou, se já for Expert, em outra perícia relacionada na qual seja Treinado). Além disso, ao adentrar um novo assentamento habitado, você pode passar 1 hora circulando por ele e realizar um teste de Sociedade. Você pode utilizar esta análise simultaneamente a Crônica dos Mil Caminhos e Estranho em Lugar Nenhum. Nesse caso, passe apenas 1 hora analisando o assentamento, realize um único teste e aplique o mesmo grau de sucesso separadamente aos efeitos de cada talento utilizado. O teste é sempre resolvido com um grau de sucesso superior ao obtido, mas essa melhoria ocorre apenas uma vez, independentemente da quantidade de talentos utilizados. Cada talento utilizado consome sua própria frequência. A frequência de Laços de Passagem é de uma vez por dia, e apenas uma vez por assentamento (no caso de cidades grandes ou capitais, o Mestre pode permitir o uso mais de uma vez, em bairros ou distritos diferentes).</p>
                   <ul>
                     <li><strong>Sucesso Crítico:</strong> Como o Sucesso, e você possui outro indivíduo com atitude Prestativa (Helpful) no assentamento, possivelmente disposto a ajudar ou fornecer informações.</li>
                     <li><strong>Sucesso:</strong> Como a Falha, e você possui um indivíduo com atitude Amigável (Friendly) no assentamento, possivelmente disposto a negociar ajuda ou informações.</li>
@@ -341,6 +341,24 @@ function Humano() {
                     Escolha até <strong>2 aliados</strong> a até 30 pés que possam perceber sua presença. Cada aliado pode utilizar sua reação para realizar imediatamente um Step. Ao gastar <strong>1 Ponto Heroico</strong>, você também pode utilizar sua reação para realizar esse Step, e todos os Steps concedidos por esta entrada podem percorrer até 10 pés, em vez de 5 pés, seguindo as demais regras de Step.</li>
                   </ul>
                   <p>Sempre que gastar <strong>1 Ponto Heroico</strong> para aprimorar uma das opções de Entrada Triunfal, você recupera o uso deste talento após resolver seus efeitos. Cada uma das três entradas só pode ser escolhida uma vez entre suas Preparações Diárias, mesmo que você recupere o uso de Entrada Triunfal.</p>
+                </>}
+              />
+              <TalentoCard
+                titulo="Estranho em Lugar Nenhum"
+                tags="Humano · Social"
+                descricao="Nenhum lugar permanece estranho para você por muito tempo. Depois de observar o movimento das ruas, os hábitos dos moradores e as portas pelas quais cada pessoa entra, você encontra um espaço capaz de acolhê-lo como se já fizesse parte daquela comunidade."
+                efeito={<>
+                  <p><em>Pré-requisito: Laços de Passagem.</em></p>
+                  <p>Você se torna <strong>Master em Sociedade</strong> ou, se já for Master, em outra perícia relacionada na qual seja Expert.</p>
+                  <p><em>Frequência: Uma vez por dia, e apenas uma vez por assentamento. No caso de cidades grandes ou capitais, o Mestre pode permitir o uso mais de uma vez, desde que em bairros ou distritos diferentes.</em></p>
+                  <p>Ao adentrar um novo assentamento habitado, você pode passar <strong>1 hora</strong> circulando por ele e realizar um teste de Sociedade. Você pode utilizar esta análise simultaneamente a Crônica dos Mil Caminhos e Laços de Passagem. Nesse caso, realize um único teste e aplique o mesmo grau de sucesso separadamente aos efeitos de cada talento utilizado. O teste é sempre resolvido com um grau de sucesso superior ao obtido, mas essa melhoria ocorre apenas uma vez, independentemente da quantidade de talentos utilizados. Cada talento utilizado consome sua própria frequência.</p>
+                  <p>Antes do teste, escolha um tipo de <strong>Ponto de Apoio</strong>, como Abrigo, Arquivo, Oficina, Entreposto, Santuário ou Loja. O Mestre determina quais tipos existem naquele local, podendo restringir, substituir ou ampliar as opções de acordo com o porte, a pluralidade e a riqueza do assentamento, mas deve oferecer ao menos uma opção adequada. Após sua escolha, o Mestre determina qual é o estabelecimento ou espaço específico encontrado.</p>
+                  <ul>
+                    <li><strong>Falha:</strong> Você identifica o Ponto de Apoio e pode frequentá-lo nas mesmas condições oferecidas ao público, respeitando seus horários, pagamentos e exigências habituais.</li>
+                    <li><strong>Sucesso:</strong> Como a Falha, mas, enquanto permanecer no assentamento, você possui acesso privilegiado às áreas, instalações e recursos do Ponto de Apoio normalmente reservados a membros, funcionários ou pessoas de confiança. Você pode estender esse acesso a até cinco aliados que o acompanhem e não precisa realizar testes apenas para entrar ou utilizar essas instalações.</li>
+                    <li><strong>Sucesso Crítico:</strong> Como o Sucesso, mas você recebe uma chave, credencial, símbolo, senha ou permissão equivalente que lhe concede acesso permanente ao Ponto de Apoio. Você pode utilizá-lo como uma base de operações e mantém esse acesso em visitas futuras. Ele só pode ser perdido se você trair deliberadamente a confiança recebida ou se uma mudança importante na história tornar o local indisponível.</li>
+                  </ul>
+                  <p>Esse acesso não concede propriedade sobre o local nem torna gratuitas suas mercadorias, materiais, tratamentos, transportes ou serviços profissionais. Custos e testes relacionados ao uso efetivo de seus recursos ainda são resolvidos normalmente.</p>
                 </>}
               />
             </>
