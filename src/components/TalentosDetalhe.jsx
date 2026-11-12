@@ -587,6 +587,23 @@ function Humano() {
                 </ul>
               </>}
             />
+          </>,
+          9: <>
+            <TalentoCard
+              titulo="Cicatriz da Escuridão"
+              tags="Humano · Tenebris"
+              descricao="A escuridão se lembra de sua passagem. Quando você atravessa a dobra entre duas sombras, pode deixar parte do caminho para trás, seja como um vínculo que o conduz de volta ou como uma porta pela qual um aliado pode segui-lo."
+              efeito={<>
+                <p><em>Pré-requisito: Passo Umbral.</em></p>
+                <p>Sempre que utilizar Passo Umbral, você pode usá-lo normalmente ou escolher um dos aprimoramentos abaixo. Escolher um aprimoramento não exige ações adicionais, mas você não pode escolher ambos no mesmo uso.</p>
+                <ul>
+                  <li><strong>Âncora Umbral:</strong> Uma ligação permanece entre você e o local de partida. Ao final do seu turno atual, você pode retornar ao espaço de onde partiu, sem gastar uma ação. Se esse espaço estiver ocupado, você reaparece no espaço desocupado mais próximo que esteja em uma área de penumbra ou escuridão. Caso não exista um espaço válido ou o local de partida esteja sob luz plena, a ligação é rompida e você permanece onde está.</li>
+                  <li><strong>Fenda Umbral:</strong> Uma passagem conecta os locais de partida e chegada até o início do seu próximo turno. Um aliado adjacente à passagem no local de partida pode utilizar a ação abaixo. Se qualquer uma das extremidades for exposta à luz plena, a Fenda Umbral se fecha imediatamente.</li>
+                </ul>
+                <p><strong>Atravessar a Fenda (1 Ação)</strong> [Manipulate] [Teleportation]</p>
+                <p>O aliado interage com a Fenda Umbral e se teletransporta para um espaço desocupado adjacente ao local de chegada de Passo Umbral. Após o aliado atravessar, a Fenda Umbral se fecha.</p>
+              </>}
+            />
           </>
         }}
       />
