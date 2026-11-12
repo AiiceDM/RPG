@@ -361,6 +361,18 @@ function Humano() {
                   <p>Esse acesso não concede propriedade sobre o local nem torna gratuitas suas mercadorias, materiais, tratamentos, transportes ou serviços profissionais. Custos e testes relacionados ao uso efetivo de seus recursos ainda são resolvidos normalmente.</p>
                 </>}
               />
+              <TalentoCard
+                titulo="Confluência Mágica"
+                tags="Humano · Arcano"
+                descricao="Você mergulhou tão profundamente em sua própria fonte de magia que encontrou correntes que jamais deveriam alcançá-lo. Por um breve instante, sua vontade atravessa as fronteiras entre as tradições e dá forma a um poder completamente alheio aos seus estudos."
+                efeito={<>
+                  <p><em>Pré-requisito: Poço Arcano.</em></p>
+                  <p><em>Frequência: Uma vez. Você recupera o uso durante suas Preparações Diárias.</em></p>
+                  <p>A recuperação de um espaço de magia ou magia preparada de 2º nível concedida por Poço Arcano não exige mais o gasto de um <strong>Ponto Heroico</strong>.</p>
+                  <p>Quando adquirir este talento, escolha uma tradição mágica entre Arcana, Divina, Ocultista ou Primal com a qual você não seja capaz de conjurar magias. Essa escolha é permanente. Durante suas <strong>Preparações Diárias</strong>, escolha uma magia comum de até 3º nível pertencente a essa tradição.</p>
+                  <p>Até suas próximas Preparações Diárias, você pode conjurar a magia escolhida uma vez como uma magia de 3º nível, sem gastar um espaço de magia ou Ponto Heroico. Utilize sua CD de magia de classe e seu modificador de ataque com magia, além do tempo de conjuração e dos custos normais da magia. Para essa conjuração, aplique o bônus de circunstância de +1 concedido por Poço Arcano à jogada de ataque com magia ou à CD da magia, conforme aplicável.</p>
+                </>}
+              />
             </>
           }}
         </TalentosNiveis>
