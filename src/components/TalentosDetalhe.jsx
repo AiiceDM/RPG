@@ -604,6 +604,23 @@ function Humano() {
                 <p>O aliado interage com a Fenda Umbral e se teletransporta para um espaço desocupado adjacente ao local de chegada de Passo Umbral. Após o aliado atravessar, a Fenda Umbral se fecha.</p>
               </>}
             />
+            <TalentoCard
+              titulo="Vigília do Abismo"
+              tags="Humano · Tenebris"
+              descricao="A escuridão aprendeu a guardar seus olhos. Você deixa uma fissura negra pelo mundo, uma cicatriz imóvel que permanece fechada e silenciosa até que sua vontade a faça despertar."
+              efeito={<>
+                <p>Entre suas Preparações Diárias, você pode manifestar <strong>uma Marca da Vigília</strong>. Manifestar a marca exige uma atividade de 10 minutos e uma superfície sólida e imóvel ao seu alcance. Ela assume a forma de uma fissura vertical de escuridão absoluta, permanece imóvel e desaparece durante suas próximas Preparações Diárias.</p>
+                <p>Enquanto estiver fechada e em uma área de escuridão, a marca fica <strong>Concealed</strong>, inclusive para criaturas com Darkvision. Se a superfície na qual foi manifestada for destruída ou se a marca for exposta à luz plena, ela desaparece imediatamente. Uma marca perdida ou consumida não pode ser substituída antes de suas próximas Preparações Diárias.</p>
+                <p><strong>Espiar pela Marca (1 Ação)</strong> [Concentrate]</p>
+                <p>Sua Marca da Vigília se abre, formando um olho completamente negro, e você passa a enxergar a partir do espaço da marca até o início do seu próximo turno. Você pode Sustentar o efeito por até 10 minutos.</p>
+                <p>Enquanto estiver conectado, você utiliza seus sentidos visuais e pode realizar ações de Percepção baseadas em visão a partir da marca, incluindo utilizar os benefícios de Olhos do Abismo. Você não recebe sons ou outras informações sensoriais e não pode utilizar essa visão para estabelecer linha de efeito.</p>
+                <p>Durante a conexão, você fica <strong>Cego</strong> em relação aos arredores do próprio corpo, fica <strong>Immobilized</strong> e não pode utilizar ações com o traço Teleportation. Se for deslocado por qualquer razão, a conexão termina imediatamente. Enquanto estiver aberta, a marca não recebe o benefício de Concealed concedido por este talento.</p>
+                <p><strong>Recolher-se à Marca (2 Ações)</strong> [Concentrate] [Manipulate] [Teleportation]<br />
+                <em>Custo: Sua Marca da Vigília é consumida.</em><br />
+                <em>Requisito: Você está em uma área de penumbra ou escuridão, encontra-se a até 500 pés de sua Marca da Vigília e existe um espaço desocupado suficientemente grande adjacente a ela.</em></p>
+                <p>Você se teletransporta para o espaço válido adjacente à marca, sem precisar de linha de visão.</p>
+              </>}
+            />
           </>
         }}
       />
