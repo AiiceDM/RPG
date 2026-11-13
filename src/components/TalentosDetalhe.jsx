@@ -274,6 +274,7 @@ function Humano() {
             9: <>
               <TalentoCard
                 titulo="Momento Decisivo"
+                img="https://i.imgur.com/Qltm6gF.jpeg"
                 tags="Humano · Fortuna"
                 descricao="Há instantes em que sorte e talento deixam de importar. Diante do golpe que decidiria tudo, sua vontade se impõe ao medo, à dor e ao próprio acaso."
                 efeito={<>
@@ -286,6 +287,7 @@ function Humano() {
               />
               <TalentoCard
                 titulo="Centelha Compartilhada"
+                img="https://i.imgur.com/jBrZEeO.jpeg"
                 tags="Humano · Suporte"
                 descricao="Durante as horas silenciosas antes da jornada, você deposita em um companheiro parte da vontade que o mantém de pé. Quando a sorte vacila, essa centelha desperta e o impulsiona adiante."
                 efeito={<>
@@ -295,6 +297,7 @@ function Humano() {
               />
               <TalentoCard
                 titulo="Potencial Adaptável"
+                img="https://i.imgur.com/AyJWV61.jpeg"
                 tags="Humano · Versatilidade"
                 descricao="A versatilidade humana não nasce de dominar todas as técnicas ao mesmo tempo, mas de reconhecer qual delas será necessária. A cada novo dia, você reorganiza experiências, hábitos e ensinamentos para se preparar exatamente para os desafios que o aguardam."
                 efeito={<>
@@ -314,6 +317,7 @@ function Humano() {
               />
               <TalentoCard
                 titulo="Mestre do Improviso"
+                img="https://i.imgur.com/GTCAW6m.jpeg"
                 tags="Humano · Perícia"
                 descricao="Para você, improvisar deixou de ser uma tentativa desesperada e se tornou uma demonstração de verdadeira competência. Mesmo diante de uma tarefa completamente desconhecida, sua experiência permite reproduzir por instinto técnicas que outros levaram anos para dominar."
                 efeito={<>
@@ -324,6 +328,7 @@ function Humano() {
               />
               <TalentoCard
                 titulo="Entrada Triunfal"
+                img="https://i.imgur.com/NhEEt6W.jpeg"
                 tags="Humano · Presença"
                 descricao="Você sabe transformar sua chegada no momento que redefine uma cena. Seja por meio de uma aparição heroica, uma ameaça incontestável ou uma ordem dada no instante perfeito, sua presença concede aos aliados a certeza de que a vitória ainda é possível e faz os inimigos hesitarem."
                 efeito={<>
@@ -345,6 +350,7 @@ function Humano() {
               />
               <TalentoCard
                 titulo="Estranho em Lugar Nenhum"
+                img="https://i.imgur.com/Yk7SBeA.jpeg"
                 tags="Humano · Social"
                 descricao="Nenhum lugar permanece estranho para você por muito tempo. Depois de observar o movimento das ruas, os hábitos dos moradores e as portas pelas quais cada pessoa entra, você encontra um espaço capaz de acolhê-lo como se já fizesse parte daquela comunidade."
                 efeito={<>
@@ -363,6 +369,7 @@ function Humano() {
               />
               <TalentoCard
                 titulo="Confluência Mágica"
+                img="https://i.imgur.com/hklMtSm.jpeg"
                 tags="Humano · Arcano"
                 descricao="Você mergulhou tão profundamente em sua própria fonte de magia que encontrou correntes que jamais deveriam alcançá-lo. Por um breve instante, sua vontade atravessa as fronteiras entre as tradições e dá forma a um poder completamente alheio aos seus estudos."
                 efeito={<>
@@ -591,6 +598,7 @@ function Humano() {
           9: <>
             <TalentoCard
               titulo="Cicatriz da Escuridão"
+              img="https://i.imgur.com/ooqaidL.jpeg"
               tags="Humano · Tenebris"
               descricao="A escuridão se lembra de sua passagem. Quando você atravessa a dobra entre duas sombras, pode deixar parte do caminho para trás, seja como um vínculo que o conduz de volta ou como uma porta pela qual um aliado pode segui-lo."
               efeito={<>
@@ -606,6 +614,7 @@ function Humano() {
             />
             <TalentoCard
               titulo="Vigília do Abismo"
+              img="https://i.imgur.com/EIo7RQr.jpeg"
               tags="Humano · Tenebris"
               descricao="A escuridão aprendeu a guardar seus olhos. Você deixa uma fissura negra pelo mundo, uma cicatriz imóvel que permanece fechada e silenciosa até que sua vontade a faça despertar."
               efeito={<>
@@ -729,6 +738,7 @@ function Humano() {
           9: <>
             <TalentoCard
               titulo="Coroa Confiada"
+              img="https://i.imgur.com/NHt57TJ.jpeg"
               tags="Humano · Luminar · Luz"
               descricao="Você retira a auréola da própria cabeça e a deposita sobre aquele que escolheu proteger. Um fio de luz permanece entre vocês, guiando seus passos e renovando as forças do portador a cada pulsação. Quando essa ligação se rompe, a coroa se parte em um último clarão."
               efeito={<>
@@ -752,6 +762,7 @@ function Humano() {
             />
             <TalentoCard
               titulo="Súplica Silenciosa"
+              img="https://i.imgur.com/ejYmFm9.jpeg"
               tags="Humano · Luminar · Luz"
               descricao="A dor alheia toca sua centelha como um chamado distante. Num clarão, você atravessa o espaço e surge junto ao ferido, levando alívio imediato ou preparando o milagre que virá em seguida."
               efeito={<>
