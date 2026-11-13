@@ -750,6 +750,24 @@ function Humano() {
                 <p>Se a distância entre vocês exceder 60 pés, se os Pontos de Vida do portador forem reduzidos a 0 ou se você ficar inconsciente, o vínculo termina imediatamente. Sempre que o vínculo termina, a auréola se despedaça e se apaga, em vez de retornar para você. Você pode manifestá-la novamente utilizando normalmente a ação de Luz Inata.</p>
               </>}
             />
+            <TalentoCard
+              titulo="Súplica Silenciosa"
+              tags="Humano · Luminar · Luz"
+              descricao="A dor alheia toca sua centelha como um chamado distante. Num clarão, você atravessa o espaço e surge junto ao ferido, levando alívio imediato ou preparando o milagre que virá em seguida."
+              efeito={<>
+                <p>A emanação de Sentir Sofrimento aumenta de 60 para <strong>120 pés</strong>, e essa habilidade deixa de possuir uma frequência. Ela passa a identificar o aliado vivo com a menor proporção de Pontos de Vida que você possa perceber dentro da área, incluindo uma criatura não hostil que esteja tentando proteger, mesmo que não a conheça. Sentir Sofrimento não altera o grau de detecção de nenhuma criatura.</p>
+                <p>Você também recebe a ação livre abaixo.</p>
+                <p><strong>Responder ao Clamor (Ação Livre)</strong> [Teleportation]<br />
+                <em>Frequência: Uma vez a cada 10 minutos.<br />
+                Gatilho: Você identifica um aliado por meio de Sentir Sofrimento.<br />
+                Requisito: Você consegue ver o aliado identificado e existe um espaço desocupado suficientemente grande para você adjacente a ele que também possa ver.</em></p>
+                <p>Você se teletransporta para o espaço válido adjacente ao aliado identificado e escolhe um dos seguintes benefícios:</p>
+                <ul>
+                  <li><strong>Alívio Imediato:</strong> O aliado recupera Pontos de Vida iguais ao seu nível.</li>
+                  <li><strong>Intervenção Celestial:</strong> Até o final do seu turno, na próxima vez que você fizer o aliado recuperar Pontos de Vida, ele recupera uma quantidade adicional de Pontos de Vida igual ao dobro do seu nível.</li>
+                </ul>
+              </>}
+            />
           </>
         }}
       />
