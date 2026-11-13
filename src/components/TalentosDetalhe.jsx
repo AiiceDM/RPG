@@ -725,6 +725,31 @@ function Humano() {
                 <p>Sempre que um aliado (ou você mesmo) recupera Pontos de Vida por meio do Halo Restaurador, ele também recebe uma quantidade igual de <strong>Pontos de Vida Temporários</strong>, que duram 1 minuto.</p>
               </>}
             />
+          </>,
+          9: <>
+            <TalentoCard
+              titulo="Coroa Confiada"
+              tags="Humano · Luminar · Luz"
+              descricao="Você retira a auréola da própria cabeça e a deposita sobre aquele que escolheu proteger. Um fio de luz permanece entre vocês, guiando seus passos e renovando as forças do portador a cada pulsação. Quando essa ligação se rompe, a coroa se parte em um último clarão."
+              efeito={<>
+                <p><em>Pré-requisito: Auréola Protetora.</em></p>
+                <p><strong>Coroa Confiada (2 Ações)</strong> [Concentrate] [Manipulate]<br />
+                <em>Frequência: Uma vez entre suas Preparações Diárias.<br />
+                Requisito: Seu halo de Luz Inata está ativo.<br />
+                Alcance: Toque.<br />
+                Alvo: Um aliado voluntário.<br />
+                Duração: Sustentada por até 1 minuto.</em></p>
+                <p>Seu halo deixa de pairar sobre você e passa a acompanhar o alvo, que se torna o <strong>portador da auréola</strong>. A luz do halo e as emanações de suas habilidades relacionadas a ele passam a ser centradas no portador, mas somente você pode ativar essas habilidades.</p>
+                <p>Enquanto o vínculo permanecer ativo, você recebe os seguintes benefícios:</p>
+                <ul>
+                  <li><strong>Luz que Sustenta:</strong> Ao Sustentar o vínculo, o portador recupera Pontos de Vida iguais à metade do seu nível, arredondada para cima. Ele só pode recuperar Pontos de Vida dessa forma uma vez por rodada.</li>
+                  <li><strong>Caminho até a Coroa:</strong> Ao realizar uma ação com o traço Move na qual cada espaço percorrido o aproxime do portador, você flutua rente ao chão, atraído por sua auréola. Durante esse movimento, recebe +10 pés de bônus de circunstância em suas Velocidades e ignora terreno difícil, inclusive mágico. Essa flutuação não permite ganhar altitude nem atravessar abismos.</li>
+                  <li><strong>Bênção Compartilhada:</strong> Quando você utiliza Bênção Radiante, o portador recebe +2 de bônus de status em suas jogadas de ataque e testes de resistência, em vez de +1.</li>
+                  <li><strong>Última Graça:</strong> Depois de Sustentar o vínculo ao menos uma vez, quando utilizar Bênção Radiante, você pode considerar que todos os dados da cura que o portador receberia de Halo Restaurador obtiveram seus resultados máximos. A duplicação concedida por Sentir Sofrimento, caso aplicável, é calculada depois dessa maximização. Após resolver completamente a Bênção Radiante, o vínculo termina e a auréola se despedaça.</li>
+                </ul>
+                <p>Se a distância entre vocês exceder 60 pés, se os Pontos de Vida do portador forem reduzidos a 0 ou se você ficar inconsciente, o vínculo termina imediatamente. Sempre que o vínculo termina, a auréola se despedaça e se apaga, em vez de retornar para você. Você pode manifestá-la novamente utilizando normalmente a ação de Luz Inata.</p>
+              </>}
+            />
           </>
         }}
       />
